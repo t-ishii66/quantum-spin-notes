@@ -111,3 +111,49 @@ Charlieは真顔でうなずいた。
 次に叩かれる瞬間を待つように。
 
 三人の実験は、ここから始まる。
+
+
+## Physics Note
+
+状況を表に整理しよう。球の表面には印がないので、叩く場所は「任意の場所」になる。
+ただし、一度叩くと、その球の内部状態が変わり、同じ場所を叩くと同じ声がする。
+一度叩いて、２度目はちょうど真逆の場所を叩くと、逆の声がする。
+
+
+
+<table border="1" cellspacing="0" cellpadding="6">
+  <thead>
+    <tr>
+      <th>一回目の叩く場所</th>
+      <th>声</th>
+      <th>二回目叩く場所</th>
+      <th>声</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>任意</td>
+      <td><strong>Yay!</strong></td>
+      <td>一回目と同じ場所</td>
+      <td><strong>Yay!</strong></td>
+    </tr>
+    <tr>
+      <td>任意</td>
+      <td><strong>Yay!</strong></td>
+      <td>一回目と真逆の場所</td>
+      <td><strong>Oops!</strong></td>
+    </tr>
+    <tr>
+      <td>任意</td>
+      <td><strong>Oops!</strong></td>
+      <td>一回目と同じ場所</td>
+      <td><strong>Oops!</strong></td>
+    </tr>
+    <tr>
+      <td>任意</td>
+      <td><strong>Oops!</strong></td>
+      <td>一回目と真逆の場所</td>
+      <td><strong>Yay!</strong></td>
+    </tr>
+  </tbody>
+</table>
