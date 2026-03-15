@@ -1,175 +1,157 @@
-# Chapter 3: 声を数にする
+# Chapter 3: Vectors and States
 
-## Scene 1: Bobの提案
+## Scene 3-1: 記号を分ける
 
-机の上で黒い球が静かに転がっている。  
-Aliceが同じ場所を二回叩くと、二回とも **Yay!** が出た。
+夜、三人は Chapter 2 の表を見ながら、同じところで止まっていた。  
+規則は見えた。だが、式として運ぶ道具がまだ粗い。
 
-Bobがノートに書く。  
-「この“声”を、そのまま数式に入れたい。まずは対応する変数を作ろう」
+Bobが言う。  
+「`Yay!` と `Oops!` をそのまま文章で追うのは限界だ。  
+ここからは、結果と状態を別の記号で管理しよう」
 
-Charlieが確認する。  
-「記号の使い分けは厳密にしよう。混ぜると破綻する」
+Aliceがノートに二列を書く。
 
-Aliceが読み上げる。  
-「`Yay` は値（変数の値）。`|Yay⟩` は状態ベクトル。見た目が似てても別物、ね」
+- 結果ラベル: `Yay`, `Oops`
+- 状態ベクトル: `|Yay\rangle`, `|Oops\rangle`
 
-## Physics Note 1: 記号の区別
+Charlieがうなずいた。  
+「見た目は似てるけど別物。そこを混ぜると全部崩れる」
 
-この章では、次の区別を明示する。
+## Physics Note 3-1: 何を何で表すか
 
-- `|Yay⟩`, `|Oops⟩`: 状態ベクトル（ケット）
-- `Yay`, `Oops`: 測定結果ラベル
-- `m`: 測定値を表す数値変数
+この章で使う最小の記号は次の通り。
 
-以後、結果ラベルと数値の対応を
+- `|Yay_n\rangle, |Oops_n\rangle`: 方向 $n$ 測定の固有状態
+- `\hat M_n`: 方向 $n$ を叩く測定操作（演算子）
+- `a,b`: その測定で得る2つの測定値（実数、$a\neq b$）
 
-$$
-Yay \leftrightarrow +1,\qquad Oops \leftrightarrow -1
-$$
-
-と定める。すると、声は「数」として扱える。
-
-## Scene 2: 測定を演算子で書く
-
-Bobは続けて書く。  
-「測定そのものを演算子にして、$\hat M$ と置こう」
-
-そして、固有状態に対して
+したがって固有値方程式は
 
 $$
-\hat M|Yay\rangle=+1\,|Yay\rangle,\qquad
-\hat M|Oops\rangle=-1\,|Oops\rangle
-$$
-
-と書いた。
-
-Aliceが首をかしげる。  
-「それで、一般の状態だとどうなるの？」
-
-## Physics Note 2: 一般状態への作用
-
-一般状態を
-
-$$
-|\phi\rangle=\alpha|Yay\rangle+\beta|Oops\rangle
-$$
-
-（この段階では $\alpha,\beta\in\mathbb R$）とすると、線形性より
-
-$$
-\hat M|\phi\rangle
-=\alpha\hat M|Yay\rangle+\beta\hat M|Oops\rangle
-=\alpha|Yay\rangle-\beta|Oops\rangle
+\hat M_n|Yay_n\rangle=a|Yay_n\rangle,\qquad
+\hat M_n|Oops_n\rangle=b|Oops_n\rangle
 $$
 
 となる。
 
-ここで重要なのは、$\hat M|\phi\rangle$ 自体は「測定後の1回の結果」ではなく、  
-演算子 $\hat M$ が状態 $|\phi\rangle$ にどう作用するかを表す式だという点である。
+この式の意味:
 
-## Scene 3: Charlieの提案
+1. 測定値として $a$ か $b$ が得られる。  
+2. 固有状態に対して同じ測定を繰り返すと、結果は再現される。
 
-沈黙のあと、Charlieが言う。  
-「左から $\langle\phi|$ をかけてみよう」
+---
 
-$$
-\langle\phi|\hat M|\phi\rangle
-$$
+## Scene 3-2: 一般状態に作用させる
 
-を計算すると（実係数の場合）、
+Aliceが尋ねる。  
+「固有状態じゃないときは？」
 
-$$
-\langle\phi|\hat M|\phi\rangle=\alpha^2-\beta^2
-$$
-
-になる。
-
-Aliceがつぶやく。  
-「これ、何を意味してるの？」
-
-## Physics Note 3: 平均値と確率の読み分け
-
-- $\langle\phi|\hat M|\phi\rangle$ は測定値の**平均値**
-- 確率そのものは（この段階の仮定として）
+Bobは白紙に書いた。
 
 $$
-P(Yay)=\alpha^2,\qquad P(Oops)=\beta^2,\qquad \alpha^2+\beta^2=1
+|\phi_n\rangle=\alpha|Yay_n\rangle+\beta|Oops_n\rangle
 $$
 
-と読む。
-
-このとき
-
-$$
-\langle\hat M\rangle
-=(+1)P(Yay)+(-1)P(Oops)
-=\alpha^2-\beta^2
-$$
-
-となり、上の計算と一致する。
-
-## この章の要点
-
-1. `|Yay⟩` と `Yay` は別物である。前者は状態、後者は結果ラベル（または対応する値）。  
-2. 測定結果を数に落とすため、`Yay↔+1`, `Oops↔-1` の対応を導入した。  
-3. 測定演算子 $\hat M$ の固有値方程式で、再測定の確定性を表現できる。  
-4. $\langle\phi|\hat M|\phi\rangle$ は確率ではなく平均値であり、確率は $\alpha^2,\beta^2$ で与える。
-
-Bobがノートを閉じる。  
-「声を数にしたら、実験結果が計算とつながった」
-
-Aliceは球を見つめる。  
-「記号が増えたのに、前より意味は見えやすいかも」
-
-
-代表的な観測結果は次のように整理できる（観測確率は試行回数を増やすと理論値へ近づく）。
-
-<table border="1" cellspacing="0" cellpadding="6">
-  <thead>
-    <tr>
-      <th>一回目と二回目の声</th>
-      <th>一回目と二回目の叩く点の角度 θ</th>
-      <th>観測確率</th>
-      <th>理論値</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>同じ声</td>
-      <td>0</td>
-      <td>0.98</td>
-      <td>cos²(θ/2) = 1.00</td>
-    </tr>
-    <tr>
-      <td>同じ声</td>
-      <td>π/4</td>
-      <td>0.86</td>
-      <td>cos²(θ/2) ≈ 0.85</td>
-    </tr>
-    <tr>
-      <td>同じ声</td>
-      <td>π/2</td>
-      <td>0.53</td>
-      <td>cos²(θ/2) = 0.50</td>
-    </tr>
-    <tr>
-      <td>同じ声</td>
-      <td>3π/4</td>
-      <td>0.17</td>
-      <td>cos²(θ/2) ≈ 0.15</td>
-    </tr>
-    <tr>
-      <td>同じ声</td>
-      <td>π</td>
-      <td>0.02</td>
-      <td>cos²(θ/2) = 0.00</td>
-    </tr>
-  </tbody>
-</table>
-
+Charlieが続ける。  
+「これに $\hat M_n$ を作用させる」
 
 $$
-\Pr(\text{二回目が同じ声})=\cos^2\frac{\theta}{2},\qquad
-\Pr(\text{二回目が反対の声})=1 - \cos^2\frac{\theta}{2}= \sin^2\frac{\theta}{2}
+\hat M_n|\phi_n\rangle
+=\alpha a|Yay_n\rangle+\beta b|Oops_n\rangle
 $$
+
+Aliceは少し考えてから言う。  
+「つまり、測定は“混ざり方”を値つきで押し出してる感じ？」
+
+Bobが笑う。  
+「いい言い方だね」
+
+## Physics Note 3-2: 線形性と展開
+
+上式は線形性
+
+$$
+\hat M_n(c_1|u\rangle+c_2|v\rangle)=c_1\hat M_n|u\rangle+c_2\hat M_n|v\rangle
+$$
+
+から直接出る。  
+この段階では、測定後の単発結果を言っているのではなく、演算子が状態にどう作用するかを言っている。
+
+---
+
+## Scene 3-3: Charlieの一手
+
+沈黙のあと、Charlieが言った。  
+「左からブラをかけてみよう。平均値が見える」
+
+$$
+\langle\phi_n|\hat M_n|\phi_n\rangle
+$$
+
+Bobが計算する。直交規格化
+
+$$
+\langle Yay_n|Yay_n\rangle=1,\quad
+\langle Oops_n|Oops_n\rangle=1,\quad
+\langle Yay_n|Oops_n\rangle=0
+$$
+
+を使うと
+
+$$
+\langle\phi_n|\hat M_n|\phi_n\rangle
+=a|\alpha|^2+b|\beta|^2
+$$
+
+Aliceが顔を上げる。  
+「これ、確率そのもの？」
+
+Charlieが首を振る。  
+「これは平均値。確率とは別に読む」
+
+## Physics Note 3-3: 平均値と確率の切り分け
+
+この章の読み分け:
+
+- $\langle\phi_n|\hat M_n|\phi_n\rangle$ は測定値の平均
+- 確率は Born則（要請）で与える
+
+$$
+P(a)=|\alpha|^2,\qquad P(b)=|\beta|^2,\qquad
+|\alpha|^2+|\beta|^2=1
+$$
+
+このとき平均値は
+
+$$
+\langle\hat M_n\rangle=aP(a)+bP(b)
+$$
+
+となり、上の式と一致する。
+
+---
+
+## Scene 3-4: 何が前進したか
+
+Aliceはノートを閉じた。  
+「Chapter 2 では“規則がある”までだった。  
+今日は“その規則を計算で運べる形”になった感じ」
+
+Bobが言う。  
+「うん。次はこの状態を幾何として見たい。  
+角度だけじゃなく、まだ見えてない自由度も含めて」
+
+Charlieはページの端に小さく書いた。
+
+**Bloch Sphere: $(\theta,\phi)$**
+
+「次章はここだ」
+
+## この章で手に入れたもの
+
+1. 状態ラベルと結果ラベルを明確に分離した。  
+2. 測定操作を `\hat M_n` として定義し、固有値方程式で書いた。  
+3. 一般状態への作用を線形性で展開した。  
+4. 期待値 `\langle\phi_n|\hat M_n|\phi_n\rangle` を導出した。  
+5. 期待値と確率（Born則）を切り分けて整理した。  
+6. 次章の Bloch 球導入に必要な記法をそろえた。
