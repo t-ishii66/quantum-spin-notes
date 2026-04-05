@@ -131,12 +131,11 @@
 ブロッホ球は見た目としては非常に魅力的で、読者にも「量子状態の図」として刺さりやすい。  
 しかし、黒い球の物語からいきなり
 
-$$
+```math
 |\psi\rangle=
 \cos\frac{\theta}{2}|Yay\rangle
 +e^{i\phi}\sin\frac{\theta}{2}|Oops\rangle
-$$
-
+```
 へ飛ぶと、読者は次の疑問を持つ。
 
 - なぜ係数が $\cos(\theta/2), \sin(\theta/2)$ なのか
@@ -219,14 +218,13 @@ $$
 
 ここで行列表示すると
 
-$$
+```math
 \sigma_z=
 \begin{pmatrix}
 1&0\\
 0&-1
 \end{pmatrix}
-$$
-
+```
 が出る。  
 この時点でのメッセージは、
 
@@ -239,11 +237,10 @@ $$
 ここは本編の流れとは別に、短い**物理コラム**を挟む価値が高い。  
 理由は、初学者が
 
-$$
+```math
 \hat Z|0\rangle=+1\,|0\rangle,\qquad
 \hat Z|1\rangle=-1\,|1\rangle
-$$
-
+```
 を見たとき、
 
 - `+1,-1` が測定結果の数値である
@@ -295,22 +292,20 @@ $$
 
 このとき
 
-$$
+```math
 |+x\rangle=\frac{1}{\sqrt2}(|+z\rangle+|-z\rangle),\qquad
 |-x\rangle=\frac{1}{\sqrt2}(|+z\rangle-|-z\rangle)
-$$
-
+```
 を、位相規約の選択として導入する。  
 そこから
 
-$$
+```math
 \sigma_x=
 \begin{pmatrix}
 0&1\\
 1&0
 \end{pmatrix}
-$$
-
+```
 が出る。
 
 この段階では、まだブロッホ球を急いで出さず、
@@ -334,10 +329,9 @@ $$
 
 この不足を埋めるために、一般の半々状態
 
-$$
+```math
 \frac{1}{\sqrt2}\left(|+z\rangle+e^{i\phi}|-z\rangle\right)
-$$
-
+```
 を導入し、
 
 - `x` は $\phi=0$
@@ -347,20 +341,18 @@ $$
 
 すると
 
-$$
+```math
 |+y\rangle=\frac{1}{\sqrt2}\left(|+z\rangle+i|-z\rangle\right)
-$$
-
+```
 から
 
-$$
+```math
 \sigma_y=
 \begin{pmatrix}
 0&-i\\
 i&0
 \end{pmatrix}
-$$
-
+```
 が出る。
 
 ここでの肝は、
@@ -373,10 +365,9 @@ $$
 
 この時点で初めて、
 
-$$
+```math
 \sigma_x,\sigma_y,\sigma_z
-$$
-
+```
 を並べて見せる意味が出る。
 
 ここで大事なのは、「3 つの行列がある」ことより、
@@ -405,35 +396,31 @@ $$
 
 つまり
 
-$$
+```math
 \langle \sigma_x\rangle,\qquad
 \langle \sigma_y\rangle,\qquad
 \langle \sigma_z\rangle
-$$
-
+```
 を成分とするベクトル
 
-$$
+```math
 \mathbf r=(r_x,r_y,r_z)
-$$
-
+```
 を考えると、純粋状態では $|\mathbf r|=1$ となり、球面上の一点になる。  
 そこで
 
-$$
+```math
 r_x=\sin\theta\cos\phi,\qquad
 r_y=\sin\theta\sin\phi,\qquad
 r_z=\cos\theta
-$$
-
+```
 と書けば、
 
-$$
+```math
 |\psi\rangle=
 \cos\frac{\theta}{2}|+z\rangle
 +e^{i\phi}\sin\frac{\theta}{2}|-z\rangle
-$$
-
+```
 という形が、一つの幾何的な意味を持って読めるようになる。
 
 この順番なら、

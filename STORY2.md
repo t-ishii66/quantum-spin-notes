@@ -114,10 +114,9 @@ Bob が補う。
 
 それを
 
-$$
+```math
 |+z\rangle,\qquad |-z\rangle
-$$
-
+```
 と書く。
 
 意味は次の通りである。
@@ -144,10 +143,9 @@ Bob が笑う。
 
 Charlie はゆっくり書いた。
 
-$$
+```math
 |+z\rangle,\qquad |-z\rangle
-$$
-
+```
 「この二つは、同じ測定に対して違う答えを返す。だから完全に区別できないといけない」
 
 Alice が言う。  
@@ -157,28 +155,25 @@ Alice が言う。
 
 Charlie は続けて書く。
 
-$$
+```math
 \langle +z|-z\rangle=0
-$$
-
+```
 さらに、
 
-$$
+```math
 \langle +z|+z\rangle=1,\qquad
 \langle -z|-z\rangle=1
-$$
-
+```
 Bob がうなずく。  
 「長さ 1 にそろえた、ってことだな」
 
 Charlie は最後にまとめた。
 
-$$
+```math
 \langle +z|+z\rangle=1,\qquad
 \langle -z|-z\rangle=1,\qquad
 \langle +z|-z\rangle=0
-$$
-
+```
 Alice は少し黙ってから言った。  
 「なんか急に本格的。でも、“二つの確定した声”をちゃんと分けて置いた感じはする」
 
@@ -187,17 +182,15 @@ Alice は少し黙ってから言った。
 $|+z\rangle$ と $|-z\rangle$ は、同じ測定に対して完全に区別可能な二つの状態である。  
 量子力学では、この「完全に区別可能」を内積 0、つまり直交で表す。
 
-$$
+```math
 \langle +z|-z\rangle=0
-$$
-
+```
 また、それぞれを確率 1 の基準状態として扱うため、長さを 1 にそろえる。
 
-$$
+```math
 \langle +z|+z\rangle=1,\qquad
 \langle -z|-z\rangle=1
-$$
-
+```
 このように、二つの状態を直交規格化基底として置くところから始める。
 
 ---
@@ -219,13 +212,12 @@ Alice は少し考えてからうなずいた。
 
 Charlie は式を書いた。
 
-$$
+```math
 \hat Z
 =
 (+1)|+z\rangle\langle +z|
 +(-1)|-z\rangle\langle -z|
-$$
-
+```
 「これは `z` 軸測定そのものを表す演算子だ」
 
 Alice が首をかしげる。  
@@ -242,13 +234,12 @@ Charlie はノートを指差した。
 
 `z` 軸測定で返る二つの結果を `+1,-1` と数値化すると、測定演算子は
 
-$$
+```math
 \hat Z
 =
 (+1)|+z\rangle\langle +z|
 +(-1)|-z\rangle\langle -z|
-$$
-
+```
 と書ける。
 
 この式は、
@@ -260,21 +251,19 @@ $$
 
 実際、
 
-$$
+```math
 \hat Z|+z\rangle=|+z\rangle,\qquad
 \hat Z|-z\rangle=-|-z\rangle
-$$
-
+```
 となる。  
 ここで右辺の `-` は、「状態がひっくり返った」という意味ではない。  
 $|-z\rangle$ という状態に対して、測定値 `-1` が対応していることを表している。
 
 この
 
-$$
+```math
 \hat Z|\psi\rangle=\lambda|\psi\rangle
-$$
-
+```
 という形は、
 
 - $|\psi\rangle$ が固有状態
@@ -288,7 +277,7 @@ $$
 
 Charlie は最後に、基底を一つ固定しようと言った。
 
-$$
+```math
 |+z\rangle=
 \begin{pmatrix}
 1\\
@@ -300,21 +289,19 @@ $$
 0\\
 1
 \end{pmatrix}
-$$
-
+```
 Bob が言う。  
 「この順番で並べれば、$\hat Z$ はただの 2 × 2 行列として書けるな」
 
 Charlie が計算すると、
 
-$$
+```math
 \hat Z=
 \begin{pmatrix}
 1&0\\
 0&-1
 \end{pmatrix}
-$$
-
+```
 となった。
 
 Alice はしばらくその行列を見ていた。  
@@ -334,25 +321,23 @@ Alice はノートに太字で書いた。
 
 $|+z\rangle, |-z\rangle$ を基底に選ぶと、
 
-$$
+```math
 \hat Z=
 \begin{pmatrix}
 1&0\\
 0&-1
 \end{pmatrix}
-$$
-
+```
 となる。  
 これはそのままパウリ行列
 
-$$
+```math
 \sigma_z=
 \begin{pmatrix}
 1&0\\
 0&-1
 \end{pmatrix}
-$$
-
+```
 である。
 
 したがって $\sigma_z$ は、最初から抽象的に与える必要はない。  

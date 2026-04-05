@@ -31,11 +31,10 @@ Bobが前章のページを指す。
 
 したがって固有値方程式は
 
-$$
+```math
 \hat M_n|Yay_n\rangle=a|Yay_n\rangle,\qquad
 \hat M_n|Oops_n\rangle=b|Oops_n\rangle
-$$
-
+```
 となる。
 
 この式の意味:
@@ -52,18 +51,16 @@ Aliceが尋ねる。
 
 Bobは白紙に書いた。
 
-$$
+```math
 |\phi_n\rangle=\alpha|Yay_n\rangle+\beta|Oops_n\rangle
-$$
-
+```
 Charlieが続ける。  
 「これに $\hat M_n$ を作用させる」
 
-$$
+```math
 \hat M_n|\phi_n\rangle
 =\alpha a|Yay_n\rangle+\beta b|Oops_n\rangle
-$$
-
+```
 Aliceは少し考えてから言う。  
 「つまり、測定は“混ざり方”を値つきで押し出してる感じ？」
 
@@ -74,10 +71,9 @@ Bobが笑う。
 
 上式は線形性
 
-$$
+```math
 \hat M_n(c_1|u\rangle+c_2|v\rangle)=c_1\hat M_n|u\rangle+c_2\hat M_n|v\rangle
-$$
-
+```
 から直接出る。  
 この段階では、測定後の単発結果を言っているのではなく、演算子が状態にどう作用するかを言っている。
 
@@ -88,25 +84,22 @@ $$
 沈黙のあと、Charlieが言った。  
 「左からブラをかけてみよう。平均値が見える」
 
-$$
+```math
 \langle\phi_n|\hat M_n|\phi_n\rangle
-$$
-
+```
 Bobが計算する。直交規格化
 
-$$
+```math
 \langle Yay_n|Yay_n\rangle=1,\quad
 \langle Oops_n|Oops_n\rangle=1,\quad
 \langle Yay_n|Oops_n\rangle=0
-$$
-
+```
 を使うと
 
-$$
+```math
 \langle\phi_n|\hat M_n|\phi_n\rangle
 =a|\alpha|^2+b|\beta|^2
-$$
-
+```
 Aliceが顔を上げる。  
 「これ、確率そのもの？」
 
@@ -120,17 +113,15 @@ Charlieが首を振る。
 - $\langle\phi_n|\hat M_n|\phi_n\rangle$ は測定値の平均
 - 確率は Born則（要請）で与える
 
-$$
+```math
 P(a)=|\alpha|^2,\qquad P(b)=|\beta|^2,\qquad
 |\alpha|^2+|\beta|^2=1
-$$
-
+```
 このとき平均値は
 
-$$
+```math
 \langle\hat M_n\rangle=aP(a)+bP(b)
-$$
-
+```
 となり、上の式と一致する。
 
 ---

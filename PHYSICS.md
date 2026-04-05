@@ -7,9 +7,9 @@
 - Aliceたちが黒い球をどう実験するか
 - どの順番で何に気づくと自然か
 - どうすれば最終的に状態ベクトル
-  $$
+```math
   |\psi\rangle=\cos\frac{\theta}{2}|Yay\rangle+e^{i\phi}\sin\frac{\theta}{2}|Oops\rangle
-  $$
+```
   に到達できるか
 
 を、**物語の流れ**として整理するための下書きである。
@@ -99,11 +99,10 @@ Aliceたちは、ある基準方向をひとつ選ぶ。これを物語ではま
 
 `z` 基底での確率
 
-$$
+```math
 P(Oops|z)=\sin^2\frac{\theta}{2},\qquad
 P(Yay|z)=\cos^2\frac{\theta}{2}
-$$
-
+```
 ただし、この段階ではまだ $\phi$ は出さない。
 
 ---
@@ -177,19 +176,17 @@ Aliceたちは測定の仕方を変える。
 
 ### 対応する物理
 
-$$
+```math
 \langle \sigma_z\rangle=\cos\theta,\qquad
 \langle \sigma_x\rangle=\sin\theta\cos\phi,\qquad
 \langle \sigma_y\rangle=\sin\theta\sin\phi
-$$
-
+```
 つまり `x`,`y`,`z` の3方向の統計から、
 ブロッホベクトル
 
-$$
+```math
 \mathbf{r}=(r_x,r_y,r_z)
-$$
-
+```
 を復元できる。
 
 ---
@@ -229,12 +226,11 @@ $$
 
 ### 対応する物理
 
-$$
+```math
 |\psi\rangle=
 \cos\frac{\theta}{2}|Yay\rangle
 +e^{i\phi}\sin\frac{\theta}{2}|Oops\rangle
-$$
-
+```
 ここで $\phi$ は全体位相ではなく、相対位相である。
 
 ---
@@ -261,18 +257,16 @@ Charlie がそれを一つの図にまとめる。
 
 ### 対応する物理
 
-$$
+```math
 \mathbf{r}=(\sin\theta\cos\phi,\ \sin\theta\sin\phi,\ \cos\theta)
-$$
-
+```
 そして
 
-$$
+```math
 |\psi\rangle=
 \cos\frac{\theta}{2}|Yay\rangle
 +e^{i\phi}\sin\frac{\theta}{2}|Oops\rangle
-$$
-
+```
 に到達する。
 
 ---
@@ -299,24 +293,21 @@ $$
 
 ここで初めて
 
-$$
+```math
 |\psi\rangle=\alpha|Yay\rangle+\beta|Oops\rangle
-$$
-
+```
 を一般形として掲げ、
 
-$$
+```math
 |\alpha|^2+|\beta|^2=1
-$$
-
+```
 さらに
 
-$$
+```math
 |\psi\rangle=
 \cos\frac{\theta}{2}|Yay\rangle
 +e^{i\phi}\sin\frac{\theta}{2}|Oops\rangle
-$$
-
+```
 へ整形すると、読者にとって「結果として得られた式」になる。
 
 ---

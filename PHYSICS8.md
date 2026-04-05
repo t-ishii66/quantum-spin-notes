@@ -4,10 +4,9 @@
 
 この文書は、ポアソン括弧
 
-$$
+```math
 \{f,g\}
-$$
-
+```
 が何をしている記号なのかを、一般論よりも**具体例**を通して理解するためのメモである。
 
 とくに知りたいのは次の点である。
@@ -42,33 +41,29 @@ $$
 3 次元空間を動く粒子を考える。  
 位置を
 
-$$
+```math
 \mathbf r=(x,y,z)
-$$
-
+```
 運動量を
 
-$$
+```math
 \mathbf p=(p_x,p_y,p_z)
-$$
-
+```
 で表す。
 
 古典力学では、位置と運動量を合わせた
 
-$$
+```math
 (x,y,z,p_x,p_y,p_z)
-$$
-
+```
 が状態を指定する。  
 この空間を位相空間と呼ぶ。
 
 ここで、位置や運動量から作られる任意の量
 
-$$
+```math
 f(x,y,z,p_x,p_y,p_z)
-$$
-
+```
 を考える。
 
 ---
@@ -77,7 +72,7 @@ $$
 
 ポアソン括弧は、二つの量 `f,g` から新しい量を作る演算で、
 
-$$
+```math
 \{f,g\}
 =
 \sum_i
@@ -85,16 +80,14 @@ $$
 \frac{\partial f}{\partial q_i}\frac{\partial g}{\partial p_i}
 -\frac{\partial f}{\partial p_i}\frac{\partial g}{\partial q_i}
 \right)
-$$
-
+```
 と定義される。  
 ここで
 
-$$
+```math
 (q_1,q_2,q_3)=(x,y,z),\qquad
 (p_1,p_2,p_3)=(p_x,p_y,p_z)
-$$
-
+```
 である。
 
 見た目は少し重いが、やっていることは
@@ -118,31 +111,28 @@ $$
 
 まず
 
-$$
+```math
 \{x,p_x\}
-$$
-
+```
 を計算する。
 
 定義から
 
-$$
+```math
 \{x,p_x\}
 =
 \frac{\partial x}{\partial x}\frac{\partial p_x}{\partial p_x}
 -\frac{\partial x}{\partial p_x}\frac{\partial p_x}{\partial x}
 =1\cdot1-0\cdot0=1
-$$
-
+```
 である。
 
 同様に
 
-$$
+```math
 \{x,p_y\}=0,\qquad
 \{y,p_x\}=0
-$$
-
+```
 である。
 
 つまりポアソン括弧は、
@@ -155,10 +145,9 @@ $$
 
 これは量子力学での交換関係
 
-$$
+```math
 [x,p_x]=i\hbar
-$$
-
+```
 に対応する古典版だと思ってよい。
 
 ---
@@ -169,10 +158,9 @@ $$
 
 古典力学では、ある量 `G` が変換の生成子であるとは、
 
-$$
+```math
 \delta f=\varepsilon\,\{f,G\}
-$$
-
+```
 によって、任意の量 `f` の微小変化が決まるということである。  
 $\varepsilon$ は小さなパラメータである。
 
@@ -187,24 +175,21 @@ $\varepsilon$ は小さなパラメータである。
 
 とくに位置ベクトル
 
-$$
+```math
 \mathbf r=(x,y,z)
-$$
-
+```
 に対しては、成分ごとに
 
-$$
+```math
 \delta x=\varepsilon\{x,G\},\qquad
 \delta y=\varepsilon\{y,G\},\qquad
 \delta z=\varepsilon\{z,G\}
-$$
-
+```
 なので、まとめて
 
-$$
+```math
 \delta\mathbf r=\varepsilon\,\{\mathbf r,G\}
-$$
-
+```
 と書いてよい。
 
 この意味で `G` は「変換を作るもの」、すなわち生成子である。
@@ -215,17 +200,16 @@ $$
 
 ここで角運動量の `z` 成分
 
-$$
+```math
 L_z=xp_y-yp_x
-$$
-
+```
 を考える。
 
 これが本当に `z` 軸まわりの回転を生成するかを見よう。
 
 ### `x` はどう変わるか
 
-$$
+```math
 \{x,L_z\}
 =
 \frac{\partial x}{\partial x}\frac{\partial L_z}{\partial p_x}
@@ -233,57 +217,50 @@ $$
 =
 1\cdot(-y)-0\cdot p_y
 =-y
-$$
-
+```
 したがって
 
-$$
+```math
 \delta x=\delta\phi\,\{x,L_z\}=-y\,\delta\phi
-$$
-
+```
 である。
 
 ### `y` はどう変わるか
 
-$$
+```math
 \{y,L_z\}
 =
 \frac{\partial y}{\partial y}\frac{\partial L_z}{\partial p_y}
 =
 1\cdot x
 =x
-$$
-
+```
 したがって
 
-$$
+```math
 \delta y=\delta\phi\,\{y,L_z\}=x\,\delta\phi
-$$
-
+```
 である。
 
 ### `z` はどう変わるか
 
-$$
+```math
 \{z,L_z\}=0
-$$
-
+```
 なので
 
-$$
+```math
 \delta z=0
-$$
-
+```
 である。
 
 まとめると、
 
-$$
+```math
 \delta x=-y\,\delta\phi,\qquad
 \delta y=x\,\delta\phi,\qquad
 \delta z=0
-$$
-
+```
 となる。
 
 これはまさに、`z` 軸まわりの微小回転そのものである。
@@ -298,46 +275,42 @@ $$
 
 微小な `z` 軸回転の回転行列は
 
-$$
+```math
 R_z(\delta\phi)\approx
 \begin{pmatrix}
 1 & -\delta\phi & 0\\
 \delta\phi & 1 & 0\\
 0 & 0 & 1
 \end{pmatrix}
-$$
-
+```
 である。
 
 これを
 
-$$
+```math
 \begin{pmatrix}
 x\\
 y\\
 z
 \end{pmatrix}
-$$
-
+```
 に作用させると
 
-$$
+```math
 \begin{pmatrix}
 x-y\,\delta\phi\\
 y+x\,\delta\phi\\
 z
 \end{pmatrix}
-$$
-
+```
 になる。  
 したがって
 
-$$
+```math
 \delta x=-y\,\delta\phi,\qquad
 \delta y=x\,\delta\phi,\qquad
 \delta z=0
-$$
-
+```
 であり、これはポアソン括弧から得た結果と完全に一致する。
 
 だから $L_z$ は、単に何か立派そうな保存量なのではなく、**実際に回転を生み出している量** だと分かる。
@@ -353,151 +326,136 @@ $$
 
 `x` 軸方向の角運動量は
 
-$$
+```math
 L_x=yp_z-zp_y
-$$
-
+```
 である。
 
 このとき
 
-$$
+```math
 \{x,L_x\}=0
-$$
-
+```
 であり、さらに
 
-$$
+```math
 \{y,L_x\}
 =
 \frac{\partial y}{\partial y}\frac{\partial L_x}{\partial p_y}
 =
 1\cdot(-z)
 =-z
-$$
-
-$$
+```
+```math
 \{z,L_x\}
 =
 \frac{\partial z}{\partial z}\frac{\partial L_x}{\partial p_z}
 =
 1\cdot y
 =y
-$$
-
+```
 だから
 
-$$
+```math
 \delta x=0,\qquad
 \delta y=-z\,\delta\phi,\qquad
 \delta z=y\,\delta\phi
-$$
-
+```
 となる。
 
 これは微小回転行列
 
-$$
+```math
 R_x(\delta\phi)\approx
 \begin{pmatrix}
 1 & 0 & 0\\
 0 & 1 & -\delta\phi\\
 0 & \delta\phi & 1
 \end{pmatrix}
-$$
-
+```
 が与える変化と一致している。
 
 ### `y` 軸まわり
 
 `y` 軸方向の角運動量は
 
-$$
+```math
 L_y=zp_x-xp_z
-$$
-
+```
 である。
 
 このとき
 
-$$
+```math
 \{y,L_y\}=0
-$$
-
+```
 であり、さらに
 
-$$
+```math
 \{x,L_y\}
 =
 \frac{\partial x}{\partial x}\frac{\partial L_y}{\partial p_x}
 =
 1\cdot z
 =z
-$$
-
-$$
+```
+```math
 \{z,L_y\}
 =
 \frac{\partial z}{\partial z}\frac{\partial L_y}{\partial p_z}
 =
 1\cdot(-x)
 =-x
-$$
-
+```
 だから
 
-$$
+```math
 \delta x=z\,\delta\phi,\qquad
 \delta y=0,\qquad
 \delta z=-x\,\delta\phi
-$$
-
+```
 となる。
 
 これは微小回転行列
 
-$$
+```math
 R_y(\delta\phi)\approx
 \begin{pmatrix}
 1 & 0 & \delta\phi\\
 0 & 1 & 0\\
 -\delta\phi & 0 & 1
 \end{pmatrix}
-$$
-
+```
 が与える変化と一致している。
 
 ### 3 軸そろえて見ると
 
 ここまでを並べると、
 
-$$
+```math
 L_x \Rightarrow
 \begin{cases}
 \delta x=0\\
 \delta y=-z\,\delta\phi\\
 \delta z=y\,\delta\phi
 \end{cases}
-$$
-
-$$
+```
+```math
 L_y \Rightarrow
 \begin{cases}
 \delta x=z\,\delta\phi\\
 \delta y=0\\
 \delta z=-x\,\delta\phi
 \end{cases}
-$$
-
-$$
+```
+```math
 L_z \Rightarrow
 \begin{cases}
 \delta x=-y\,\delta\phi\\
 \delta y=x\,\delta\phi\\
 \delta z=0
 \end{cases}
-$$
-
+```
 となっていて、各成分がそれぞれ対応する軸まわりの微小回転をきちんと生み出していることが分かる。
 
 したがって、角運動量は `z` 軸だけで偶然うまくいったのではなく、**3 次元空間の回転そのものの生成子** なのである。
@@ -514,40 +472,36 @@ $$
 
 軸 $\mathbf n$ を
 
-$$
+```math
 \mathbf n=(n_x,n_y,n_z),\qquad |\mathbf n|=1
-$$
-
+```
 とすると、その方向の角運動量成分
 
-$$
+```math
 L_{\mathbf n}=n_xL_x+n_yL_y+n_zL_z
-$$
-
+```
 を考えるのが自然である。  
 これはベクトルの内積を使えば
 
-$$
+```math
 L_{\mathbf n}=\mathbf n\cdot\mathbf L
-$$
-
+```
 である。
 
 すると、位置ベクトルの微小変化は
 
-$$
+```math
 \delta\mathbf r
 =
 \delta\theta\,\{\mathbf r,L_{\mathbf n}\}
 =
 \delta\theta\,\{\mathbf r,n_xL_x+n_yL_y+n_zL_z\}
-$$
-
+```
 となる。
 
 ポアソン括弧は第 2 引数について線形なので、
 
-$$
+```math
 \delta\mathbf r
 =
 \delta\theta\left(
@@ -557,8 +511,7 @@ n_y\{\mathbf r,L_y\}
 +
 n_z\{\mathbf r,L_z\}
 \right)
-$$
-
+```
 と分解できる。
 
 つまり、一般軸まわりの微小回転は
@@ -571,21 +524,19 @@ $$
 
 これが
 
-$$
+```math
 L_{\mathbf n}=\mathbf n\cdot\mathbf L
-$$
-
+```
 という式の意味である。  
 いきなりこの形を思いつくのではなく、**3 軸の結果をまとめて、一般軸へ線形に拡張したもの** だと見ると自然である。
 
 したがって、一般軸 $\mathbf n$ まわりの回転に対しては
 
-$$
+```math
 \delta\mathbf r
 =
 \delta\theta\,\{\mathbf r,\mathbf n\cdot\mathbf L\}
-$$
-
+```
 と書けばよい。
 
 ---
@@ -596,32 +547,29 @@ $$
 
 ざっくり言えば
 
-$$
+```math
 \{f,g\}
 \quad\longleftrightarrow\quad
 \frac{1}{i\hbar}[F,G]
-$$
-
+```
 という対応がある。
 
 ここで大事なのは、「生成子」という言葉の意味が古典と量子でよく似ていることである。
 
 古典では
 
-$$
+```math
 \delta f=\varepsilon\,\{f,G\}
-$$
-
+```
 という形で、量 `G` が微小変換を作った。  
 量子でも同様に、ある演算子 `G` が微小変換を作るなら、状態は
 
-$$
+```math
 |\psi\rangle \longrightarrow
 \left(
 I-\frac{i}{\hbar}\varepsilon G
 \right)|\psi\rangle
-$$
-
+```
 のように変わると考えるのが自然である。
 
 ここで
@@ -636,31 +584,28 @@ $$
 
 したがって、軸 $\mathbf n$ まわりの微小回転は
 
-$$
+```math
 U(\delta\theta,\mathbf n)
 \approx
 I-\frac{i}{\hbar}\,\delta\theta\,J_{\mathbf n}
-$$
-
+```
 と書けるはずである。  
 ここで
 
-$$
+```math
 J_{\mathbf n}=\mathbf n\cdot\mathbf J
-$$
-
+```
 は、その軸方向の角運動量成分である。
 
 次に、この微小回転を何回も積み重ねて有限回転を作る。  
 角度 $\theta$ を `N` 個に分けて
 
-$$
+```math
 \delta\theta=\frac{\theta}{N}
-$$
-
+```
 とすると、
 
-$$
+```math
 U(\theta,\mathbf n)
 =
 \left[
@@ -670,20 +615,18 @@ U\!\left(\frac{\theta}{N},\mathbf n\right)
 \left(
 I-\frac{i}{\hbar}\frac{\theta}{N}J_{\mathbf n}
 \right)^N
-$$
-
+```
 となる。
 
 そして $N\to\infty$ の極限を取ると、これは指数関数になって
 
-$$
+```math
 U(\theta,\mathbf n)
 =
 \exp\!\left(
 -\frac{i}{\hbar}\theta\,J_{\mathbf n}
 \right)
-$$
-
+```
 となる。
 
 つまり、ここで指数関数が出てくるのは「何となく便利だから」ではない。  
@@ -692,14 +635,13 @@ $$
 したがって、古典で回転の生成子だった角運動量は、量子でも回転の生成子になる。  
 この意味で量子回転演算子は
 
-$$
+```math
 U(\theta,\mathbf n)
 =
 \exp\!\left(
 -\frac{i}{\hbar}\theta\,J_{\mathbf n}
 \right)
-$$
-
+```
 となるのである。
 
 ---

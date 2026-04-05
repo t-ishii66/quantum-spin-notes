@@ -27,11 +27,10 @@ Aliceが言う。
 
 この章で固定する実験則は次の2式。
 
-$$
+```math
 \Pr(\text{同じ声})=\cos^2\frac{\theta}{2},\qquad
 \Pr(\text{異なる声})=\sin^2\frac{\theta}{2}
-$$
-
+```
 ここで $\theta$ は「1回目と2回目の叩く方向の角度差」。
 
 ---
@@ -46,10 +45,9 @@ Bobがうなずく。
 
 Charlieは式を書いた。
 
-$$
+```math
 |\phi\rangle=\alpha|Yay\rangle+\beta|Oops\rangle
-$$
-
+```
 「これを一般状態として仮定して、観測確率を再現できるか試す」
 
 Aliceが笑う。  
@@ -59,20 +57,18 @@ Aliceが笑う。
 
 この段階では、状態を次の形で書けると仮定する。
 
-$$
+```math
 |\phi\rangle=\alpha|Yay\rangle+\beta|Oops\rangle
-$$
-
+```
 ここでのポイントは、状態が `Yay` と `Oops` のどちらか一方だけでなく、  
 2つの基底状態の重ね合わせとして表せる、ということ。  
 この章ではまず $\alpha,\beta$ を実数として扱う。  
 例えば
 
-$$
+```math
 \alpha=1,\ \beta=0 \Rightarrow |\phi\rangle=|Yay\rangle,\qquad
 \alpha=0,\ \beta=1 \Rightarrow |\phi\rangle=|Oops\rangle
-$$
-
+```
 となるので、2つの極端な状態を含む一般形として使える。  
 ただし「$\alpha,\beta$ は実数で十分」というのは現段階の仮定にすぎない。  
 実験事実と辻褄が合わなければ、後で複素数へ拡張する。
@@ -121,14 +117,14 @@ Charlie達は条件を固定して測定した。
 Bobは表を見て言った。  
 「ここで素朴な候補は2つある。  
 `確率そのものを係数にする` なら
-$$
+```math
 \alpha=\cos^2\frac{\theta}{2},\quad \beta=\sin^2\frac{\theta}{2}
-$$
+```
 だし、  
 `確率は係数の二乗で読む` なら
-$$
+```math
 \alpha=\cos\frac{\theta}{2},\quad \beta=\sin\frac{\theta}{2}
-$$
+```
 になる」
 
 Aliceが言う。  
@@ -145,11 +141,10 @@ Bobがまとめる。
 Charlieが暫定メモを書いた。  
 「現時点では、角度依存に対して次の形が有力」
 
-$$
+```math
 \alpha(\theta)\approx\cos\frac{\theta}{2},\qquad
 \beta(\theta)\approx\sin\frac{\theta}{2}
-$$
-
+```
 Aliceは笑った。  
 「つまり、ここではまだ“仮説勝負”ってことだね」
 
@@ -176,9 +171,9 @@ Chapter 2 で固定できたのは次の3点。
 
 2. **重ね合わせ表現**  
 状態は
-$$
+```math
 |\phi\rangle=\alpha|Yay\rangle+\beta|Oops\rangle
-$$
+```
 の形で書くのが有効である。
 
 3. **係数候補の比較方針**  

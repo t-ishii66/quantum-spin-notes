@@ -26,22 +26,19 @@ Bobが笑う。
 
 結果を数値化:
 
-$$
+```math
 Yay\to +1,\qquad Oops\to -1
-$$
-
+```
 相関関数を
 
-$$
+```math
 E(x,y)=\langle A_x B_y\rangle
-$$
-
+```
 と置き、CHSH量を
 
-$$
+```math
 S=E(a,b)+E(a,b')+E(a',b)-E(a',b')
-$$
-
+```
 と定義する。
 
 ---
@@ -50,16 +47,14 @@ $$
 
 Charlieは白紙に一気に式を書いた。
 
-$$
+```math
 s=A_aB_b + A_aB_{b'} + A_{a'}B_b - A_{a'}B_{b'}
-$$
-
+```
 「1試行ごとの量をこう置く。右側でくくると」
 
-$$
+```math
 s=A_a(B_b+B_{b'}) + A_{a'}(B_b-B_{b'})
-$$
-
+```
 「各 $B$ は $\pm1$ だから、
 `和` と `差` の片方は $\pm2$、もう片方は 0。  
 だから必ず $|s|\le2$」
@@ -67,10 +62,9 @@ $$
 Bobが続ける。  
 「平均を取っても上限は同じ。つまり」
 
-$$
+```math
 |S|\le2
-$$
-
+```
 Aliceがうなずく。  
 「これが古典の限界線ね」
 
@@ -101,21 +95,19 @@ Bobは角度設定を固定した。
 
 夕方、Bobが結果を読み上げた。
 
-$$
+```math
 \begin{aligned}
 E(a,b)&\approx-0.69\\
 E(a,b')&\approx-0.72\\
 E(a',b)&\approx-0.70\\
 E(a',b')&\approx+0.71
 \end{aligned}
-$$
-
-$$
+```
+```math
 S\approx-2.82,
 \qquad
 |S|\approx2.82>2
-$$
-
+```
 Aliceが息を呑む。  
 「越えた……」
 
@@ -141,10 +133,9 @@ Charlieは静かに言う。
 
 Bobはノートに太い枠で書いた。
 
-$$
+```math
 \boxed{|S|>2\Rightarrow\text{local hidden variables fail}}
-$$
-
+```
 Aliceが笑う。  
 「通信はできない。でも古典でもない。  
 いちばん面倒で、いちばん面白いやつだね」

@@ -35,11 +35,10 @@
 
 この文書では
 
-$$
+```math
 |0\rangle \equiv |+z\rangle,\qquad
 |1\rangle \equiv |-z\rangle
-$$
-
+```
 とする。  
 つまり `|0\rangle`, `|1\rangle` は、**実験室に固定した `z` 軸** に対する二つの固有状態である。
 
@@ -61,19 +60,17 @@ $$
 
 その状態に対応して
 
-$$
+```math
 \mathbf r=(r_x,r_y,r_z)
-$$
-
+```
 というベクトルを考える。  
 ここで各成分は
 
-$$
+```math
 r_x=\langle \sigma_x\rangle,\qquad
 r_y=\langle \sigma_y\rangle,\qquad
 r_z=\langle \sigma_z\rangle
-$$
-
+```
 である。
 
 つまりブロッホベクトルとは、
@@ -153,10 +150,9 @@ $$
 
 物理的には、空間回転 `R` に対して状態は
 
-$$
+```math
 |\psi\rangle \longrightarrow U(R)|\psi\rangle
-$$
-
+```
 と変わる。  
 これに対応して、ブロッホベクトルも 3 次元ベクトルのように回る。
 
@@ -196,49 +192,43 @@ Alice が球を**縦に** 180° 回した場合を考える。
 
 最初に状態が
 
-$$
+```math
 |0\rangle = |+z\rangle
-$$
-
+```
 だとする。  
 この状態はブロッホ球の北極に対応する。
 
 縦に 180° 回転させると、北極は南極へ移る。  
 したがって、実験室固定の `z` 軸に対して見れば
 
-$$
+```math
 |+z\rangle \longrightarrow |-z\rangle
-$$
-
+```
 となる。  
 つまり位相を除いて
 
-$$
+```math
 |0\rangle \longrightarrow |1\rangle
-$$
-
+```
 である。
 
 このあと、Alice がもう一度 **実験室固定の `z` 軸方向** を測れば、結果は
 
-$$
+```math
 \text{Oops!}
-$$
-
+```
 になる。
 
 逆に最初が
 
-$$
+```math
 |1\rangle = |-z\rangle
-$$
-
+```
 なら、同じ縦 180° 回転によって
 
-$$
+```math
 |1\rangle \longrightarrow |0\rangle
-$$
-
+```
 となり、次の `z` 軸測定では `Yay!` が出る。
 
 したがって、スピン模型として読むなら
@@ -264,25 +254,23 @@ $$
 
 スピン `1/2` の状態ベクトルは、空間回転 `\theta` に対して
 
-$$
+```math
 U(\theta,\mathbf n)
 =
 \exp\!\left(
 -i\frac{\theta}{2}\,\mathbf n\cdot\boldsymbol{\sigma}
 \right)
-$$
-
+```
 で変換される。  
 ここに `\theta/2` が現れる。  
 これが「スピノルは半角で回る」という話である。
 
 しかし、その結果として得られるブロッホベクトル
 
-$$
+```math
 \mathbf r=
 (\langle \sigma_x\rangle,\langle \sigma_y\rangle,\langle \sigma_z\rangle)
-$$
-
+```
 は、空間ベクトルと同じく **角度 `\theta` だけ** 回転する。
 
 したがって

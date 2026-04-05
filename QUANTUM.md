@@ -8,112 +8,99 @@
 
 基底状態を
 
-$$
+```math
 |Yay\rangle,\quad |Oops\rangle
-$$
-
+```
 とする。一般状態は
 
-$$
+```math
 |\psi\rangle=\alpha|Yay\rangle+\beta|Oops\rangle
-$$
-
+```
 で表す（一般には $\alpha,\beta\in\mathbb{C}$）。
 
 ## 2. 射影測定とは何か
 
 方向 $n$ の2値測定を考える。対応する射影演算子を
 
-$$
+```math
 P_n^{Yay}=|Yay_n\rangle\langle Yay_n|,\qquad
 P_n^{Oops}=|Oops_n\rangle\langle Oops_n|
-$$
-
+```
 とおく。
 
 要請:
 
-$$
+```math
 P_n^{Yay}+P_n^{Oops}=I,\qquad
 P_n^{Yay}P_n^{Oops}=0
-$$
-
+```
 意味:
 - 完備性: 結果は Yay/Oops のどちらかで尽くされる。
 - 直交性: 同時に両方の結果は起きない。
 
 具体的に、状態を $n$ 基底で
 
-$$
+```math
 |\phi\rangle=a|Yay_n\rangle+b|Oops_n\rangle
-$$
-
+```
 と書くと、射影は
 
-$$
+```math
 P_n^{Yay}|\phi\rangle
 =|Yay_n\rangle\langle Yay_n|
 \left(a|Yay_n\rangle+b|Oops_n\rangle\right)
 =a|Yay_n\rangle
-$$
-
+```
 となり、Yay成分だけを取り出す。同様に
 
-$$
+```math
 P_n^{Oops}|\phi\rangle=b|Oops_n\rangle
-$$
-
+```
 である。
 
 したがって
 
-$$
+```math
 (P_n^{Yay}+P_n^{Oops})|\phi\rangle
 =a|Yay_n\rangle+b|Oops_n\rangle
 =|\phi\rangle
-$$
-
+```
 が任意の $|\phi\rangle$ で成り立つため、
 
-$$
+```math
 P_n^{Yay}+P_n^{Oops}=I
-$$
-
+```
 となる。
 
 ## 3. ボルン則（この段階では基本仮定）
 
 状態 $|\psi\rangle$ で測定したときの確率を
 
-$$
+```math
 \Pr(Yay|n)=\langle\psi|P_n^{Yay}|\psi\rangle,\qquad
 \Pr(Oops|n)=\langle\psi|P_n^{Oops}|\psi\rangle
-$$
-
+```
 で与える。これがボルン則。
 
 この規則を採用すると
 
-$$
+```math
 \Pr(Yay|n)+\Pr(Oops|n)=1
-$$
-
+```
 が自動的に成り立つ（完備性より）。
 
 ## 4. なぜ「二乗」なのか
 
 2準位の単純化で
 
-$$
+```math
 |\psi\rangle=\alpha|Yay\rangle+\beta|Oops\rangle
-$$
-
+```
 なら、$z$ 基底で
 
-$$
+```math
 \Pr(Yay)=|\alpha|^2,\qquad \Pr(Oops)=|\beta|^2
-$$
-
+```
 となる。
 
 ポイント:
@@ -125,12 +112,11 @@ $$
 
 測定で Yay が出たなら
 
-$$
+```math
 |\psi\rangle\to\frac{P_n^{Yay}|\psi\rangle}
 {\sqrt{\langle\psi|P_n^{Yay}|\psi\rangle}}
 =|Yay_n\rangle
-$$
-
+```
 Oops なら同様に $|Oops_n\rangle$ へ更新する。
 
 意味:
@@ -155,23 +141,20 @@ Oops なら同様に $|Oops_n\rangle$ へ更新する。
 
 まず状態を
 
-$$
+```math
 |\phi\rangle=\alpha|Yay\rangle+\beta|Oops\rangle
-$$
-
+```
 と書く。基底の内積は
 
-$$
+```math
 \langle Yay|Oops\rangle=0,\qquad
 \langle Yay|Yay\rangle=\langle Oops|Oops\rangle=1
-$$
-
+```
 で、状態の規格化は
 
-$$
+```math
 \langle\phi|\phi\rangle=1
-$$
-
+```
 とする。
 
 ### Step 2: 観測量を演算子で表す
@@ -181,10 +164,9 @@ $$
 
 ### Step 3: 固有値と固有状態
 
-$$
+```math
 A|a_i\rangle=a_i|a_i\rangle
-$$
-
+```
 を満たす $a_i$ が測定で得る値、$|a_i\rangle$ が対応する状態。  
 エルミート性により $a_i$ は実数になる。
 
@@ -192,42 +174,37 @@ $$
 
 状態 $|\phi\rangle$ で $A$ を測るとき、結果 $a_i$ の確率は
 
-$$
+```math
 p_i=|\langle a_i|\phi\rangle|^2
-$$
-
+```
 で与える（基本要請）。
 
 ### Step 5: 射影測定と状態更新
 
 射影演算子
 
-$$
+```math
 P_i=|a_i\rangle\langle a_i|
-$$
-
+```
 を用いると
 
-$$
+```math
 p_i=\langle\phi|P_i|\phi\rangle
-$$
-
+```
 で、結果 $a_i$ が出た直後の状態は
 
-$$
+```math
 |\phi\rangle\to\frac{P_i|\phi\rangle}{\sqrt{p_i}}
-$$
-
+```
 となる。
 
 ### Step 6: 可換性と同時測定可能性
 
 2つの観測量 $A,B$ について
 
-$$
+```math
 [A,B]=AB-BA
-$$
-
+```
 を考える。
 
 - $[A,B]=0$: 共通固有基底を持ち、同時に確定させられる。

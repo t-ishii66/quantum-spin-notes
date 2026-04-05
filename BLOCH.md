@@ -2,21 +2,21 @@
 
 ## 目的
 - ブロッホ球の式
-  $$
+```math
   |\psi\rangle=\cos\frac{\theta}{2}|Yay\rangle+e^{i\phi}\sin\frac{\theta}{2}|Oops\rangle
-  $$
+```
   を、Alice/Bob/Charlie の実験から自然に導く。
 - 特に「$\phi$ はどうやって見つかるのか」を物語として納得できる形にする。
 
 ## まず押さえる本質
 - `z` 基底（`|Yay>`,`|Oops>`）での確率だけを見ると $\phi$ は消える。
-  $$
+```math
   P(Oops|z)=\sin^2(\theta/2),\quad P(Yay|z)=\cos^2(\theta/2)
-  $$
+```
 - 理由:
-  $$
+```math
   |e^{i\phi}\sin(\theta/2)|^2=\sin^2(\theta/2)
-  $$
+```
   なので位相は絶対値二乗で消える。
 - したがって、`z` だけ叩いている限り $\theta$ しか分からない。
 
@@ -42,24 +42,23 @@
 
 ## 数学への接続（本文で使う最小式）
 - 一般に
-  $$
+```math
   |\psi\rangle=\cos\frac{\theta}{2}|Yay\rangle+e^{i\phi}\sin\frac{\theta}{2}|Oops\rangle
-  $$
+```
 - 期待値（または Yay 確率）として:
-  $$
+```math
   \langle \sigma_z\rangle=\cos\theta,\quad
   \langle \sigma_x\rangle=\sin\theta\cos\phi,\quad
   \langle \sigma_y\rangle=\sin\theta\sin\phi
-  $$
-  $$
+```
+```math
   P(Yay|n)=\frac{1+\langle \sigma_n\rangle}{2}
-  $$
+```
 - 逆算:
-  $$
+```math
   \theta=\arccos(\langle \sigma_z\rangle),\quad
   \phi=\mathrm{atan2}(\langle \sigma_y\rangle,\langle \sigma_x\rangle)
-  $$
-
+```
 ## 物語への落とし込み（ラフ台詞）
 - Alice:
   - 「同じ準備なのに、横から叩くと統計が違う」

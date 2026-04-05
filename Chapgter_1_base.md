@@ -173,16 +173,14 @@ Charlieは真顔でうなずいた。
 Bobは考えた。「一度叩くと、内部の何かの状態が決まる。
 ベクトルのようなものを考えると良いのかな？ Yay! と叫んだら
 
-$$
+```math
 |Yay\rangle
-$$
-
+```
 という状態。逆に、Oops! と叫んだら 
 
-$$
+```math
 |Oops\rangle
-$$
-
+```
 という状態になると考えるのはどう？」
 
 Charlie「そう、 $|Yay\rangle$ ベクトルの先端をもう一度叩くと
@@ -230,55 +228,49 @@ Bobがうなずく。
 
 状態記号として
 
-$$
+```math
 |Yay\rangle,\quad |Oops\rangle
-$$
-
+```
 を導入する。
 この $|\,\cdot\,\rangle$ の形をケット（ket）、対応する $\langle\,\cdot\,|$ の形をブラ（bra）と呼ぶ。
 
 本書では、特に断らない限り基準軸として $z$ 軸を暗黙に採用する。  
 したがって
 
-$$
+```math
 |Yay\rangle\equiv|Yay_z\rangle,\qquad |Oops\rangle\equiv|Oops_z\rangle
-$$
-
+```
 とする。一般方向 $n$ の固有状態は
 
-$$
+```math
 |Yay_n\rangle,\quad |Oops_n\rangle
-$$
-
+```
 と書く。また、$n$ のちょうど180°の方向を $-n$ とする。
 
-$$
+```math
 \begin{aligned}
 |Yay_{-n}\rangle &= |Oops_n\rangle\\
 |Oops_{-n}\rangle &= |Yay_n\rangle
 \end{aligned}
-$$
-
+```
 ここで重要なのは、`逆向きに見える` ことと `同じ状態` であることは別だという点である。  
 厳密には、$|Yay_n\rangle$ と $|Oops_n\rangle$ は同一直線上の符号違いではなく、互いに直交する独立状態として扱う。
 
 直交規格化条件:
 
-$$
+```math
 \langle Yay|Yay\rangle=\langle Oops|Oops\rangle=1,\qquad
 \langle Yay|Oops\rangle=0
-$$
-
+```
 測定を表す演算子を $\hat M_n$ とする（添字 $n$ は「どこを叩くか」）。  
 特に $z$ 方向の測定を $\hat M_z$ と書き、この章では簡単のため $\hat M\equiv\hat M_z$ と省略する。
 
 測定値（固有値）は記号として $a,b$ を使う（実数、かつ $a\neq b$）。
 
-$$
+```math
 \hat M|Yay\rangle=a|Yay\rangle,\qquad
 \hat M|Oops\rangle=b|Oops\rangle
-$$
-
+```
 この式の意味は2つある。  
 1つ目は、測定 $\hat M$ を行うと、それぞれの状態に対して測定値（固有値）$a,b$ が得られること。  
 2つ目は、右辺の状態ベクトルが左辺と同じ $|Yay\rangle,|Oops\rangle$ のままであること、つまり固有状態にある限り測定で状態が変わらないこと。  
@@ -295,11 +287,10 @@ Bob「そのために一般の状態を導入する。」
 
 2つの基底状態 $|Yay\rangle, |Oops\rangle$ の混ざり具合を表すため、一般状態を
 
-$$
+```math
 |\phi\rangle=\alpha|Yay\rangle+\beta|Oops\rangle,\qquad
 \alpha,\beta\in\mathbb{R}
-$$
-
+```
 と置く。
 
 Alice「なんだかよく分かんない。」
@@ -392,36 +383,31 @@ Bob「でも規則はあるね。これを式に落とし込みたい」
 
 $\alpha,\beta$ はそれぞれの成分の重みである。  
 
-$$
+```math
 |\phi\rangle=\alpha|Yay\rangle+\beta|Oops\rangle
-$$
-
+```
 正確に書くと
 
-$$
+```math
 |\phi_n\rangle=\alpha|Yay_n\rangle+\beta|Oops_n\rangle
-$$
-
+```
 ここで **要請（ボルン則）** として、測定確率を
 
-$$
+```math
 P(a)=|\alpha|^2,\qquad P(b)=|\beta|^2
-$$
-
+```
 と置く（本章では実係数なので $|\alpha|^2=\alpha^2,\ |\beta|^2=\beta^2$）。  
 したがって規格化条件は
 
-$$
+```math
 \left|\alpha\right|^2+\left|\beta\right|^2=1
-$$
-
+```
 この仮定のもとで期待値は
 
-$$
+```math
 \langle \phi_n | \hat M_n | \phi_n \rangle
 =a\left|\alpha\right|^2+b\left|\beta\right|^2
-$$
-
+```
 と書ける。
 
 要点:

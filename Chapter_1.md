@@ -158,16 +158,14 @@ Bobは球の一点を軽く叩き、出た声を確かめる。
 Bobはノートに書いた。  
 「結果をそのまま記号にしよう。`Yay` が出た直後の状態を」
 
-$$
+```math
 |Yay\rangle
-$$
-
+```
 「`Oops` が出た直後の状態を」
 
-$$
+```math
 |Oops\rangle
-$$
-
+```
 Charlieが補足する。  
 「これは今のところ“状態ラベル”だ。あとで厳密化する」
 
@@ -185,36 +183,32 @@ Bobがうなずく。
 
 状態記号として
 
-$$
+```math
 |Yay\rangle,\quad |Oops\rangle
-$$
-
+```
 を導入する。  
 この $|\,\cdot\,\rangle$ の形をケット（ket）と呼ぶ。
 
 また、方向 $n$ を叩く測定を
 
-$$
+```math
 \hat M_n
-$$
-
+```
 と書く。添字 $n$ は「どこを叩くか」を表す。
 
 この章では、基準として $z$ 方向を選び、
 
-$$
+```math
 \hat M\equiv\hat M_z
-$$
-
+```
 と省略して書く。
 
 `Yay` / `Oops` が確定している状態は、この測定の固有状態として表せる:
 
-$$
+```math
 \hat M|Yay\rangle=a|Yay\rangle,\qquad
 \hat M|Oops\rangle=b|Oops\rangle
-$$
-
+```
 （$a,b$ は測定値を表す実数で、$a\neq b$）
 
 この式が表す実験的意味:

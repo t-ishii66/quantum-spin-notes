@@ -38,18 +38,16 @@
 
 `PHYSICS2.md` では、1個の二状態系を
 
-$$
+```math
 \mathcal{H}\cong\mathbb{C}^2
-$$
-
+```
 で表し、方向 $\mathbf{n}$  に沿った測定を
 
-$$
+```math
 \mathbf{n}\cdot\boldsymbol{\sigma}
 =
 n_x\sigma_x+n_y\sigma_y+n_z\sigma_z
-$$
-
+```
 と書いた。  
 固有値は `+1,-1` であり、観測結果はこの二値に対応していた。
 
@@ -63,46 +61,42 @@ $$
 を同時に持てる必要がある。  
 そのため量子力学では、2粒子系の状態空間を
 
-$$
+```math
 \mathcal{H}_L\otimes\mathcal{H}_R
 \cong
 \mathbb{C}^2\otimes\mathbb{C}^2
 \cong
 \mathbb{C}^4
-$$
-
+```
 というテンソル積空間で表す。
 
 `z` 基底を使えば、基底状態は
 
-$$
+```math
 |+z\rangle_L|+z\rangle_R,\quad
 |+z\rangle_L|-z\rangle_R,\quad
 |-z\rangle_L|+z\rangle_R,\quad
 |-z\rangle_L|-z\rangle_R
-$$
-
+```
 の4つである。  
 略して
 
-$$
+```math
 |++\rangle,\quad |+-\rangle,\quad |-+\rangle,\quad |--\rangle
-$$
-
+```
 と書いてもよい。
 
 ここで大事なのは、二つの粒子があるなら、状態空間は「2本のラベルの組」では終わらないという点である。  
 1粒子のときと同様に、ここでも重ね合わせが許されるので、一般状態は
 
-$$
+```math
 |\Psi\rangle
 =
 c_{++}|++\rangle
 +c_{+-}|+-\rangle
 +c_{-+}|-+\rangle
 +c_{--}|--\rangle
-$$
-
+```
 と書ける。
 
 ---
@@ -136,47 +130,42 @@ Charlieはノートに書く。
 
 もし左と右が本当に独立なら、全状態は
 
-$$
+```math
 |\psi\rangle_L\otimes|\phi\rangle_R
-$$
-
+```
 という積状態で書ける。  
 このとき左右の同時確率は、各側の確率の積で決まる。
 
 たとえば左が
 
-$$
+```math
 |\psi\rangle_L=\alpha|+\rangle_L+\beta|-\rangle_L
-$$
-
+```
 右が
 
-$$
+```math
 |\phi\rangle_R=\gamma|+\rangle_R+\delta|-\rangle_R
-$$
-
+```
 なら、
 
-$$
+```math
 |\psi\rangle_L\otimes|\phi\rangle_R
 =
 \alpha\gamma|++\rangle
 +\alpha\delta|+-\rangle
 +\beta\gamma|-+\rangle
 +\beta\delta|--\rangle
-$$
-
+```
 である。
 
 ここで係数が
 
-$$
+```math
 c_{++}=\alpha\gamma,\quad
 c_{+-}=\alpha\delta,\quad
 c_{-+}=\beta\gamma,\quad
 c_{--}=\beta\delta
-$$
-
+```
 のように因数分解できるなら、その状態は積状態である。
 
 しかし一般の4成分状態は、必ずしもこの形にはならない。  
@@ -212,10 +201,9 @@ Bobが言う。
 
 同じ向きで必ず反対が出るなら、`z` 基底だけを見る限り
 
-$$
+```math
 |+-\rangle,\qquad |-+\rangle
-$$
-
+```
 が有力に見える。  
 しかしこれらのどちらか一方を最初から持っているだけなら、`x` や `y` 方向に測定を回したときの対称性が壊れてしまう。
 
@@ -224,22 +212,20 @@ $$
 
 その候補は
 
-$$
+```math
 |\Psi^-\rangle
 =
 \frac{1}{\sqrt2}\Bigl(
 |+z\rangle_L|-z\rangle_R
 -|-z\rangle_L|+z\rangle_R
 \Bigr)
-$$
-
+```
 である。  
 略記すれば
 
-$$
+```math
 |\Psi^-\rangle=\frac{1}{\sqrt2}(|+-\rangle-|-+\rangle)
-$$
-
+```
 となる。
 
 Aliceが言う。  
@@ -252,28 +238,25 @@ Charlieがうなずく。
 
 この状態
 
-$$
+```math
 |\Psi^-\rangle=\frac{1}{\sqrt2}(|+-\rangle-|-+\rangle)
-$$
-
+```
 は、二つのスピン `1/2` の**singlet 状態**と呼ばれる。
 
 まず、これは積状態ではない。  
 もし
 
-$$
+```math
 |\Psi^-\rangle=(\alpha|+\rangle+\beta|-\rangle)\otimes(\gamma|+\rangle+\delta|-\rangle)
-$$
-
+```
 と書けるなら、
 
-$$
+```math
 \alpha\gamma=0,\qquad
 \beta\delta=0,\qquad
 \alpha\delta=\frac1{\sqrt2},\qquad
 \beta\gamma=-\frac1{\sqrt2}
-$$
-
+```
 を同時に満たさねばならないが、これは不可能である。  
 したがって $|\Psi^-\rangle$ はもつれ状態である。
 
@@ -290,10 +273,9 @@ $$
 もし本当に「どの方向も特別でない反相関」を表しているなら、`z` 以外の方向でも同様の規則が出てほしい。  
 この期待が正しいかどうかは、次の節で相関関数
 
-$$
+```math
 E(\mathbf{a},\mathbf{b})
-$$
-
+```
 を実際に計算することで確かめる。
 
 ---
@@ -303,29 +285,26 @@ $$
 ここで `PHYSICS2.md` の道具がそのまま使える。  
 左で方向 $\mathbf{a}$ を測るなら、その演算子は
 
-$$
+```math
 \mathbf{a}\cdot\boldsymbol{\sigma}\otimes I
-$$
-
+```
 である。  
 右で方向 $\mathbf{b}$ を測るなら
 
-$$
+```math
 I\otimes \mathbf{b}\cdot\boldsymbol{\sigma}
-$$
-
+```
 である。
 
 左右同時の相関を調べたいなら、結果 $\pm1$ の積の平均
 
-$$
+```math
 E(\mathbf{a},\mathbf{b})
 =
 \left\langle\Psi\middle|
 (\mathbf{a}\cdot\boldsymbol{\sigma})\otimes(\mathbf{b}\cdot\boldsymbol{\sigma})
 \middle|\Psi\right\rangle
-$$
-
+```
 を考えればよい。
 
 Aliceが聞く。  
@@ -344,10 +323,9 @@ Bobが答える。
 左の測定結果を $A_{\mathbf{a}}\in\{+1,-1\}$、右の結果を $B_{\mathbf{b}}\in\{+1,-1\}$ とする。  
 すると相関関数は
 
-$$
+```math
 E(\mathbf{a},\mathbf{b})=\langle A_{\mathbf{a}}B_{\mathbf{b}}\rangle
-$$
-
+```
 である。
 
 - いつも同じ結果なら `E=+1`
@@ -356,162 +334,144 @@ $$
 
 量子力学では、この平均は
 
-$$
+```math
 E(\mathbf{a},\mathbf{b})
 =
 \langle\Psi|
 (\mathbf{a}\cdot\boldsymbol{\sigma})\otimes(\mathbf{b}\cdot\boldsymbol{\sigma})
 |\Psi\rangle
-$$
-
+```
 で与えられる。
 
 singlet 状態 $|\Psi^-\rangle$ に対しては、結果は
 
-$$
+```math
 E(\mathbf{a},\mathbf{b})=-\mathbf{a}\cdot\mathbf{b}
-$$
-
+```
 になる。  
 この式は重要なので、少し丁寧に導いておく。
 
 まず
 
-$$
+```math
 \mathbf{a}\cdot\boldsymbol{\sigma}
 =a_x\sigma_x+a_y\sigma_y+a_z\sigma_z,
 \qquad
 \mathbf{b}\cdot\boldsymbol{\sigma}
 =b_x\sigma_x+b_y\sigma_y+b_z\sigma_z
-$$
-
+```
 だから、
 
-$$
+```math
 (\mathbf{a}\cdot\boldsymbol{\sigma})\otimes(\mathbf{b}\cdot\boldsymbol{\sigma})
 =
 \sum_{i,j\in\{x,y,z\}} a_i b_j\,(\sigma_i\otimes\sigma_j)
-$$
-
+```
 と展開できる。  
 したがって必要なのは、singlet に対する
 
-$$
+```math
 \langle\Psi^-|\sigma_i\otimes\sigma_j|\Psi^-\rangle
-$$
-
+```
 を知ることである。
 
 ここで
 
-$$
+```math
 |\Psi^-\rangle=\frac{1}{\sqrt2}(|+-\rangle-|-+\rangle)
-$$
-
+```
 を使って直接計算すると、
 
-$$
+```math
 (\sigma_z\otimes\sigma_z)|\Psi^-\rangle=-|\Psi^-\rangle
-$$
-
+```
 である。実際、
 
-$$
+```math
 \sigma_z|+\rangle=|+\rangle,\qquad
 \sigma_z|-\rangle=-|-\rangle
-$$
-
+```
 なので
 
-$$
+```math
 \begin{aligned}
 (\sigma_z\otimes\sigma_z)|+-\rangle&=-|+-\rangle,\\
 (\sigma_z\otimes\sigma_z)|-+\rangle&=-|-+\rangle
 \end{aligned}
-$$
-
+```
 となり、両方の成分に `-1` がかかる。
 
 同様に
 
-$$
+```math
 \sigma_x|+\rangle=|-\rangle,\qquad
 \sigma_x|-\rangle=|+\rangle
-$$
-
+```
 を使うと
 
-$$
+```math
 \begin{aligned}
 (\sigma_x\otimes\sigma_x)|+-\rangle&=|-+\rangle,\\
 (\sigma_x\otimes\sigma_x)|-+\rangle&=|+-\rangle
 \end{aligned}
-$$
-
+```
 だから
 
-$$
+```math
 (\sigma_x\otimes\sigma_x)|\Psi^-\rangle=-|\Psi^-\rangle
-$$
-
+```
 となる。  
 `y` についても
 
-$$
+```math
 \sigma_y|+\rangle=i|-\rangle,\qquad
 \sigma_y|-\rangle=-i|+\rangle
-$$
-
+```
 より
 
-$$
+```math
 (\sigma_y\otimes\sigma_y)|\Psi^-\rangle=-|\Psi^-\rangle
-$$
-
+```
 が成り立つ。
 
 したがって対角成分については
 
-$$
+```math
 \langle\Psi^-|\sigma_x\otimes\sigma_x|\Psi^-\rangle
 =
 \langle\Psi^-|\sigma_y\otimes\sigma_y|\Psi^-\rangle
 =
 \langle\Psi^-|\sigma_z\otimes\sigma_z|\Psi^-\rangle
 =-1
-$$
-
+```
 である。
 
 一方、混合成分は 0 になる。  
 たとえば
 
-$$
+```math
 (\sigma_x\otimes\sigma_z)|\Psi^-\rangle
 =
 -\frac{1}{\sqrt2}\Bigl(|++\rangle+|--\rangle\Bigr)
-$$
-
+```
 であり、これは $|\Psi^-\rangle$ と直交している。  
 したがって
 
-$$
+```math
 \langle\Psi^-|\sigma_x\otimes\sigma_z|\Psi^-\rangle=0
-$$
-
+```
 である。  
 他の $i\neq j$ についても同様に 0 になる。
 
 結局、
 
-$$
+```math
 \langle\Psi^-|\sigma_i\otimes\sigma_j|\Psi^-\rangle=-\delta_{ij}
-$$
-
+```
 が成り立つ。  
 これを上の展開式に戻すと
 
-$$
+```math
 \begin{aligned}
 E(\mathbf{a},\mathbf{b})
 &=
@@ -524,16 +484,14 @@ E(\mathbf{a},\mathbf{b})
 &=
 -\mathbf{a}\cdot\mathbf{b}
 \end{aligned}
-$$
-
+```
 となる。
 
 したがって二つの測定方向のなす角を $\theta$ とすれば
 
-$$
+```math
 E(\theta)=-\cos\theta
-$$
-
+```
 である。
 
 この式は重要で、次の3つを一気に含んでいる。
@@ -574,25 +532,22 @@ Bobがノートに四つの設定を書く。
 
 このとき左の答えを
 
-$$
+```math
 A_a,\ A_{a'}\in\{\pm1\}
-$$
-
+```
 右の答えを
 
-$$
+```math
 B_b,\ B_{b'}\in\{\pm1\}
-$$
-
+```
 と書ける。  
 ここで `A_a` は「左で設定 `a` を選んだときに返る結果」、`A_{a'}` は「左で設定 `a'` を選んだときに返る結果」である。  
 同様に `B_b`,`B_{b'}` は右側の結果を表す。  
 添字は“どの設定に対する答えか”を示しており、値そのものは
 
-$$
+```math
 +1=\text{Yay},\qquad -1=\text{Oops}
-$$
-
+```
 のどちらかである。
 
 したがって、`a` と `A_a` は別物である。
@@ -606,10 +561,9 @@ CHSH では、この区別が重要になる。
 
 実験で直接集計できるのは、まず4種類の平均相関である。
 
-$$
+```math
 E(a,b),\qquad E(a,b'),\qquad E(a',b),\qquad E(a',b')
-$$
-
+```
 たとえば $E(a,b)$ は、
 
 - 左で設定 `a`
@@ -622,12 +576,11 @@ $$
 各試行には、観測される前からその試行を特徴づける隠れた情報 $\lambda$ があるとしよう。  
 そのとき結果は
 
-$$
+```math
 A(a,\lambda),\ A(a',\lambda)\in\{\pm1\},
 \qquad
 B(b,\lambda),\ B(b',\lambda)\in\{\pm1\}
-$$
-
+```
 のように書ける。
 
 この記法では、たとえば $A(a,\lambda)$ は
@@ -640,26 +593,24 @@ $$
 
 この仮定のもとで、各 $\lambda$ ごとに補助量
 
-$$
+```math
 s(\lambda)
 =
 A(a,\lambda)B(b,\lambda)
 +A(a,\lambda)B(b',\lambda)
 +A(a',\lambda)B(b,\lambda)
 -A(a',\lambda)B(b',\lambda)
-$$
-
+```
 を考える。  
 これは実験で1回ごとに直接測る量ではなく、**局所隠れ変数モデルの内部で考える仮想的な量**である。  
 これを整理すると
 
-$$
+```math
 s(\lambda)
 =
 A(a,\lambda)\bigl(B(b,\lambda)+B(b',\lambda)\bigr)
 +A(a',\lambda)\bigl(B(b,\lambda)-B(b',\lambda)\bigr)
-$$
-
+```
 である。
 
 ここで $B(b,\lambda),B(b',\lambda)$ はそれぞれ $\pm1$ だから、
@@ -670,51 +621,45 @@ $$
 となり、しかもこの二つのうち片方が $\pm2$ なら、もう片方は `0` である。  
 したがって必ず
 
-$$
+```math
 |s(\lambda)|\le2
-$$
-
+```
 である。
 
 次に、$\lambda$ は各試行に埋め込まれている隠れた内部情報だと思えばよい。  
 ただし実際の試行では、毎回まったく同じ $\lambda$ が現れるとは限らない。  
 試行ごとに $\lambda$ はある分布に従ってばらついていると考えるのが自然であり、その重みを $\rho(\lambda)$ と書く。
 
-$$
+```math
 \rho(\lambda)\ge 0,\qquad
 \int d\lambda\,\rho(\lambda)=1
-$$
-
+```
 このとき $A(a,\lambda)B(b,\lambda)$ は、「その試行の隠れ変数がたまたま $\lambda$ だったなら、左で `a`、右で `b` を選んだとき結果の積がどうなるか」を表している。  
 したがって
 
-$$
+```math
 E(a,b)=\int d\lambda\,\rho(\lambda)\,A(a,\lambda)B(b,\lambda)
-$$
-
+```
 は、その積を $\lambda$ の分布で平均したもの、つまり設定 `(a,b)` に対する**平均相関**である。
   
 他の3つの相関も同様である。したがって CHSH 量
 
-$$
+```math
 S
 =
 E(a,b)+E(a,b')+E(a',b)-E(a',b')
-$$
-
+```
 は
 
-$$
+```math
 S=\int d\lambda\,\rho(\lambda)\,s(\lambda)
-$$
-
+```
 となる。  
 したがって
 
-$$
+```math
 |S|\le2
-$$
-
+```
 を得る。  
 これが CHSH 形のベル不等式である。
 
@@ -728,10 +673,9 @@ $$
 これは「どの向きを測るか」という実験者の選択が、あらかじめ粒子対に埋め込まれていた隠れ変数と不自然に相関していない、という仮定である。  
 この仮定があるからこそ
 
-$$
+```math
 E(a,b)=\int d\lambda\,\rho(\lambda)\,A(a,\lambda)B(b,\lambda)
-$$
-
+```
 のように、同じ $\rho(\lambda)$ を使って4つの相関を同時に書ける。
 
 つまり $|S|\le2$ は、**測定独立性を含む局所隠れ変数モデル**の上限である。
@@ -761,18 +705,17 @@ Charlieは分度器を回しながら言う。
 
 なので
 
-$$
+```math
 \begin{aligned}
 E(a,b)&=-\cos45^\circ=-\frac{\sqrt2}{2},\\
 E(a,b')&=-\cos45^\circ=-\frac{\sqrt2}{2},\\
 E(a',b)&=-\cos45^\circ=-\frac{\sqrt2}{2},\\
 E(a',b')&=-\cos135^\circ=+\frac{\sqrt2}{2}.
 \end{aligned}
-$$
-
+```
 したがって
 
-$$
+```math
 \begin{aligned}
 S
 &=
@@ -784,14 +727,12 @@ E(a,b)+E(a,b')+E(a',b)-E(a',b')\\
 -\frac{\sqrt2}{2}\\
 &=-2\sqrt2
 \end{aligned}
-$$
-
+```
 となり、
 
-$$
+```math
 |S|=2\sqrt2>2
-$$
-
+```
 である。
 
 Aliceが目を見開く。  
@@ -808,10 +749,9 @@ Charlieが補足する。
 
 実験で `|S|>2` が観測されたとき、否定されるのは
 
-$$
+```math
 \text{局所隠れ変数モデル}
-$$
-
+```
 である。
 
 ただし、ここで直ちに言ってよいことと、まだ言えないことを分ける必要がある。

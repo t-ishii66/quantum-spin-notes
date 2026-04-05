@@ -24,16 +24,14 @@ Bobがノートに書く。
 
 `z` 基底で
 
-$$
+```math
 |\psi\rangle=\cos\frac{\theta}{2}|Yay\rangle+e^{i\phi}\sin\frac{\theta}{2}|Oops\rangle
-$$
-
+```
 と書くと、`z` 方向の確率は
 
-$$
+```math
 P(Oops|z)=\sin^2\frac{\theta}{2}
-$$
-
+```
 で、相対位相 $\phi$ は現れない。  
 つまり、`z` 方向だけの測定では $\theta$ は見えても $\phi$ は見えない。
 
@@ -68,34 +66,30 @@ Bobが笑う。
 
 純粋状態を
 
-$$
+```math
 |\psi\rangle=\cos\frac{\theta}{2}|Yay\rangle+e^{i\phi}\sin\frac{\theta}{2}|Oops\rangle
-$$
-
+```
 とすると、期待値は
 
-$$
+```math
 \langle\sigma_z\rangle=\cos\theta,
 \quad
 \langle\sigma_x\rangle=\sin\theta\cos\phi,
 \quad
 \langle\sigma_y\rangle=\sin\theta\sin\phi
-$$
-
+```
 である。測定確率との関係は
 
-$$
+```math
 P(Yay|n)=\frac{1+\langle\sigma_n\rangle}{2}
-$$
-
+```
 だから、`x,y,z` の統計から
 
-$$
+```math
 \theta=\arccos(\langle\sigma_z\rangle),
 \qquad
 \phi=\mathrm{atan2}(\langle\sigma_y\rangle,\langle\sigma_x\rangle)
-$$
-
+```
 を再構成できる。
 
 補足: $\theta=0,\pi$（北極・南極）では $\phi$ は物理的に未定義になる。
