@@ -61,7 +61,7 @@
 
 - 固有状態
 - 射影測定
-- `|Yay\rangle`, `|Oops\rangle` の導入
+- $|Yay\rangle$, $|Oops\rangle$ の導入
 
 ---
 

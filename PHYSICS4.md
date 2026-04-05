@@ -801,10 +801,7 @@ $$
 射影測定で結果 $+$ が得られたなら、状態更新は
 
 $$
-|\psi\rangle \to |\psi'\rangle
-=
-\frac{P_+(\mathbf{n})|\psi\rangle}
-\sqrt{\langle\psi|P_+(\mathbf{n})|\psi\rangle}}
+|\psi\rangle \to |\psi'\rangle=\frac{P_+(\mathbf{n})|\psi\rangle}{ \sqrt{\langle\psi|P_+(\mathbf{n})|\psi\rangle}}
 $$
 
 で与えられる。結果として、ブロッホベクトルは
