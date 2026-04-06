@@ -207,18 +207,18 @@ R_z(\delta\phi) \approx
 
 ### 量子力学で演算子を変換するしくみ
 
-回転によって状態が変わるとする。回転前の状態を $|\psi\rangle$、回転後の状態を $|\psi'\rangle$ とすれば
+回転によって状態が変わるとする。回転前の状態を $\vert \psi\rangle$、回転後の状態を $\vert \psi'\rangle$ とすれば
 
 ```math
-|\psi'\rangle = U|\psi\rangle
+\vert \psi'\rangle = U\vert \psi\rangle
 ```
 
 である。このとき、物理量 $\hat{A}$ の期待値は回転後に
 
 ```math
-\langle\psi'|\hat{A}|\psi'\rangle
+\langle\psi'\vert \hat{A}\vert \psi'\rangle
 =
-\langle\psi|U^\dagger \hat{A}\, U|\psi\rangle
+\langle\psi\vert U^\dagger \hat{A}\, U\vert \psi\rangle
 ```
 
 となる。これは「状態を回す代わりに、演算子を $U^\dagger \hat{A}\, U$ に置き換えても同じ期待値が得られる」ということである。したがって、回転に伴う演算子の変換は
@@ -357,7 +357,7 @@ G_z = \hat{L}_z
 である。ここで、すでに示した各軸まわりの結果を並べてみる。
 
 ```math
-\begin{array}{c|ccc}
+\begin{array}{c\vert ccc}
  & \delta x & \delta y & \delta z \\
 \hline
 L_x\text{ が生成} & 0 & -z\,\delta\theta & +y\,\delta\theta \\

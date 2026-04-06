@@ -22,8 +22,8 @@
 2. **シングレット状態** → 完全に反相関する特別な2粒子状態
 3. **量子力学の予測** → Alice と Bob が異なる方向で測ったときの相関を計算する
 4. **古典的な説明の試み** → 「粒子は最初から答えを持っていた」という仮説
-5. **CHSH 不等式** → その仮説から導かれる相関の上限 $|S| \leq 2$
-6. **量子力学の破り** → 量子力学は $|S| = 2\sqrt{2}$ を予測し、上限を超える
+5. **CHSH 不等式** → その仮説から導かれる相関の上限 $\vert S\vert \leq 2$
+6. **量子力学の破り** → 量子力学は $\vert S\vert = 2\sqrt{2}$ を予測し、上限を超える
 
 ---
 
@@ -34,39 +34,39 @@
 CLAUDE_PHYSICS2.md で見たように、1粒子のスピン状態は 2 次元空間に住んでいる。$z$ 基底は
 
 ```math
-|{+z}\rangle = \begin{pmatrix}1\\0\end{pmatrix}, \qquad
-|{-z}\rangle = \begin{pmatrix}0\\1\end{pmatrix}
+\vert {+z}\rangle = \begin{pmatrix}1\\0\end{pmatrix}, \qquad
+\vert {-z}\rangle = \begin{pmatrix}0\\1\end{pmatrix}
 ```
 
-であり、任意の状態は $\alpha|{+z}\rangle + \beta|{-z}\rangle$ と書ける。
+であり、任意の状態は $\alpha\vert {+z}\rangle + \beta\vert {-z}\rangle$ と書ける。
 
 ### 2粒子を同時に記述する
 
 いま、2つのスピン 1/2 粒子がある。Alice が1番目の粒子を、Bob が2番目の粒子を持っているとする。
 
-2粒子系の状態を書くには、両方の粒子の状態を同時に指定する必要がある。たとえば「Alice の粒子が $|{+z}\rangle$ で、Bob の粒子が $|{-z}\rangle$」という状態を
+2粒子系の状態を書くには、両方の粒子の状態を同時に指定する必要がある。たとえば「Alice の粒子が $\vert {+z}\rangle$ で、Bob の粒子が $\vert {-z}\rangle$」という状態を
 
 ```math
-|{+z}\rangle \otimes |{-z}\rangle
+\vert {+z}\rangle \otimes \vert {-z}\rangle
 ```
 
 と書く。$\otimes$ は「テンソル積」と呼ばれるが、ここでは「かつ」と読めばよい。表記を短くするために
 
 ```math
-|{+z}\rangle|{-z}\rangle \quad \text{あるいは} \quad |{+z},{-z}\rangle
+\vert {+z}\rangle\vert {-z}\rangle \quad \text{あるいは} \quad \vert {+z},{-z}\rangle
 ```
 
 とも書く。
 
 ### 基底は4つ
 
-各粒子に $|{+z}\rangle$ と $|{-z}\rangle$ の2通りがあるので、2粒子系の基底は $2 \times 2 = 4$ 個になる。
+各粒子に $\vert {+z}\rangle$ と $\vert {-z}\rangle$ の2通りがあるので、2粒子系の基底は $2 \times 2 = 4$ 個になる。
 
 ```math
-|{+z}\rangle|{+z}\rangle, \qquad
-|{+z}\rangle|{-z}\rangle, \qquad
-|{-z}\rangle|{+z}\rangle, \qquad
-|{-z}\rangle|{-z}\rangle
+\vert {+z}\rangle\vert {+z}\rangle, \qquad
+\vert {+z}\rangle\vert {-z}\rangle, \qquad
+\vert {-z}\rangle\vert {+z}\rangle, \qquad
+\vert {-z}\rangle\vert {-z}\rangle
 ```
 
 任意の2粒子状態は、この4つの線形結合で書ける。
@@ -76,7 +76,7 @@ CLAUDE_PHYSICS2.md で見たように、1粒子のスピン状態は 2 次元空
 もし2粒子の状態が
 
 ```math
-|\Psi\rangle = |\psi\rangle_A \otimes |\phi\rangle_B
+\vert \Psi\rangle = \vert \psi\rangle_A \otimes \vert \phi\rangle_B
 ```
 
 のように「Alice の状態」と「Bob の状態」の積に分解できるなら、これを**積状態**と呼ぶ。積状態では、Alice と Bob の粒子はそれぞれ独立な状態を持っている。
@@ -84,10 +84,10 @@ CLAUDE_PHYSICS2.md で見たように、1粒子のスピン状態は 2 次元空
 しかし、4次元空間には積に分解できない状態も存在する。たとえば
 
 ```math
-\frac{1}{\sqrt{2}}\bigl(|{+z}\rangle|{-z}\rangle - |{-z}\rangle|{+z}\rangle\bigr)
+\frac{1}{\sqrt{2}}\bigl(\vert {+z}\rangle\vert {-z}\rangle - \vert {-z}\rangle\vert {+z}\rangle\bigr)
 ```
 
-は、どのような $|\psi\rangle_A$ と $|\phi\rangle_B$ を持ってきても積の形に書けない。このような状態を**もつれ状態（エンタングル状態）**と呼ぶ。
+は、どのような $\vert \psi\rangle_A$ と $\vert \phi\rangle_B$ を持ってきても積の形に書けない。このような状態を**もつれ状態（エンタングル状態）**と呼ぶ。
 
 ---
 
@@ -98,7 +98,7 @@ CLAUDE_PHYSICS2.md で見たように、1粒子のスピン状態は 2 次元空
 2粒子のもつれ状態の中で、最も重要なものの一つが**シングレット状態**である。
 
 ```math
-|\Psi^-\rangle = \frac{1}{\sqrt{2}}\bigl(|{+z}\rangle|{-z}\rangle - |{-z}\rangle|{+z}\rangle\bigr)
+\vert \Psi^-\rangle = \frac{1}{\sqrt{2}}\bigl(\vert {+z}\rangle\vert {-z}\rangle - \vert {-z}\rangle\vert {+z}\rangle\bigr)
 ```
 
 ここで左のケットが Alice の粒子、右のケットが Bob の粒子である。
@@ -109,7 +109,7 @@ CLAUDE_PHYSICS2.md で見たように、1粒子のスピン状態は 2 次元空
 
 Alice と Bob が両方とも $z$ 方向で測定したとき、何が起こるかを見る。
 
-$|\Psi^-\rangle$ の第1項 $|{+z}\rangle|{-z}\rangle$ は「Alice が $+1$、Bob が $-1$」を返し、第2項 $|{-z}\rangle|{+z}\rangle$ は「Alice が $-1$、Bob が $+1$」を返す。どちらの項でも、Alice と Bob の結果は逆である。
+$\vert \Psi^-\rangle$ の第1項 $\vert {+z}\rangle\vert {-z}\rangle$ は「Alice が $+1$、Bob が $-1$」を返し、第2項 $\vert {-z}\rangle\vert {+z}\rangle$ は「Alice が $-1$、Bob が $+1$」を返す。どちらの項でも、Alice と Bob の結果は逆である。
 
 したがって、シングレット状態では $z$ 方向の測定に対して**完全な反相関**がある。Alice が $+1$ なら Bob は必ず $-1$、Alice が $-1$ なら Bob は必ず $+1$ である。
 
@@ -117,9 +117,9 @@ $|\Psi^-\rangle$ の第1項 $|{+z}\rangle|{-z}\rangle$ は「Alice が $+1$、Bo
 
 実は、シングレット状態には驚くべき性質がある。上の完全反相関は $z$ 方向に限らず、**任意の方向で成り立つ**。
 
-これを確かめるには、任意の方向 $\mathbf{a}$ の固有状態で $|\Psi^-\rangle$ を書き直してみればよい。$\mathbf{a}$ が $z$ 軸から角度 $\theta_a$ の方向にあるとする（$xz$ 平面内とする）。
+これを確かめるには、任意の方向 $\mathbf{a}$ の固有状態で $\vert \Psi^-\rangle$ を書き直してみればよい。$\mathbf{a}$ が $z$ 軸から角度 $\theta_a$ の方向にあるとする（$xz$ 平面内とする）。
 
-方向 $\mathbf{a}$ の固有状態 $|{+a}\rangle$ は、$|{+z}\rangle$ を $y$ 軸まわりに $\theta_a$ だけ回転させたものである。CLAUDE_PHYSICS3.md の回転行列
+方向 $\mathbf{a}$ の固有状態 $\vert {+a}\rangle$ は、$\vert {+z}\rangle$ を $y$ 軸まわりに $\theta_a$ だけ回転させたものである。CLAUDE_PHYSICS3.md の回転行列
 
 ```math
 U(\theta, \mathbf{n}) = \cos\frac{\theta}{2}\,I - i\sin\frac{\theta}{2}\,\mathbf{n}\cdot\boldsymbol{\sigma}
@@ -143,10 +143,10 @@ $-i \cdot (-i) = i^2 = -1$ と $-i \cdot i = -i^2 = 1$ に注意すると
 \end{pmatrix}
 ```
 
-これを $|{+z}\rangle$ に作用させる。
+これを $\vert {+z}\rangle$ に作用させる。
 
 ```math
-|{+a}\rangle = U(\theta_a, \hat{y})\,|{+z}\rangle
+\vert {+a}\rangle = U(\theta_a, \hat{y})\,\vert {+z}\rangle
 = \begin{pmatrix}
 \cos\frac{\theta_a}{2} & -\sin\frac{\theta_a}{2} \\[4pt]
 \sin\frac{\theta_a}{2} & \cos\frac{\theta_a}{2}
@@ -158,13 +158,13 @@ $-i \cdot (-i) = i^2 = -1$ と $-i \cdot i = -i^2 = 1$ に注意すると
 すなわち
 
 ```math
-|{+a}\rangle = \cos\frac{\theta_a}{2}\,|{+z}\rangle + \sin\frac{\theta_a}{2}\,|{-z}\rangle
+\vert {+a}\rangle = \cos\frac{\theta_a}{2}\,\vert {+z}\rangle + \sin\frac{\theta_a}{2}\,\vert {-z}\rangle
 ```
 
-同様に $|{-a}\rangle = U(\theta_a, \hat{y})\,|{-z}\rangle$ は
+同様に $\vert {-a}\rangle = U(\theta_a, \hat{y})\,\vert {-z}\rangle$ は
 
 ```math
-|{-a}\rangle
+\vert {-a}\rangle
 = \begin{pmatrix}
 \cos\frac{\theta_a}{2} & -\sin\frac{\theta_a}{2} \\[4pt]
 \sin\frac{\theta_a}{2} & \cos\frac{\theta_a}{2}
@@ -176,56 +176,56 @@ $-i \cdot (-i) = i^2 = -1$ と $-i \cdot i = -i^2 = 1$ に注意すると
 すなわち
 
 ```math
-|{-a}\rangle = -\sin\frac{\theta_a}{2}\,|{+z}\rangle + \cos\frac{\theta_a}{2}\,|{-z}\rangle
+\vert {-a}\rangle = -\sin\frac{\theta_a}{2}\,\vert {+z}\rangle + \cos\frac{\theta_a}{2}\,\vert {-z}\rangle
 ```
 
 である。空間的には $\theta_a$ だけ回転しているが、状態ベクトルの係数には $\theta_a/2$ が現れる。これは CLAUDE_PHYSICS3.md で見たスピノルの半角構造そのものである。$c = \cos(\theta_a/2)$, $s = \sin(\theta_a/2)$ と略記すると
 
 ```math
-|{+a}\rangle|{-a}\rangle
-= (c|{+z}\rangle + s|{-z}\rangle)(-s|{+z}\rangle + c|{-z}\rangle)
+\vert {+a}\rangle\vert {-a}\rangle
+= (c\vert {+z}\rangle + s\vert {-z}\rangle)(-s\vert {+z}\rangle + c\vert {-z}\rangle)
 ```
 
 ```math
-= -cs|{+z}\rangle|{+z}\rangle + c^2|{+z}\rangle|{-z}\rangle - s^2|{-z}\rangle|{+z}\rangle + sc|{-z}\rangle|{-z}\rangle
+= -cs\vert {+z}\rangle\vert {+z}\rangle + c^2\vert {+z}\rangle\vert {-z}\rangle - s^2\vert {-z}\rangle\vert {+z}\rangle + sc\vert {-z}\rangle\vert {-z}\rangle
 ```
 
 ```math
-|{-a}\rangle|{+a}\rangle
-= (-s|{+z}\rangle + c|{-z}\rangle)(c|{+z}\rangle + s|{-z}\rangle)
+\vert {-a}\rangle\vert {+a}\rangle
+= (-s\vert {+z}\rangle + c\vert {-z}\rangle)(c\vert {+z}\rangle + s\vert {-z}\rangle)
 ```
 
 ```math
-= -sc|{+z}\rangle|{+z}\rangle - s^2|{+z}\rangle|{-z}\rangle + c^2|{-z}\rangle|{+z}\rangle + cs|{-z}\rangle|{-z}\rangle
+= -sc\vert {+z}\rangle\vert {+z}\rangle - s^2\vert {+z}\rangle\vert {-z}\rangle + c^2\vert {-z}\rangle\vert {+z}\rangle + cs\vert {-z}\rangle\vert {-z}\rangle
 ```
 
 差を取る。
 
 ```math
-|{+a}\rangle|{-a}\rangle - |{-a}\rangle|{+a}\rangle
+\vert {+a}\rangle\vert {-a}\rangle - \vert {-a}\rangle\vert {+a}\rangle
 ```
 
-$|{+z}\rangle|{+z}\rangle$ の係数：$-cs - (-sc) = 0$
+$\vert {+z}\rangle\vert {+z}\rangle$ の係数：$-cs - (-sc) = 0$
 
-$|{+z}\rangle|{-z}\rangle$ の係数：$c^2 - (-s^2) = c^2 + s^2 = 1$
+$\vert {+z}\rangle\vert {-z}\rangle$ の係数：$c^2 - (-s^2) = c^2 + s^2 = 1$
 
-$|{-z}\rangle|{+z}\rangle$ の係数：$-s^2 - c^2 = -(s^2 + c^2) = -1$
+$\vert {-z}\rangle\vert {+z}\rangle$ の係数：$-s^2 - c^2 = -(s^2 + c^2) = -1$
 
-$|{-z}\rangle|{-z}\rangle$ の係数：$sc - cs = 0$
+$\vert {-z}\rangle\vert {-z}\rangle$ の係数：$sc - cs = 0$
 
 したがって
 
 ```math
-|{+a}\rangle|{-a}\rangle - |{-a}\rangle|{+a}\rangle
-= |{+z}\rangle|{-z}\rangle - |{-z}\rangle|{+z}\rangle
+\vert {+a}\rangle\vert {-a}\rangle - \vert {-a}\rangle\vert {+a}\rangle
+= \vert {+z}\rangle\vert {-z}\rangle - \vert {-z}\rangle\vert {+z}\rangle
 ```
 
 両辺を $\sqrt{2}$ で割ると
 
 ```math
 \boxed{
-\frac{1}{\sqrt{2}}\bigl(|{+a}\rangle|{-a}\rangle - |{-a}\rangle|{+a}\rangle\bigr)
-= |\Psi^-\rangle
+\frac{1}{\sqrt{2}}\bigl(\vert {+a}\rangle\vert {-a}\rangle - \vert {-a}\rangle\vert {+a}\rangle\bigr)
+= \vert \Psi^-\rangle
 }
 ```
 
@@ -233,8 +233,8 @@ $|{-z}\rangle|{-z}\rangle$ の係数：$sc - cs = 0$
 
 この結果から、Alice がどの方向 $\mathbf{a}$ で測定しても、Bob の粒子は Alice と反対の状態に決まる。
 
-- Alice が $\mathbf{a}$ 方向で $+1$ を得る → Bob の粒子は $|{-a}\rangle$ になる
-- Alice が $\mathbf{a}$ 方向で $-1$ を得る → Bob の粒子は $|{+a}\rangle$ になる
+- Alice が $\mathbf{a}$ 方向で $+1$ を得る → Bob の粒子は $\vert {-a}\rangle$ になる
+- Alice が $\mathbf{a}$ 方向で $-1$ を得る → Bob の粒子は $\vert {+a}\rangle$ になる
 
 いずれも確率 $1/2$ である。
 
@@ -264,29 +264,29 @@ E(\mathbf{a}, \mathbf{b}) = \langle A \cdot B \rangle
 
 回転不変性から、Alice が $\mathbf{a}$ 方向で測定したとき
 
-- 結果が $+1$（確率 $1/2$）→ Bob の粒子は $|{-a}\rangle$
-- 結果が $-1$（確率 $1/2$）→ Bob の粒子は $|{+a}\rangle$
+- 結果が $+1$（確率 $1/2$）→ Bob の粒子は $\vert {-a}\rangle$
+- 結果が $-1$（確率 $1/2$）→ Bob の粒子は $\vert {+a}\rangle$
 
 Bob は方向 $\mathbf{b}$ で測定する。$\mathbf{a}$ と $\mathbf{b}$ の間の角度を $\theta$ とする。
 
-**Alice が $+1$ のとき（Bob の粒子は $|{-a}\rangle$）：**
+**Alice が $+1$ のとき（Bob の粒子は $\vert {-a}\rangle$）：**
 
-Bob が $+1$ を得る確率は $|\langle{+b}|{-a}\rangle|^2$、$-1$ を得る確率は $|\langle{-b}|{-a}\rangle|^2$ である。
+Bob が $+1$ を得る確率は $\vert \langle{+b}\vert {-a}\rangle\vert ^2$、$-1$ を得る確率は $\vert \langle{-b}\vert {-a}\rangle\vert ^2$ である。
 
 $\mathbf{a}$ と $\mathbf{b}$ が同じ $xz$ 平面内にあるとし、$z$ 軸からの角度をそれぞれ $\theta_a$, $\theta_b$ とする（$\theta = \theta_b - \theta_a$）。CLAUDE_PHYSICS3.md の回転から
 
 ```math
-|{+b}\rangle = \cos\frac{\theta_b}{2}|{+z}\rangle + \sin\frac{\theta_b}{2}|{-z}\rangle
+\vert {+b}\rangle = \cos\frac{\theta_b}{2}\vert {+z}\rangle + \sin\frac{\theta_b}{2}\vert {-z}\rangle
 ```
 
 ```math
-|{-a}\rangle = -\sin\frac{\theta_a}{2}|{+z}\rangle + \cos\frac{\theta_a}{2}|{-z}\rangle
+\vert {-a}\rangle = -\sin\frac{\theta_a}{2}\vert {+z}\rangle + \cos\frac{\theta_a}{2}\vert {-z}\rangle
 ```
 
 内積を計算する。
 
 ```math
-\langle{+b}|{-a}\rangle
+\langle{+b}\vert {-a}\rangle
 = -\cos\frac{\theta_b}{2}\sin\frac{\theta_a}{2} + \sin\frac{\theta_b}{2}\cos\frac{\theta_a}{2}
 = \sin\frac{\theta_b - \theta_a}{2}
 = \sin\frac{\theta}{2}
@@ -297,7 +297,7 @@ $\mathbf{a}$ と $\mathbf{b}$ が同じ $xz$ 平面内にあるとし、$z$ 軸�
 同様に
 
 ```math
-\langle{-b}|{-a}\rangle
+\langle{-b}\vert {-a}\rangle
 = \sin\frac{\theta_b}{2}\sin\frac{\theta_a}{2} + \cos\frac{\theta_b}{2}\cos\frac{\theta_a}{2}
 = \cos\frac{\theta_b - \theta_a}{2}
 = \cos\frac{\theta}{2}
@@ -310,12 +310,12 @@ P(B = +1 \mid A = +1) = \sin^2\frac{\theta}{2}, \qquad
 P(B = -1 \mid A = +1) = \cos^2\frac{\theta}{2}
 ```
 
-**Alice が $-1$ のとき（Bob の粒子は $|{+a}\rangle$）：**
+**Alice が $-1$ のとき（Bob の粒子は $\vert {+a}\rangle$）：**
 
 同じ計算を繰り返す。
 
 ```math
-\langle{+b}|{+a}\rangle
+\langle{+b}\vert {+a}\rangle
 = \cos\frac{\theta_b}{2}\cos\frac{\theta_a}{2} + \sin\frac{\theta_b}{2}\sin\frac{\theta_a}{2}
 = \cos\frac{\theta}{2}
 ```
@@ -372,7 +372,7 @@ E(\mathbf{a}, \mathbf{b}) = -\cos\theta = -\mathbf{a}\cdot\mathbf{b}
 
 ここで立ち止まって考える。
 
-Alice が方向 $\mathbf{a}$ で測定すると、Bob の粒子は即座に $|{-a}\rangle$（または $|{+a}\rangle$）に決まる。Alice と Bob がどれほど離れていても、である。
+Alice が方向 $\mathbf{a}$ で測定すると、Bob の粒子は即座に $\vert {-a}\rangle$（または $\vert {+a}\rangle$）に決まる。Alice と Bob がどれほど離れていても、である。
 
 しかし Alice の測定が Bob の粒子に物理的な影響を与えるわけではない（特殊相対論により、光より速い影響伝達はない）。
 
@@ -424,7 +424,7 @@ Alice は $\mathbf{a}$ と $\mathbf{a}'$ の2方向のどちらかを選び、Bo
 S = E(\mathbf{a}, \mathbf{b}) - E(\mathbf{a}, \mathbf{b}') + E(\mathbf{a}', \mathbf{b}) + E(\mathbf{a}', \mathbf{b}')
 ```
 
-### 隠れた変数なら $|S| \leq 2$
+### 隠れた変数なら $\vert S\vert \leq 2$
 
 隠れた変数の仮説のもとでは、各粒子ペア（隠れた変数 $\lambda$）に対して4つの値
 
@@ -468,14 +468,14 @@ s = A \cdot (\pm 2) + A' \cdot 0 = \pm 2
 どちらの場合も $s(\lambda) = \pm 2$ であるから
 
 ```math
-|s(\lambda)| = 2
+\vert s(\lambda)\vert = 2
 ```
 
 が各粒子ペアで成り立つ。これを $\lambda$ について平均すると
 
 ```math
-|S| = \left|\int s(\lambda)\,\rho(\lambda)\,d\lambda\right|
-\leq \int |s(\lambda)|\,\rho(\lambda)\,d\lambda
+\vert S\vert = \left\vert \int s(\lambda)\,\rho(\lambda)\,d\lambda\right\vert 
+\leq \int \vert s(\lambda)\vert \,\rho(\lambda)\,d\lambda
 = 2\int \rho(\lambda)\,d\lambda
 = 2
 ```
@@ -483,7 +483,7 @@ s = A \cdot (\pm 2) + A' \cdot 0 = \pm 2
 したがって
 
 ```math
-\boxed{|S| \leq 2} \qquad \text{（CHSH 不等式）}
+\boxed{\vert S\vert \leq 2} \qquad \text{（CHSH 不等式）}
 ```
 
 これは隠れた変数の仮説（局所性 + 実在性）だけから導かれる不等式であり、量子力学の法則を一切使っていない。
@@ -494,7 +494,7 @@ s = A \cdot (\pm 2) + A' \cdot 0 = \pm 2
 
 ### 方向の選択
 
-第3段階で $E(\mathbf{a}, \mathbf{b}) = -\cos\theta$ を導いた。この公式を使って $S$ を計算し、$|S| > 2$ になる方向を探す。
+第3段階で $E(\mathbf{a}, \mathbf{b}) = -\cos\theta$ を導いた。この公式を使って $S$ を計算し、$\vert S\vert > 2$ になる方向を探す。
 
 4方向をすべて $xz$ 平面内に取り、$z$ 軸からの角度で指定する。
 
@@ -556,7 +556,7 @@ S = E(\mathbf{a}, \mathbf{b}) - E(\mathbf{a}, \mathbf{b}') + E(\mathbf{a}', \mat
 したがって
 
 ```math
-\boxed{|S| = 2\sqrt{2} \approx 2.83}
+\boxed{\vert S\vert = 2\sqrt{2} \approx 2.83}
 ```
 
 これは CHSH 不等式の上限 $2$ を明確に超えている。
@@ -574,15 +574,15 @@ CHSH 不等式は「各粒子がすべての方向に対する答えを事前に
 
 ### 実験
 
-この予測は実験で繰り返し検証されている。光子の偏光や原子のスピンを使った実験で、量子力学の予測 $|S| = 2\sqrt{2}$ に一致する結果が得られており、CHSH 不等式 $|S| \leq 2$ は破れている。
+この予測は実験で繰り返し検証されている。光子の偏光や原子のスピンを使った実験で、量子力学の予測 $\vert S\vert = 2\sqrt{2}$ に一致する結果が得られており、CHSH 不等式 $\vert S\vert \leq 2$ は破れている。
 
 ---
 
 ## 補足：$2\sqrt{2}$ は量子力学の上限でもある
 
-隠れた変数では $|S| \leq 2$。量子力学では $|S| = 2\sqrt{2}$。では、$|S|$ はどこまで大きくなりうるか。
+隠れた変数では $\vert S\vert \leq 2$。量子力学では $\vert S\vert = 2\sqrt{2}$。では、$\vert S\vert $ はどこまで大きくなりうるか。
 
-$A, B = \pm 1$ の4つの相関を自由に選べるなら、$S$ の式の定義から最大値は $|S| = 4$ になりうる（4つの相関がすべて $\pm 1$ で揃えば）。
+$A, B = \pm 1$ の4つの相関を自由に選べるなら、$S$ の式の定義から最大値は $\vert S\vert = 4$ になりうる（4つの相関がすべて $\pm 1$ で揃えば）。
 
 しかし量子力学ではこの $4$ に達することはなく、上限は $2\sqrt{2}$ である（Tsirelson の限界）。
 

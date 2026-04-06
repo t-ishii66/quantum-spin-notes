@@ -511,18 +511,18 @@ e^{-i\theta/2} & 0 \\
 \end{pmatrix}
 ```
 
-$|{+z}\rangle$ と $|{-z}\rangle$ にそれぞれ逆符号の位相がつく。これだけでは「回転」のイメージが湧きにくいので、具体的な状態に作用させてみよう。
+$\vert {+z}\rangle$ と $\vert {-z}\rangle$ にそれぞれ逆符号の位相がつく。これだけでは「回転」のイメージが湧きにくいので、具体的な状態に作用させてみよう。
 
-$|{+x}\rangle$ は CLAUDE_PHYSICS2.md で導いたように
+$\vert {+x}\rangle$ は CLAUDE_PHYSICS2.md で導いたように
 
 ```math
-|{+x}\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}
+\vert {+x}\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}
 ```
 
 である。これにブロッホ球上で赤道上（$x$ 方向）の状態だった。$U(\theta, \hat{z})$ を作用させると
 
 ```math
-U(\theta, \hat{z})\,|{+x}\rangle
+U(\theta, \hat{z})\,\vert {+x}\rangle
 = \begin{pmatrix}e^{-i\theta/2} & 0 \\ 0 & e^{+i\theta/2}\end{pmatrix}
 \frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}
 = \frac{1}{\sqrt{2}}\begin{pmatrix}e^{-i\theta/2}\\e^{+i\theta/2}\end{pmatrix}
@@ -543,18 +543,18 @@ U(\theta, \hat{z})\,|{+x}\rangle
 が得られる。CLAUDE_PHYSICS2.md で見たように、この形は
 
 ```math
-\frac{1}{\sqrt{2}}\bigl(|{+z}\rangle + e^{i\phi}|{-z}\rangle\bigr)
+\frac{1}{\sqrt{2}}\bigl(\vert {+z}\rangle + e^{i\phi}\vert {-z}\rangle\bigr)
 ```
 
-の赤道状態であり、$\phi$ は赤道上の方位角だった。$\phi = 0$ が $|{+x}\rangle$、$\phi = \pi/2$ が $|{+y}\rangle$ だった。
+の赤道状態であり、$\phi$ は赤道上の方位角だった。$\phi = 0$ が $\vert {+x}\rangle$、$\phi = \pi/2$ が $\vert {+y}\rangle$ だった。
 
-上の結果では $\phi = \theta$ である。つまり、もとの $|{+x}\rangle$（方位角 $0$）がブロッホ球の赤道上で方位角 $\theta$ の位置に移った。これはまさに $z$ 軸まわりに角度 $\theta$ だけ回転したことを意味する。
+上の結果では $\phi = \theta$ である。つまり、もとの $\vert {+x}\rangle$（方位角 $0$）がブロッホ球の赤道上で方位角 $\theta$ の位置に移った。これはまさに $z$ 軸まわりに角度 $\theta$ だけ回転したことを意味する。
 
-一方、$|{+z}\rangle$（北極）と $|{-z}\rangle$（南極）に作用させると
+一方、$\vert {+z}\rangle$（北極）と $\vert {-z}\rangle$（南極）に作用させると
 
 ```math
-U(\theta, \hat{z})\,|{+z}\rangle = e^{-i\theta/2}|{+z}\rangle, \qquad
-U(\theta, \hat{z})\,|{-z}\rangle = e^{+i\theta/2}|{-z}\rangle
+U(\theta, \hat{z})\,\vert {+z}\rangle = e^{-i\theta/2}\vert {+z}\rangle, \qquad
+U(\theta, \hat{z})\,\vert {-z}\rangle = e^{+i\theta/2}\vert {-z}\rangle
 ```
 
 どちらも全体位相が変わるだけで、ブロッホ球上では動かない。$z$ 軸まわりの回転で北極と南極が動かないのは当然である。
@@ -572,17 +572,17 @@ U(\pi, \hat{x})
 = \begin{pmatrix}0&-i\\-i&0\end{pmatrix}
 ```
 
-これを $|{+z}\rangle$ に作用させると
+これを $\vert {+z}\rangle$ に作用させると
 
 ```math
-U(\pi, \hat{x})|{+z}\rangle
+U(\pi, \hat{x})\vert {+z}\rangle
 = \begin{pmatrix}0&-i\\-i&0\end{pmatrix}\begin{pmatrix}1\\0\end{pmatrix}
 = \begin{pmatrix}0\\-i\end{pmatrix}
 = -i\begin{pmatrix}0\\1\end{pmatrix}
-= -i\,|{-z}\rangle
+= -i\,\vert {-z}\rangle
 ```
 
-全体位相 $-i$ を除けば $|{-z}\rangle$ になっている。$x$ 軸まわりの 180 度回転で、北極が南極に移る。ブロッホ球の絵で考えれば当然の結果である。
+全体位相 $-i$ を除けば $\vert {-z}\rangle$ になっている。$x$ 軸まわりの 180 度回転で、北極が南極に移る。ブロッホ球の絵で考えれば当然の結果である。
 
 ---
 
@@ -590,7 +590,7 @@ U(\pi, \hat{x})|{+z}\rangle
 
 ### 問いの設定
 
-いま、スピン 1/2 の粒子が状態 $|\psi\rangle$ にあり、ブロッホ球上のある点を指しているとする。
+いま、スピン 1/2 の粒子が状態 $\vert \psi\rangle$ にあり、ブロッホ球上のある点を指しているとする。
 
 この粒子を**古典的に** $\theta$ だけ回転させたとする。たとえばブロッホ球そのものを手で $\theta$ だけ回すようなイメージである。
 
@@ -606,7 +606,7 @@ $z$ 軸まわりに角度 $\theta$ だけ回転させる。例1で見たよう�
 U(\theta, \hat{z}) = \begin{pmatrix}e^{-i\theta/2} & 0 \\ 0 & e^{+i\theta/2}\end{pmatrix}
 ```
 
-である。初期状態を $|{+x}\rangle$（ブロッホ球の赤道上、方位角 $\phi = 0$）とする。
+である。初期状態を $\vert {+x}\rangle$（ブロッホ球の赤道上、方位角 $\phi = 0$）とする。
 
 例1で計算したように、回転後の状態は（全体位相を除くと）
 
@@ -616,10 +616,10 @@ U(\theta, \hat{z}) = \begin{pmatrix}e^{-i\theta/2} & 0 \\ 0 & e^{+i\theta/2}\end
 
 であり、方位角が $0 \to \theta$ に移った。つまり**ブロッホベクトルは $\theta$ だけ動いている**。$\theta/2$ ではない。
 
-もう一例。初期状態を $|{+y}\rangle$（方位角 $\phi = \pi/2$）にする。
+もう一例。初期状態を $\vert {+y}\rangle$（方位角 $\phi = \pi/2$）にする。
 
 ```math
-U(\theta, \hat{z})\,|{+y}\rangle
+U(\theta, \hat{z})\,\vert {+y}\rangle
 = \begin{pmatrix}e^{-i\theta/2} & 0 \\ 0 & e^{+i\theta/2}\end{pmatrix}
 \frac{1}{\sqrt{2}}\begin{pmatrix}1\\i\end{pmatrix}
 = \frac{1}{\sqrt{2}}\begin{pmatrix}e^{-i\theta/2}\\i\,e^{+i\theta/2}\end{pmatrix}
@@ -641,7 +641,7 @@ $i = e^{i\pi/2}$ なので $i\,e^{i\theta} = e^{i(\theta + \pi/2)}$。したが�
 
 ### なぜ $\theta/2$ ではなく $\theta$ なのか
 
-状態ベクトルの中には確かに $\theta/2$ が入っている。$|{+z}\rangle$ 成分には $e^{-i\theta/2}$、$|{-z}\rangle$ 成分には $e^{+i\theta/2}$ がかかる。
+状態ベクトルの中には確かに $\theta/2$ が入っている。$\vert {+z}\rangle$ 成分には $e^{-i\theta/2}$、$\vert {-z}\rangle$ 成分には $e^{+i\theta/2}$ がかかる。
 
 しかしブロッホ球上の方位角を決めるのは、2成分の**相対位相**である。
 
@@ -657,17 +657,17 @@ $+\theta/2$ と $-\theta/2$ の差は $\theta$ になる。2成分に逆符号�
 
 $z$ 軸まわりの回転について赤道上の状態で確かめたが、これは一般の状態でも同じである。
 
-一般の状態 $|\psi\rangle = \cos(\alpha/2)|{+z}\rangle + e^{i\phi}\sin(\alpha/2)|{-z}\rangle$（ブロッホ球の極角 $\alpha$、方位角 $\phi$）に $U(\theta, \hat{z})$ を作用させると
+一般の状態 $\vert \psi\rangle = \cos(\alpha/2)\vert {+z}\rangle + e^{i\phi}\sin(\alpha/2)\vert {-z}\rangle$（ブロッホ球の極角 $\alpha$、方位角 $\phi$）に $U(\theta, \hat{z})$ を作用させると
 
 ```math
-U(\theta, \hat{z})|\psi\rangle
-= e^{-i\theta/2}\cos\frac{\alpha}{2}|{+z}\rangle + e^{i(\phi+\theta/2)}\sin\frac{\alpha}{2}|{-z}\rangle
+U(\theta, \hat{z})\vert \psi\rangle
+= e^{-i\theta/2}\cos\frac{\alpha}{2}\vert {+z}\rangle + e^{i(\phi+\theta/2)}\sin\frac{\alpha}{2}\vert {-z}\rangle
 ```
 
 全体位相 $e^{-i\theta/2}$ を括り出すと
 
 ```math
-= e^{-i\theta/2}\left(\cos\frac{\alpha}{2}|{+z}\rangle + e^{i(\phi+\theta)}\sin\frac{\alpha}{2}|{-z}\rangle\right)
+= e^{-i\theta/2}\left(\cos\frac{\alpha}{2}\vert {+z}\rangle + e^{i(\phi+\theta)}\sin\frac{\alpha}{2}\vert {-z}\rangle\right)
 ```
 
 極角 $\alpha$ は変わらず、方位角が $\phi \to \phi + \theta$ に変わった。$z$ 軸まわりに $\theta$ だけ回転している。
@@ -679,7 +679,7 @@ U(\theta, \hat{z})|\psi\rangle
 - **状態ベクトル**（スピノル）は $\theta/2$ の位相変化を受ける
 - **ブロッホベクトル**（測定統計）は $\theta$ だけ回転する
 
-この二重構造は、状態ベクトルからブロッホベクトルへの対応が「2対1」であることから来ている。$|\psi\rangle$ と $-|\psi\rangle$ はブロッホ球上で同じ点を指す。状態ベクトルの空間（SU(2)）は、ブロッホベクトルの空間（回転群 SO(3)）の**二重被覆**になっている。
+この二重構造は、状態ベクトルからブロッホベクトルへの対応が「2対1」であることから来ている。$\vert \psi\rangle$ と $-\vert \psi\rangle$ はブロッホ球上で同じ点を指す。状態ベクトルの空間（SU(2)）は、ブロッホベクトルの空間（回転群 SO(3)）の**二重被覆**になっている。
 
 したがって、答えは明確である。
 
@@ -703,7 +703,7 @@ U(2\pi,\mathbf{n})
 つまり、どの軸まわりでも 360 度回転すると
 
 ```math
-|\psi\rangle \to -|\psi\rangle
+\vert \psi\rangle \to -\vert \psi\rangle
 ```
 
 になる。状態ベクトルは元に戻らず、**符号が反転する**。
@@ -719,7 +719,7 @@ U(4\pi,\mathbf{n})
 = I
 ```
 
-720 度回転して初めて $|\psi\rangle \to |\psi\rangle$ に戻る。
+720 度回転して初めて $\vert \psi\rangle \to \vert \psi\rangle$ に戻る。
 
 ### なぜ 360 度で戻らないのか
 
@@ -734,7 +734,7 @@ U(4\pi,\mathbf{n})
 
 ### 観測にかかるか
 
-$|\psi\rangle$ と $-|\psi\rangle$ は、単独の測定では区別できない。確率は $|\langle\phi|\psi\rangle|^2$ で計算され、全体位相 $-1$ は二乗で消えるからである。
+$\vert \psi\rangle$ と $-\vert \psi\rangle$ は、単独の測定では区別できない。確率は $\vert \langle\phi\vert \psi\rangle\vert ^2$ で計算され、全体位相 $-1$ は二乗で消えるからである。
 
 しかし、ある粒子のスピンを2つの経路に分け、片方だけを 360 度回転してから再び合流させると、$-1$ の符号差が**干渉**として観測される。これは中性子干渉実験で実際に確認されている。
 
