@@ -4,9 +4,9 @@
 
 CLAUDE_PHYSICS.md で、回転演算子が
 
-$$
+```math
 U(\theta,\mathbf{n}) = \exp\!\left(-\frac{i}{\hbar}\,\theta\,\mathbf{n}\cdot\mathbf{J}\right)
-$$
+```
 
 であることを導いた。CLAUDE_PHYSICS2.md で、パウリ行列 $\sigma_x, \sigma_y, \sigma_z$ を実験事実から導き、スピン演算子が $S_i = \hbar\sigma_i/2$ であることを示した。
 
@@ -27,17 +27,17 @@ $$
 
 古典力学では、角運動量は
 
-$$
+```math
 \mathbf{L} = \mathbf{r} \times \mathbf{p}
-$$
+```
 
 で定義される。これは「位置と運動量から作られる量」という**構成的な定義**である。
 
 しかし CLAUDE_PHYSICS.md で見たように、$\mathbf{L}$ にはもう一つの顔がある。それは**回転の生成子**としての役割である。$z$ 軸まわりの微小回転 $\delta\phi$ に対して
 
-$$
+```math
 \delta\hat{x} = \frac{i}{\hbar}\delta\phi\,[G_z,\,\hat{x}]
-$$
+```
 
 という条件を満たす $G_z$ を探したら、$G_z = \hat{L}_z$ だった。つまり角運動量は、「回転を作る量」でもある。
 
@@ -68,43 +68,43 @@ $$
 
 この「入れ替えたときのずれ」を、量子力学の演算子で捉えたい。微小回転を考える。$x$ 軸まわりに $\delta\alpha$、$y$ 軸まわりに $\delta\beta$ の微小回転を順に行うとする。CLAUDE_PHYSICS.md の形を使うと
 
-$$
+```math
 U(\delta\alpha, \hat{x}) = I - \frac{i}{\hbar}\delta\alpha\,G_x + O(\delta\alpha^2)
-$$
+```
 
-$$
+```math
 U(\delta\beta, \hat{y}) = I - \frac{i}{\hbar}\delta\beta\,G_y + O(\delta\beta^2)
-$$
+```
 
 順序 A（$x$ が先、$y$ が後）の積を二次まで展開する。
 
-$$
+```math
 U(\delta\beta, \hat{y})\,U(\delta\alpha, \hat{x})
 = I
 - \frac{i}{\hbar}\delta\alpha\,G_x
 - \frac{i}{\hbar}\delta\beta\,G_y
 - \frac{1}{\hbar^2}\delta\alpha\,\delta\beta\,G_y G_x
 + \cdots
-$$
+```
 
 順序 B（$y$ が先、$x$ が後）は
 
-$$
+```math
 U(\delta\alpha, \hat{x})\,U(\delta\beta, \hat{y})
 = I
 - \frac{i}{\hbar}\delta\alpha\,G_x
 - \frac{i}{\hbar}\delta\beta\,G_y
 - \frac{1}{\hbar^2}\delta\alpha\,\delta\beta\,G_x G_y
 + \cdots
-$$
+```
 
 一次の項は同じである。差が出るのは二次の項で
 
-$$
+```math
 \text{順序 A} - \text{順序 B}
 = -\frac{1}{\hbar^2}\delta\alpha\,\delta\beta\,(G_y G_x - G_x G_y)
 = \frac{1}{\hbar^2}\delta\alpha\,\delta\beta\,[G_x, G_y]
-$$
+```
 
 つまり、**2つの回転を入れ替えたときのずれは、生成子の交換子 $[G_x, G_y]$ で決まる。**
 
@@ -112,86 +112,86 @@ $$
 
 $x$ 軸まわりの微小回転行列は（CLAUDE_PHYSICS.md の $z$ 軸版と同様に、$\cos\delta\alpha \approx 1$, $\sin\delta\alpha \approx \delta\alpha$ を使う）
 
-$$
+```math
 R_x(\delta\alpha) \approx
 \begin{pmatrix}
 1 & 0 & 0 \\
 0 & 1 & -\delta\alpha \\
 0 & \delta\alpha & 1
 \end{pmatrix}
-$$
+```
 
 $y$ 軸まわりは
 
-$$
+```math
 R_y(\delta\beta) \approx
 \begin{pmatrix}
 1 & 0 & \delta\beta \\
 0 & 1 & 0 \\
 -\delta\beta & 0 & 1
 \end{pmatrix}
-$$
+```
 
 順序 A（$x$ が先、$y$ が後）：
 
-$$
+```math
 R_y R_x \approx
 \begin{pmatrix}
 1 & \delta\alpha\,\delta\beta & \delta\beta \\
 0 & 1 & -\delta\alpha \\
 -\delta\beta & \delta\alpha & 1
 \end{pmatrix}
-$$
+```
 
 順序 B（$y$ が先、$x$ が後）：
 
-$$
+```math
 R_x R_y \approx
 \begin{pmatrix}
 1 & 0 & \delta\beta \\
 \delta\alpha\,\delta\beta & 1 & -\delta\alpha \\
 -\delta\beta & \delta\alpha & 1
 \end{pmatrix}
-$$
+```
 
 差を取ると（一次の項は同じなので、二次の項だけが残る）
 
-$$
+```math
 R_y R_x - R_x R_y \approx
 \begin{pmatrix}
 0 & \delta\alpha\,\delta\beta & 0 \\
 -\delta\alpha\,\delta\beta & 0 & 0 \\
 0 & 0 & 0
 \end{pmatrix}
-$$
+```
 
 一方、$z$ 軸まわりの微小回転行列は
 
-$$
+```math
 R_z(\delta\gamma) \approx
 \begin{pmatrix}
 1 & -\delta\gamma & 0 \\
 \delta\gamma & 1 & 0 \\
 0 & 0 & 1
 \end{pmatrix}
-$$
+```
 
 であり、$R_z - I$ は
 
-$$
+```math
 R_z(\delta\gamma) - I \approx
 \begin{pmatrix}
 0 & -\delta\gamma & 0 \\
 \delta\gamma & 0 & 0 \\
 0 & 0 & 0
 \end{pmatrix}
-$$
+```
 
 見比べると、$\delta\gamma = -\delta\alpha\,\delta\beta$ とすればぴったり一致する。つまり
 
-$$
+```math
 R_y R_x - R_x R_y \approx R_z(-\delta\alpha\,\delta\beta) - I
-$$
+```
 
 である。$x$ と $y$ の微小回転の順序を入れ替えたときのずれは、$z$ 軸まわりの微小回転になっている。
 
@@ -199,37 +199,37 @@ $$
 
 先ほどの量子力学の計算で、順序の差は
 
-$$
+```math
 \text{順序 A} - \text{順序 B}
 = \frac{1}{\hbar^2}\,\delta\alpha\,\delta\beta\,[G_x, G_y]
-$$
+```
 
 だった。一方、古典の計算結果は「ずれが $z$ 軸まわりの角度 $\delta\gamma = -\delta\alpha\,\delta\beta$ の微小回転である」と言っている。量子力学では、$z$ 軸まわりの微小回転は
 
-$$
+```math
 U(\delta\gamma, \hat{z}) = I - \frac{i}{\hbar}\,\delta\gamma\,G_z
-$$
+```
 
 なので、「ずれ」は
 
-$$
+```math
 U(\delta\gamma, \hat{z}) - I = -\frac{i}{\hbar}\,\delta\gamma\,G_z
 = -\frac{i}{\hbar}\,(-\delta\alpha\,\delta\beta)\,G_z
 = \frac{i}{\hbar}\,\delta\alpha\,\delta\beta\,G_z
-$$
+```
 
 両者を等しいと置く。
 
-$$
+```math
 \frac{1}{\hbar^2}\,\delta\alpha\,\delta\beta\,[G_x, G_y]
 = \frac{i}{\hbar}\,\delta\alpha\,\delta\beta\,G_z
-$$
+```
 
 両辺から $\delta\alpha\,\delta\beta$ を消し、$\hbar^2$ を掛けると
 
-$$
+```math
 [G_x, G_y] = i\hbar\,G_z
-$$
+```
 
 が出る。**$i\hbar$ は要請ではなく、導かれた係数である。** その起源を分解すると
 
@@ -238,17 +238,17 @@ $$
 
 同様に $y$ と $z$、$z$ と $x$ の組み合わせでも同じ計算ができて
 
-$$
+```math
 [G_x, G_y] = i\hbar\,G_z, \qquad
 [G_y, G_z] = i\hbar\,G_x, \qquad
 [G_z, G_x] = i\hbar\,G_y
-$$
+```
 
 が導かれる。まとめると
 
-$$
+```math
 [G_i, G_j] = i\hbar\,\epsilon_{ijk}\,G_k
-$$
+```
 
 である。
 
@@ -260,10 +260,10 @@ $$
 
 CLAUDE_PHYSICS.md で見たように、有限回転は微小回転の積み重ねで作れる。
 
-$$
+```math
 U(\theta, \mathbf{n}) = \lim_{N\to\infty}\left(I - \frac{i}{\hbar}\frac{\theta}{N}\,\mathbf{n}\cdot\mathbf{J}\right)^N
 = \exp\!\left(-\frac{i}{\hbar}\,\theta\,\mathbf{n}\cdot\mathbf{J}\right)
-$$
+```
 
 ここで問題は、こうして作った $U$ が「本物の回転」として正しく振る舞うかである。つまり
 
@@ -288,15 +288,15 @@ CLAUDE_PHYSICS.md で導いた $\hat{L}_z = \hat{x}\hat{p}_y - \hat{y}\hat{p}_x$
 
 CLAUDE_PHYSICS2.md で直接計算したように
 
-$$
+```math
 [\sigma_i, \sigma_j] = 2i\,\epsilon_{ijk}\,\sigma_k
-$$
+```
 
 が成り立つ。したがって $S_i = \frac{\hbar}{2}\sigma_i$ とおけば
 
-$$
+```math
 [S_i, S_j] = i\hbar\,\epsilon_{ijk}\,S_k
-$$
+```
 
 が成り立つ。これは角運動量の定義そのものである。
 
@@ -325,41 +325,41 @@ $$
 
 スピンのみを持つ粒子（軌道角運動量がない場合）では
 
-$$
+```math
 \mathbf{J} = \mathbf{S}
-$$
+```
 
 である。前節で確認したように、スピン 1/2 のスピン演算子は
 
-$$
+```math
 S_i = \frac{\hbar}{2}\,\sigma_i \qquad (i = x, y, z)
-$$
+```
 
 なので
 
-$$
+```math
 \mathbf{n}\cdot\mathbf{J}
 = \mathbf{n}\cdot\mathbf{S}
 = n_x S_x + n_y S_y + n_z S_z
 = \frac{\hbar}{2}(n_x\sigma_x + n_y\sigma_y + n_z\sigma_z)
 = \frac{\hbar}{2}\,\mathbf{n}\cdot\boldsymbol{\sigma}
-$$
+```
 
 である。これを回転演算子に代入すると
 
-$$
+```math
 U(\theta,\mathbf{n})
 = \exp\!\left(-\frac{i}{\hbar}\,\theta\cdot\frac{\hbar}{2}\,\mathbf{n}\cdot\boldsymbol{\sigma}\right)
-$$
+```
 
 $\hbar$ が約分されて
 
-$$
+```math
 \boxed{
 U(\theta,\mathbf{n})
 = \exp\!\left(-i\frac{\theta}{2}\,\mathbf{n}\cdot\boldsymbol{\sigma}\right)
 }
-$$
+```
 
 が得られる。
 
@@ -367,9 +367,9 @@ $$
 
 ここで $\theta/2$ が出る仕組みを確認しておく。もとの式
 
-$$
+```math
 \exp\!\left(-\frac{i}{\hbar}\,\theta\,\mathbf{n}\cdot\mathbf{J}\right)
-$$
+```
 
 には $\hbar$ が分母にある。一方、スピン 1/2 では $\mathbf{J} = \frac{\hbar}{2}\boldsymbol{\sigma}$ なので、分子にも $\hbar$ が入っている。この二つの $\hbar$ が消え合い、後に残るのは $1/2$ だけである。
 
@@ -385,42 +385,42 @@ $$
 
 まず $\mathbf{n}\cdot\boldsymbol{\sigma}$ を書き下す。$\mathbf{n} = (n_x, n_y, n_z)$ として
 
-$$
+```math
 \mathbf{n}\cdot\boldsymbol{\sigma}
 = n_x\begin{pmatrix}0&1\\1&0\end{pmatrix}
 + n_y\begin{pmatrix}0&-i\\i&0\end{pmatrix}
 + n_z\begin{pmatrix}1&0\\0&-1\end{pmatrix}
 = \begin{pmatrix}n_z & n_x - in_y \\ n_x + in_y & -n_z\end{pmatrix}
-$$
+```
 
 この行列を $M$ とおいて、$M^2$ を計算する。
 
-$$
+```math
 M^2 = \begin{pmatrix}n_z & n_x - in_y \\ n_x + in_y & -n_z\end{pmatrix}
 \begin{pmatrix}n_z & n_x - in_y \\ n_x + in_y & -n_z\end{pmatrix}
-$$
+```
 
 $(1,1)$ 成分：
 
-$$
+```math
 n_z^2 + (n_x - in_y)(n_x + in_y)
 = n_z^2 + n_x^2 + n_y^2
 = 1
-$$
+```
 
 （$\mathbf{n}$ は単位ベクトルなので $n_x^2 + n_y^2 + n_z^2 = 1$）
 
 $(1,2)$ 成分：
 
-$$
+```math
 n_z(n_x - in_y) + (n_x - in_y)(-n_z) = 0
-$$
+```
 
 同様に $(2,1) = 0$, $(2,2) = 1$。したがって
 
-$$
+```math
 (\mathbf{n}\cdot\boldsymbol{\sigma})^2 = I
-$$
+```
 
 これはパウリ行列に特有の性質であり、$\mathbf{n}$ が単位ベクトルであることだけから出る。
 
@@ -428,58 +428,58 @@ $$
 
 $M^2 = I$ を使うと、$M$ の冪は2通りしかない。
 
-$$
+```math
 M^0 = I, \quad M^1 = M, \quad M^2 = I, \quad M^3 = M, \quad \ldots
-$$
+```
 
 つまり偶数乗は $I$、奇数乗は $M$ である。
 
 行列の指数関数の定義は
 
-$$
+```math
 e^{-i\alpha M}
 = \sum_{k=0}^{\infty}\frac{(-i\alpha)^k}{k!}M^k
-$$
+```
 
 であり（$\alpha = \theta/2$ とする）、これを偶数項と奇数項に分ける。
 
-$$
+```math
 = \sum_{k\,\text{even}}\frac{(-i\alpha)^k}{k!}\,I
 \;+\;\sum_{k\,\text{odd}}\frac{(-i\alpha)^k}{k!}\,M
-$$
+```
 
 偶数項の係数は
 
-$$
+```math
 \sum_{k\,\text{even}}\frac{(-i\alpha)^k}{k!}
 = 1 - \frac{\alpha^2}{2!} + \frac{\alpha^4}{4!} - \cdots
 = \cos\alpha
-$$
+```
 
 奇数項の係数は
 
-$$
+```math
 \sum_{k\,\text{odd}}\frac{(-i\alpha)^k}{k!}
 = -i\alpha + \frac{i\alpha^3}{3!} - \cdots
 = -i\!\left(\alpha - \frac{\alpha^3}{3!} + \cdots\right)
 = -i\sin\alpha
-$$
+```
 
 したがって
 
-$$
+```math
 e^{-i\alpha M} = \cos\alpha\,I - i\sin\alpha\,M
-$$
+```
 
 $\alpha = \theta/2$, $M = \mathbf{n}\cdot\boldsymbol{\sigma}$ を戻すと
 
-$$
+```math
 \boxed{
 U(\theta,\mathbf{n})
 = \cos\frac{\theta}{2}\,I
 - i\sin\frac{\theta}{2}\,\mathbf{n}\cdot\boldsymbol{\sigma}
 }
-$$
+```
 
 これがスピン 1/2 の回転行列の完全な形である。
 
@@ -491,7 +491,7 @@ $$
 
 $\mathbf{n} = (0,0,1)$ とすると $\mathbf{n}\cdot\boldsymbol{\sigma} = \sigma_z$ なので
 
-$$
+```math
 U(\theta, \hat{z})
 = \cos\frac{\theta}{2}\begin{pmatrix}1&0\\0&1\end{pmatrix}
 - i\sin\frac{\theta}{2}\begin{pmatrix}1&0\\0&-1\end{pmatrix}
@@ -499,52 +499,52 @@ U(\theta, \hat{z})
 \cos\frac{\theta}{2} - i\sin\frac{\theta}{2} & 0 \\
 0 & \cos\frac{\theta}{2} + i\sin\frac{\theta}{2}
 \end{pmatrix}
-$$
+```
 
 オイラーの公式 $e^{-i\alpha} = \cos\alpha - i\sin\alpha$ を使うと
 
-$$
+```math
 U(\theta, \hat{z})
 = \begin{pmatrix}
 e^{-i\theta/2} & 0 \\
 0 & e^{+i\theta/2}
 \end{pmatrix}
-$$
+```
 
 $|{+z}\rangle$ と $|{-z}\rangle$ にそれぞれ逆符号の位相がつく。これだけでは「回転」のイメージが湧きにくいので、具体的な状態に作用させてみよう。
 
 $|{+x}\rangle$ は CLAUDE_PHYSICS2.md で導いたように
 
-$$
+```math
 |{+x}\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}
-$$
+```
 
 である。これにブロッホ球上で赤道上（$x$ 方向）の状態だった。$U(\theta, \hat{z})$ を作用させると
 
-$$
+```math
 U(\theta, \hat{z})\,|{+x}\rangle
 = \begin{pmatrix}e^{-i\theta/2} & 0 \\ 0 & e^{+i\theta/2}\end{pmatrix}
 \frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}
 = \frac{1}{\sqrt{2}}\begin{pmatrix}e^{-i\theta/2}\\e^{+i\theta/2}\end{pmatrix}
-$$
+```
 
 全体位相 $e^{-i\theta/2}$ を括り出すと
 
-$$
+```math
 = \frac{e^{-i\theta/2}}{\sqrt{2}}\begin{pmatrix}1\\e^{+i\theta}\end{pmatrix}
-$$
+```
 
 全体位相は物理に影響しないので無視すると
 
-$$
+```math
 \frac{1}{\sqrt{2}}\begin{pmatrix}1\\e^{i\theta}\end{pmatrix}
-$$
+```
 
 が得られる。CLAUDE_PHYSICS2.md で見たように、この形は
 
-$$
+```math
 \frac{1}{\sqrt{2}}\bigl(|{+z}\rangle + e^{i\phi}|{-z}\rangle\bigr)
-$$
+```
 
 の赤道状態であり、$\phi$ は赤道上の方位角だった。$\phi = 0$ が $|{+x}\rangle$、$\phi = \pi/2$ が $|{+y}\rangle$ だった。
 
@@ -552,10 +552,10 @@ $$
 
 一方、$|{+z}\rangle$（北極）と $|{-z}\rangle$（南極）に作用させると
 
-$$
+```math
 U(\theta, \hat{z})\,|{+z}\rangle = e^{-i\theta/2}|{+z}\rangle, \qquad
 U(\theta, \hat{z})\,|{-z}\rangle = e^{+i\theta/2}|{-z}\rangle
-$$
+```
 
 どちらも全体位相が変わるだけで、ブロッホ球上では動かない。$z$ 軸まわりの回転で北極と南極が動かないのは当然である。
 
@@ -563,24 +563,24 @@ $$
 
 $\mathbf{n} = (1,0,0)$, $\theta = \pi$ とすると
 
-$$
+```math
 U(\pi, \hat{x})
 = \cos\frac{\pi}{2}\,I - i\sin\frac{\pi}{2}\,\sigma_x
 = 0\cdot I - i\cdot 1\cdot\sigma_x
 = -i\sigma_x
 = -i\begin{pmatrix}0&1\\1&0\end{pmatrix}
 = \begin{pmatrix}0&-i\\-i&0\end{pmatrix}
-$$
+```
 
 これを $|{+z}\rangle$ に作用させると
 
-$$
+```math
 U(\pi, \hat{x})|{+z}\rangle
 = \begin{pmatrix}0&-i\\-i&0\end{pmatrix}\begin{pmatrix}1\\0\end{pmatrix}
 = \begin{pmatrix}0\\-i\end{pmatrix}
 = -i\begin{pmatrix}0\\1\end{pmatrix}
 = -i\,|{-z}\rangle
-$$
+```
 
 全体位相 $-i$ を除けば $|{-z}\rangle$ になっている。$x$ 軸まわりの 180 度回転で、北極が南極に移る。ブロッホ球の絵で考えれば当然の結果である。
 
@@ -602,40 +602,40 @@ $$
 
 $z$ 軸まわりに角度 $\theta$ だけ回転させる。例1で見たように
 
-$$
+```math
 U(\theta, \hat{z}) = \begin{pmatrix}e^{-i\theta/2} & 0 \\ 0 & e^{+i\theta/2}\end{pmatrix}
-$$
+```
 
 である。初期状態を $|{+x}\rangle$（ブロッホ球の赤道上、方位角 $\phi = 0$）とする。
 
 例1で計算したように、回転後の状態は（全体位相を除くと）
 
-$$
+```math
 \frac{1}{\sqrt{2}}\begin{pmatrix}1\\e^{i\theta}\end{pmatrix}
-$$
+```
 
 であり、方位角が $0 \to \theta$ に移った。つまり**ブロッホベクトルは $\theta$ だけ動いている**。$\theta/2$ ではない。
 
 もう一例。初期状態を $|{+y}\rangle$（方位角 $\phi = \pi/2$）にする。
 
-$$
+```math
 U(\theta, \hat{z})\,|{+y}\rangle
 = \begin{pmatrix}e^{-i\theta/2} & 0 \\ 0 & e^{+i\theta/2}\end{pmatrix}
 \frac{1}{\sqrt{2}}\begin{pmatrix}1\\i\end{pmatrix}
 = \frac{1}{\sqrt{2}}\begin{pmatrix}e^{-i\theta/2}\\i\,e^{+i\theta/2}\end{pmatrix}
-$$
+```
 
 全体位相 $e^{-i\theta/2}$ を括り出すと
 
-$$
+```math
 = \frac{e^{-i\theta/2}}{\sqrt{2}}\begin{pmatrix}1\\i\,e^{i\theta}\end{pmatrix}
-$$
+```
 
 $i = e^{i\pi/2}$ なので $i\,e^{i\theta} = e^{i(\theta + \pi/2)}$。したがって全体位相を除くと
 
-$$
+```math
 \frac{1}{\sqrt{2}}\begin{pmatrix}1\\e^{i(\theta + \pi/2)}\end{pmatrix}
-$$
+```
 
 方位角が $\pi/2 \to \theta + \pi/2$ に移った。やはり**方位角の変化は $\theta$** であり、$\theta/2$ ではない。
 
@@ -645,9 +645,9 @@ $$
 
 しかしブロッホ球上の方位角を決めるのは、2成分の**相対位相**である。
 
-$$
+```math
 \frac{e^{+i\theta/2}}{e^{-i\theta/2}} = e^{i\theta}
-$$
+```
 
 $+\theta/2$ と $-\theta/2$ の差は $\theta$ になる。2成分に逆符号で $\theta/2$ ずつ位相がつくので、相対位相は $\theta$ 変化する。
 
@@ -659,16 +659,16 @@ $z$ 軸まわりの回転について赤道上の状態で確かめたが、こ�
 
 一般の状態 $|\psi\rangle = \cos(\alpha/2)|{+z}\rangle + e^{i\phi}\sin(\alpha/2)|{-z}\rangle$（ブロッホ球の極角 $\alpha$、方位角 $\phi$）に $U(\theta, \hat{z})$ を作用させると
 
-$$
+```math
 U(\theta, \hat{z})|\psi\rangle
 = e^{-i\theta/2}\cos\frac{\alpha}{2}|{+z}\rangle + e^{i(\phi+\theta/2)}\sin\frac{\alpha}{2}|{-z}\rangle
-$$
+```
 
 全体位相 $e^{-i\theta/2}$ を括り出すと
 
-$$
+```math
 = e^{-i\theta/2}\left(\cos\frac{\alpha}{2}|{+z}\rangle + e^{i(\phi+\theta)}\sin\frac{\alpha}{2}|{-z}\rangle\right)
-$$
+```
 
 極角 $\alpha$ は変わらず、方位角が $\phi \to \phi + \theta$ に変わった。$z$ 軸まわりに $\theta$ だけ回転している。
 
@@ -693,18 +693,18 @@ $$
 
 $\theta = 2\pi$（360 度）を代入する。
 
-$$
+```math
 U(2\pi,\mathbf{n})
 = \cos\pi\,I - i\sin\pi\,\mathbf{n}\cdot\boldsymbol{\sigma}
 = (-1)\cdot I - i\cdot 0\cdot\mathbf{n}\cdot\boldsymbol{\sigma}
 = -I
-$$
+```
 
 つまり、どの軸まわりでも 360 度回転すると
 
-$$
+```math
 |\psi\rangle \to -|\psi\rangle
-$$
+```
 
 になる。状態ベクトルは元に戻らず、**符号が反転する**。
 
@@ -712,12 +712,12 @@ $$
 
 $\theta = 4\pi$（720 度）を代入すると
 
-$$
+```math
 U(4\pi,\mathbf{n})
 = \cos 2\pi\,I - i\sin 2\pi\,\mathbf{n}\cdot\boldsymbol{\sigma}
 = (+1)\cdot I - 0
 = I
-$$
+```
 
 720 度回転して初めて $|\psi\rangle \to |\psi\rangle$ に戻る。
 
@@ -746,9 +746,9 @@ $|\psi\rangle$ と $-|\psi\rangle$ は、単独の測定では区別できない
 
 一般に、角運動量量子数 $j$ を持つ系では
 
-$$
+```math
 U(\theta,\mathbf{n}) = \exp\!\left(-\frac{i}{\hbar}\,\theta\,\mathbf{n}\cdot\mathbf{J}\right)
-$$
+```
 
 であり、$\mathbf{J}$ の固有値は $-j\hbar$ から $+j\hbar$ まで整数刻みで並ぶ。
 

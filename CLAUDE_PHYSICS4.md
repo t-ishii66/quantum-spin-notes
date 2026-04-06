@@ -33,10 +33,10 @@
 
 CLAUDE_PHYSICS2.md で見たように、1粒子のスピン状態は 2 次元空間に住んでいる。$z$ 基底は
 
-$$
+```math
 |{+z}\rangle = \begin{pmatrix}1\\0\end{pmatrix}, \qquad
 |{-z}\rangle = \begin{pmatrix}0\\1\end{pmatrix}
-$$
+```
 
 であり、任意の状態は $\alpha|{+z}\rangle + \beta|{-z}\rangle$ と書ける。
 
@@ -46,15 +46,15 @@ $$
 
 2粒子系の状態を書くには、両方の粒子の状態を同時に指定する必要がある。たとえば「Alice の粒子が $|{+z}\rangle$ で、Bob の粒子が $|{-z}\rangle$」という状態を
 
-$$
+```math
 |{+z}\rangle \otimes |{-z}\rangle
-$$
+```
 
 と書く。$\otimes$ は「テンソル積」と呼ばれるが、ここでは「かつ」と読めばよい。表記を短くするために
 
-$$
+```math
 |{+z}\rangle|{-z}\rangle \quad \text{あるいは} \quad |{+z},{-z}\rangle
-$$
+```
 
 とも書く。
 
@@ -62,12 +62,12 @@ $$
 
 各粒子に $|{+z}\rangle$ と $|{-z}\rangle$ の2通りがあるので、2粒子系の基底は $2 \times 2 = 4$ 個になる。
 
-$$
+```math
 |{+z}\rangle|{+z}\rangle, \qquad
 |{+z}\rangle|{-z}\rangle, \qquad
 |{-z}\rangle|{+z}\rangle, \qquad
 |{-z}\rangle|{-z}\rangle
-$$
+```
 
 任意の2粒子状態は、この4つの線形結合で書ける。
 
@@ -75,17 +75,17 @@ $$
 
 もし2粒子の状態が
 
-$$
+```math
 |\Psi\rangle = |\psi\rangle_A \otimes |\phi\rangle_B
-$$
+```
 
 のように「Alice の状態」と「Bob の状態」の積に分解できるなら、これを**積状態**と呼ぶ。積状態では、Alice と Bob の粒子はそれぞれ独立な状態を持っている。
 
 しかし、4次元空間には積に分解できない状態も存在する。たとえば
 
-$$
+```math
 \frac{1}{\sqrt{2}}\bigl(|{+z}\rangle|{-z}\rangle - |{-z}\rangle|{+z}\rangle\bigr)
-$$
+```
 
 は、どのような $|\psi\rangle_A$ と $|\phi\rangle_B$ を持ってきても積の形に書けない。このような状態を**もつれ状態（エンタングル状態）**と呼ぶ。
 
@@ -97,9 +97,9 @@ $$
 
 2粒子のもつれ状態の中で、最も重要なものの一つが**シングレット状態**である。
 
-$$
+```math
 |\Psi^-\rangle = \frac{1}{\sqrt{2}}\bigl(|{+z}\rangle|{-z}\rangle - |{-z}\rangle|{+z}\rangle\bigr)
-$$
+```
 
 ここで左のケットが Alice の粒子、右のケットが Bob の粒子である。
 
@@ -121,31 +121,31 @@ $|\Psi^-\rangle$ の第1項 $|{+z}\rangle|{-z}\rangle$ は「Alice が $+1$、Bo
 
 方向 $\mathbf{a}$ の固有状態 $|{+a}\rangle$ は、$|{+z}\rangle$ を $y$ 軸まわりに $\theta_a$ だけ回転させたものである。CLAUDE_PHYSICS3.md の回転行列
 
-$$
+```math
 U(\theta, \mathbf{n}) = \cos\frac{\theta}{2}\,I - i\sin\frac{\theta}{2}\,\mathbf{n}\cdot\boldsymbol{\sigma}
-$$
+```
 
 で $\mathbf{n} = \hat{y}$, $\theta = \theta_a$ とすると
 
-$$
+```math
 U(\theta_a, \hat{y})
 = \cos\frac{\theta_a}{2}\,I - i\sin\frac{\theta_a}{2}\,\sigma_y
 = \cos\frac{\theta_a}{2}\begin{pmatrix}1&0\\0&1\end{pmatrix}
 - i\sin\frac{\theta_a}{2}\begin{pmatrix}0&-i\\i&0\end{pmatrix}
-$$
+```
 
 $-i \cdot (-i) = i^2 = -1$ と $-i \cdot i = -i^2 = 1$ に注意すると
 
-$$
+```math
 = \begin{pmatrix}
 \cos\frac{\theta_a}{2} & -\sin\frac{\theta_a}{2} \\[4pt]
 \sin\frac{\theta_a}{2} & \cos\frac{\theta_a}{2}
 \end{pmatrix}
-$$
+```
 
 これを $|{+z}\rangle$ に作用させる。
 
-$$
+```math
 |{+a}\rangle = U(\theta_a, \hat{y})\,|{+z}\rangle
 = \begin{pmatrix}
 \cos\frac{\theta_a}{2} & -\sin\frac{\theta_a}{2} \\[4pt]
@@ -153,17 +153,17 @@ $$
 \end{pmatrix}
 \begin{pmatrix}1\\0\end{pmatrix}
 = \begin{pmatrix}\cos\frac{\theta_a}{2}\\[4pt]\sin\frac{\theta_a}{2}\end{pmatrix}
-$$
+```
 
 すなわち
 
-$$
+```math
 |{+a}\rangle = \cos\frac{\theta_a}{2}\,|{+z}\rangle + \sin\frac{\theta_a}{2}\,|{-z}\rangle
-$$
+```
 
 同様に $|{-a}\rangle = U(\theta_a, \hat{y})\,|{-z}\rangle$ は
 
-$$
+```math
 |{-a}\rangle
 = \begin{pmatrix}
 \cos\frac{\theta_a}{2} & -\sin\frac{\theta_a}{2} \\[4pt]
@@ -171,39 +171,39 @@ $$
 \end{pmatrix}
 \begin{pmatrix}0\\1\end{pmatrix}
 = \begin{pmatrix}-\sin\frac{\theta_a}{2}\\[4pt]\cos\frac{\theta_a}{2}\end{pmatrix}
-$$
+```
 
 すなわち
 
-$$
+```math
 |{-a}\rangle = -\sin\frac{\theta_a}{2}\,|{+z}\rangle + \cos\frac{\theta_a}{2}\,|{-z}\rangle
-$$
+```
 
 である。空間的には $\theta_a$ だけ回転しているが、状態ベクトルの係数には $\theta_a/2$ が現れる。これは CLAUDE_PHYSICS3.md で見たスピノルの半角構造そのものである。$c = \cos(\theta_a/2)$, $s = \sin(\theta_a/2)$ と略記すると
 
-$$
+```math
 |{+a}\rangle|{-a}\rangle
 = (c|{+z}\rangle + s|{-z}\rangle)(-s|{+z}\rangle + c|{-z}\rangle)
-$$
+```
 
-$$
+```math
 = -cs|{+z}\rangle|{+z}\rangle + c^2|{+z}\rangle|{-z}\rangle - s^2|{-z}\rangle|{+z}\rangle + sc|{-z}\rangle|{-z}\rangle
-$$
+```
 
-$$
+```math
 |{-a}\rangle|{+a}\rangle
 = (-s|{+z}\rangle + c|{-z}\rangle)(c|{+z}\rangle + s|{-z}\rangle)
-$$
+```
 
-$$
+```math
 = -sc|{+z}\rangle|{+z}\rangle - s^2|{+z}\rangle|{-z}\rangle + c^2|{-z}\rangle|{+z}\rangle + cs|{-z}\rangle|{-z}\rangle
-$$
+```
 
 差を取る。
 
-$$
+```math
 |{+a}\rangle|{-a}\rangle - |{-a}\rangle|{+a}\rangle
-$$
+```
 
 $|{+z}\rangle|{+z}\rangle$ の係数：$-cs - (-sc) = 0$
 
@@ -215,19 +215,19 @@ $|{-z}\rangle|{-z}\rangle$ の係数：$sc - cs = 0$
 
 したがって
 
-$$
+```math
 |{+a}\rangle|{-a}\rangle - |{-a}\rangle|{+a}\rangle
 = |{+z}\rangle|{-z}\rangle - |{-z}\rangle|{+z}\rangle
-$$
+```
 
 両辺を $\sqrt{2}$ で割ると
 
-$$
+```math
 \boxed{
 \frac{1}{\sqrt{2}}\bigl(|{+a}\rangle|{-a}\rangle - |{-a}\rangle|{+a}\rangle\bigr)
 = |\Psi^-\rangle
 }
-$$
+```
 
 シングレット状態は、$z$ 基底で書いても $\mathbf{a}$ 基底で書いても同じ形になる。これが**回転不変性**である。
 
@@ -250,9 +250,9 @@ Alice は方向 $\mathbf{a}$ で、Bob は方向 $\mathbf{b}$ で測定する。
 
 各測定の結果を $A = \pm 1$（Alice）、$B = \pm 1$（Bob）とし、その積の期待値
 
-$$
+```math
 E(\mathbf{a}, \mathbf{b}) = \langle A \cdot B \rangle
-$$
+```
 
 を計算する。これが**相関**である。
 
@@ -275,88 +275,88 @@ Bob が $+1$ を得る確率は $|\langle{+b}|{-a}\rangle|^2$、$-1$ を得る�
 
 $\mathbf{a}$ と $\mathbf{b}$ が同じ $xz$ 平面内にあるとし、$z$ 軸からの角度をそれぞれ $\theta_a$, $\theta_b$ とする（$\theta = \theta_b - \theta_a$）。CLAUDE_PHYSICS3.md の回転から
 
-$$
+```math
 |{+b}\rangle = \cos\frac{\theta_b}{2}|{+z}\rangle + \sin\frac{\theta_b}{2}|{-z}\rangle
-$$
+```
 
-$$
+```math
 |{-a}\rangle = -\sin\frac{\theta_a}{2}|{+z}\rangle + \cos\frac{\theta_a}{2}|{-z}\rangle
-$$
+```
 
 内積を計算する。
 
-$$
+```math
 \langle{+b}|{-a}\rangle
 = -\cos\frac{\theta_b}{2}\sin\frac{\theta_a}{2} + \sin\frac{\theta_b}{2}\cos\frac{\theta_a}{2}
 = \sin\frac{\theta_b - \theta_a}{2}
 = \sin\frac{\theta}{2}
-$$
+```
 
 ここで加法定理 $\sin\alpha\cos\beta - \cos\alpha\sin\beta = \sin(\alpha - \beta)$ を使った。
 
 同様に
 
-$$
+```math
 \langle{-b}|{-a}\rangle
 = \sin\frac{\theta_b}{2}\sin\frac{\theta_a}{2} + \cos\frac{\theta_b}{2}\cos\frac{\theta_a}{2}
 = \cos\frac{\theta_b - \theta_a}{2}
 = \cos\frac{\theta}{2}
-$$
+```
 
 したがって
 
-$$
+```math
 P(B = +1 \mid A = +1) = \sin^2\frac{\theta}{2}, \qquad
 P(B = -1 \mid A = +1) = \cos^2\frac{\theta}{2}
-$$
+```
 
 **Alice が $-1$ のとき（Bob の粒子は $|{+a}\rangle$）：**
 
 同じ計算を繰り返す。
 
-$$
+```math
 \langle{+b}|{+a}\rangle
 = \cos\frac{\theta_b}{2}\cos\frac{\theta_a}{2} + \sin\frac{\theta_b}{2}\sin\frac{\theta_a}{2}
 = \cos\frac{\theta}{2}
-$$
+```
 
-$$
+```math
 P(B = +1 \mid A = -1) = \cos^2\frac{\theta}{2}, \qquad
 P(B = -1 \mid A = -1) = \sin^2\frac{\theta}{2}
-$$
+```
 
 ### 相関を組み立てる
 
-$$
+```math
 E(\mathbf{a}, \mathbf{b})
 = \sum_{A,B = \pm 1} A \cdot B \cdot P(A, B)
-$$
+```
 
 Alice の結果は等確率（各 $1/2$）なので
 
-$$
+```math
 E = \frac{1}{2}\Bigl[(+1)(+1)\sin^2\frac{\theta}{2} + (+1)(-1)\cos^2\frac{\theta}{2}\Bigr]
   + \frac{1}{2}\Bigl[(-1)(+1)\cos^2\frac{\theta}{2} + (-1)(-1)\sin^2\frac{\theta}{2}\Bigr]
-$$
+```
 
 各項を整理する。
 
-$$
+```math
 = \frac{1}{2}\Bigl[\sin^2\frac{\theta}{2} - \cos^2\frac{\theta}{2}\Bigr]
 + \frac{1}{2}\Bigl[-\cos^2\frac{\theta}{2} + \sin^2\frac{\theta}{2}\Bigr]
-$$
+```
 
-$$
+```math
 = \sin^2\frac{\theta}{2} - \cos^2\frac{\theta}{2}
-$$
+```
 
 ここで $\cos\theta = \cos^2(\theta/2) - \sin^2(\theta/2)$ なので
 
-$$
+```math
 \boxed{
 E(\mathbf{a}, \mathbf{b}) = -\cos\theta = -\mathbf{a}\cdot\mathbf{b}
 }
-$$
+```
 
 ### 確認
 
@@ -400,9 +400,9 @@ EPR の議論を数学的にまとめると、次のような仮説になる。
 
 各粒子ペアには異なる $\lambda$ が付随しうるので、相関は $\lambda$ の分布で平均して
 
-$$
+```math
 E(\mathbf{a}, \mathbf{b}) = \int A(\mathbf{a}, \lambda)\,B(\mathbf{b}, \lambda)\,\rho(\lambda)\,d\lambda
-$$
+```
 
 と書ける。ここで $\rho(\lambda)$ は $\lambda$ の確率分布（$\int \rho\,d\lambda = 1$, $\rho \geq 0$）である。
 
@@ -420,20 +420,20 @@ Alice は $\mathbf{a}$ と $\mathbf{a}'$ の2方向のどちらかを選び、Bo
 
 4つの相関から次の量を作る。
 
-$$
+```math
 S = E(\mathbf{a}, \mathbf{b}) - E(\mathbf{a}, \mathbf{b}') + E(\mathbf{a}', \mathbf{b}) + E(\mathbf{a}', \mathbf{b}')
-$$
+```
 
 ### 隠れた変数なら $|S| \leq 2$
 
 隠れた変数の仮説のもとでは、各粒子ペア（隠れた変数 $\lambda$）に対して4つの値
 
-$$
+```math
 A = A(\mathbf{a}, \lambda), \quad
 A' = A(\mathbf{a}', \lambda), \quad
 B = B(\mathbf{b}, \lambda), \quad
 B' = B(\mathbf{b}', \lambda)
-$$
+```
 
 が**すべて同時に定まっている**。各値は $\pm 1$ である。
 
@@ -441,50 +441,50 @@ $$
 
 この仮定のもとで、各粒子ペアに対して次の量を考える。
 
-$$
+```math
 s(\lambda) = A B - A B' + A' B + A' B'
-$$
+```
 
 $AB'$ を括り出すと
 
-$$
+```math
 s(\lambda) = A(B - B') + A'(B + B')
-$$
+```
 
 ここで $B, B' = \pm 1$ なので、$B - B'$ と $B + B'$ の組み合わせは次の2通りしかない。
 
 $B = B'$ のとき：$B - B' = 0$, $B + B' = \pm 2$ なので
 
-$$
+```math
 s = A \cdot 0 + A' \cdot (\pm 2) = \pm 2
-$$
+```
 
 $B = -B'$ のとき：$B - B' = \pm 2$, $B + B' = 0$ なので
 
-$$
+```math
 s = A \cdot (\pm 2) + A' \cdot 0 = \pm 2
-$$
+```
 
 どちらの場合も $s(\lambda) = \pm 2$ であるから
 
-$$
+```math
 |s(\lambda)| = 2
-$$
+```
 
 が各粒子ペアで成り立つ。これを $\lambda$ について平均すると
 
-$$
+```math
 |S| = \left|\int s(\lambda)\,\rho(\lambda)\,d\lambda\right|
 \leq \int |s(\lambda)|\,\rho(\lambda)\,d\lambda
 = 2\int \rho(\lambda)\,d\lambda
 = 2
-$$
+```
 
 したがって
 
-$$
+```math
 \boxed{|S| \leq 2} \qquad \text{（CHSH 不等式）}
-$$
+```
 
 これは隠れた変数の仮説（局所性 + 実在性）だけから導かれる不等式であり、量子力学の法則を一切使っていない。
 
@@ -498,12 +498,12 @@ $$
 
 4方向をすべて $xz$ 平面内に取り、$z$ 軸からの角度で指定する。
 
-$$
+```math
 \mathbf{a}: 0°, \qquad
 \mathbf{b}: 45°, \qquad
 \mathbf{a}': 90°, \qquad
 \mathbf{b}': 135°
-$$
+```
 
 つまり、4方向が 45 度ずつ等間隔に並んでいる。
 
@@ -513,51 +513,51 @@ $$
 
 $E(\mathbf{a}, \mathbf{b})$：$\theta = 45°$
 
-$$
+```math
 E(\mathbf{a}, \mathbf{b}) = -\cos 45° = -\frac{1}{\sqrt{2}}
-$$
+```
 
 $E(\mathbf{a}, \mathbf{b}')$：$\theta = 135°$
 
-$$
+```math
 E(\mathbf{a}, \mathbf{b}') = -\cos 135° = -\left(-\frac{1}{\sqrt{2}}\right) = +\frac{1}{\sqrt{2}}
-$$
+```
 
 $E(\mathbf{a}', \mathbf{b})$：$\theta = 90° - 45° = 45°$
 
-$$
+```math
 E(\mathbf{a}', \mathbf{b}) = -\cos 45° = -\frac{1}{\sqrt{2}}
-$$
+```
 
 $E(\mathbf{a}', \mathbf{b}')$：$\theta = 135° - 90° = 45°$
 
-$$
+```math
 E(\mathbf{a}', \mathbf{b}') = -\cos 45° = -\frac{1}{\sqrt{2}}
-$$
+```
 
 ### $S$ の計算
 
-$$
+```math
 S = E(\mathbf{a}, \mathbf{b}) - E(\mathbf{a}, \mathbf{b}') + E(\mathbf{a}', \mathbf{b}) + E(\mathbf{a}', \mathbf{b}')
-$$
+```
 
-$$
+```math
 = \left(-\frac{1}{\sqrt{2}}\right) - \left(+\frac{1}{\sqrt{2}}\right) + \left(-\frac{1}{\sqrt{2}}\right) + \left(-\frac{1}{\sqrt{2}}\right)
-$$
+```
 
-$$
+```math
 = -\frac{1}{\sqrt{2}} - \frac{1}{\sqrt{2}} - \frac{1}{\sqrt{2}} - \frac{1}{\sqrt{2}}
-$$
+```
 
-$$
+```math
 = -\frac{4}{\sqrt{2}} = -2\sqrt{2}
-$$
+```
 
 したがって
 
-$$
+```math
 \boxed{|S| = 2\sqrt{2} \approx 2.83}
-$$
+```
 
 これは CHSH 不等式の上限 $2$ を明確に超えている。
 
@@ -586,13 +586,13 @@ $A, B = \pm 1$ の4つの相関を自由に選べるなら、$S$ の式の定義
 
 しかし量子力学ではこの $4$ に達することはなく、上限は $2\sqrt{2}$ である（Tsirelson の限界）。
 
-$$
+```math
 2 \quad \leq \quad 2\sqrt{2} \quad \leq \quad 4
-$$
+```
 
-$$
+```math
 \text{古典上限} \qquad \text{量子上限} \qquad \text{数学的上限}
-$$
+```
 
 量子力学は古典を超えるが、数学的に可能な最大値にも達しない。この中間に位置することの物理的意味は、いまだに研究が続いている。
 
