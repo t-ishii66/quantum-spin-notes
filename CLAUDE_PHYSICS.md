@@ -45,7 +45,7 @@ U(\theta,\mathbf{n})
 U(\delta\theta) = I + \delta\theta \cdot K + O(\delta\theta^2)
 ```
 
-と書ける。ここで $K$ はまだ正体不明の演算子であり、$O(\delta\theta^2)$ は小さな角度の二次以上で効く補正である。
+と書ける。ここで $K$ はまだ正体不明の演算子であり、 $O(\delta\theta^2)$ は小さな角度の二次以上で効く補正である。
 
 この段階では $K$ に何の制約もない。次の段階で絞る。
 
@@ -53,7 +53,7 @@ U(\delta\theta) = I + \delta\theta \cdot K + O(\delta\theta^2)
 
 ## 第2段階：確率保存が形を決める
 
-量子力学では、状態ベクトルの長さが確率の合計に対応する。回転しても確率は変わらないはずなので、$U$ はユニタリ演算子でなければならない。
+量子力学では、状態ベクトルの長さが確率の合計に対応する。回転しても確率は変わらないはずなので、 $U$ はユニタリ演算子でなければならない。
 
 ```math
 U^\dagger U = I
@@ -85,7 +85,7 @@ K + K^\dagger = 0
 K = -\frac{i}{\hbar}\,G
 ```
 
-と書ける。$\hbar$ を入れるのは、$G$ に角運動量と同じ次元を持たせるためである（角度 $\delta\theta$ は無次元なので、$\delta\theta \cdot G/\hbar$ が全体で無次元になる）。
+と書ける。 $\hbar$ を入れるのは、 $G$ に角運動量と同じ次元を持たせるためである（角度 $\delta\theta$ は無次元なので、 $\delta\theta \cdot G/\hbar$ が全体で無次元になる）。
 
 したがって微小回転は
 
@@ -123,7 +123,7 @@ U(\theta) = \bigl[U(\delta\theta)\bigr]^N
 U(\theta) = \left(I - \frac{i}{\hbar}\frac{\theta}{N}\,G\right)^N
 ```
 
-ここで $N$ を大きくする。すると各回の回転はどんどん小さくなり、二次以上の項は消えていく。$N \to \infty$ の極限では
+ここで $N$ を大きくする。すると各回の回転はどんどん小さくなり、二次以上の項は消えていく。 $N \to \infty$ の極限では
 
 ```math
 U(\theta)
@@ -140,9 +140,9 @@ U(\theta)
 e^a = \lim_{N\to\infty}\left(1 + \frac{a}{N}\right)^N
 ```
 
-が成り立つ。これは「$1 + a/N$ を $N$ 回掛ける」という操作の極限が $e^a$ になるという、指数関数の定義そのものである。
+が成り立つ。これは「 $1 + a/N$ を $N$ 回掛ける」という操作の極限が $e^a$ になるという、指数関数の定義そのものである。
 
-演算子でもまったく同じ形が成り立つ。$a$ を $-i\theta G/\hbar$ に置き換えれば
+演算子でもまったく同じ形が成り立つ。 $a$ を $-i\theta G/\hbar$ に置き換えれば
 
 ```math
 \boxed{
@@ -167,13 +167,13 @@ U(\theta,\mathbf{n})
 
 ---
 
-## 第4段階：$G$ の正体を決める
+## 第4段階： $G$ の正体を決める
 
 ### 回転演算子に求められること
 
 回転演算子 $U$ は、物理量を正しく回さなければならない。
 
-たとえば位置の演算子 $\hat{x}, \hat{y}, \hat{z}$ を考える。$z$ 軸まわりに角度 $\delta\phi$ だけ回すなら、位置の演算子は
+たとえば位置の演算子 $\hat{x}, \hat{y}, \hat{z}$ を考える。 $z$ 軸まわりに角度 $\delta\phi$ だけ回すなら、位置の演算子は
 
 ```math
 \hat{x} \to \hat{x} - \hat{y}\,\delta\phi, \qquad
@@ -207,7 +207,7 @@ R_z(\delta\phi) \approx
 
 ### 量子力学で演算子を変換するしくみ
 
-回転によって状態が変わるとする。回転前の状態を $\vert \psi\rangle$、回転後の状態を $\vert \psi'\rangle$ とすれば
+回転によって状態が変わるとする。回転前の状態を $\vert \psi\rangle$ 、回転後の状態を $\vert \psi'\rangle$ とすれば
 
 ```math
 \vert \psi'\rangle = U\vert \psi\rangle
@@ -233,7 +233,7 @@ R_z(\delta\phi) \approx
 U^\dagger = I + \frac{i}{\hbar}\delta\phi\,G_z
 ```
 
-である（$G_z$ がエルミートなので $-i$ が $+i$ に変わる）。これを使うと
+である（ $G_z$ がエルミートなので $-i$ が $+i$ に変わる）。これを使うと
 
 ```math
 \begin{aligned}
@@ -389,7 +389,7 @@ $\delta z$ について：
 = n_x \underbrace{(+y\,\delta\theta)}_{L_x\text{ の行}} + n_y \underbrace{(-x\,\delta\theta)}_{L_y\text{ の行}}
 ```
 
-三つとも、表の $L_x$ の行に $n_x$ を掛けたもの、$L_y$ の行に $n_y$ を掛けたもの、$L_z$ の行に $n_z$ を掛けたものの和になっている（表の該当セルが $0$ の項は消えている）。
+三つとも、表の $L_x$ の行に $n_x$ を掛けたもの、 $L_y$ の行に $n_y$ を掛けたもの、 $L_z$ の行に $n_z$ を掛けたものの和になっている（表の該当セルが $0$ の項は消えている）。
 
 つまり一般軸の微小回転は、表の各行をそのまま使って
 
@@ -423,7 +423,7 @@ n_z
 \delta\hat{A} = \frac{i}{\hbar}\delta\theta\,[G_{\mathbf{n}},\, \hat{A}]
 ```
 
-で与えられるのだった。$z$ 軸の場合は $G_z = \hat{L}_z$ で、$[G_z, \hat{x}]$ が $\delta\hat{x}$ を決めた。$x$ 軸、$y$ 軸も同様だった。
+で与えられるのだった。 $z$ 軸の場合は $G_z = \hat{L}_z$ で、 $[G_z, \hat{x}]$ が $\delta\hat{x}$ を決めた。 $x$ 軸、 $y$ 軸も同様だった。
 
 いま上の分解は「一般軸の変化 = 各軸の変化の $n_x, n_y, n_z$ 重み付き和」と言っている。交換子は第1引数について線形なので
 
@@ -481,7 +481,7 @@ U(\theta,\mathbf{n})
 \exp\!\left(-i\frac{\theta}{2}\,\mathbf{n}\cdot\boldsymbol{\sigma}\right)
 ```
 
-となる。$\hbar$ が消えて、半角 $\theta/2$ が現れる。これが PHYSICS5.md や PHYSICS6.md で現れたスピン回転の式である。
+となる。 $\hbar$ が消えて、半角 $\theta/2$ が現れる。これが PHYSICS5.md や PHYSICS6.md で現れたスピン回転の式である。
 
 ---
 

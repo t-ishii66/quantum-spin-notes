@@ -33,13 +33,13 @@ U(\theta,\mathbf{n}) = \exp\!\left(-\frac{i}{\hbar}\,\theta\,\mathbf{n}\cdot\mat
 
 で定義される。これは「位置と運動量から作られる量」という**構成的な定義**である。
 
-しかし CLAUDE_PHYSICS.md で見たように、$\mathbf{L}$ にはもう一つの顔がある。それは**回転の生成子**としての役割である。$z$ 軸まわりの微小回転 $\delta\phi$ に対して
+しかし CLAUDE_PHYSICS.md で見たように、 $\mathbf{L}$ にはもう一つの顔がある。それは**回転の生成子**としての役割である。 $z$ 軸まわりの微小回転 $\delta\phi$ に対して
 
 ```math
 \delta\hat{x} = \frac{i}{\hbar}\delta\phi\,[G_z,\,\hat{x}]
 ```
 
-という条件を満たす $G_z$ を探したら、$G_z = \hat{L}_z$ だった。つまり角運動量は、「回転を作る量」でもある。
+という条件を満たす $G_z$ を探したら、 $G_z = \hat{L}_z$ だった。つまり角運動量は、「回転を作る量」でもある。
 
 古典力学では、この二つの顔は同じものを指していた。しかし量子力学では、**回転の生成子であること** のほうがより根本的な定義になる。
 
@@ -51,7 +51,7 @@ U(\theta,\mathbf{n}) = \exp\!\left(-\frac{i}{\hbar}\,\theta\,\mathbf{n}\cdot\mat
 >
 > $$[J_i, J_j] = i\hbar\,\epsilon_{ijk}\,J_k$$
 >
-> を満たすとき、$\mathbf{J} = (J_x, J_y, J_z)$ を**角運動量**と呼ぶ。
+> を満たすとき、 $\mathbf{J} = (J_x, J_y, J_z)$ を**角運動量**と呼ぶ。
 
 なぜこれが定義になるのか。理由は、回転の生成子であるためにはこの交換関係を満たすことが**必要かつ十分**だからである。以下、必要性と十分性をそれぞれ具体的に見る。
 
@@ -66,7 +66,7 @@ U(\theta,\mathbf{n}) = \exp\!\left(-\frac{i}{\hbar}\,\theta\,\mathbf{n}\cdot\mat
 
 結果は異なる。回転は順序に依存する（非可換である）。
 
-この「入れ替えたときのずれ」を、量子力学の演算子で捉えたい。微小回転を考える。$x$ 軸まわりに $\delta\alpha$、$y$ 軸まわりに $\delta\beta$ の微小回転を順に行うとする。CLAUDE_PHYSICS.md の形を使うと
+この「入れ替えたときのずれ」を、量子力学の演算子で捉えたい。微小回転を考える。 $x$ 軸まわりに $\delta\alpha$ 、 $y$ 軸まわりに $\delta\beta$ の微小回転を順に行うとする。CLAUDE_PHYSICS.md の形を使うと
 
 ```math
 U(\delta\alpha, \hat{x}) = I - \frac{i}{\hbar}\delta\alpha\,G_x + O(\delta\alpha^2)
@@ -76,7 +76,7 @@ U(\delta\alpha, \hat{x}) = I - \frac{i}{\hbar}\delta\alpha\,G_x + O(\delta\alpha
 U(\delta\beta, \hat{y}) = I - \frac{i}{\hbar}\delta\beta\,G_y + O(\delta\beta^2)
 ```
 
-順序 A（$x$ が先、$y$ が後）の積を二次まで展開する。
+順序 A（ $x$ が先、 $y$ が後）の積を二次まで展開する。
 
 ```math
 U(\delta\beta, \hat{y})\,U(\delta\alpha, \hat{x})
@@ -87,7 +87,7 @@ U(\delta\beta, \hat{y})\,U(\delta\alpha, \hat{x})
 + \cdots
 ```
 
-順序 B（$y$ が先、$x$ が後）は
+順序 B（ $y$ が先、 $x$ が後）は
 
 ```math
 U(\delta\alpha, \hat{x})\,U(\delta\beta, \hat{y})
@@ -108,9 +108,9 @@ U(\delta\alpha, \hat{x})\,U(\delta\beta, \hat{y})
 
 つまり、**2つの回転を入れ替えたときのずれは、生成子の交換子 $[G_x, G_y]$ で決まる。**
 
-一方、古典幾何学では、$x$ と $y$ の微小回転を入れ替えたときのずれは、$z$ 軸まわりの微小回転になる。これを回転行列で直接確かめる。
+一方、古典幾何学では、 $x$ と $y$ の微小回転を入れ替えたときのずれは、 $z$ 軸まわりの微小回転になる。これを回転行列で直接確かめる。
 
-$x$ 軸まわりの微小回転行列は（CLAUDE_PHYSICS.md の $z$ 軸版と同様に、$\cos\delta\alpha \approx 1$, $\sin\delta\alpha \approx \delta\alpha$ を使う）
+$x$ 軸まわりの微小回転行列は（CLAUDE_PHYSICS.md の $z$ 軸版と同様に、 $\cos\delta\alpha \approx 1$, $\sin\delta\alpha \approx \delta\alpha$ を使う）
 
 ```math
 R_x(\delta\alpha) \approx
@@ -132,7 +132,7 @@ R_y(\delta\beta) \approx
 \end{pmatrix}
 ```
 
-順序 A（$x$ が先、$y$ が後）：
+順序 A（ $x$ が先、 $y$ が後）：
 
 ```math
 R_y R_x \approx
@@ -143,7 +143,7 @@ R_y R_x \approx
 \end{pmatrix}
 ```
 
-順序 B（$y$ が先、$x$ が後）：
+順序 B（ $y$ が先、 $x$ が後）：
 
 ```math
 R_x R_y \approx
@@ -165,7 +165,7 @@ R_y R_x - R_x R_y \approx
 \end{pmatrix}
 ```
 
-一方、$z$ 軸まわりの微小回転行列は
+一方、 $z$ 軸まわりの微小回転行列は
 
 ```math
 R_z(\delta\gamma) \approx
@@ -176,7 +176,7 @@ R_z(\delta\gamma) \approx
 \end{pmatrix}
 ```
 
-であり、$R_z - I$ は
+であり、 $R_z - I$ は
 
 ```math
 R_z(\delta\gamma) - I \approx
@@ -187,15 +187,15 @@ R_z(\delta\gamma) - I \approx
 \end{pmatrix}
 ```
 
-見比べると、$\delta\gamma = -\delta\alpha\,\delta\beta$ とすればぴったり一致する。つまり
+見比べると、 $\delta\gamma = -\delta\alpha\,\delta\beta$ とすればぴったり一致する。つまり
 
 ```math
 R_y R_x - R_x R_y \approx R_z(-\delta\alpha\,\delta\beta) - I
 ```
 
-である。$x$ と $y$ の微小回転の順序を入れ替えたときのずれは、$z$ 軸まわりの微小回転になっている。
+である。 $x$ と $y$ の微小回転の順序を入れ替えたときのずれは、 $z$ 軸まわりの微小回転になっている。
 
-この古典の結果を、量子力学の生成子の言葉に翻訳する。$i\hbar$ の係数まで含めて導出できることを見よう。
+この古典の結果を、量子力学の生成子の言葉に翻訳する。 $i\hbar$ の係数まで含めて導出できることを見よう。
 
 先ほどの量子力学の計算で、順序の差は
 
@@ -204,7 +204,7 @@ R_y R_x - R_x R_y \approx R_z(-\delta\alpha\,\delta\beta) - I
 = \frac{1}{\hbar^2}\,\delta\alpha\,\delta\beta\,[G_x, G_y]
 ```
 
-だった。一方、古典の計算結果は「ずれが $z$ 軸まわりの角度 $\delta\gamma = -\delta\alpha\,\delta\beta$ の微小回転である」と言っている。量子力学では、$z$ 軸まわりの微小回転は
+だった。一方、古典の計算結果は「ずれが $z$ 軸まわりの角度 $\delta\gamma = -\delta\alpha\,\delta\beta$ の微小回転である」と言っている。量子力学では、 $z$ 軸まわりの微小回転は
 
 ```math
 U(\delta\gamma, \hat{z}) = I - \frac{i}{\hbar}\,\delta\gamma\,G_z
@@ -225,7 +225,7 @@ U(\delta\gamma, \hat{z}) - I = -\frac{i}{\hbar}\,\delta\gamma\,G_z
 = \frac{i}{\hbar}\,\delta\alpha\,\delta\beta\,G_z
 ```
 
-両辺から $\delta\alpha\,\delta\beta$ を消し、$\hbar^2$ を掛けると
+両辺から $\delta\alpha\,\delta\beta$ を消し、 $\hbar^2$ を掛けると
 
 ```math
 [G_x, G_y] = i\hbar\,G_z
@@ -233,10 +233,10 @@ U(\delta\gamma, \hat{z}) - I = -\frac{i}{\hbar}\,\delta\gamma\,G_z
 
 が出る。**$i\hbar$ は要請ではなく、導かれた係数である。** その起源を分解すると
 
-- $i$ は、微小回転演算子を $U = I - \frac{i}{\hbar}\delta\theta\,G$（$G$ はエルミート）と書いたことから来る
+- $i$ は、微小回転演算子を $U = I - \frac{i}{\hbar}\delta\theta\,G$ （ $G$ はエルミート）と書いたことから来る
 - $\hbar$ は、同じ式の $1/\hbar$ の分母と二次の $1/\hbar^2$ の比から来る
 
-同様に $y$ と $z$、$z$ と $x$ の組み合わせでも同じ計算ができて
+同様に $y$ と $z$ 、 $z$ と $x$ の組み合わせでも同じ計算ができて
 
 ```math
 [G_x, G_y] = i\hbar\,G_z, \qquad
@@ -252,7 +252,7 @@ U(\delta\gamma, \hat{z}) - I = -\frac{i}{\hbar}\,\delta\gamma\,G_z
 
 である。
 
-つまりこの交換関係は、「$x$ と $y$ の回転を入れ替えると $z$ の回転がずれとして出る」という3次元回転の幾何学的性質を、演算子の言葉に翻訳したものである。回転の生成子であるなら、この関係を満たさなければならない。
+つまりこの交換関係は、「 $x$ と $y$ の回転を入れ替えると $z$ の回転がずれとして出る」という3次元回転の幾何学的性質を、演算子の言葉に翻訳したものである。回転の生成子であるなら、この関係を満たさなければならない。
 
 ### なぜ交換関係が十分なのか
 
@@ -282,7 +282,7 @@ U(\theta, \mathbf{n}) = \lim_{N\to\infty}\left(I - \frac{i}{\hbar}\frac{\theta}{
 
 CLAUDE_PHYSICS.md で導いた $\hat{L}_z = \hat{x}\hat{p}_y - \hat{y}\hat{p}_x$ は、位置と運動量を持つ粒子において、上の交換関係を満たす生成子を**具体的に構成した**ものである。
 
-しかし交換関係の定義は、$\mathbf{r} \times \mathbf{p}$ という構成法を要求していない。位置や運動量を一切持たない自由度でも、3つのエルミート演算子が交換関係を満たしさえすれば、それは角運動量である。
+しかし交換関係の定義は、 $\mathbf{r} \times \mathbf{p}$ という構成法を要求していない。位置や運動量を一切持たない自由度でも、3つのエルミート演算子が交換関係を満たしさえすれば、それは角運動量である。
 
 ### パウリ行列はこの条件を満たす
 
@@ -308,12 +308,12 @@ CLAUDE_PHYSICS2.md で直接計算したように
 
 これが**スピン角運動量**と呼ばれるものの正体である。「空間を動き回ることに由来しない角運動量」であり、粒子の**内部自由度**に宿る角運動量である。
 
-### まとめ：$\boldsymbol{\sigma}$ が角運動量である理由
+### まとめ： $\boldsymbol{\sigma}$ が角運動量である理由
 
 流れを整理する。
 
 1. 回転の生成子は交換関係 $[J_i, J_j] = i\hbar\,\epsilon_{ijk}\,J_k$ を満たす（回転の幾何から要請される）
-2. この交換関係を満たすものを角運動量と定義する（$\mathbf{r} \times \mathbf{p}$ は特殊例にすぎない）
+2. この交換関係を満たすものを角運動量と定義する（ $\mathbf{r} \times \mathbf{p}$ は特殊例にすぎない）
 3. $S_i = \frac{\hbar}{2}\sigma_i$ はこの交換関係を満たす（CLAUDE_PHYSICS2.md で計算済み）
 4. したがって $\mathbf{S}$ は角運動量であり、回転演算子 $U = \exp(-i\theta\,\mathbf{n}\cdot\mathbf{J}/\hbar)$ の $\mathbf{J}$ として使える
 
@@ -373,7 +373,7 @@ U(\theta,\mathbf{n})
 
 には $\hbar$ が分母にある。一方、スピン 1/2 では $\mathbf{J} = \frac{\hbar}{2}\boldsymbol{\sigma}$ なので、分子にも $\hbar$ が入っている。この二つの $\hbar$ が消え合い、後に残るのは $1/2$ だけである。
 
-つまり $\theta/2$ の $1/2$ は、スピン 1/2 の「1/2」そのものである。スピン量子数が $s$ なら角運動量は $\hbar s$ のスケールを持つので、一般に指数の中に $s$ が現れる。$s = 1/2$ だから $\theta/2$ になる。
+つまり $\theta/2$ の $1/2$ は、スピン 1/2 の「1/2」そのものである。スピン量子数が $s$ なら角運動量は $\hbar s$ のスケールを持つので、一般に指数の中に $s$ が現れる。 $s = 1/2$ だから $\theta/2$ になる。
 
 ---
 
@@ -381,9 +381,9 @@ U(\theta,\mathbf{n})
 
 ### パウリ行列の便利な性質
 
-回転行列を具体的に書き下すには、$\exp(-i\frac{\theta}{2}\,\mathbf{n}\cdot\boldsymbol{\sigma})$ を計算しなければならない。行列の指数関数は一般に複雑だが、パウリ行列には特別な性質がある。
+回転行列を具体的に書き下すには、 $\exp(-i\frac{\theta}{2}\,\mathbf{n}\cdot\boldsymbol{\sigma})$ を計算しなければならない。行列の指数関数は一般に複雑だが、パウリ行列には特別な性質がある。
 
-まず $\mathbf{n}\cdot\boldsymbol{\sigma}$ を書き下す。$\mathbf{n} = (n_x, n_y, n_z)$ として
+まず $\mathbf{n}\cdot\boldsymbol{\sigma}$ を書き下す。 $\mathbf{n} = (n_x, n_y, n_z)$ として
 
 ```math
 \mathbf{n}\cdot\boldsymbol{\sigma}
@@ -393,7 +393,7 @@ U(\theta,\mathbf{n})
 = \begin{pmatrix}n_z & n_x - in_y \\ n_x + in_y & -n_z\end{pmatrix}
 ```
 
-この行列を $M$ とおいて、$M^2$ を計算する。
+この行列を $M$ とおいて、 $M^2$ を計算する。
 
 ```math
 M^2 = \begin{pmatrix}n_z & n_x - in_y \\ n_x + in_y & -n_z\end{pmatrix}
@@ -408,7 +408,7 @@ n_z^2 + (n_x - in_y)(n_x + in_y)
 = 1
 ```
 
-（$\mathbf{n}$ は単位ベクトルなので $n_x^2 + n_y^2 + n_z^2 = 1$）
+（ $\mathbf{n}$ は単位ベクトルなので $n_x^2 + n_y^2 + n_z^2 = 1$ ）
 
 $(1,2)$ 成分：
 
@@ -416,23 +416,23 @@ $(1,2)$ 成分：
 n_z(n_x - in_y) + (n_x - in_y)(-n_z) = 0
 ```
 
-同様に $(2,1) = 0$, $(2,2) = 1$。したがって
+同様に $(2,1) = 0$, $(2,2) = 1$ 。したがって
 
 ```math
 (\mathbf{n}\cdot\boldsymbol{\sigma})^2 = I
 ```
 
-これはパウリ行列に特有の性質であり、$\mathbf{n}$ が単位ベクトルであることだけから出る。
+これはパウリ行列に特有の性質であり、 $\mathbf{n}$ が単位ベクトルであることだけから出る。
 
 ### 指数関数の展開
 
-$M^2 = I$ を使うと、$M$ の冪は2通りしかない。
+$M^2 = I$ を使うと、 $M$ の冪は2通りしかない。
 
 ```math
 M^0 = I, \quad M^1 = M, \quad M^2 = I, \quad M^3 = M, \quad \ldots
 ```
 
-つまり偶数乗は $I$、奇数乗は $M$ である。
+つまり偶数乗は $I$ 、奇数乗は $M$ である。
 
 行列の指数関数の定義は
 
@@ -441,7 +441,7 @@ e^{-i\alpha M}
 = \sum_{k=0}^{\infty}\frac{(-i\alpha)^k}{k!}M^k
 ```
 
-であり（$\alpha = \theta/2$ とする）、これを偶数項と奇数項に分ける。
+であり（ $\alpha = \theta/2$ とする）、これを偶数項と奇数項に分ける。
 
 ```math
 = \sum_{k\,\text{even}}\frac{(-i\alpha)^k}{k!}\,I
@@ -487,7 +487,7 @@ U(\theta,\mathbf{n})
 
 ## 第4段階：具体例で確かめる
 
-### 例1：$z$ 軸まわりの回転
+### 例1： $z$ 軸まわりの回転
 
 $\mathbf{n} = (0,0,1)$ とすると $\mathbf{n}\cdot\boldsymbol{\sigma} = \sigma_z$ なので
 
@@ -519,7 +519,7 @@ $\vert {+x}\rangle$ は CLAUDE_PHYSICS2.md で導いたように
 \vert {+x}\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}
 ```
 
-である。これにブロッホ球上で赤道上（$x$ 方向）の状態だった。$U(\theta, \hat{z})$ を作用させると
+である。これにブロッホ球上で赤道上（ $x$ 方向）の状態だった。 $U(\theta, \hat{z})$ を作用させると
 
 ```math
 U(\theta, \hat{z})\,\vert {+x}\rangle
@@ -546,20 +546,20 @@ U(\theta, \hat{z})\,\vert {+x}\rangle
 \frac{1}{\sqrt{2}}\bigl(\vert {+z}\rangle + e^{i\phi}\vert {-z}\rangle\bigr)
 ```
 
-の赤道状態であり、$\phi$ は赤道上の方位角だった。$\phi = 0$ が $\vert {+x}\rangle$、$\phi = \pi/2$ が $\vert {+y}\rangle$ だった。
+の赤道状態であり、 $\phi$ は赤道上の方位角だった。 $\phi = 0$ が $\vert {+x}\rangle$ 、 $\phi = \pi/2$ が $\vert {+y}\rangle$ だった。
 
-上の結果では $\phi = \theta$ である。つまり、もとの $\vert {+x}\rangle$（方位角 $0$）がブロッホ球の赤道上で方位角 $\theta$ の位置に移った。これはまさに $z$ 軸まわりに角度 $\theta$ だけ回転したことを意味する。
+上の結果では $\phi = \theta$ である。つまり、もとの $\vert {+x}\rangle$ （方位角 $0$ ）がブロッホ球の赤道上で方位角 $\theta$ の位置に移った。これはまさに $z$ 軸まわりに角度 $\theta$ だけ回転したことを意味する。
 
-一方、$\vert {+z}\rangle$（北極）と $\vert {-z}\rangle$（南極）に作用させると
+一方、 $\vert {+z}\rangle$ （北極）と $\vert {-z}\rangle$ （南極）に作用させると
 
 ```math
 U(\theta, \hat{z})\,\vert {+z}\rangle = e^{-i\theta/2}\vert {+z}\rangle, \qquad
 U(\theta, \hat{z})\,\vert {-z}\rangle = e^{+i\theta/2}\vert {-z}\rangle
 ```
 
-どちらも全体位相が変わるだけで、ブロッホ球上では動かない。$z$ 軸まわりの回転で北極と南極が動かないのは当然である。
+どちらも全体位相が変わるだけで、ブロッホ球上では動かない。 $z$ 軸まわりの回転で北極と南極が動かないのは当然である。
 
-### 例2：$x$ 軸まわりに 180 度回転
+### 例2： $x$ 軸まわりに 180 度回転
 
 $\mathbf{n} = (1,0,0)$, $\theta = \pi$ とすると
 
@@ -582,7 +582,7 @@ U(\pi, \hat{x})\vert {+z}\rangle
 = -i\,\vert {-z}\rangle
 ```
 
-全体位相 $-i$ を除けば $\vert {-z}\rangle$ になっている。$x$ 軸まわりの 180 度回転で、北極が南極に移る。ブロッホ球の絵で考えれば当然の結果である。
+全体位相 $-i$ を除けば $\vert {-z}\rangle$ になっている。 $x$ 軸まわりの 180 度回転で、北極が南極に移る。ブロッホ球の絵で考えれば当然の結果である。
 
 ---
 
@@ -606,7 +606,7 @@ $z$ 軸まわりに角度 $\theta$ だけ回転させる。例1で見たよう�
 U(\theta, \hat{z}) = \begin{pmatrix}e^{-i\theta/2} & 0 \\ 0 & e^{+i\theta/2}\end{pmatrix}
 ```
 
-である。初期状態を $\vert {+x}\rangle$（ブロッホ球の赤道上、方位角 $\phi = 0$）とする。
+である。初期状態を $\vert {+x}\rangle$ （ブロッホ球の赤道上、方位角 $\phi = 0$ ）とする。
 
 例1で計算したように、回転後の状態は（全体位相を除くと）
 
@@ -614,9 +614,9 @@ U(\theta, \hat{z}) = \begin{pmatrix}e^{-i\theta/2} & 0 \\ 0 & e^{+i\theta/2}\end
 \frac{1}{\sqrt{2}}\begin{pmatrix}1\\e^{i\theta}\end{pmatrix}
 ```
 
-であり、方位角が $0 \to \theta$ に移った。つまり**ブロッホベクトルは $\theta$ だけ動いている**。$\theta/2$ ではない。
+であり、方位角が $0 \to \theta$ に移った。つまり**ブロッホベクトルは $\theta$ だけ動いている**。 $\theta/2$ ではない。
 
-もう一例。初期状態を $\vert {+y}\rangle$（方位角 $\phi = \pi/2$）にする。
+もう一例。初期状態を $\vert {+y}\rangle$ （方位角 $\phi = \pi/2$ ）にする。
 
 ```math
 U(\theta, \hat{z})\,\vert {+y}\rangle
@@ -631,17 +631,17 @@ U(\theta, \hat{z})\,\vert {+y}\rangle
 = \frac{e^{-i\theta/2}}{\sqrt{2}}\begin{pmatrix}1\\i\,e^{i\theta}\end{pmatrix}
 ```
 
-$i = e^{i\pi/2}$ なので $i\,e^{i\theta} = e^{i(\theta + \pi/2)}$。したがって全体位相を除くと
+$i = e^{i\pi/2}$ なので $i\,e^{i\theta} = e^{i(\theta + \pi/2)}$ 。したがって全体位相を除くと
 
 ```math
 \frac{1}{\sqrt{2}}\begin{pmatrix}1\\e^{i(\theta + \pi/2)}\end{pmatrix}
 ```
 
-方位角が $\pi/2 \to \theta + \pi/2$ に移った。やはり**方位角の変化は $\theta$** であり、$\theta/2$ ではない。
+方位角が $\pi/2 \to \theta + \pi/2$ に移った。やはり**方位角の変化は $\theta$** であり、 $\theta/2$ ではない。
 
 ### なぜ $\theta/2$ ではなく $\theta$ なのか
 
-状態ベクトルの中には確かに $\theta/2$ が入っている。$\vert {+z}\rangle$ 成分には $e^{-i\theta/2}$、$\vert {-z}\rangle$ 成分には $e^{+i\theta/2}$ がかかる。
+状態ベクトルの中には確かに $\theta/2$ が入っている。 $\vert {+z}\rangle$ 成分には $e^{-i\theta/2}$ 、 $\vert {-z}\rangle$ 成分には $e^{+i\theta/2}$ がかかる。
 
 しかしブロッホ球上の方位角を決めるのは、2成分の**相対位相**である。
 
@@ -657,7 +657,7 @@ $+\theta/2$ と $-\theta/2$ の差は $\theta$ になる。2成分に逆符号�
 
 $z$ 軸まわりの回転について赤道上の状態で確かめたが、これは一般の状態でも同じである。
 
-一般の状態 $\vert \psi\rangle = \cos(\alpha/2)\vert {+z}\rangle + e^{i\phi}\sin(\alpha/2)\vert {-z}\rangle$（ブロッホ球の極角 $\alpha$、方位角 $\phi$）に $U(\theta, \hat{z})$ を作用させると
+一般の状態 $\vert \psi\rangle = \cos(\alpha/2)\vert {+z}\rangle + e^{i\phi}\sin(\alpha/2)\vert {-z}\rangle$ （ブロッホ球の極角 $\alpha$ 、方位角 $\phi$ ）に $U(\theta, \hat{z})$ を作用させると
 
 ```math
 U(\theta, \hat{z})\vert \psi\rangle
@@ -670,7 +670,7 @@ U(\theta, \hat{z})\vert \psi\rangle
 = e^{-i\theta/2}\left(\cos\frac{\alpha}{2}\vert {+z}\rangle + e^{i(\phi+\theta)}\sin\frac{\alpha}{2}\vert {-z}\rangle\right)
 ```
 
-極角 $\alpha$ は変わらず、方位角が $\phi \to \phi + \theta$ に変わった。$z$ 軸まわりに $\theta$ だけ回転している。
+極角 $\alpha$ は変わらず、方位角が $\phi \to \phi + \theta$ に変わった。 $z$ 軸まわりに $\theta$ だけ回転している。
 
 ### まとめ：二重構造
 
@@ -679,11 +679,11 @@ U(\theta, \hat{z})\vert \psi\rangle
 - **状態ベクトル**（スピノル）は $\theta/2$ の位相変化を受ける
 - **ブロッホベクトル**（測定統計）は $\theta$ だけ回転する
 
-この二重構造は、状態ベクトルからブロッホベクトルへの対応が「2対1」であることから来ている。$\vert \psi\rangle$ と $-\vert \psi\rangle$ はブロッホ球上で同じ点を指す。状態ベクトルの空間（SU(2)）は、ブロッホベクトルの空間（回転群 SO(3)）の**二重被覆**になっている。
+この二重構造は、状態ベクトルからブロッホベクトルへの対応が「2対1」であることから来ている。 $\vert \psi\rangle$ と $-\vert \psi\rangle$ はブロッホ球上で同じ点を指す。状態ベクトルの空間（SU(2)）は、ブロッホベクトルの空間（回転群 SO(3)）の**二重被覆**になっている。
 
 したがって、答えは明確である。
 
-> 古典的に $\theta$ 回したら、ブロッホベクトルも $\theta$ 動く。$\theta/2$ ではない。
+> 古典的に $\theta$ 回したら、ブロッホベクトルも $\theta$ 動く。 $\theta/2$ ではない。
 
 ---
 
@@ -691,7 +691,7 @@ U(\theta, \hat{z})\vert \psi\rangle
 
 ### 計算
 
-$\theta = 2\pi$（360 度）を代入する。
+$\theta = 2\pi$ （360 度）を代入する。
 
 ```math
 U(2\pi,\mathbf{n})
@@ -710,7 +710,7 @@ U(2\pi,\mathbf{n})
 
 ### 720 度で戻る
 
-$\theta = 4\pi$（720 度）を代入すると
+$\theta = 4\pi$ （720 度）を代入すると
 
 ```math
 U(4\pi,\mathbf{n})
@@ -723,20 +723,20 @@ U(4\pi,\mathbf{n})
 
 ### なぜ 360 度で戻らないのか
 
-この原因は $\theta/2$ にある。回転角 $\theta$ に対して、行列の中には $\cos(\theta/2)$ と $\sin(\theta/2)$ が入っている。三角関数は $2\pi$ で一周するから、$\theta/2 = 2\pi$ すなわち $\theta = 4\pi$ で一周する。
+この原因は $\theta/2$ にある。回転角 $\theta$ に対して、行列の中には $\cos(\theta/2)$ と $\sin(\theta/2)$ が入っている。三角関数は $2\pi$ で一周するから、 $\theta/2 = 2\pi$ すなわち $\theta = 4\pi$ で一周する。
 
 言い換えれば
 
 - **古典的な回転**は $2\pi$ で一周する
 - **スピン 1/2 の状態ベクトル**は $4\pi$ で一周する
 
-この「半分の速さで回る」性質は、$s = 1/2$ という値に直結している。
+この「半分の速さで回る」性質は、 $s = 1/2$ という値に直結している。
 
 ### 観測にかかるか
 
 $\vert \psi\rangle$ と $-\vert \psi\rangle$ は、単独の測定では区別できない。確率は $\vert \langle\phi\vert \psi\rangle\vert ^2$ で計算され、全体位相 $-1$ は二乗で消えるからである。
 
-しかし、ある粒子のスピンを2つの経路に分け、片方だけを 360 度回転してから再び合流させると、$-1$ の符号差が**干渉**として観測される。これは中性子干渉実験で実際に確認されている。
+しかし、ある粒子のスピンを2つの経路に分け、片方だけを 360 度回転してから再び合流させると、 $-1$ の符号差が**干渉**として観測される。これは中性子干渉実験で実際に確認されている。
 
 ---
 
@@ -750,14 +750,14 @@ $\vert \psi\rangle$ と $-\vert \psi\rangle$ は、単独の測定では区別�
 U(\theta,\mathbf{n}) = \exp\!\left(-\frac{i}{\hbar}\,\theta\,\mathbf{n}\cdot\mathbf{J}\right)
 ```
 
-であり、$\mathbf{J}$ の固有値は $-j\hbar$ から $+j\hbar$ まで整数刻みで並ぶ。
+であり、 $\mathbf{J}$ の固有値は $-j\hbar$ から $+j\hbar$ まで整数刻みで並ぶ。
 
-$z$ 軸まわりの回転では $U = e^{-i\theta J_z/\hbar}$ であり、$J_z$ の固有値 $m\hbar$（$m = -j, -j+1, \ldots, +j$）に対して各成分に $e^{-im\theta}$ がかかる。
+$z$ 軸まわりの回転では $U = e^{-i\theta J_z/\hbar}$ であり、 $J_z$ の固有値 $m\hbar$ （ $m = -j, -j+1, \ldots, +j$ ）に対して各成分に $e^{-im\theta}$ がかかる。
 
 全成分が元に戻る条件は $e^{-im\theta} = 1$ が全ての $m$ で成り立つことである。
 
-- $j$ が整数（$j = 0, 1, 2, \ldots$）なら $m$ も整数なので、$\theta = 2\pi$ で全部戻る
-- $j$ が半整数（$j = 1/2, 3/2, \ldots$）なら $m$ に半整数が含まれるので、$\theta = 2\pi$ では $e^{-i\cdot(1/2)\cdot 2\pi} = e^{-i\pi} = -1$ となり、戻らない。$\theta = 4\pi$ で戻る
+- $j$ が整数（ $j = 0, 1, 2, \ldots$ ）なら $m$ も整数なので、 $\theta = 2\pi$ で全部戻る
+- $j$ が半整数（ $j = 1/2, 3/2, \ldots$ ）なら $m$ に半整数が含まれるので、 $\theta = 2\pi$ では $e^{-i\cdot(1/2)\cdot 2\pi} = e^{-i\pi} = -1$ となり、戻らない。 $\theta = 4\pi$ で戻る
 
 スピン 1/2 は $j = 1/2$ の最も単純な場合である。
 
@@ -785,4 +785,4 @@ U = cos(θ/2) I − i sin(θ/2) n·σ
 θ = 4π で U = +I （720度で元に戻る）
 ```
 
-$\theta/2$ の起源は $S_i = \hbar\sigma_i/2$ の $1/2$ であり、その $1/2$ はスピン量子数 $s = 1/2$ そのものである。そして $\mathbf{S}$ が角運動量として $\mathbf{J}$ に代入できるのは、$\mathbf{r} \times \mathbf{p}$ という出自を持つからではなく、回転の交換関係を満たすからである。
+$\theta/2$ の起源は $S_i = \hbar\sigma_i/2$ の $1/2$ であり、その $1/2$ はスピン量子数 $s = 1/2$ そのものである。そして $\mathbf{S}$ が角運動量として $\mathbf{J}$ に代入できるのは、 $\mathbf{r} \times \mathbf{p}$ という出自を持つからではなく、回転の交換関係を満たすからである。

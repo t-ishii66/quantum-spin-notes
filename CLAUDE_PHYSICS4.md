@@ -7,7 +7,7 @@
 使う道具は
 
 - 状態ベクトルと測定（CLAUDE_PHYSICS2.md）
-- パウリ行列 $\sigma_x, \sigma_y, \sigma_z$ と方向 $\mathbf{n}$ の測定 $\mathbf{n}\cdot\boldsymbol{\sigma}$（CLAUDE_PHYSICS2.md）
+- パウリ行列 $\sigma_x, \sigma_y, \sigma_z$ と方向 $\mathbf{n}$ の測定 $\mathbf{n}\cdot\boldsymbol{\sigma}$ （CLAUDE_PHYSICS2.md）
 - スピン回転と固有状態の変換（CLAUDE_PHYSICS3.md）
 
 だけである。新たに導入するのは「2粒子系の状態をどう書くか」だけで、それ以外は既知の道具の組み合わせで話が進む。
@@ -31,7 +31,7 @@
 
 ### 1粒子の復習
 
-CLAUDE_PHYSICS2.md で見たように、1粒子のスピン状態は 2 次元空間に住んでいる。$z$ 基底は
+CLAUDE_PHYSICS2.md で見たように、1粒子のスピン状態は 2 次元空間に住んでいる。 $z$ 基底は
 
 ```math
 \vert {+z}\rangle = \begin{pmatrix}1\\0\end{pmatrix}, \qquad
@@ -44,13 +44,13 @@ CLAUDE_PHYSICS2.md で見たように、1粒子のスピン状態は 2 次元空
 
 いま、2つのスピン 1/2 粒子がある。Alice が1番目の粒子を、Bob が2番目の粒子を持っているとする。
 
-2粒子系の状態を書くには、両方の粒子の状態を同時に指定する必要がある。たとえば「Alice の粒子が $\vert {+z}\rangle$ で、Bob の粒子が $\vert {-z}\rangle$」という状態を
+2粒子系の状態を書くには、両方の粒子の状態を同時に指定する必要がある。たとえば「Alice の粒子が $\vert {+z}\rangle$ で、Bob の粒子が $\vert {-z}\rangle$ 」という状態を
 
 ```math
 \vert {+z}\rangle \otimes \vert {-z}\rangle
 ```
 
-と書く。$\otimes$ は「テンソル積」と呼ばれるが、ここでは「かつ」と読めばよい。表記を短くするために
+と書く。 $\otimes$ は「テンソル積」と呼ばれるが、ここでは「かつ」と読めばよい。表記を短くするために
 
 ```math
 \vert {+z}\rangle\vert {-z}\rangle \quad \text{あるいは} \quad \vert {+z},{-z}\rangle
@@ -103,23 +103,23 @@ CLAUDE_PHYSICS2.md で見たように、1粒子のスピン状態は 2 次元空
 
 ここで左のケットが Alice の粒子、右のケットが Bob の粒子である。
 
-この状態は「Alice が $+z$ で Bob が $-z$」という成分と「Alice が $-z$ で Bob が $+z$」という成分の重ね合わせになっている。
+この状態は「Alice が $+z$ で Bob が $-z$ 」という成分と「Alice が $-z$ で Bob が $+z$ 」という成分の重ね合わせになっている。
 
 ### 同じ方向で測ると必ず逆になる
 
 Alice と Bob が両方とも $z$ 方向で測定したとき、何が起こるかを見る。
 
-$\vert \Psi^-\rangle$ の第1項 $\vert {+z}\rangle\vert {-z}\rangle$ は「Alice が $+1$、Bob が $-1$」を返し、第2項 $\vert {-z}\rangle\vert {+z}\rangle$ は「Alice が $-1$、Bob が $+1$」を返す。どちらの項でも、Alice と Bob の結果は逆である。
+$\vert \Psi^-\rangle$ の第1項 $\vert {+z}\rangle\vert {-z}\rangle$ は「Alice が $+1$ 、Bob が $-1$ 」を返し、第2項 $\vert {-z}\rangle\vert {+z}\rangle$ は「Alice が $-1$ 、Bob が $+1$ 」を返す。どちらの項でも、Alice と Bob の結果は逆である。
 
-したがって、シングレット状態では $z$ 方向の測定に対して**完全な反相関**がある。Alice が $+1$ なら Bob は必ず $-1$、Alice が $-1$ なら Bob は必ず $+1$ である。
+したがって、シングレット状態では $z$ 方向の測定に対して**完全な反相関**がある。Alice が $+1$ なら Bob は必ず $-1$ 、Alice が $-1$ なら Bob は必ず $+1$ である。
 
 ### 回転不変性：どの方向でも同じことが成り立つ
 
 実は、シングレット状態には驚くべき性質がある。上の完全反相関は $z$ 方向に限らず、**任意の方向で成り立つ**。
 
-これを確かめるには、任意の方向 $\mathbf{a}$ の固有状態で $\vert \Psi^-\rangle$ を書き直してみればよい。$\mathbf{a}$ が $z$ 軸から角度 $\theta_a$ の方向にあるとする（$xz$ 平面内とする）。
+これを確かめるには、任意の方向 $\mathbf{a}$ の固有状態で $\vert \Psi^-\rangle$ を書き直してみればよい。 $\mathbf{a}$ が $z$ 軸から角度 $\theta_a$ の方向にあるとする（ $xz$ 平面内とする）。
 
-方向 $\mathbf{a}$ の固有状態 $\vert {+a}\rangle$ は、$\vert {+z}\rangle$ を $y$ 軸まわりに $\theta_a$ だけ回転させたものである。CLAUDE_PHYSICS3.md の回転行列
+方向 $\mathbf{a}$ の固有状態 $\vert {+a}\rangle$ は、 $\vert {+z}\rangle$ を $y$ 軸まわりに $\theta_a$ だけ回転させたものである。CLAUDE_PHYSICS3.md の回転行列
 
 ```math
 U(\theta, \mathbf{n}) = \cos\frac{\theta}{2}\,I - i\sin\frac{\theta}{2}\,\mathbf{n}\cdot\boldsymbol{\sigma}
@@ -179,7 +179,7 @@ $-i \cdot (-i) = i^2 = -1$ と $-i \cdot i = -i^2 = 1$ に注意すると
 \vert {-a}\rangle = -\sin\frac{\theta_a}{2}\,\vert {+z}\rangle + \cos\frac{\theta_a}{2}\,\vert {-z}\rangle
 ```
 
-である。空間的には $\theta_a$ だけ回転しているが、状態ベクトルの係数には $\theta_a/2$ が現れる。これは CLAUDE_PHYSICS3.md で見たスピノルの半角構造そのものである。$c = \cos(\theta_a/2)$, $s = \sin(\theta_a/2)$ と略記すると
+である。空間的には $\theta_a$ だけ回転しているが、状態ベクトルの係数には $\theta_a/2$ が現れる。これは CLAUDE_PHYSICS3.md で見たスピノルの半角構造そのものである。 $c = \cos(\theta_a/2)$, $s = \sin(\theta_a/2)$ と略記すると
 
 ```math
 \vert {+a}\rangle\vert {-a}\rangle
@@ -205,13 +205,13 @@ $-i \cdot (-i) = i^2 = -1$ と $-i \cdot i = -i^2 = 1$ に注意すると
 \vert {+a}\rangle\vert {-a}\rangle - \vert {-a}\rangle\vert {+a}\rangle
 ```
 
-$\vert {+z}\rangle\vert {+z}\rangle$ の係数：$-cs - (-sc) = 0$
+$\vert {+z}\rangle\vert {+z}\rangle$ の係数： $-cs - (-sc) = 0$
 
-$\vert {+z}\rangle\vert {-z}\rangle$ の係数：$c^2 - (-s^2) = c^2 + s^2 = 1$
+$\vert {+z}\rangle\vert {-z}\rangle$ の係数： $c^2 - (-s^2) = c^2 + s^2 = 1$
 
-$\vert {-z}\rangle\vert {+z}\rangle$ の係数：$-s^2 - c^2 = -(s^2 + c^2) = -1$
+$\vert {-z}\rangle\vert {+z}\rangle$ の係数： $-s^2 - c^2 = -(s^2 + c^2) = -1$
 
-$\vert {-z}\rangle\vert {-z}\rangle$ の係数：$sc - cs = 0$
+$\vert {-z}\rangle\vert {-z}\rangle$ の係数： $sc - cs = 0$
 
 したがって
 
@@ -229,7 +229,7 @@ $\vert {-z}\rangle\vert {-z}\rangle$ の係数：$sc - cs = 0$
 }
 ```
 
-シングレット状態は、$z$ 基底で書いても $\mathbf{a}$ 基底で書いても同じ形になる。これが**回転不変性**である。
+シングレット状態は、 $z$ 基底で書いても $\mathbf{a}$ 基底で書いても同じ形になる。これが**回転不変性**である。
 
 この結果から、Alice がどの方向 $\mathbf{a}$ で測定しても、Bob の粒子は Alice と反対の状態に決まる。
 
@@ -246,9 +246,9 @@ $\vert {-z}\rangle\vert {-z}\rangle$ の係数：$sc - cs = 0$
 
 Alice は方向 $\mathbf{a}$ で、Bob は方向 $\mathbf{b}$ で測定する。2つの方向の間の角度を $\theta$ とする。
 
-同じ方向なら完全反相関（$+1$ と $-1$ のペアが必ず出る）。では方向が異なるときは？
+同じ方向なら完全反相関（ $+1$ と $-1$ のペアが必ず出る）。では方向が異なるときは？
 
-各測定の結果を $A = \pm 1$（Alice）、$B = \pm 1$（Bob）とし、その積の期待値
+各測定の結果を $A = \pm 1$ （Alice）、 $B = \pm 1$ （Bob）とし、その積の期待値
 
 ```math
 E(\mathbf{a}, \mathbf{b}) = \langle A \cdot B \rangle
@@ -256,24 +256,24 @@ E(\mathbf{a}, \mathbf{b}) = \langle A \cdot B \rangle
 
 を計算する。これが**相関**である。
 
-- $E = -1$：完全反相関（必ず逆）
-- $E = +1$：完全正相関（必ず同じ）
-- $E = 0$：無相関
+- $E = -1$ ：完全反相関（必ず逆）
+- $E = +1$ ：完全正相関（必ず同じ）
+- $E = 0$ ：無相関
 
 ### 計算
 
 回転不変性から、Alice が $\mathbf{a}$ 方向で測定したとき
 
-- 結果が $+1$（確率 $1/2$）→ Bob の粒子は $\vert {-a}\rangle$
-- 結果が $-1$（確率 $1/2$）→ Bob の粒子は $\vert {+a}\rangle$
+- 結果が $+1$ （確率 $1/2$ ）→ Bob の粒子は $\vert {-a}\rangle$
+- 結果が $-1$ （確率 $1/2$ ）→ Bob の粒子は $\vert {+a}\rangle$
 
-Bob は方向 $\mathbf{b}$ で測定する。$\mathbf{a}$ と $\mathbf{b}$ の間の角度を $\theta$ とする。
+Bob は方向 $\mathbf{b}$ で測定する。 $\mathbf{a}$ と $\mathbf{b}$ の間の角度を $\theta$ とする。
 
-**Alice が $+1$ のとき（Bob の粒子は $\vert {-a}\rangle$）：**
+**Alice が $+1$ のとき（Bob の粒子は $\vert {-a}\rangle$ ）：**
 
-Bob が $+1$ を得る確率は $\vert \langle{+b}\vert {-a}\rangle\vert ^2$、$-1$ を得る確率は $\vert \langle{-b}\vert {-a}\rangle\vert ^2$ である。
+Bob が $+1$ を得る確率は $\vert \langle{+b}\vert {-a}\rangle\vert ^2$ 、 $-1$ を得る確率は $\vert \langle{-b}\vert {-a}\rangle\vert ^2$ である。
 
-$\mathbf{a}$ と $\mathbf{b}$ が同じ $xz$ 平面内にあるとし、$z$ 軸からの角度をそれぞれ $\theta_a$, $\theta_b$ とする（$\theta = \theta_b - \theta_a$）。CLAUDE_PHYSICS3.md の回転から
+$\mathbf{a}$ と $\mathbf{b}$ が同じ $xz$ 平面内にあるとし、 $z$ 軸からの角度をそれぞれ $\theta_a$, $\theta_b$ とする（ $\theta = \theta_b - \theta_a$ ）。CLAUDE_PHYSICS3.md の回転から
 
 ```math
 \vert {+b}\rangle = \cos\frac{\theta_b}{2}\vert {+z}\rangle + \sin\frac{\theta_b}{2}\vert {-z}\rangle
@@ -310,7 +310,7 @@ P(B = +1 \mid A = +1) = \sin^2\frac{\theta}{2}, \qquad
 P(B = -1 \mid A = +1) = \cos^2\frac{\theta}{2}
 ```
 
-**Alice が $-1$ のとき（Bob の粒子は $\vert {+a}\rangle$）：**
+**Alice が $-1$ のとき（Bob の粒子は $\vert {+a}\rangle$ ）：**
 
 同じ計算を繰り返す。
 
@@ -332,7 +332,7 @@ E(\mathbf{a}, \mathbf{b})
 = \sum_{A,B = \pm 1} A \cdot B \cdot P(A, B)
 ```
 
-Alice の結果は等確率（各 $1/2$）なので
+Alice の結果は等確率（各 $1/2$ ）なので
 
 ```math
 E = \frac{1}{2}\Bigl[(+1)(+1)\sin^2\frac{\theta}{2} + (+1)(-1)\cos^2\frac{\theta}{2}\Bigr]
@@ -360,9 +360,9 @@ E(\mathbf{a}, \mathbf{b}) = -\cos\theta = -\mathbf{a}\cdot\mathbf{b}
 
 ### 確認
 
-- $\theta = 0$（同方向）：$E = -1$（完全反相関） ✓
-- $\theta = \pi$（逆方向）：$E = +1$（完全正相関） ✓
-- $\theta = \pi/2$（直交）：$E = 0$（無相関） ✓
+- $\theta = 0$ （同方向）： $E = -1$ （完全反相関） ✓
+- $\theta = \pi$ （逆方向）： $E = +1$ （完全正相関） ✓
+- $\theta = \pi/2$ （直交）： $E = 0$ （無相関） ✓
 
 ---
 
@@ -372,7 +372,7 @@ E(\mathbf{a}, \mathbf{b}) = -\cos\theta = -\mathbf{a}\cdot\mathbf{b}
 
 ここで立ち止まって考える。
 
-Alice が方向 $\mathbf{a}$ で測定すると、Bob の粒子は即座に $\vert {-a}\rangle$（または $\vert {+a}\rangle$）に決まる。Alice と Bob がどれほど離れていても、である。
+Alice が方向 $\mathbf{a}$ で測定すると、Bob の粒子は即座に $\vert {-a}\rangle$ （または $\vert {+a}\rangle$ ）に決まる。Alice と Bob がどれほど離れていても、である。
 
 しかし Alice の測定が Bob の粒子に物理的な影響を与えるわけではない（特殊相対論により、光より速い影響伝達はない）。
 
@@ -404,7 +404,7 @@ EPR の議論を数学的にまとめると、次のような仮説になる。
 E(\mathbf{a}, \mathbf{b}) = \int A(\mathbf{a}, \lambda)\,B(\mathbf{b}, \lambda)\,\rho(\lambda)\,d\lambda
 ```
 
-と書ける。ここで $\rho(\lambda)$ は $\lambda$ の確率分布（$\int \rho\,d\lambda = 1$, $\rho \geq 0$）である。
+と書ける。ここで $\rho(\lambda)$ は $\lambda$ の確率分布（ $\int \rho\,d\lambda = 1$, $\rho \geq 0$ ）である。
 
 問いはこうである。**この枠組みで、量子力学の予測 $E = -\cos\theta$ を再現できるか？**
 
@@ -426,7 +426,7 @@ S = E(\mathbf{a}, \mathbf{b}) - E(\mathbf{a}, \mathbf{b}') + E(\mathbf{a}', \mat
 
 ### 隠れた変数なら $\vert S\vert \leq 2$
 
-隠れた変数の仮説のもとでは、各粒子ペア（隠れた変数 $\lambda$）に対して4つの値
+隠れた変数の仮説のもとでは、各粒子ペア（隠れた変数 $\lambda$ ）に対して4つの値
 
 ```math
 A = A(\mathbf{a}, \lambda), \quad
@@ -451,15 +451,15 @@ $AB'$ を括り出すと
 s(\lambda) = A(B - B') + A'(B + B')
 ```
 
-ここで $B, B' = \pm 1$ なので、$B - B'$ と $B + B'$ の組み合わせは次の2通りしかない。
+ここで $B, B' = \pm 1$ なので、 $B - B'$ と $B + B'$ の組み合わせは次の2通りしかない。
 
-$B = B'$ のとき：$B - B' = 0$, $B + B' = \pm 2$ なので
+$B = B'$ のとき： $B - B' = 0$, $B + B' = \pm 2$ なので
 
 ```math
 s = A \cdot 0 + A' \cdot (\pm 2) = \pm 2
 ```
 
-$B = -B'$ のとき：$B - B' = \pm 2$, $B + B' = 0$ なので
+$B = -B'$ のとき： $B - B' = \pm 2$, $B + B' = 0$ なので
 
 ```math
 s = A \cdot (\pm 2) + A' \cdot 0 = \pm 2
@@ -494,15 +494,15 @@ s = A \cdot (\pm 2) + A' \cdot 0 = \pm 2
 
 ### 方向の選択
 
-第3段階で $E(\mathbf{a}, \mathbf{b}) = -\cos\theta$ を導いた。この公式を使って $S$ を計算し、$\vert S\vert > 2$ になる方向を探す。
+第3段階で $E(\mathbf{a}, \mathbf{b}) = -\cos\theta$ を導いた。この公式を使って $S$ を計算し、 $\vert S\vert > 2$ になる方向を探す。
 
-4方向をすべて $xz$ 平面内に取り、$z$ 軸からの角度で指定する。
+4方向をすべて $xz$ 平面内に取り、 $z$ 軸からの角度で指定する。
 
 ```math
-\mathbf{a}: 0°, \qquad
-\mathbf{b}: 45°, \qquad
-\mathbf{a}': 90°, \qquad
-\mathbf{b}': 135°
+\mathbf{a}: 0^\circ, \qquad
+\mathbf{b}: 45^\circ, \qquad
+\mathbf{a}': 90^\circ, \qquad
+\mathbf{b}': 135^\circ
 ```
 
 つまり、4方向が 45 度ずつ等間隔に並んでいる。
@@ -511,28 +511,28 @@ s = A \cdot (\pm 2) + A' \cdot 0 = \pm 2
 
 各ペアの間の角度と $E = -\cos\theta$ を計算する。
 
-$E(\mathbf{a}, \mathbf{b})$：$\theta = 45°$
+$E(\mathbf{a}, \mathbf{b})$ ： $\theta = 45^\circ$
 
 ```math
-E(\mathbf{a}, \mathbf{b}) = -\cos 45° = -\frac{1}{\sqrt{2}}
+E(\mathbf{a}, \mathbf{b}) = -\cos 45^\circ = -\frac{1}{\sqrt{2}}
 ```
 
-$E(\mathbf{a}, \mathbf{b}')$：$\theta = 135°$
+$E(\mathbf{a}, \mathbf{b}')$ ： $\theta = 135^\circ$
 
 ```math
-E(\mathbf{a}, \mathbf{b}') = -\cos 135° = -\left(-\frac{1}{\sqrt{2}}\right) = +\frac{1}{\sqrt{2}}
+E(\mathbf{a}, \mathbf{b}') = -\cos 135^\circ = -\left(-\frac{1}{\sqrt{2}}\right) = +\frac{1}{\sqrt{2}}
 ```
 
-$E(\mathbf{a}', \mathbf{b})$：$\theta = 90° - 45° = 45°$
+$E(\mathbf{a}', \mathbf{b})$ ： $\theta = 90^\circ - 45^\circ = 45^\circ$
 
 ```math
-E(\mathbf{a}', \mathbf{b}) = -\cos 45° = -\frac{1}{\sqrt{2}}
+E(\mathbf{a}', \mathbf{b}) = -\cos 45^\circ = -\frac{1}{\sqrt{2}}
 ```
 
-$E(\mathbf{a}', \mathbf{b}')$：$\theta = 135° - 90° = 45°$
+$E(\mathbf{a}', \mathbf{b}')$ ： $\theta = 135^\circ - 90^\circ = 45^\circ$
 
 ```math
-E(\mathbf{a}', \mathbf{b}') = -\cos 45° = -\frac{1}{\sqrt{2}}
+E(\mathbf{a}', \mathbf{b}') = -\cos 45^\circ = -\frac{1}{\sqrt{2}}
 ```
 
 ### $S$ の計算
@@ -578,11 +578,11 @@ CHSH 不等式は「各粒子がすべての方向に対する答えを事前に
 
 ---
 
-## 補足：$2\sqrt{2}$ は量子力学の上限でもある
+## 補足： $2\sqrt{2}$ は量子力学の上限でもある
 
-隠れた変数では $\vert S\vert \leq 2$。量子力学では $\vert S\vert = 2\sqrt{2}$。では、$\vert S\vert $ はどこまで大きくなりうるか。
+隠れた変数では $\vert S\vert \leq 2$ 。量子力学では $\vert S\vert = 2\sqrt{2}$ 。では、 $\vert S\vert $ はどこまで大きくなりうるか。
 
-$A, B = \pm 1$ の4つの相関を自由に選べるなら、$S$ の式の定義から最大値は $\vert S\vert = 4$ になりうる（4つの相関がすべて $\pm 1$ で揃えば）。
+$A, B = \pm 1$ の4つの相関を自由に選べるなら、 $S$ の式の定義から最大値は $\vert S\vert = 4$ になりうる（4つの相関がすべて $\pm 1$ で揃えば）。
 
 しかし量子力学ではこの $4$ に達することはなく、上限は $2\sqrt{2}$ である（Tsirelson の限界）。
 
