@@ -164,6 +164,106 @@ f(x,y,z,p_x,p_y,p_z)
 によって、任意の量 `f` の微小変化が決まるということである。  
 $\varepsilon$ は小さなパラメータである。
 
+ここで読者は、
+
+- なぜ右辺がそのまま $\delta f$ になるのか
+- これは定義なのか、それとも導出できるのか
+
+と感じるかもしれない。  
+この点を一度、一般論としてはっきり書いておく。
+
+まず、位相空間の点
+
+```math
+(q_i,p_i)
+```
+
+を、生成子 `G` によってごく少し動かすとする。  
+その動かし方を
+
+```math
+\delta q_i=\varepsilon\,\{q_i,G\},
+\qquad
+\delta p_i=\varepsilon\,\{p_i,G\}
+```
+
+と定める。  
+これが「`G` が生成する微小変換」の定義である。
+
+ポアソン括弧の定義を使うと、
+
+```math
+\{q_i,G\}=\frac{\partial G}{\partial p_i},
+\qquad
+\{p_i,G\}=-\frac{\partial G}{\partial q_i}
+```
+
+だから、
+
+```math
+\delta q_i=\varepsilon\,\frac{\partial G}{\partial p_i},
+\qquad
+\delta p_i=-\varepsilon\,\frac{\partial G}{\partial q_i}
+```
+
+となる。
+
+次に、任意の量
+
+```math
+f=f(q_1,\dots,q_n,p_1,\dots,p_n)
+```
+
+の変化を考える。  
+`q_i,p_i` が微小に変わったとき、`f` の一次の変化は多変数関数のテイラー展開から
+
+```math
+\delta f
+=
+\sum_i
+\left(
+\frac{\partial f}{\partial q_i}\,\delta q_i
++
+\frac{\partial f}{\partial p_i}\,\delta p_i
+\right)
+```
+
+である。
+
+ここへ上の
+
+```math
+\delta q_i=\varepsilon\,\frac{\partial G}{\partial p_i},
+\qquad
+\delta p_i=-\varepsilon\,\frac{\partial G}{\partial q_i}
+```
+
+を代入すると、
+
+```math
+\delta f
+=
+\varepsilon
+\sum_i
+\left(
+\frac{\partial f}{\partial q_i}\frac{\partial G}{\partial p_i}
+-
+\frac{\partial f}{\partial p_i}\frac{\partial G}{\partial q_i}
+\right)
+```
+
+となる。  
+しかし右辺は、ポアソン括弧の定義そのものだから、
+
+```math
+\delta f=\varepsilon\,\{f,G\}
+```
+
+となる。
+
+つまり、この式は魔法のように突然成り立つのではない。  
+**`G` による微小変換を位相空間上で定義し、そのときの `f` の一次変化を計算すると、ちょうどポアソン括弧になる** のである。
+
 つまり `G` が分かれば、
 
 - `x` がどう動くか

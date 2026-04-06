@@ -20,7 +20,7 @@ J_{\mathbf n}=\mathbf n\cdot\mathbf J
 
 - 回転演算子はなぜ指数関数になるのか
 - その指数の中に、なぜ角運動量が入るのか
-- なぜ `\mathbf n\cdot\mathbf J` という形になるのか
+- なぜ $\mathbf n\cdot\mathbf J$ という形になるのか
 
 である。
 
@@ -195,7 +195,7 @@ U(\theta,\mathbf n)
 
 したがって、問題は完全に
 
-**「回転の生成子 `G_{\mathbf n}` は何か」**
+**「回転の生成子 $G_{\mathbf n}$ は何か」**
 
 に絞られる。
 
@@ -256,8 +256,8 @@ L_z=xp_y-yp_x
 
 同様に
 
-- `L_x` は `x` 軸まわりの回転の生成子
-- `L_y` は `y` 軸まわりの回転の生成子
+- $L_x$ は `x` 軸まわりの回転の生成子
+- $L_y$ は `y` 軸まわりの回転の生成子
 
 である。
 
@@ -283,7 +283,7 @@ J_{\mathbf n}=\mathbf n\cdot\mathbf J
 ```
 である。
 
-ここで `\mathbf n=(n_x,n_y,n_z)` は単位ベクトルなので、
+ここで $\mathbf n=(n_x,n_y,n_z)$ は単位ベクトルなので、
 
 ```math
 J_{\mathbf n}=n_xJ_x+n_yJ_y+n_zJ_z
@@ -310,7 +310,7 @@ U(\theta,\mathbf n)
 
 ---
 
-## 5. なぜ `\mathbf n\cdot\mathbf J` なのか
+## 5. なぜ $\mathbf n\cdot\mathbf J$ なのか
 
 この式が少し唐突に見える読者もいるので、言葉で確認しておく。
 
