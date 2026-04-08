@@ -1,14 +1,16 @@
 # ベルの不等式：量子力学が古典的直観を越える場所
 
+> **シリーズ構成**: [実験からパウリ行列へ](CLAUDE_PHYSICS.md) → [回転演算子](CLAUDE_PHYSICS2.md) → [θ/2 の由来](CLAUDE_PHYSICS3.md) → 本文書（CLAUDE_PHYSICS4.md）
+
 ## この文書の方針
 
 この文書は、CLAUDE_PHYSICS シリーズの知識だけを使って、ベルの不等式を導く。
 
 使う道具は
 
-- 状態ベクトルと測定（CLAUDE_PHYSICS2.md）
-- パウリ行列 $\sigma_x, \sigma_y, \sigma_z$ と方向 $\mathbf{n}$ の測定 $\mathbf{n}\cdot\boldsymbol{\sigma}$ （CLAUDE_PHYSICS2.md）
-- スピン回転と固有状態の変換（CLAUDE_PHYSICS3.md）
+- 状態ベクトルと測定（[CLAUDE_PHYSICS.md](CLAUDE_PHYSICS.md)）
+- パウリ行列 $\sigma_x, \sigma_y, \sigma_z$ と方向 $\mathbf{n}$ の測定 $\mathbf{n}\cdot\boldsymbol{\sigma}$ （[CLAUDE_PHYSICS.md](CLAUDE_PHYSICS.md)）
+- スピン回転と固有状態の変換（[CLAUDE_PHYSICS3.md](CLAUDE_PHYSICS3.md)）
 
 だけである。新たに導入するのは「2粒子系の状態をどう書くか」だけで、それ以外は既知の道具の組み合わせで話が進む。
 
@@ -31,7 +33,7 @@
 
 ### 1粒子の復習
 
-CLAUDE_PHYSICS2.md で見たように、1粒子のスピン状態は 2 次元空間に住んでいる。 $z$ 基底は
+[CLAUDE_PHYSICS.md](CLAUDE_PHYSICS.md) で見たように、1粒子のスピン状態は 2 次元空間に住んでいる。 $z$ 基底は
 
 ```math
 \vert {+z}\rangle = \begin{pmatrix}1\\0\end{pmatrix}, \qquad
@@ -119,7 +121,7 @@ $\vert \Psi^-\rangle$ の第1項 $\vert {+z}\rangle\vert {-z}\rangle$ は「Alic
 
 これを確かめるには、任意の方向 $\mathbf{a}$ の固有状態で $\vert \Psi^-\rangle$ を書き直してみればよい。 $\mathbf{a}$ が $z$ 軸から角度 $\theta_a$ の方向にあるとする（ $xz$ 平面内とする）。
 
-方向 $\mathbf{a}$ の固有状態 $\vert {+a}\rangle$ は、 $\vert {+z}\rangle$ を $y$ 軸まわりに $\theta_a$ だけ回転させたものである。CLAUDE_PHYSICS3.md の回転行列
+方向 $\mathbf{a}$ の固有状態 $\vert {+a}\rangle$ は、 $\vert {+z}\rangle$ を $y$ 軸まわりに $\theta_a$ だけ回転させたものである。[CLAUDE_PHYSICS3.md](CLAUDE_PHYSICS3.md) の回転行列
 
 ```math
 U(\theta, \mathbf{n}) = \cos\frac{\theta}{2}\,I - i\sin\frac{\theta}{2}\,\mathbf{n}\cdot\boldsymbol{\sigma}
@@ -179,7 +181,7 @@ $-i \cdot (-i) = i^2 = -1$ と $-i \cdot i = -i^2 = 1$ に注意すると
 \vert {-a}\rangle = -\sin\frac{\theta_a}{2}\,\vert {+z}\rangle + \cos\frac{\theta_a}{2}\,\vert {-z}\rangle
 ```
 
-である。空間的には $\theta_a$ だけ回転しているが、状態ベクトルの係数には $\theta_a/2$ が現れる。これは CLAUDE_PHYSICS3.md で見たスピノルの半角構造そのものである。 $c = \cos(\theta_a/2)$, $s = \sin(\theta_a/2)$ と略記すると
+である。空間的には $\theta_a$ だけ回転しているが、状態ベクトルの係数には $\theta_a/2$ が現れる。これは [CLAUDE_PHYSICS3.md](CLAUDE_PHYSICS3.md) で見たスピノルの半角構造そのものである。 $c = \cos(\theta_a/2)$, $s = \sin(\theta_a/2)$ と略記すると
 
 ```math
 \vert {+a}\rangle\vert {-a}\rangle
@@ -273,7 +275,7 @@ Bob は方向 $\mathbf{b}$ で測定する。 $\mathbf{a}$ と $\mathbf{b}$ の�
 
 Bob が $+1$ を得る確率は $\vert \langle{+b}\vert {-a}\rangle\vert ^2$ 、 $-1$ を得る確率は $\vert \langle{-b}\vert {-a}\rangle\vert ^2$ である。
 
-$\mathbf{a}$ と $\mathbf{b}$ が同じ $xz$ 平面内にあるとし、 $z$ 軸からの角度をそれぞれ $\theta_a$, $\theta_b$ とする（ $\theta = \theta_b - \theta_a$ ）。CLAUDE_PHYSICS3.md の回転から
+$\mathbf{a}$ と $\mathbf{b}$ が同じ $xz$ 平面内にあるとし、 $z$ 軸からの角度をそれぞれ $\theta_a$, $\theta_b$ とする（ $\theta = \theta_b - \theta_a$ ）。[CLAUDE_PHYSICS3.md](CLAUDE_PHYSICS3.md) の回転から
 
 ```math
 \vert {+b}\rangle = \cos\frac{\theta_b}{2}\vert {+z}\rangle + \sin\frac{\theta_b}{2}\vert {-z}\rangle
@@ -601,7 +603,7 @@ $A, B = \pm 1$ の4つの相関を自由に選べるなら、 $S$ の式の定�
 ## 全体の論理構造（振り返り）
 
 ```
-1粒子のスピン状態（2次元）  ← CLAUDE_PHYSICS2.md
+1粒子のスピン状態（2次元）  ← CLAUDE_PHYSICS.md
     ↓
 2粒子は 2×2 = 4 次元（テンソル積）
     ↓

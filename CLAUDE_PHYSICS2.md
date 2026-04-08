@@ -1,567 +1,532 @@
-# 実験事実からパウリ行列を導く
+# 回転演算子 $U(\theta,\mathbf{n}) = \exp(-i\theta J_{\mathbf{n}}/\hbar)$ の導出
+
+> **シリーズ構成**: [実験からパウリ行列へ](CLAUDE_PHYSICS.md) → 本文書（CLAUDE_PHYSICS2.md）→ [θ/2 の由来](CLAUDE_PHYSICS3.md) → [ベルの不等式](CLAUDE_PHYSICS4.md)
 
 ## この文書の方針
 
-この文書は、パウリ行列 $\sigma_x, \sigma_y, \sigma_z$ を「便利な道具」として天下りに置くのではなく、実験事実から一歩ずつ導く。
+[CLAUDE_PHYSICS.md](CLAUDE_PHYSICS.md) では、シュテルン・ゲルラッハ実験の二値測定からパウリ行列 $\sigma_x, \sigma_y, \sigma_z$ を導き、交換関係 $[\sigma_i, \sigma_j] = 2i\epsilon_{ijk}\sigma_k$ を確認した。
+
+この文書では、より一般的な問いに答える。回転を量子力学の演算子で表すと、なぜ
+
+```math
+U(\theta,\mathbf{n})
+=
+\exp\!\left(
+-\frac{i}{\hbar}\,\theta\,\mathbf{n}\cdot\mathbf{J}
+\right)
+```
+
+の形になるのかを、一つの流れで説明する。
 
 必要な前提は次の三つだけである。
 
-1. ある種の粒子に磁場をかけると、進路が**ちょうど2本**に分かれる（シュテルン・ゲルラッハ実験）
-2. 量子力学では、状態はベクトル、物理量はエルミート演算子で表される
-3. 測定で値 $a$ が確定的に出る状態は、その演算子の固有値 $a$ に属する固有ベクトルである
-
-この三つから出発して、パウリ行列の形がすべて決まることを示す。
+1. 量子状態はベクトルで表される
+2. 物理量はエルミート演算子で表される
+3. 確率は保存される（状態ベクトルの長さが変わらない）
 
 ---
 
 ## 全体の筋
 
-流れは5段階ある。
+流れは4段階ある。
 
-1. **$z$ 方向の測定が二値** → 2次元空間と $\sigma_z$ が決まる
-2. **$x$ 方向の測定が半々** → $\sigma_x$ の固有状態が決まる（位相の自由度が残る）
-3. **位相規約を選ぶ** → $\sigma_x$ の行列が確定する
-4. **$y$ 方向が必要** → 複素数が避けられず、 $\sigma_y$ が確定する
-5. **交換関係の検証** → 3つの行列がスピン演算子であることが分かる
+1. **小さな回転は「ほぼ何もしない」** → $U = I + (\text{小さい何か})$ と書ける
+2. **確率保存が形を絞る** → その「何か」は $-iG/\hbar$ の形でなければならない
+3. **小さな回転の積み重ねが指数関数を生む** → $U = \exp(-i\theta G/\hbar)$
+4. **$G$ が何かを決める** → 回転を正しく作る $G$ は角運動量である
+
+この4段階がすべてであり、各段階に飛躍はない。
 
 ---
 
-## 第1段階： $z$ 方向の測定から $\sigma_z$ へ
+## 第1段階：小さな回転を式で書く
 
-### 実験事実
+方向 $\mathbf{n}$ のまわりに、ごく小さな角度 $\delta\theta$ だけ回すことを考える。
 
-粒子線を $z$ 方向の不均一磁場に通すと、スクリーン上に2本のスポットが現れる。上側と下側の2つだけである。
-
-ここから分かることは
-
-- この内部自由度は $z$ 方向について2値しか返さない
-- したがって状態空間は（少なくとも）2次元である
-
-最小のモデルとして、2次元の複素ベクトル空間を採用する。
-
-### 固有状態を置く
-
-$z$ 測定で上側に出た粒子をもう一度 $z$ 方向で測ると、必ず上側になる。下側も同様に再現される。したがって
-
-- $z$ 測定には2つの確定状態がある
-- 一方が「必ず上（ $+1$ ）」、他方が「必ず下（ $-1$ ）」を返す
-
-この2状態を $\vert {+z}\rangle$, $\vert {-z}\rangle$ と書く。両者は完全に区別可能なので直交し、確率1の状態なので正規化されている。
+この回転は「ほぼ何もしない」変換なので、対応する演算子は恒等演算子 $I$ に近い。したがって
 
 ```math
-\langle{+z}\vert {+z}\rangle = 1, \qquad
-\langle{-z}\vert {-z}\rangle = 1, \qquad
-\langle{+z}\vert {-z}\rangle = 0
+U(\delta\theta) = I + \delta\theta \cdot K + O(\delta\theta^2)
 ```
 
-### 測定演算子を作る
+と書ける。ここで $K$ はまだ正体不明の演算子であり、 $O(\delta\theta^2)$ は小さな角度の二次以上で効く補正である。
 
-$z$ 測定の結果を $+1$, $-1$ に対応させると、測定演算子は
+この段階では $K$ に何の制約もない。次の段階で絞る。
+
+---
+
+## 第2段階：確率保存が形を決める
+
+量子力学では、状態ベクトルの長さが確率の合計に対応する。回転した後の状態を $\vert\phi'\rangle = U\vert\phi\rangle$ と書くと、回転しても確率は変わらないという要請は
 
 ```math
-\hat{Z} = (+1)\vert {+z}\rangle\langle{+z}\vert + (-1)\vert {-z}\rangle\langle{-z}\vert 
+\langle\phi'\vert\phi'\rangle = \langle\phi\vert\phi\rangle
 ```
 
-と書ける。実際に固有値方程式を確かめると
+である。左辺を展開すると
 
 ```math
-\hat{Z}\vert {+z}\rangle = +\vert {+z}\rangle, \qquad
-\hat{Z}\vert {-z}\rangle = -\vert {-z}\rangle
+\langle\phi'\vert\phi'\rangle = \langle\phi\vert U^\dagger U\vert\phi\rangle
 ```
 
-となり、確かに $\vert {+z}\rangle$ は固有値 $+1$ 、 $\vert {-z}\rangle$ は固有値 $-1$ に属する。
-
-### 行列表示
-
-この2状態を計算基底に選ぶ。
+これが任意の $\vert\phi\rangle$ に対して $\langle\phi\vert\phi\rangle$ と等しくなるためには
 
 ```math
-\vert {+z}\rangle = \begin{pmatrix}1\\0\end{pmatrix}, \qquad
-\vert {-z}\rangle = \begin{pmatrix}0\\1\end{pmatrix}
+U^\dagger U = I
 ```
 
-すると $\hat{Z}$ の行列表示は
+でなければならない。この条件を満たす $U$ をユニタリ演算子と呼ぶ。
+
+これを一次の式に代入する。
 
 ```math
-\sigma_z =
+(I + \delta\theta\, K^\dagger)(I + \delta\theta\, K) = I
+```
+
+一次まで展開すると
+
+```math
+I + \delta\theta(K + K^\dagger) + O(\delta\theta^2) = I
+```
+
+したがって
+
+```math
+K + K^\dagger = 0
+```
+
+つまり $K$ は**反エルミート**でなければならない（ $\dagger$ は転置して複素共役を取る操作で、 $K^\dagger = -K$ を満たす演算子を反エルミートと呼ぶ。逆に $G^\dagger = G$ を満たすものがエルミートである）。
+
+反エルミート演算子は、エルミート演算子 $G$ を使って
+
+```math
+K = -\frac{i}{\hbar}\,G
+```
+
+と書ける。 $\hbar$ を入れるのは、 $G$ に角運動量と同じ次元を持たせるためである（角度 $\delta\theta$ は無次元なので、 $\delta\theta \cdot G/\hbar$ が全体で無次元になる）。
+
+したがって微小回転は
+
+```math
+\boxed{
+U(\delta\theta) = I - \frac{i}{\hbar}\,\delta\theta\,G + O(\delta\theta^2)
+}
+```
+
+の形に限られる。ここで $G$ はエルミート、すなわち物理量（オブザーバブル）である。
+
+---
+
+## 第3段階：積み重ねが指数関数を生む
+
+### なぜ指数関数が出るのか
+
+ここが核心の一つである。指数関数は天から降ってくるのではなく、**同じ操作を何度も繰り返す** と自然に現れる。
+
+有限の角度 $\theta$ の回転を作りたい。これを $N$ 等分して
+
+```math
+\delta\theta = \frac{\theta}{N}
+```
+
+とする。角度 $\theta$ の回転は、角度 $\delta\theta$ の回転を $N$ 回重ねたものだから
+
+```math
+U(\theta) = \bigl[U(\delta\theta)\bigr]^N
+```
+
+である。前節の結果を代入すると
+
+```math
+U(\theta) = \left(I - \frac{i}{\hbar}\frac{\theta}{N}\,G\right)^N
+```
+
+ここで $N$ を大きくする。すると各回の回転はどんどん小さくなり、二次以上の項は消えていく。 $N \to \infty$ の極限では
+
+```math
+U(\theta)
+=
+\lim_{N\to\infty}
+\left(I - \frac{i}{\hbar}\frac{\theta}{N}\,G\right)^N
+```
+
+### 数としての指数関数との比較
+
+普通の数 $a$ に対して
+
+```math
+e^a = \lim_{N\to\infty}\left(1 + \frac{a}{N}\right)^N
+```
+
+が成り立つ。これは「 $1 + a/N$ を $N$ 回掛ける」という操作の極限が $e^a$ になるという、指数関数の定義そのものである。
+
+演算子でもまったく同じ形が成り立つ。 $a$ を $-i\theta G/\hbar$ に置き換えれば
+
+```math
+\boxed{
+U(\theta,\mathbf{n})
+=
+\exp\!\left(-\frac{i}{\hbar}\,\theta\,G_{\mathbf{n}}\right)
+}
+```
+
+が得られる。
+
+### ここまでのまとめ
+
+ここまでで使った仮定は
+
+1. 微小回転は $I$ に近い（一次まで展開できる）
+2. 確率保存（ユニタリ性）
+
+の二つだけである。この二つから、回転演算子が指数関数の形になることが出た。
+
+残る問題はただ一つ：**$G$ は何か。**
+
+---
+
+## 第4段階： $G$ の正体を決める
+
+### 回転演算子に求められること
+
+回転演算子 $U$ は、物理量を正しく回さなければならない。
+
+たとえば位置の演算子 $\hat{x}, \hat{y}, \hat{z}$ を考える。 $z$ 軸まわりに角度 $\delta\phi$ だけ回すなら、位置の演算子は
+
+```math
+\hat{x} \to \hat{x} - \hat{y}\,\delta\phi, \qquad
+\hat{y} \to \hat{y} + \hat{x}\,\delta\phi, \qquad
+\hat{z} \to \hat{z}
+```
+
+と変わるべきである。これは古典的な $z$ 軸まわりの回転行列
+
+```math
+R_z(\phi) =
 \begin{pmatrix}
-1 & 0 \\
-0 & -1
+\cos\phi & -\sin\phi & 0 \\
+\sin\phi & \cos\phi & 0 \\
+0 & 0 & 1
 \end{pmatrix}
 ```
 
-である。これが最初のパウリ行列 $\sigma_z$ であり、「 $z$ 方向の測定で2値が出る」という事実をそのまま行列にしたものにすぎない。
-
-### 任意の状態
-
-2次元空間の基底が決まったので、この系の任意の状態は
+を微小角 $\delta\phi$ で一次まで展開した
 
 ```math
-\vert \psi\rangle = \alpha\vert {+z}\rangle + \beta\vert {-z}\rangle
-= \begin{pmatrix}\alpha\\\beta\end{pmatrix}
+R_z(\delta\phi) \approx
+\begin{pmatrix}
+1 & -\delta\phi & 0 \\
+\delta\phi & 1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
 ```
 
-と書ける。ここで $\alpha, \beta$ は $\vert \\1\vert ^2 + \vert \\1\vert ^2 = 1$ を満たす複素数である。
+そのものである。
 
----
+### 量子力学で演算子を変換するしくみ
 
-## 第2段階： $x$ 方向の測定から固有状態の形へ
-
-### 実験事実
-
-$z$ 方向で上側を選んだ粒子を、今度は $x$ 方向の装置に入れる。すると
-
-- $x$ 方向の上と下が**半々**で出る
-
-さらに
-
-- $x$ で上を選んでもう一度 $x$ を測ると、必ず上になる
-- しかしその後 $z$ を測ると、 $z$ の結果は半々に戻る
-
-つまり $z$ と $x$ は同時には確定せず、 $x$ にも独自の2つの確定状態がある。
-
-### $x$ の固有状態を $z$ 基底で表す
-
-$x$ 方向にも2つの固有状態 $\vert {+x}\rangle$, $\vert {-x}\rangle$ がある。これらは同じ2次元空間の中に住んでいるので、 $z$ 基底で書けるはずである。
+回転によって状態が変わるとする。回転前の状態を $\vert \psi\rangle$ 、回転後の状態を $\vert \psi'\rangle$ とすれば
 
 ```math
-\vert {+x}\rangle = a\vert {+z}\rangle + b\vert {-z}\rangle
+\vert \psi'\rangle = U\vert \psi\rangle
 ```
 
-「 $\vert {+z}\rangle$ を $x$ で測ると半々」という条件は
+である。このとき、物理量 $\hat{A}$ の期待値は回転後に
 
 ```math
-\vert \langle{+x}\vert {+z}\rangle\vert ^2 = \frac{1}{2}
+\langle\psi'\vert \hat{A}\vert \psi'\rangle
+=
+\langle\psi\vert U^\dagger \hat{A}\, U\vert \psi\rangle
 ```
 
-を意味する。 $\langle{+x}\vert {+z}\rangle = a^*$ なので $\vert a\vert ^2 = 1/2$ 。正規化 $\vert a\vert ^2 + \vert b\vert ^2 = 1$ から $\vert b\vert ^2 = 1/2$ も得られる。
-
-したがって
+となる。これは「状態を回す代わりに、演算子を $U^\dagger \hat{A}\, U$ に置き換えても同じ期待値が得られる」ということである。したがって、回転に伴う演算子の変換は
 
 ```math
-\vert {+x}\rangle = \frac{1}{\sqrt{2}}\bigl(e^{i\alpha}\vert {+z}\rangle + e^{i\beta}\vert {-z}\rangle\bigr)
+\hat{A} \to U^\dagger \hat{A}\, U
 ```
 
-の形になる。ここで $e^{i\alpha}$, $e^{i\beta}$ は絶対値1の位相因子である。
-
-### 位相の自由度を数える
-
-量子力学では、状態ベクトル全体に共通の位相 $e^{i\gamma}$ を掛けても物理は変わらない。この自由度を使って $e^{i\alpha} = 1$ と選ぶことができる。すると
+と書ける。微小回転 $U = I - (i/\hbar)\delta\phi\,G_z$ を代入する。まず $U^\dagger$ は
 
 ```math
-\vert {+x}\rangle = \frac{1}{\sqrt{2}}\bigl(\vert {+z}\rangle + e^{i\phi}\vert {-z}\rangle\bigr)
+U^\dagger = I + \frac{i}{\hbar}\delta\phi\,G_z
 ```
 
-のように、**相対位相** $e^{i\phi}$ だけが残る。
-
-つまり「 $z$ から見て半々」という条件を満たす状態は無限に存在し、それらは相対位相 $\phi$ で区別される。
-
----
-
-## 第3段階：位相規約を選んで $\sigma_x$ を確定する
-
-### $\phi$ の選択は物理的に何を意味するか
-
-相対位相 $\phi$ が異なる状態は、 $z$ 測定では区別できない（どれも半々）。しかし別方向の測定をすれば区別できる。したがって $\phi$ は物理的に意味のある量であり、ブロッホ球でいえば赤道上の方位角に対応する。
-
-ここで $x$ 軸方向を定義するにあたって、位相規約を選ぶ。**$z$ 基底で書いたとき実数係数になる方向を $x$ と呼ぶ** ことにする。すなわち
+である（ $G_z$ がエルミートなので $-i$ が $+i$ に変わる）。これを使うと
 
 ```math
-\phi = 0
+\begin{aligned}
+U^\dagger \hat{A}\, U
+&=
+\left(I + \frac{i}{\hbar}\delta\phi\,G_z\right)
+\hat{A}
+\left(I - \frac{i}{\hbar}\delta\phi\,G_z\right) \\
+&=
+\hat{A}
+- \frac{i}{\hbar}\delta\phi\,\hat{A}G_z
++ \frac{i}{\hbar}\delta\phi\,G_z\hat{A}
++ O(\delta\phi^2) \\
+&=
+\hat{A}
++ \frac{i}{\hbar}\delta\phi\,(G_z\hat{A} - \hat{A}G_z)
++ O(\delta\phi^2) \\
+&=
+\hat{A} + \frac{i}{\hbar}\delta\phi\,[G_z, \hat{A}]
++ O(\delta\phi^2)
+\end{aligned}
 ```
 
-を選ぶ。すると
+となる。したがって演算子の変化は
 
 ```math
-\vert {+x}\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}, \qquad
-\vert {-x}\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\-1\end{pmatrix}
+\delta\hat{A} = \frac{i}{\hbar}\delta\phi\,[G_z, \hat{A}]
 ```
 
-となる。 $\vert {-x}\rangle$ の形は、 $\vert {+x}\rangle$ と直交する条件 $\langle{-x}\vert {+x}\rangle = 0$ から決まる（同じく $\vert {-z}\rangle$ 成分の符号だけが自由だが、 $\phi = 0$ の規約のもとでは $-1$ になる）。
+で与えられる。
 
-### なぜこれが「規約」なのか
+### $G_z$ に課される条件
 
-「 $\phi = 0$ を選ぶ」とは、3次元空間の中で $z$ 軸に対して垂直な一方向を、 $x$ 軸と名付けるということである。 $z$ 軸だけでは水平面内の向きは決まらないので、どこを $x$ と呼ぶかは規約として選ばなければならない。 $\phi = 0$ はその選択であり、物理法則ではない。
-
-### $\sigma_x$ を書き下す
-
-$\vert {+x}\rangle$ が固有値 $+1$ 、 $\vert {-x}\rangle$ が固有値 $-1$ を持つ演算子を作る。
+$z$ 軸まわりの回転を正しく再現するには
 
 ```math
-\hat{X} = (+1)\vert {+x}\rangle\langle{+x}\vert + (-1)\vert {-x}\rangle\langle{-x}\vert 
+\frac{i}{\hbar}[G_z, \hat{x}] = -\hat{y}, \qquad
+\frac{i}{\hbar}[G_z, \hat{y}] = +\hat{x}, \qquad
+\frac{i}{\hbar}[G_z, \hat{z}] = 0
 ```
 
-これを $z$ 基底で行列にする。
+が成り立たなければならない。書き直すと
 
 ```math
-\vert {+x}\rangle\langle{+x}\vert 
-= \frac{1}{2}\begin{pmatrix}1\\1\end{pmatrix}(1\;1)
-= \frac{1}{2}\begin{pmatrix}1&1\\1&1\end{pmatrix}
-```
-
-```math
-\vert {-x}\rangle\langle{-x}\vert 
-= \frac{1}{2}\begin{pmatrix}1\\-1\end{pmatrix}(1\;{-1})
-= \frac{1}{2}\begin{pmatrix}1&-1\\-1&1\end{pmatrix}
-```
-
-したがって
-
-```math
-\hat{X}
-= \frac{1}{2}\begin{pmatrix}1&1\\1&1\end{pmatrix}
-- \frac{1}{2}\begin{pmatrix}1&-1\\-1&1\end{pmatrix}
-= \begin{pmatrix}0&1\\1&0\end{pmatrix}
-```
-
-これが
-
-```math
-\sigma_x = \begin{pmatrix}0&1\\1&0\end{pmatrix}
+[G_z, \hat{x}] = i\hbar\,\hat{y}, \qquad
+[G_z, \hat{y}] = -i\hbar\,\hat{x}, \qquad
+[G_z, \hat{z}] = 0
 ```
 
 である。
 
-### 検算
-
-固有値方程式を直接確かめる。
-
-```math
-\sigma_x\,\vert {+x}\rangle
-= \begin{pmatrix}0&1\\1&0\end{pmatrix}\frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}
-= \frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}
-= +1 \cdot \vert {+x}\rangle \quad\checkmark
-```
-
-```math
-\sigma_x\,\vert {-x}\rangle
-= \begin{pmatrix}0&1\\1&0\end{pmatrix}\frac{1}{\sqrt{2}}\begin{pmatrix}1\\-1\end{pmatrix}
-= \frac{1}{\sqrt{2}}\begin{pmatrix}-1\\1\end{pmatrix}
-= -1 \cdot \vert {-x}\rangle \quad\checkmark
-```
-
----
-
-## 第4段階： $y$ 方向には複素数が必要
-
-### なぜ $y$ は $x$ と同じではないのか
-
-3次元空間には $z$ に垂直な方向が2つ（ $x$ と $y$ ）ある。 $z$ から見れば $x$ も $y$ も対等で、どちらも
-
-- $\vert {+z}\rangle$ を測ると半々
-
-を与える。ならば $x$ と $y$ は同じものではないか？
-
-答えは否である。 $x$ と $y$ は**異なる方向**の測定なので、**異なる固有状態**を持たなければならない。しかし「 $z$ から見て半々」という条件だけでは $\vert a\vert ^2 = \vert b\vert ^2 = 1/2$ しか言えず、差は相対位相にしかない。
-
-$x$ はすでに $\phi = 0$ を使った。 $y$ が $x$ と異なるなら、 $\phi \neq 0$ でなければならない。
-
-### $y$ を $\phi = \pi/2$ に対応させる
-
-$x$ 軸から 90 度回転した方向が $y$ 軸である。赤道上の方位角で $x$ を $\phi = 0$ に取ったので、 $y$ は
-
-```math
-\phi = \frac{\pi}{2}
-```
-
-に対応する。 $e^{i\pi/2} = i$ なので
-
-```math
-\vert {+y}\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\i\end{pmatrix}, \qquad
-\vert {-y}\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\-i\end{pmatrix}
-```
-
-となる。
-
-### なぜ $i$ が出るのか
-
-$i$ は突然の思いつきではない。一般の「 $z$ から見て半々」の状態は
-
-```math
-\vert \psi(\phi)\rangle = \frac{1}{\sqrt{2}}\bigl(\vert {+z}\rangle + e^{i\phi}\vert {-z}\rangle\bigr)
-```
-
-であり、 $\phi$ は赤道上の方位角だった。 $x$ が $\phi = 0$ なら、そこから 90 度回った $y$ は $\phi = \pi/2$ であり
-
-```math
-e^{i\pi/2} = i
-```
-
-になるだけである。
-
-### 実数では足りない理由
-
-もし係数を実数に限ると、相対位相は $+1$ か $-1$ しかない。 $+1$ はすでに $x$ が使っている。 $-1$ を使うと $\vert {-x}\rangle$ と同じ状態になってしまう。
-
-つまり実数だけでは、 $z$ に垂直な独立方向を1つしか表せない。3次元空間の3方向を2次元複素ベクトルで表すには、 $i$ がどうしても必要になる。
-
-### 測定統計の検算
-
-この $\vert {+y}\rangle$, $\vert {-y}\rangle$ が実験事実と矛盾しないかを確かめる。
-
-$\vert {+x}\rangle$ を $y$ で測る：
-
-```math
-\langle{+y}\vert {+x}\rangle
-= \frac{1}{\sqrt{2}}(1,\,-i) \cdot \frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}
-= \frac{1}{2}(1 - i)
-```
-
-```math
-\vert \langle{+y}\vert {+x}\rangle\vert ^2
-= \left\vert \frac{1-i}{2}\right\vert ^2
-= \frac{1+1}{4}
-= \frac{1}{2} \quad\checkmark
-```
-
-$\vert {+y}\rangle$ を $x$ で測る：
-
-```math
-\langle{+x}\vert {+y}\rangle
-= \frac{1}{\sqrt{2}}(1,\,1) \cdot \frac{1}{\sqrt{2}}\begin{pmatrix}1\\i\end{pmatrix}
-= \frac{1}{2}(1 + i)
-```
-
-```math
-\vert \langle{+x}\vert {+y}\rangle\vert ^2
-= \left\vert \frac{1+i}{2}\right\vert ^2
-= \frac{1}{2} \quad\checkmark
-```
-
-$\vert {+y}\rangle$ を $z$ で測る：
-
-```math
-\vert \langle{+z}\vert {+y}\rangle\vert ^2
-= \left\vert \frac{1}{\sqrt{2}}\right\vert ^2
-= \frac{1}{2} \quad\checkmark
-```
-
-$x$, $y$, $z$ のどの2方向を選んでも、一方の固有状態を他方で測れば半々になる。この対称性は、 $y$ を $\phi = \pi/2$ に取る選択が実験と整合することを示している。
-
-### $\sigma_y$ を書き下す
-
-$\vert {+y}\rangle$ が固有値 $+1$ 、 $\vert {-y}\rangle$ が固有値 $-1$ を持つ演算子を作る。
-
-```math
-\hat{Y} = (+1)\vert {+y}\rangle\langle{+y}\vert + (-1)\vert {-y}\rangle\langle{-y}\vert 
-```
-
-$z$ 基底で各項を計算する。
-
-```math
-\vert {+y}\rangle\langle{+y}\vert 
-= \frac{1}{2}\begin{pmatrix}1\\i\end{pmatrix}(1\;{-i})
-= \frac{1}{2}\begin{pmatrix}1&-i\\i&1\end{pmatrix}
-```
-
-```math
-\vert {-y}\rangle\langle{-y}\vert 
-= \frac{1}{2}\begin{pmatrix}1\\-i\end{pmatrix}(1\;{i})
-= \frac{1}{2}\begin{pmatrix}1&i\\-i&1\end{pmatrix}
-```
-
-したがって
-
-```math
-\hat{Y}
-= \frac{1}{2}\begin{pmatrix}1&-i\\i&1\end{pmatrix}
-- \frac{1}{2}\begin{pmatrix}1&i\\-i&1\end{pmatrix}
-= \begin{pmatrix}0&-i\\i&0\end{pmatrix}
-```
-
-これが
-
-```math
-\sigma_y = \begin{pmatrix}0&-i\\i&0\end{pmatrix}
-```
-
-である。
-
-### 検算
-
-```math
-\sigma_y\,\vert {+y}\rangle
-= \begin{pmatrix}0&-i\\i&0\end{pmatrix}\frac{1}{\sqrt{2}}\begin{pmatrix}1\\i\end{pmatrix}
-= \frac{1}{\sqrt{2}}\begin{pmatrix}-i^2\\i\end{pmatrix}
-= \frac{1}{\sqrt{2}}\begin{pmatrix}1\\i\end{pmatrix}
-= +1 \cdot \vert {+y}\rangle \quad\checkmark
-```
-
-```math
-\sigma_y\,\vert {-y}\rangle
-= \begin{pmatrix}0&-i\\i&0\end{pmatrix}\frac{1}{\sqrt{2}}\begin{pmatrix}1\\-i\end{pmatrix}
-= \frac{1}{\sqrt{2}}\begin{pmatrix}-(-i)(-i)\\i\cdot 1 + 0\end{pmatrix}
-```
-
-もう少し丁寧にやる。
-
-```math
-\sigma_y\,\vert {-y}\rangle
-= \begin{pmatrix}0&-i\\i&0\end{pmatrix}\frac{1}{\sqrt{2}}\begin{pmatrix}1\\-i\end{pmatrix}
-= \frac{1}{\sqrt{2}}\begin{pmatrix}0\cdot 1 + (-i)(-i)\\i\cdot 1 + 0\cdot(-i)\end{pmatrix}
-= \frac{1}{\sqrt{2}}\begin{pmatrix}i^2\\i\end{pmatrix}
-```
-
-ここで $(-i)(-i) = i^2 = -1$ なので
-
-```math
-= \frac{1}{\sqrt{2}}\begin{pmatrix}-1\\i\end{pmatrix}
-= -\frac{1}{\sqrt{2}}\begin{pmatrix}1\\-i\end{pmatrix}
-= -1\cdot\vert {-y}\rangle \quad\checkmark
-```
-
----
-
-## 第5段階：3つの行列がスピン演算子になること
-
-### ここまでの整理
-
-実験事実と位相規約だけから、3つの行列が決まった。
-
-```math
-\sigma_z = \begin{pmatrix}1&0\\0&-1\end{pmatrix}, \qquad
-\sigma_x = \begin{pmatrix}0&1\\1&0\end{pmatrix}, \qquad
-\sigma_y = \begin{pmatrix}0&-i\\i&0\end{pmatrix}
-```
-
-これらは「各方向の二値測定を表す行列」として導入された。しかし、これらが角運動量の交換関係を満たすことを確かめると、もっと深い意味が見えてくる。
-
-### 交換関係の計算
-
-角運動量の3成分は
-
-```math
-[S_i, S_j] = i\hbar\,\epsilon_{ijk}\,S_k
-```
-
-を満たすべきである。ここで $\epsilon_{ijk}$ は完全反対称テンソル（ $\epsilon_{xyz} = 1$, 添字の巡回入替で $+1$, 奇置換で $-1$, 重複で $0$ ）。
-
-まず $[\sigma_x, \sigma_y]$ を直接計算する。
-
-```math
-\sigma_x\sigma_y
-= \begin{pmatrix}0&1\\1&0\end{pmatrix}\begin{pmatrix}0&-i\\i&0\end{pmatrix}
-= \begin{pmatrix}i&0\\0&-i\end{pmatrix}
-```
-
-```math
-\sigma_y\sigma_x
-= \begin{pmatrix}0&-i\\i&0\end{pmatrix}\begin{pmatrix}0&1\\1&0\end{pmatrix}
-= \begin{pmatrix}-i&0\\0&i\end{pmatrix}
-```
-
-したがって
-
-```math
-[\sigma_x, \sigma_y]
-= \sigma_x\sigma_y - \sigma_y\sigma_x
-= \begin{pmatrix}2i&0\\0&-2i\end{pmatrix}
-= 2i\begin{pmatrix}1&0\\0&-1\end{pmatrix}
-= 2i\,\sigma_z
-```
-
-同様に（同じ手順で行列を掛けるだけなので結果だけ示す）
-
-```math
-[\sigma_y, \sigma_z] = 2i\,\sigma_x, \qquad
-[\sigma_z, \sigma_x] = 2i\,\sigma_y
-```
-
-これらをまとめると
-
-```math
-[\sigma_i, \sigma_j] = 2i\,\epsilon_{ijk}\,\sigma_k
-```
-
-である。
-
-### スピン演算子への接続
+### 軌道角運動量がこの条件を満たす
 
 ここで
 
 ```math
-S_i = \frac{\hbar}{2}\,\sigma_i
+\hat{L}_z = \hat{x}\hat{p}_y - \hat{y}\hat{p}_x
 ```
 
-と置くと
+を試す。必要なのは正準交換関係
 
 ```math
-[S_i, S_j]
-= \frac{\hbar^2}{4}[\sigma_i, \sigma_j]
-= \frac{\hbar^2}{4}\cdot 2i\,\epsilon_{ijk}\,\sigma_k
-= i\hbar\,\epsilon_{ijk}\,\frac{\hbar}{2}\sigma_k
-= i\hbar\,\epsilon_{ijk}\,S_k
+[\hat{x}, \hat{p}_x] = i\hbar, \qquad
+[\hat{x}, \hat{p}_y] = 0, \qquad \text{etc.}
 ```
 
-となり、角運動量の交換関係が成り立つ。
+だけである。実際に計算すると
 
-### なぜこれで十分なのか
+```math
+[\hat{L}_z, \hat{x}]
+= [\hat{x}\hat{p}_y - \hat{y}\hat{p}_x,\, \hat{x}]
+= -\hat{y}[\hat{p}_x, \hat{x}]
+= -\hat{y}(-i\hbar)
+= i\hbar\,\hat{y}
+```
 
-「交換関係を満たす」だけでは、パウリ行列がスピン 1/2 の演算子だと断言するには不十分に見えるかもしれない。実際、交換関係を満たすことは**必要条件**であって**十分条件**ではない。
+同様に
 
-しかし、次の数学的事実がある。
+```math
+[\hat{L}_z, \hat{y}]
+= [\hat{x}\hat{p}_y,\, \hat{y}]
+= \hat{x}[\hat{p}_y, \hat{y}]
+= \hat{x}(-i\hbar)
+= -i\hbar\,\hat{x}
+```
 
-> 2次元空間において、角運動量の交換関係 $[S_i, S_j] = i\hbar\,\epsilon_{ijk}\,S_k$ を満たすエルミート行列の組は、ユニタリ基底変換を除いて本質的に一つしかない。
+```math
+[\hat{L}_z, \hat{z}] = 0
+```
 
-これは $\mathrm{SU}(2)$ の2次元既約表現の一意性という定理による。つまり、基底の取り方（座標軸の向き）を変えれば、交換関係を満たすどんなエルミート行列の組も $\hbar\sigma_i/2$ に一致する。
+三つとも条件を満たす。したがって
 
-したがって、パウリ行列は
+```math
+G_z = \hat{L}_z
+```
 
-- 実験事実（二値測定、半々の統計）から形が決まる
-- その形が角運動量の交換関係を自動的に満たす
-- しかも2次元では、この交換関係を満たす表現は本質的にこれだけ
+である。同様の計算で $G_x = \hat{L}_x$, $G_y = \hat{L}_y$ も確かめられる。
 
-という三重の意味で、スピン 1/2 の演算子として確定する。
+### 一般の軸 $\mathbf{n}$ への拡張
+
+ここまでで $x, y, z$ の各軸まわりの生成子が $\hat{L}_x, \hat{L}_y, \hat{L}_z$ であることが分かった。では斜めの軸 $\mathbf{n}$ ではどうか。
+
+鍵は、微小回転が角度について一次で効くことである。一般の軸 $\mathbf{n} = (n_x, n_y, n_z)$ まわりの微小回転は、各座標軸まわりの微小回転の重ね合わせとして書ける。
+
+古典的な $\mathbf{n}$ 軸まわりの微小回転は、外積を使って
+
+```math
+\delta\mathbf{r} = \delta\theta\,(\mathbf{n}\times\mathbf{r})
+```
+
+と書ける。これを成分で展開すると
+
+```math
+\begin{aligned}
+\delta x &= \delta\theta\,(n_y z - n_z y) \\
+\delta y &= \delta\theta\,(n_z x - n_x z) \\
+\delta z &= \delta\theta\,(n_x y - n_y x)
+\end{aligned}
+```
+
+である。ここで、すでに示した各軸まわりの結果を並べてみる。
+
+```math
+\begin{array}{c|ccc}
+ & \delta x & \delta y & \delta z \\
+\hline
+L_x\text{ が生成} & 0 & -z\,\delta\theta & +y\,\delta\theta \\
+L_y\text{ が生成} & +z\,\delta\theta & 0 & -x\,\delta\theta \\
+L_z\text{ が生成} & -y\,\delta\theta & +x\,\delta\theta & 0
+\end{array}
+```
+
+一般軸の各成分を、表の各行と突き合わせてみる。
+
+$\delta x$ について：
+
+```math
+\delta x = \delta\theta\,(n_y z - n_z y)
+= n_y \underbrace{(+z\,\delta\theta)}_{L_y\text{ の行}} + n_z \underbrace{(-y\,\delta\theta)}_{L_z\text{ の行}}
+```
+
+$\delta y$ について：
+
+```math
+\delta y = \delta\theta\,(n_z x - n_x z)
+= n_z \underbrace{(+x\,\delta\theta)}_{L_z\text{ の行}} + n_x \underbrace{(-z\,\delta\theta)}_{L_x\text{ の行}}
+```
+
+$\delta z$ について：
+
+```math
+\delta z = \delta\theta\,(n_x y - n_y x)
+= n_x \underbrace{(+y\,\delta\theta)}_{L_x\text{ の行}} + n_y \underbrace{(-x\,\delta\theta)}_{L_y\text{ の行}}
+```
+
+三つとも、表の $L_x$ の行に $n_x$ を掛けたもの、 $L_y$ の行に $n_y$ を掛けたもの、 $L_z$ の行に $n_z$ を掛けたものの和になっている（表の該当セルが $0$ の項は消えている）。
+
+つまり一般軸の微小回転は、表の各行をそのまま使って
+
+```math
+\begin{pmatrix} \delta x \\ \delta y \\ \delta z \end{pmatrix}
+=
+n_x
+\underbrace{
+\begin{pmatrix} 0 \\ -z \\ +y \end{pmatrix}
+}_{L_x\text{ の行}}
+\delta\theta
+\;+\;
+n_y
+\underbrace{
+\begin{pmatrix} +z \\ 0 \\ -x \end{pmatrix}
+}_{L_y\text{ の行}}
+\delta\theta
+\;+\;
+n_z
+\underbrace{
+\begin{pmatrix} -y \\ +x \\ 0 \end{pmatrix}
+}_{L_z\text{ の行}}
+\delta\theta
+```
+
+と分解できる。
+
+ところで、量子力学では演算子の変化は
+
+```math
+\delta\hat{A} = \frac{i}{\hbar}\delta\theta\,[G_{\mathbf{n}},\, \hat{A}]
+```
+
+で与えられるのだった。 $z$ 軸の場合は $G_z = \hat{L}_z$ で、 $[G_z, \hat{x}]$ が $\delta\hat{x}$ を決めた。 $x$ 軸、 $y$ 軸も同様だった。
+
+いま上の分解は「一般軸の変化 = 各軸の変化の $n_x, n_y, n_z$ 重み付き和」と言っている。交換子は第1引数について線形なので
+
+```math
+[n_x\hat{L}_x + n_y\hat{L}_y + n_z\hat{L}_z,\, \hat{A}]
+=
+n_x[\hat{L}_x, \hat{A}] + n_y[\hat{L}_y, \hat{A}] + n_z[\hat{L}_z, \hat{A}]
+```
+
+が成り立つ。右辺はまさに各軸の寄与を $n_x, n_y, n_z$ で重ね合わせたものである。したがって
+
+```math
+G_{\mathbf{n}} = n_x\hat{L}_x + n_y\hat{L}_y + n_z\hat{L}_z = \mathbf{n}\cdot\hat{\mathbf{L}}
+```
+
+とすれば、上の重ね合わせがそのまま再現される。
+
+### スピンがある場合
+
+ここまでは位置と運動量だけを持つ粒子（軌道角運動量のみ）の話だった。
+
+しかしスピンのように、位置を持たないが回転に対して変換する内部自由度もある。そのような場合も含めて、回転の生成子を**全角運動量** $\mathbf{J}$ と書く。
+
+```math
+\mathbf{J} = \hat{\mathbf{L}} + \hat{\mathbf{S}}
+```
+
+したがって一般に
+
+```math
+\boxed{
+U(\theta,\mathbf{n})
+=
+\exp\!\left(-\frac{i}{\hbar}\,\theta\,\mathbf{n}\cdot\mathbf{J}\right)
+}
+```
+
+これが導きたかった式である。
 
 ---
 
-## まとめ：何が実験事実で、何が規約か
+## スピン 1/2 への適用
 
-導出の中で使ったものを整理しておく。
+スピン 1/2 では
 
-### 実験事実（変えられない）
+```math
+\mathbf{J} = \mathbf{S} = \frac{\hbar}{2}\boldsymbol{\sigma}
+```
 
-- 各方向の測定で結果が2値（ $+1$ と $-1$ ）
-- 同方向の再測定で結果が再現する
-- 異方向の測定で確率が半々になる
-- 一方の測定を挟むと他方の情報が失われる
+なので
 
-### 規約（別の選び方もあり得る）
+```math
+U(\theta,\mathbf{n})
+=
+\exp\!\left(-i\frac{\theta}{2}\,\mathbf{n}\cdot\boldsymbol{\sigma}\right)
+```
 
-- $\vert {+z}\rangle = (1,0)^T$, $\vert {-z}\rangle = (0,1)^T$ という基底の取り方
-- $x$ 方向の固有状態を実数係数で書く（ $\phi = 0$ ）
-- 右手系の約束で $y$ は $x$ から反時計回り 90 度（ $\phi = \pi/2$ ）
-
-### 導出された結果
-
-- $\sigma_z, \sigma_x, \sigma_y$ の行列形
-- $S_i = \hbar\sigma_i/2$ が角運動量の交換関係を満たすこと
-- 2次元既約表現の一意性により、これがスピン 1/2 の唯一の表現であること
+となる。 $\hbar$ が消えて、半角 $\theta/2$ が現れる。なぜ $\theta/2$ が出るのか、その物理的意味は何か——これが次の文書 [CLAUDE_PHYSICS3.md](CLAUDE_PHYSICS3.md) の主題である。
 
 ---
 
 ## 全体の論理構造（振り返り）
 
 ```
-z方向の測定で2値が出る
+小さな回転は I に近い
     ↓
-2つの固有状態 |+z⟩, |−z⟩ を基底にする
+確率保存 → U = I − (i/ℏ)δθ G （G はエルミート）
     ↓
-測定演算子を書くと σ_z が出る
+小さな回転を N 回積む → U = exp(−iθG/ℏ)
     ↓
-x方向で測ると半々 → |+x⟩ の形が |a|=|b|=1/√2 に絞られる
+G は何か？ → 演算子を正しく回す条件を課す
     ↓
-相対位相 e^{iφ} が残る → φ=0 を x と呼ぶ規約を選ぶ
+位置演算子の変換: δÂ = (i/ℏ)δθ [G, Â]
     ↓
-σ_x が確定する
+z 軸回転の要件: [G_z, x̂] = iℏ ŷ,  [G_z, ŷ] = −iℏ x̂
     ↓
-y方向にはφ≠0が必要 → 実数では足りない → φ=π/2 で i が出る
+L_z = x̂p̂_y − ŷp̂_x がこれを満たす
     ↓
-σ_y が確定する
+G = J = L + S （スピンを含む全角運動量）
     ↓
-3つの交換関係を計算 → 角運動量の代数と一致
-    ↓
-SU(2) の2次元既約表現の一意性 → スピン 1/2 の演算子として確定
+U(θ,n) = exp(−iθ n·J/ℏ)
 ```
 
-どの段階にも天下りはない。実験事実が形を絞り、規約が残りの自由度を固定し、交換関係がスピンとの同定を保証する。
+どの段階にも「天下り」はない。各ステップは、直前のステップから自然に要請される。
+
+---
+
+**次の文書**: [CLAUDE_PHYSICS3.md — スピン 1/2 の回転演算子になぜ θ/2 が現れるのか](CLAUDE_PHYSICS3.md) では、本文書の一般論と [CLAUDE_PHYSICS.md](CLAUDE_PHYSICS.md) のパウリ行列を接続する。
