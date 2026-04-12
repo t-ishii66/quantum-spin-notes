@@ -376,15 +376,11 @@ G_z = \hat{L}_z
 
 である。ここで、すでに示した各軸まわりの結果を並べてみる。
 
-```math
-\begin{array}{c|ccc}
- & \delta x & \delta y & \delta z \\
-\hline
-L_x\text{ が生成} & 0 & -z\,\delta\theta & +y\,\delta\theta \\
-L_y\text{ が生成} & +z\,\delta\theta & 0 & -x\,\delta\theta \\
-L_z\text{ が生成} & -y\,\delta\theta & +x\,\delta\theta & 0
-\end{array}
-```
+|  | $\delta x$ | $\delta y$ | $\delta z$ |
+|:---:|:---:|:---:|:---:|
+| $L_x$ が生成 | $0$ | $-z\,\delta\theta$ | $+y\,\delta\theta$ |
+| $L_y$ が生成 | $+z\,\delta\theta$ | $0$ | $-x\,\delta\theta$ |
+| $L_z$ が生成 | $-y\,\delta\theta$ | $+x\,\delta\theta$ | $0$ |
 
 一般軸の各成分を、表の各行と突き合わせてみる。
 
