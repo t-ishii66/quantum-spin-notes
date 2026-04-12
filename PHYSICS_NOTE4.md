@@ -1,18 +1,18 @@
 # ベルの不等式：量子力学が古典的直観を越える場所
 
-> **シリーズ構成**: [実験からパウリ行列へ](CLAUDE_PHYSICS.md) → [回転演算子](CLAUDE_PHYSICS2.md) → [θ/2 の由来](CLAUDE_PHYSICS3.md) → 本文書（CLAUDE_PHYSICS4.md）
+> **シリーズ構成**: [実験からパウリ行列へ](PHYSICS_NOTE.md) → [回転演算子](PHYSICS_NOTE2.md) → [θ/2 の由来](PHYSICS_NOTE3.md) → 本文書（PHYSICS_NOTE4.md）
 
 ## この文書の方針
 
-この文書は、CLAUDE_PHYSICS シリーズの知識だけを使って、ベルの不等式を導く。
+この文書は、PHYSICS_NOTE シリーズの知識だけを使って、ベルの不等式を導く。
 
 使う道具は
 
-- 状態ベクトルと測定（[CLAUDE_PHYSICS.md](CLAUDE_PHYSICS.md)）
-- パウリ行列 $\sigma_x, \sigma_y, \sigma_z$ と方向 $\mathbf{n}$ の測定 $\mathbf{n}\cdot\boldsymbol{\sigma}$ （[CLAUDE_PHYSICS.md](CLAUDE_PHYSICS.md)）
-- スピン回転と固有状態の変換（[CLAUDE_PHYSICS3.md](CLAUDE_PHYSICS3.md)）
+- 状態ベクトルと測定（[PHYSICS_NOTE.md](PHYSICS_NOTE.md)）
+- パウリ行列 $\sigma_x, \sigma_y, \sigma_z$ と方向 $\mathbf{n}$ の測定 $\mathbf{n}\cdot\boldsymbol{\sigma}$ （[PHYSICS_NOTE.md](PHYSICS_NOTE.md)）
+- スピン回転と固有状態の変換（[PHYSICS_NOTE3.md](PHYSICS_NOTE3.md)）
 
-だけである。新たに導入するのは「2粒子系の状態をどう書くか」だけで、それ以外は既知の道具の組み合わせで話が進む。
+である。新しい数学道具としては2粒子系のテンソル積を導入し、概念としては局所隠れ変数と CHSH の考え方を追加する。それ以外は既知の道具の組み合わせで話が進む。
 
 ---
 
@@ -33,7 +33,7 @@
 
 ### 1粒子の復習
 
-[CLAUDE_PHYSICS.md](CLAUDE_PHYSICS.md) で見たように、1粒子のスピン状態は 2 次元空間に住んでいる。 $z$ 基底は
+[PHYSICS_NOTE.md](PHYSICS_NOTE.md) で見たように、1粒子のスピン状態は 2 次元空間に住んでいる。 $z$ 基底は
 
 ```math
 \vert {+z}\rangle = \begin{pmatrix}1\\0\end{pmatrix}, \qquad
@@ -119,9 +119,11 @@ $\vert \Psi^-\rangle$ の第1項 $\vert {+z}\rangle\vert {-z}\rangle$ は「Alic
 
 実は、シングレット状態には驚くべき性質がある。上の完全反相関は $z$ 方向に限らず、**任意の方向で成り立つ**。
 
-これを確かめるには、任意の方向 $\mathbf{a}$ の固有状態で $\vert \Psi^-\rangle$ を書き直してみればよい。 $\mathbf{a}$ が $z$ 軸から角度 $\theta_a$ の方向にあるとする（ $xz$ 平面内とする）。
+これを確かめるには、任意の方向 $\mathbf{a}$ の固有状態で $\vert \Psi^-\rangle$ を書き直してみればよい。ここでは計算を簡単にするため、方向を $xz$ 平面内に取る。シングレットは任意の空間回転に対して不変なので、一般の方向でも同じ結論になる。
 
-方向 $\mathbf{a}$ の固有状態 $\vert {+a}\rangle$ は、 $\vert {+z}\rangle$ を $y$ 軸まわりに $\theta_a$ だけ回転させたものである。[CLAUDE_PHYSICS3.md](CLAUDE_PHYSICS3.md) の回転行列
+$\mathbf{a}$ が $z$ 軸から角度 $\theta_a$ の方向にあるとする。
+
+方向 $\mathbf{a}$ の固有状態 $\vert {+a}\rangle$ は、 $\vert {+z}\rangle$ を $y$ 軸まわりに $\theta_a$ だけ回転させたものである。[PHYSICS_NOTE3.md](PHYSICS_NOTE3.md) の回転行列
 
 ```math
 U(\theta, \mathbf{n}) = \cos\frac{\theta}{2}\,I - i\sin\frac{\theta}{2}\,\mathbf{n}\cdot\boldsymbol{\sigma}
@@ -181,7 +183,7 @@ $-i \cdot (-i) = i^2 = -1$ と $-i \cdot i = -i^2 = 1$ に注意すると
 \vert {-a}\rangle = -\sin\frac{\theta_a}{2}\,\vert {+z}\rangle + \cos\frac{\theta_a}{2}\,\vert {-z}\rangle
 ```
 
-である。空間的には $\theta_a$ だけ回転しているが、状態ベクトルの係数には $\theta_a/2$ が現れる。これは [CLAUDE_PHYSICS3.md](CLAUDE_PHYSICS3.md) で見たスピノルの半角構造そのものである。 $c = \cos(\theta_a/2)$, $s = \sin(\theta_a/2)$ と略記すると
+である。空間的には $\theta_a$ だけ回転しているが、状態ベクトルの係数には $\theta_a/2$ が現れる。これは [PHYSICS_NOTE3.md](PHYSICS_NOTE3.md) で見たスピノルの半角構造そのものである。 $c = \cos(\theta_a/2)$, $s = \sin(\theta_a/2)$ と略記すると
 
 ```math
 \vert {+a}\rangle\vert {-a}\rangle
@@ -275,7 +277,7 @@ Bob は方向 $\mathbf{b}$ で測定する。 $\mathbf{a}$ と $\mathbf{b}$ の�
 
 Bob が $+1$ を得る確率は $\vert \langle{+b}\vert {-a}\rangle\vert ^2$ 、 $-1$ を得る確率は $\vert \langle{-b}\vert {-a}\rangle\vert ^2$ である。
 
-$\mathbf{a}$ と $\mathbf{b}$ が同じ $xz$ 平面内にあるとし、 $z$ 軸からの角度をそれぞれ $\theta_a$, $\theta_b$ とする（ $\theta = \theta_b - \theta_a$ ）。[CLAUDE_PHYSICS3.md](CLAUDE_PHYSICS3.md) の回転から
+$\mathbf{a}$ と $\mathbf{b}$ が同じ $xz$ 平面内にあるとし、 $z$ 軸からの角度をそれぞれ $\theta_a$, $\theta_b$ とする（ $\theta = \theta_b - \theta_a$ ）。[PHYSICS_NOTE3.md](PHYSICS_NOTE3.md) の回転から
 
 ```math
 \vert {+b}\rangle = \cos\frac{\theta_b}{2}\vert {+z}\rangle + \sin\frac{\theta_b}{2}\vert {-z}\rangle
@@ -360,6 +362,10 @@ E(\mathbf{a}, \mathbf{b}) = -\cos\theta = -\mathbf{a}\cdot\mathbf{b}
 }
 ```
 
+これがベル不等式の議論全体の到達点となる核心的な結果である。
+
+なぜこの結果が重要なのか。古典的な（隠れた変数を持つ）理論でも、相関 $E(\theta)$ の形自体は工夫次第でさまざまに作れる。しかし、4つの測定方向を適切に選んで相関を組み合わせると、古典理論では絶対に超えられない上限が存在する（CHSH 不等式）。量子力学の $E = -\cos\theta$ は、Born 則の $\cos^2(\theta/2)$, $\sin^2(\theta/2)$ という確率——状態ベクトルの内積から来る——が生み出す曲線であり、この上限を超えてしまう。次の段階でこれを定量的に見ていく。
+
 ### 確認
 
 - $\theta = 0$ （同方向）： $E = -1$ （完全反相関） ✓
@@ -376,7 +382,7 @@ E(\mathbf{a}, \mathbf{b}) = -\cos\theta = -\mathbf{a}\cdot\mathbf{b}
 
 Alice が方向 $\mathbf{a}$ で測定すると、Bob の粒子は即座に $\vert {-a}\rangle$ （または $\vert {+a}\rangle$ ）に決まる。Alice と Bob がどれほど離れていても、である。
 
-しかし Alice の測定が Bob の粒子に物理的な影響を与えるわけではない（特殊相対論により、光より速い影響伝達はない）。
+しかし Bob 単独で見える測定統計は Alice が何をしようと変わらず、この相関を使って光より速く信号を送ることはできない（量子力学はこの意味で特殊相対論と矛盾しない）。
 
 ならば、Bob の粒子は**最初から答えを持っていた**と考えるほうが自然ではないか。
 
@@ -386,7 +392,7 @@ Alice が方向 $\mathbf{a}$ で測定すると、Bob の粒子は即座に $\ve
 
 EPR の議論を数学的にまとめると、次のような仮説になる。
 
-> 2つの粒子が作られた瞬間に、各粒子には**すべての方向に対する測定結果が事前に決まっている**。この事前の値を決めるのが隠れた変数 $\lambda$ である。
+> 2つの粒子が作られた瞬間に、各粒子には測定結果が事前に決まっている——少なくとも、実験で選ばれうる方向については、測らなかった場合の値も同時に存在する。この事前の値を決めるのが隠れた変数 $\lambda$ である。
 
 具体的には
 
@@ -406,7 +412,7 @@ EPR の議論を数学的にまとめると、次のような仮説になる。
 E(\mathbf{a}, \mathbf{b}) = \int A(\mathbf{a}, \lambda)\,B(\mathbf{b}, \lambda)\,\rho(\lambda)\,d\lambda
 ```
 
-と書ける。ここで $\rho(\lambda)$ は $\lambda$ の確率分布（ $\int \rho\,d\lambda = 1$, $\rho \geq 0$ ）である。
+と書ける。ここで $\rho(\lambda)$ は $\lambda$ の確率分布（ $\int \rho\,d\lambda = 1$, $\rho \geq 0$ ）である。もう一つ暗黙の仮定がある。 $\rho(\lambda)$ は Alice と Bob がどの方向を選ぶかに依存しない——つまり測定方向の選択と隠れた変数は統計的に独立である。
 
 問いはこうである。**この枠組みで、量子力学の予測 $E = -\cos\theta$ を再現できるか？**
 
@@ -488,7 +494,7 @@ s = A \cdot (\pm 2) + A' \cdot 0 = \pm 2
 \boxed{\vert S\vert \leq 2} \qquad \text{（CHSH 不等式）}
 ```
 
-これは隠れた変数の仮説（局所性 + 実在性）だけから導かれる不等式であり、量子力学の法則を一切使っていない。
+これは隠れた変数の仮説——事前に値が決まっていること（実在性）、遠方の設定に依存しないこと（局所性）、測定方向の選択が $\lambda$ と独立であること——だけから導かれる不等式であり、量子力学の法則を一切使っていない。
 
 ---
 
@@ -565,18 +571,13 @@ S = E(\mathbf{a}, \mathbf{b}) - E(\mathbf{a}, \mathbf{b}') + E(\mathbf{a}', \mat
 
 ### 何が起きたのか
 
-CHSH 不等式は「各粒子がすべての方向に対する答えを事前に持っている」という仮定から導かれた。量子力学はこの上限を超える。
+CHSH 不等式は、測定結果が事前に決まっていて（実在性）、遠方の設定に依存せず（局所性）、測定方向の選択が自由である、という仮定から導かれた。量子力学はこの上限を超える。
 
-したがって、**少なくとも次の仮定の一方は誤りである**。
-
-1. **実在性**：測定しなくても結果は事前に決まっている
-2. **局所性**：Alice の選択は Bob の結果に影響しない
-
-量子力学は、この二つを同時には認めない。これがベルの不等式の核心である。
+したがって、**測定結果が事前に同時に決まっており、しかも遠方の測定設定に影響されない、という素朴な局所実在論は成り立たない**。よく短く言えば、局所性と実在性を同時には保てない。これがベルの不等式の核心である。
 
 ### 実験
 
-この予測は実験で繰り返し検証されている。光子の偏光や原子のスピンを使った実験で、量子力学の予測 $\vert S\vert = 2\sqrt{2}$ に一致する結果が得られており、CHSH 不等式 $\vert S\vert \leq 2$ は破れている。
+この予測は実験で繰り返し検証されている。光子の偏光や原子・電子のスピンなど、対応する量子二値測定を使った実験で、CHSH 不等式の古典上限 $\vert S\vert \leq 2$ を明確に超える相関が観測されている。
 
 ---
 
@@ -593,17 +594,17 @@ $A, B = \pm 1$ の4つの相関を自由に選べるなら、 $S$ の式の定�
 ```
 
 ```math
-\text{古典上限} \qquad \text{量子上限} \qquad \text{数学的上限}
+\text{古典上限} \qquad \text{量子上限} \qquad \text{代数的上限}
 ```
 
-量子力学は古典を超えるが、数学的に可能な最大値にも達しない。この中間に位置することの物理的意味は、いまだに研究が続いている。
+量子力学は古典を超えるが、代数的に可能な最大値にも達しない。この中間に位置することの物理的意味は、いまだに研究が続いている。
 
 ---
 
 ## 全体の論理構造（振り返り）
 
 ```
-1粒子のスピン状態（2次元）  ← CLAUDE_PHYSICS.md
+1粒子のスピン状態（2次元）  ← PHYSICS_NOTE.md
     ↓
 2粒子は 2×2 = 4 次元（テンソル積）
     ↓
@@ -625,5 +626,5 @@ E(a,b) = −cos θ = −a·b    ← 量子力学の予測
     ↓
 4方向を 45° 間隔に選ぶ → |S| = 2√2 > 2
     ↓
-隠れた変数（局所性 + 実在性）は量子力学と両立しない
+素朴な局所実在論は量子力学と両立しない
 ```

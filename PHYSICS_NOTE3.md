@@ -1,12 +1,12 @@
 # スピン 1/2 の回転演算子になぜ $\theta/2$ が現れるのか
 
-> **シリーズ構成**: [実験からパウリ行列へ](CLAUDE_PHYSICS.md) → [回転演算子](CLAUDE_PHYSICS2.md) → 本文書（CLAUDE_PHYSICS3.md）→ [ベルの不等式](CLAUDE_PHYSICS4.md)
+> **シリーズ構成**: [実験からパウリ行列へ](PHYSICS_NOTE.md) → [回転演算子](PHYSICS_NOTE2.md) → 本文書（PHYSICS_NOTE3.md）→ [ベルの不等式](PHYSICS_NOTE4.md)
 
 ## この文書の方針
 
-[CLAUDE_PHYSICS.md](CLAUDE_PHYSICS.md) で、パウリ行列 $\sigma_x, \sigma_y, \sigma_z$ を実験事実から導き、スピン演算子が $S_i = \hbar\sigma_i/2$ であること、交換関係 $[\sigma_i, \sigma_j] = 2i\epsilon_{ijk}\sigma_k$ を確認した。
+[PHYSICS_NOTE.md](PHYSICS_NOTE.md) で、パウリ行列 $\sigma_x, \sigma_y, \sigma_z$ を実験事実から導き、スピン演算子が $S_i = \hbar\sigma_i/2$ であること、交換関係 $[\sigma_i, \sigma_j] = 2i\epsilon_{ijk}\sigma_k$ を確認した。
 
-[CLAUDE_PHYSICS2.md](CLAUDE_PHYSICS2.md) で、回転演算子が
+[PHYSICS_NOTE2.md](PHYSICS_NOTE2.md) で、回転演算子が
 
 ```math
 U(\theta,\mathbf{n}) = \exp\!\left(-\frac{i}{\hbar}\,\theta\,\mathbf{n}\cdot\mathbf{J}\right)
@@ -37,7 +37,7 @@ U(\theta,\mathbf{n}) = \exp\!\left(-\frac{i}{\hbar}\,\theta\,\mathbf{n}\cdot\mat
 
 で定義される。これは「位置と運動量から作られる量」という**構成的な定義**である。
 
-しかし [CLAUDE_PHYSICS2.md](CLAUDE_PHYSICS2.md) で見たように、 $\mathbf{L}$ にはもう一つの顔がある。それは**回転の生成子**としての役割である。 $z$ 軸まわりの微小回転 $\delta\phi$ に対して
+しかし [PHYSICS_NOTE2.md](PHYSICS_NOTE2.md) で見たように、 $\mathbf{L}$ にはもう一つの顔がある。それは**回転の生成子**としての役割である。 $z$ 軸まわりの微小回転 $\delta\phi$ に対して
 
 ```math
 \delta\hat{x} = \frac{i}{\hbar}\delta\phi\,[G_z,\,\hat{x}]
@@ -70,7 +70,7 @@ U(\theta,\mathbf{n}) = \exp\!\left(-\frac{i}{\hbar}\,\theta\,\mathbf{n}\cdot\mat
 
 結果は異なる。回転は順序に依存する（非可換である）。
 
-この「入れ替えたときのずれ」を、量子力学の演算子で捉えたい。微小回転を考える。 $x$ 軸まわりに $\delta\alpha$ 、 $y$ 軸まわりに $\delta\beta$ の微小回転を順に行うとする。[CLAUDE_PHYSICS2.md](CLAUDE_PHYSICS2.md) の形を使うと
+この「入れ替えたときのずれ」を、量子力学の演算子で捉えたい。微小回転を考える。 $x$ 軸まわりに $\delta\alpha$ 、 $y$ 軸まわりに $\delta\beta$ の微小回転を順に行うとする。[PHYSICS_NOTE2.md](PHYSICS_NOTE2.md) の形を使うと
 
 ```math
 U(\delta\alpha, \hat{x}) = I - \frac{i}{\hbar}\delta\alpha\,G_x + O(\delta\alpha^2)
@@ -114,7 +114,7 @@ U(\delta\alpha, \hat{x})\,U(\delta\beta, \hat{y})
 
 一方、古典幾何学では、 $x$ と $y$ の微小回転を入れ替えたときのずれは、 $z$ 軸まわりの微小回転になる。これを回転行列で直接確かめる。
 
-$x$ 軸まわりの微小回転行列は（[CLAUDE_PHYSICS2.md](CLAUDE_PHYSICS2.md) の $z$ 軸版と同様に、 $\cos\delta\alpha \approx 1$, $\sin\delta\alpha \approx \delta\alpha$ を使う）
+$x$ 軸まわりの微小回転行列は（[PHYSICS_NOTE2.md](PHYSICS_NOTE2.md) の $z$ 軸版と同様に、 $\cos\delta\alpha \approx 1$, $\sin\delta\alpha \approx \delta\alpha$ を使う）
 
 ```math
 R_x(\delta\alpha) \approx
@@ -262,7 +262,7 @@ U(\delta\gamma, \hat{z}) - I = -\frac{i}{\hbar}\,\delta\gamma\,G_z
 
 逆に、3つのエルミート演算子 $J_x, J_y, J_z$ がこの交換関係を満たしているとする。そこから本当に回転演算子が作れるか。
 
-[CLAUDE_PHYSICS2.md](CLAUDE_PHYSICS2.md) で見たように、有限回転は微小回転の積み重ねで作れる。
+[PHYSICS_NOTE2.md](PHYSICS_NOTE2.md) で見たように、有限回転は微小回転の積み重ねで作れる。
 
 ```math
 U(\theta, \mathbf{n}) = \lim_{N\to\infty}\left(I - \frac{i}{\hbar}\frac{\theta}{N}\,\mathbf{n}\cdot\mathbf{J}\right)^N
@@ -284,13 +284,13 @@ U(\theta, \mathbf{n}) = \lim_{N\to\infty}\left(I - \frac{i}{\hbar}\frac{\theta}{
 
 ### 軌道角運動量はこの特殊例にすぎない
 
-[CLAUDE_PHYSICS2.md](CLAUDE_PHYSICS2.md) で導いた $\hat{L}_z = \hat{x}\hat{p}_y - \hat{y}\hat{p}_x$ は、位置と運動量を持つ粒子において、上の交換関係を満たす生成子を**具体的に構成した**ものである。
+[PHYSICS_NOTE2.md](PHYSICS_NOTE2.md) で導いた $\hat{L}_z = \hat{x}\hat{p}_y - \hat{y}\hat{p}_x$ は、位置と運動量を持つ粒子において、上の交換関係を満たす生成子を**具体的に構成した**ものである。
 
 しかし交換関係の定義は、 $\mathbf{r} \times \mathbf{p}$ という構成法を要求していない。位置や運動量を一切持たない自由度でも、3つのエルミート演算子が交換関係を満たしさえすれば、それは角運動量である。
 
 ### パウリ行列はこの条件を満たす
 
-[CLAUDE_PHYSICS.md](CLAUDE_PHYSICS.md) で直接計算したように
+[PHYSICS_NOTE.md](PHYSICS_NOTE.md) で直接計算したように
 
 ```math
 [\sigma_i, \sigma_j] = 2i\,\epsilon_{ijk}\,\sigma_k
@@ -312,13 +312,15 @@ U(\theta, \mathbf{n}) = \lim_{N\to\infty}\left(I - \frac{i}{\hbar}\frac{\theta}{
 
 これが**スピン角運動量**と呼ばれるものの正体である。「空間を動き回ることに由来しない角運動量」であり、粒子の**内部自由度**に宿る角運動量である。
 
+しかも $\mathbf{S}$ は $2 \times 2$ 行列なので、角運動量の2次元既約表現になっている。角運動量の理論では、既約表現は量子数 $j = 0, 1/2, 1, 3/2, \ldots$ で分類される。2次元に対応するのは $j = 1/2$ だけなので、パウリ行列から作った $\mathbf{S}$ は**スピン 1/2** の角運動量だと確定する。
+
 ### まとめ： $\boldsymbol{\sigma}$ が角運動量である理由
 
 流れを整理する。
 
 1. 回転の生成子は交換関係 $[J_i, J_j] = i\hbar\,\epsilon_{ijk}\,J_k$ を満たす（回転の幾何から要請される）
 2. この交換関係を満たすものを角運動量と定義する（ $\mathbf{r} \times \mathbf{p}$ は特殊例にすぎない）
-3. $S_i = \frac{\hbar}{2}\sigma_i$ はこの交換関係を満たす（[CLAUDE_PHYSICS.md](CLAUDE_PHYSICS.md) で計算済み）
+3. $S_i = \frac{\hbar}{2}\sigma_i$ はこの交換関係を満たす（[PHYSICS_NOTE.md](PHYSICS_NOTE.md) で計算済み）
 4. したがって $\mathbf{S}$ は角運動量であり、回転演算子 $U = \exp(-i\theta\,\mathbf{n}\cdot\mathbf{J}/\hbar)$ の $\mathbf{J}$ として使える
 
 ---
@@ -327,7 +329,7 @@ U(\theta, \mathbf{n}) = \lim_{N\to\infty}\left(I - \frac{i}{\hbar}\frac{\theta}{
 
 ### 出発点
 
-スピンのみを持つ粒子（軌道角運動量がない場合）では
+純粋なスピン自由度だけを扱う場合（空間的な運動は考えない）には
 
 ```math
 \mathbf{J} = \mathbf{S}
@@ -517,7 +519,7 @@ e^{-i\theta/2} & 0 \\
 
 $\vert {+z}\rangle$ と $\vert {-z}\rangle$ にそれぞれ逆符号の位相がつく。これだけでは「回転」のイメージが湧きにくいので、具体的な状態に作用させてみよう。
 
-$\vert {+x}\rangle$ は [CLAUDE_PHYSICS.md](CLAUDE_PHYSICS.md) で導いたように
+$\vert {+x}\rangle$ は [PHYSICS_NOTE.md](PHYSICS_NOTE.md) で導いたように
 
 ```math
 \vert {+x}\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}
@@ -544,7 +546,7 @@ U(\theta, \hat{z})\,\vert {+x}\rangle
 \frac{1}{\sqrt{2}}\begin{pmatrix}1\\e^{i\theta}\end{pmatrix}
 ```
 
-が得られる。[CLAUDE_PHYSICS.md](CLAUDE_PHYSICS.md) で見たように、この形は
+が得られる。[PHYSICS_NOTE.md](PHYSICS_NOTE.md) で見たように、この形は
 
 ```math
 \frac{1}{\sqrt{2}}\bigl(\vert {+z}\rangle + e^{i\phi}\vert {-z}\rangle\bigr)
@@ -683,7 +685,9 @@ U(\theta, \hat{z})\vert \psi\rangle
 - **状態ベクトル**（スピノル）は $\theta/2$ の位相変化を受ける
 - **ブロッホベクトル**（測定統計）は $\theta$ だけ回転する
 
-この二重構造は、状態ベクトルからブロッホベクトルへの対応が「2対1」であることから来ている。 $\vert \psi\rangle$ と $-\vert \psi\rangle$ はブロッホ球上で同じ点を指す。状態ベクトルの空間（SU(2)）は、ブロッホベクトルの空間（回転群 SO(3)）の**二重被覆**になっている。
+この二重構造は、状態ベクトルからブロッホベクトルへの対応が多対一であることから来ている。 $\vert \psi\rangle$ と $e^{i\chi}\vert \psi\rangle$ （全体位相が違うだけ）はブロッホ球上で同じ点を指す。特に $\vert \psi\rangle$ と $-\vert \psi\rangle$ も同じ点になる。
+
+数学の言葉では、スピン 1/2 の回転演算子は回転群 $\mathrm{SO}(3)$ そのものではなく、その**二重被覆**である $\mathrm{SU}(2)$ の表現になっている。 $\mathrm{SU}(2)$ の2つの元（ $U$ と $-U$ ）が $\mathrm{SO}(3)$ の1つの回転に対応する——だから状態ベクトルは $4\pi$ で一周するが、ブロッホベクトル（つまり物理的な測定統計）は $2\pi$ で一周する。
 
 したがって、答えは明確である。
 
@@ -711,6 +715,8 @@ U(2\pi,\mathbf{n})
 ```
 
 になる。状態ベクトルは元に戻らず、**符号が反転する**。
+
+ただし、物理状態としてはどうか。量子力学では $\vert \psi\rangle$ と $-\vert \psi\rangle$ は同じ射線（全体位相が違うだけ）なので、単独の測定ではすべての確率が一致し、区別できない。つまり「状態ベクトルは符号反転するが、物理的な観測量は変わらない」——この符号差が見えるのは、干渉実験で別の経路と比較したときだけである。
 
 ### 720 度で戻る
 
@@ -765,6 +771,8 @@ $z$ 軸まわりの回転では $U = e^{-i\theta J_z/\hbar}$ であり、 $J_z$ 
 
 スピン 1/2 は $j = 1/2$ の最も単純な場合である。
 
+ここでも 360 度回転と同じ注意が当てはまる。状態ベクトルとしての周期は半整数 $j$ で $4\pi$、整数 $j$ で $2\pi$ だが、ブロッホベクトル（測定統計）の周期はいずれも $2\pi$ である。半整数 $j$ の符号反転が見えるのは干渉実験だけである。
+
 ---
 
 ## 全体の論理構造（振り返り）
@@ -793,4 +801,4 @@ $\theta/2$ の起源は $S_i = \hbar\sigma_i/2$ の $1/2$ であり、その $1/
 
 ---
 
-**次の文書**: [CLAUDE_PHYSICS4.md — ベルの不等式](CLAUDE_PHYSICS4.md) では、本文書で整備した回転・固有状態の道具を使って、2粒子系の相関からベルの不等式を導く。
+**次の文書**: [PHYSICS_NOTE4.md — ベルの不等式](PHYSICS_NOTE4.md) では、本文書で整備した回転・固有状態の道具を使って、2粒子系の相関からベルの不等式を導く。
