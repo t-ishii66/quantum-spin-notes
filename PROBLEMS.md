@@ -1,8 +1,8 @@
-# PROBLEMS.md — PHYSICS_NOTE4.md の物理学的評価
+# PROBLEMS.md — PHYSICS_NOTE5.md の物理学的評価
 
 ## 総評
 
-`PHYSICS_NOTE4.md` は、物理初心者向けのベル不等式入門としてはかなり完成度が高い。2粒子状態、シングレット、相関
+`PHYSICS_NOTE5.md` は、物理初心者向けのベル不等式入門としてはかなり完成度が高い。2粒子状態、シングレット、相関
 
 ```math
 E(\mathbf{a},\mathbf{b})=-\cos\theta

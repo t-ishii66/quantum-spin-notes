@@ -1,6 +1,6 @@
 # 回転演算子 $U(\theta,\mathbf{n}) = \exp(-i\theta J_{\mathbf{n}}/\hbar)$ の導出
 
-> **シリーズ構成**: [実験からパウリ行列へ](PHYSICS_NOTE.md) → 本文書（PHYSICS_NOTE2.md）→ [θ/2 の由来](PHYSICS_NOTE3.md) → [ベルの不等式](PHYSICS_NOTE4.md)
+> **シリーズ構成**: [実験からパウリ行列へ](PHYSICS_NOTE.md) → 本文書（PHYSICS_NOTE2.md）→ [ブロッホ球](PHYSICS_NOTE3.md) → [θ/2 の由来](PHYSICS_NOTE4.md) → [ベルの不等式](PHYSICS_NOTE5.md)
 
 ## この文書の方針
 
@@ -491,7 +491,7 @@ U(\theta,\mathbf{n})
 \exp\!\left(-i\frac{\theta}{2}\,\mathbf{n}\cdot\boldsymbol{\sigma}\right)
 ```
 
-となる。 $\hbar$ が消えて、半角 $\theta/2$ が現れる。なぜ $\theta/2$ が出るのか、その物理的意味は何か——これが次の文書 [PHYSICS_NOTE3.md](PHYSICS_NOTE3.md) の主題である。
+となる。 $\hbar$ が消えて、半角 $\theta/2$ が現れる。なぜ $\theta/2$ が出るのか、その物理的意味は何か——これが次の文書 [PHYSICS_NOTE4.md](PHYSICS_NOTE4.md) の主題である。
 
 ---
 
@@ -519,4 +519,4 @@ U(θ,n) = exp(−iθ n·J/ℏ)
 
 ---
 
-**次の文書**: [PHYSICS_NOTE3.md — スピン 1/2 の回転演算子になぜ θ/2 が現れるのか](PHYSICS_NOTE3.md) では、本文書の一般論と [PHYSICS_NOTE.md](PHYSICS_NOTE.md) のパウリ行列を接続する。
+**次の文書**: [PHYSICS_NOTE3.md — ブロッホ球](PHYSICS_NOTE3.md) では、スピン状態を球面上の点として視覚化する方法を導入する。
