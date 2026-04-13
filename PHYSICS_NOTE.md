@@ -140,13 +140,31 @@ $z$ 方向の装置を演算子 $\hat{Z}$ と書くと、上向きの銀に装�
 
 となる。このように、ある状態に演算子を作用させたとき、定数倍（測定値）×元の状態に戻る関係を**固有値方程式**と呼び、 $(+1)$, $(-1)$ を**固有値**、 $\vert {+z}\rangle$, $\vert {-z}\rangle$ を**固有状態**と呼ぶ。
 
-この2つの固有状態と固有値を使うと、測定演算子は
+この2つの固有状態と固有値を使うと、測定演算子を組み立てることができる。発想はこうである。まず $\vert {+z}\rangle\langle{+z}\vert$ は「状態の $\vert {+z}\rangle$ 成分だけを取り出す」射影子であった。これに固有値 $(+1)$ を重みとして掛ける。 $\vert {-z}\rangle$ 成分についても同様にして、両者を足し合わせると
 
 ```math
 \hat{Z} = (+1)\vert {+z}\rangle\langle{+z}\vert + (-1)\vert {-z}\rangle\langle{-z}\vert
 ```
 
-と書ける。
+が得られる。これを**スペクトル分解**と呼ぶ。本当にこれが正しい演算子になっているか、固有状態に作用させて確かめよう。 $\vert {+z}\rangle$ に作用させると
+
+```math
+\hat{Z}\vert {+z}\rangle
+= (+1)\vert {+z}\rangle\underbrace{\langle{+z}\vert {+z}\rangle}_{=1}
+ + (-1)\vert {-z}\rangle\underbrace{\langle{-z}\vert {+z}\rangle}_{=0}
+= (+1)\vert {+z}\rangle \quad\checkmark
+```
+
+同様に $\vert {-z}\rangle$ に作用させると
+
+```math
+\hat{Z}\vert {-z}\rangle
+= (+1)\vert {+z}\rangle\underbrace{\langle{+z}\vert {-z}\rangle}_{=0}
+ + (-1)\vert {-z}\rangle\underbrace{\langle{-z}\vert {-z}\rangle}_{=1}
+= (-1)\vert {-z}\rangle \quad\checkmark
+```
+
+確かに132行目・138行目の固有値方程式が再現された。ここで内積の直交性（ $\langle{+z}\vert {-z}\rangle = 0$ ）が本質的に効いている。
 
 ### 行列表示
 

@@ -55,29 +55,114 @@
 
 ### なぜ $\theta/2$ なのか
 
-ここで $\theta$ ではなく $\theta/2$ を使うのはなぜか。もちろん $\cos\eta$, $\sin\eta$ と置いて $\eta = \theta/2$ としても同じだが、 $\theta$ と書く理由がある。
+ここで $\theta$ ではなく $\theta/2$ を使うのはなぜか。もちろん $\cos\eta$, $\sin\eta$ と置いて $\eta = \theta/2$ としても同じだが、 $\theta$ と書く物理的な理由がある。それを見るために、空間の一般方向 $\mathbf{n}$ の測定に対応する固有状態を求めてみよう。
 
-[PHYSICS_NOTE.md](PHYSICS_NOTE.md) で見たように、方向 $\mathbf{n}$（ $z$ 軸から角度 $\theta$ ）の固有状態は
+#### 一般方向の測定演算子
+
+[PHYSICS_NOTE.md](PHYSICS_NOTE.md) では $z$, $x$, $y$ 方向の測定演算子としてパウリ行列 $\sigma_z, \sigma_x, \sigma_y$ を導いた。空間の一般方向 $\mathbf{n} = (n_x, n_y, n_z)$ の測定演算子は、これらの線形結合
+
+```math
+\mathbf{n}\cdot\boldsymbol{\sigma}
+= n_x\sigma_x + n_y\sigma_y + n_z\sigma_z
+= \begin{pmatrix} n_z & n_x - in_y \\ n_x + in_y & -n_z \end{pmatrix}
+```
+
+で与えられる。方向 $\mathbf{n}$ を極座標で $n_x = \sin\theta\cos\phi$, $n_y = \sin\theta\sin\phi$, $n_z = \cos\theta$ と書くと、対角成分はそのまま $\pm\cos\theta$ になる。非対角成分は
+
+```math
+n_x + in_y = \sin\theta\cos\phi + i\sin\theta\sin\phi = \sin\theta(\cos\phi + i\sin\phi) = \sin\theta\,e^{i\phi}
+```
+
+であり、もう一方は複素共役をとって
+
+```math
+n_x - in_y = \sin\theta\,e^{-i\phi}
+```
+
+となる。最後のステップではオイラーの公式 $e^{i\phi} = \cos\phi + i\sin\phi$ を使った。まとめると
+
+```math
+\mathbf{n}\cdot\boldsymbol{\sigma}
+= \begin{pmatrix} \cos\theta & \sin\theta\,e^{-i\phi} \\ \sin\theta\,e^{i\phi} & -\cos\theta \end{pmatrix}
+```
+
+となる。
+
+#### 固有状態を求める
+
+この行列の固有値 $+1$ に属する固有状態 $\vert {+n}\rangle = \begin{pmatrix} a \\ b \end{pmatrix}$ を求める。固有値方程式の第1行は
+
+```math
+\cos\theta \cdot a + \sin\theta\,e^{-i\phi} \cdot b = a
+```
+
+整理すると
+
+```math
+\sin\theta\,e^{-i\phi} \cdot b = (1 - \cos\theta)\,a
+```
+
+ここで三角関数の半角公式を使う。
+
+```math
+1 - \cos\theta = 2\sin^2\frac{\theta}{2}, \qquad
+\sin\theta = 2\sin\frac{\theta}{2}\cos\frac{\theta}{2}
+```
+
+代入すると
+
+```math
+2\sin\frac{\theta}{2}\cos\frac{\theta}{2}\,e^{-i\phi} \cdot b
+= 2\sin^2\frac{\theta}{2} \cdot a
+```
+
+両辺を $2\sin(\theta/2)$ で割ると（ $\theta = 0$ の場合は後で別に確認する）
+
+```math
+\cos\frac{\theta}{2}\,e^{-i\phi} \cdot b = \sin\frac{\theta}{2} \cdot a
+```
+
+したがって $a$ と $b$ の比は
+
+```math
+\frac{b}{a} = \frac{\sin(\theta/2)}{\cos(\theta/2)}\,e^{i\phi}
+```
+
+正規化 $\vert a\vert ^2 + \vert b\vert ^2 = 1$ と、 $a$ を実数かつ非負に選ぶ自由度を使えば
+
+```math
+a = \cos\frac{\theta}{2}, \qquad b = e^{i\phi}\sin\frac{\theta}{2}
+```
+
+と決まる。つまり
 
 ```math
 \vert {+n}\rangle = \cos\frac{\theta}{2}\vert {+z}\rangle + e^{i\phi}\sin\frac{\theta}{2}\vert {-z}\rangle
 ```
 
-の形をしていた。つまり**空間的な角度 $\theta$ に対して、状態ベクトルの係数には $\theta/2$ が入る**。この対応を保つために、パラメータを $\theta/2$ で書くのが自然である。こうすると、後で見るように、球面上の角度 $\theta$ がそのまま空間的な方向の角度に一致する。
+#### 既知の結果との整合
 
-### $\beta$ の位相
+念のため、[PHYSICS_NOTE.md](PHYSICS_NOTE.md) で求めた特殊な場合と合うか確認しよう。
 
-$\vert \beta\vert  = \sin(\theta/2)$ が決まったので、 $\beta$ は
+- **$z$ 方向** （ $\theta = 0$ ）： $\cos 0 = 1$, $\sin 0 = 0$ なので $\vert {+n}\rangle = \vert {+z}\rangle$ $\checkmark$
+- **$x$ 方向** （ $\theta = \pi/2$, $\phi = 0$ ）： $\cos(\pi/4) = \sin(\pi/4) = 1/\sqrt{2}$, $e^{i\cdot 0} = 1$ なので $\vert {+n}\rangle = \frac{1}{\sqrt{2}}(\vert {+z}\rangle + \vert {-z}\rangle) = \vert {+x}\rangle$ $\checkmark$
+- **$y$ 方向** （ $\theta = \pi/2$, $\phi = \pi/2$ ）： $e^{i\pi/2} = i$ なので $\vert {+n}\rangle = \frac{1}{\sqrt{2}}(\vert {+z}\rangle + i\vert {-z}\rangle) = \vert {+y}\rangle$ $\checkmark$
+
+#### $\theta/2$ の意味と $(\alpha, \beta)$ への接続
+
+こうして、**空間的な方向の角度が $\theta$ のとき、状態ベクトルの係数には $\theta/2$ が入る**ことが分かった。これは偶然ではなく、スピン 1/2 の数学的構造から必然的に出てくる結果である（詳しくは [PHYSICS_NOTE4.md](PHYSICS_NOTE4.md) で扱う）。
+
+ここで出発点に戻ろう。48行目で $\alpha = \cos(\theta/2)$, $\vert \beta\vert = \sin(\theta/2)$ と置いたが、いま固有状態の導出から $b = e^{i\phi}\sin(\theta/2)$ という形も得られた。これはまさに $\beta$ の完全な形を与えている——大きさが $\sin(\theta/2)$ で、位相が $e^{i\phi}$ である。つまり
 
 ```math
-\beta = e^{i\phi}\sin\frac{\theta}{2}
+\alpha = \cos\frac{\theta}{2}, \qquad \beta = e^{i\phi}\sin\frac{\theta}{2}
 ```
 
-と書ける。 $\phi$ （ $0 \leq \phi < 2\pi$ ）は $\beta$ の位相、すなわち2成分の**相対位相**である。
+ここで $\phi$ （ $0 \leq \phi < 2\pi$ ）は2成分の**相対位相**であり、$\theta$ と $\phi$ はそれぞれ方向 $\mathbf{n}$ の極角と方位角に対応する。
 
 ### 標準形
 
-以上をまとめると、全体位相の自由度を除いた後、スピン 1/2 の一般の状態は
+以上をまとめると、固有状態 $\vert {+n}\rangle$ の表式で方向 $\mathbf{n}$ を自由に動かせば任意の状態が得られるので、 $\vert {+n}\rangle$ を改めて $\vert \psi\rangle$ と書き直す。全体位相の自由度を除いた後、スピン 1/2 の一般の状態は
 
 ```math
 \boxed{
@@ -164,6 +249,10 @@ $\vert {-x}\rangle$：$\theta = \pi/2$, $\phi = \pi$ を代入すると
 
 ## 第3段階：測定確率を球面上で読む
 
+ここで視点を切り替える。第1段階では、任意の方向のスピン固有状態 $\vert {+n}\rangle$ を改めて $\vert \psi\rangle$ と書いた。次に問いたいのは、「この状態に対して、**$\vert \psi\rangle$ とは独立の別の方向 $\mathbf{n}$** のスピン測定を行ったら、結果はどうなるか」である。 $\mathbf{n}$ は測定装置の向きであり、状態 $\vert \psi\rangle$ とは無関係に自由に選べる。
+
+2つの方向を区別するために、以降では $\vert \psi\rangle$ の角度を $(\theta_r, \phi_r)$、測定方向 $\vert {+n}\rangle$ の角度を $(\theta_n, \phi_n)$ と書く。
+
 ### Born 則の復習
 
 状態 $\vert \psi\rangle$ に対して、方向 $\mathbf{n}$ のスピン測定で $+1$ が出る確率は
@@ -194,7 +283,34 @@ $\vert \psi\rangle$ と $\vert {+n}\rangle$ をそれぞれ標準形で書くと
 \langle{+n}\vert \psi\rangle = \cos\frac{\theta_n}{2}\cos\frac{\theta_r}{2} + e^{i(\phi_r - \phi_n)}\sin\frac{\theta_n}{2}\sin\frac{\theta_r}{2}
 ```
 
-この絶対値の二乗を取る。 $\Delta\phi = \phi_r - \phi_n$ とおくと
+この絶対値の二乗を取る。 $\Delta\phi = \phi_r - \phi_n$ とおき、見通しをよくするために
+
+```math
+A = \cos\frac{\theta_n}{2}\cos\frac{\theta_r}{2}, \qquad
+B = \sin\frac{\theta_n}{2}\sin\frac{\theta_r}{2}
+```
+
+と略記すると、内積は $\langle{+n}\vert \psi\rangle = A + e^{i\Delta\phi}B$ である。その絶対値の二乗は
+
+```math
+\vert A + e^{i\Delta\phi}B\vert ^2
+= (A + e^{i\Delta\phi}B)(A + e^{-i\Delta\phi}B)
+```
+
+$A, B$ は実数なので $A^* = A$, $B^* = B$ であり、展開すると
+
+```math
+= A^2 + AB\,e^{-i\Delta\phi} + AB\,e^{i\Delta\phi} + B^2
+= A^2 + B^2 + AB(e^{i\Delta\phi} + e^{-i\Delta\phi})
+```
+
+ここでオイラーの公式から $e^{i\Delta\phi} + e^{-i\Delta\phi} = 2\cos\Delta\phi$ なので
+
+```math
+= A^2 + B^2 + 2AB\cos\Delta\phi
+```
+
+$A, B$ を元に戻すと
 
 ```math
 \vert \langle{+n}\vert \psi\rangle\vert ^2

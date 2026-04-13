@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 440" width="400" height="440" font-family="serif">
+  <defs>
+    <style>
+      text { font-size: 14px; }
+      .label { font-style: italic; }
+      .axis { stroke: #555; stroke-width: 1; }
+      .axis-dash { stroke: #999; stroke-width: 0.8; stroke-dasharray: 4,3; }
+      .sphere-outline { fill: none; stroke: #333; stroke-width: 1.5; }
+      .equator { fill: none; stroke: #aaa; stroke-width: 1; stroke-dasharray: 5,4; }
+      .equator-front { fill: none; stroke: #888; stroke-width: 1; }
+      .bloch-vec { stroke: #c03020; stroke-width: 2.2; fill: none; }
+      .bloch-head { fill: #c03020; }
+      .angle-arc { fill: none; stroke-width: 1.2; }
+      .dot { r: 4; }
+      .dot-outline { fill: white; stroke: #333; stroke-width: 1.5; r: 4; }
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect width="400" height="440" fill="white" rx="8"/>
+
+  <!-- center at (200, 210) radius 150 -->
+
+  <!-- sphere outline -->
+  <circle cx="200" cy="210" r="150" class="sphere-outline"/>
+
+  <!-- equator ellipse (back half dashed, front half solid) -->
+  <!-- back half -->
+  <ellipse cx="200" cy="210" rx="150" ry="45" class="equator"/>
+  <!-- front half -->
+  <path d="M 50,210 A 150,45 0 0,0 350,210" class="equator-front"/>
+
+  <!-- z axis -->
+  <line x1="200" y1="375" x2="200" y2="42" class="axis"/>
+  <!-- z axis arrowhead -->
+  <polygon points="200,38 196,48 204,48" fill="#555"/>
+
+  <!-- x axis (toward lower-left) -->
+  <line x1="310" y1="145" x2="82" y2="280" class="axis"/>
+  <!-- x axis arrowhead -->
+  <polygon points="78,282 90,280 86,272" fill="#555"/>
+
+  <!-- y axis (toward right) -->
+  <line x1="72" y1="225" x2="335" y2="192" class="axis"/>
+  <!-- y axis arrowhead -->
+  <polygon points="339,191 328,188 330,197" fill="#555"/>
+
+  <!-- general state |psi> : theta=55deg, phi=40deg -->
+  <!-- Bloch vector endpoint (approximate 3D projection) -->
+  <!-- theta=55, phi=40: r=(sin55 cos40, sin55 sin40, cos55) = (0.627, 0.527, 0.574) -->
+  <!-- project: x_screen = 200 + 150*(0.627*(-0.7) + 0.527*0.7) = 200 + 150*(-0.439+0.369) = 200 - 10.5 -->
+  <!-- but let's use a simpler visual projection -->
+  <!-- Place it at roughly upper-right area of sphere -->
+  <line x1="200" y1="210" x2="268" y2="100" class="bloch-vec" marker-end="url(#arrowRed)"/>
+  <defs>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#c03020"/>
+    </marker>
+  </defs>
+
+  <!-- projection dashed line to equator -->
+  <line x1="268" y1="100" x2="285" y2="195" stroke="#c03020" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="200" y1="210" x2="285" y2="195" stroke="#c03020" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- theta arc (from +z axis to vector) -->
+  <path d="M 200,170 A 40,40 0 0,1 222,156" class="angle-arc" stroke="#2060c0"/>
+  <text x="207" y="155" fill="#2060c0" font-size="16" font-style="italic">&#952;</text>
+
+  <!-- phi arc (from x axis in equator plane) -->
+  <path d="M 228,222 A 30,10 0 0,0 254,207" class="angle-arc" stroke="#208040"/>
+  <text x="248" y="226" fill="#208040" font-size="16" font-style="italic">&#966;</text>
+
+  <!-- state label |psi> -->
+  <text x="274" y="95" font-size="15" fill="#c03020">|&#968;&#10217;</text>
+
+  <!-- 6 cardinal points -->
+
+  <!-- |+z> at north pole -->
+  <circle cx="200" cy="60" class="dot-outline"/>
+  <text x="210" y="50" font-size="14">|+z&#10217;</text>
+
+  <!-- |-z> at south pole -->
+  <circle cx="200" cy="360" class="dot-outline"/>
+  <text x="210" y="375" font-size="14">|-z&#10217;</text>
+
+  <!-- |+x> at front-left on equator -->
+  <circle cx="98" cy="268" class="dot-outline"/>
+  <text x="58" y="290" font-size="14">|+x&#10217;</text>
+
+  <!-- |-x> at back-right on equator -->
+  <circle cx="302" cy="152" class="dot-outline"/>
+  <text x="310" y="148" font-size="14">|-x&#10217;</text>
+
+  <!-- |+y> at right on equator -->
+  <circle cx="330" cy="195" class="dot-outline"/>
+  <text x="340" y="192" font-size="14">|+y&#10217;</text>
+
+  <!-- |-y> at left on equator -->
+  <circle cx="78" cy="223" class="dot-outline"/>
+  <text x="34" y="218" font-size="14">|-y&#10217;</text>
+
+  <!-- axis labels -->
+  <text x="68" y="296" font-size="13" fill="#555" font-style="italic">x</text>
+  <text x="345" y="190" font-size="13" fill="#555" font-style="italic">y</text>
+  <text x="207" y="38" font-size="13" fill="#555" font-style="italic">z</text>
+
+</svg>
