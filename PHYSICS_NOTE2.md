@@ -374,7 +374,33 @@ G_z = \hat{L}_z
 \end{aligned}
 ```
 
-である。ここで、すでに示した各軸まわりの結果を並べてみる。
+である。ここで、各座標軸まわりの微小回転の結果を並べたい。これは上の外積の式で $\mathbf{n}$ を各座標軸の単位ベクトルに置けば得られる。
+
+$x$ 軸まわり（ $\mathbf{n} = (1, 0, 0)$ ）：
+
+```math
+\delta x = \delta\theta\,(0 \cdot z - 0 \cdot y) = 0, \qquad
+\delta y = \delta\theta\,(0 \cdot x - 1 \cdot z) = -z\,\delta\theta, \qquad
+\delta z = \delta\theta\,(1 \cdot y - 0 \cdot x) = +y\,\delta\theta
+```
+
+$y$ 軸まわり（ $\mathbf{n} = (0, 1, 0)$ ）：
+
+```math
+\delta x = \delta\theta\,(1 \cdot z - 0 \cdot y) = +z\,\delta\theta, \qquad
+\delta y = 0, \qquad
+\delta z = \delta\theta\,(0 \cdot y - 1 \cdot x) = -x\,\delta\theta
+```
+
+$z$ 軸まわり（ $\mathbf{n} = (0, 0, 1)$ ）：
+
+```math
+\delta x = \delta\theta\,(0 \cdot z - 1 \cdot y) = -y\,\delta\theta, \qquad
+\delta y = \delta\theta\,(1 \cdot x - 0 \cdot z) = +x\,\delta\theta, \qquad
+\delta z = 0
+```
+
+$z$ 軸の結果は196行目で回転行列から導いたものと一致している。これらを表にまとめると見通しがよい。
 
 |  | $\delta x$ | $\delta y$ | $\delta z$ |
 |:---:|:---:|:---:|:---:|

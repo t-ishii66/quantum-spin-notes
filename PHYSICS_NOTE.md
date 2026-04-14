@@ -140,7 +140,15 @@ $z$ 方向の装置を演算子 $\hat{Z}$ と書くと、上向きの銀に装�
 
 となる。このように、ある状態に演算子を作用させたとき、定数倍（測定値）×元の状態に戻る関係を**固有値方程式**と呼び、 $(+1)$, $(-1)$ を**固有値**、 $\vert {+z}\rangle$, $\vert {-z}\rangle$ を**固有状態**と呼ぶ。
 
-この2つの固有状態と固有値を使うと、測定演算子を組み立てることができる。発想はこうである。まず $\vert {+z}\rangle\langle{+z}\vert$ は「状態の $\vert {+z}\rangle$ 成分だけを取り出す」射影子であった。これに固有値 $(+1)$ を重みとして掛ける。 $\vert {-z}\rangle$ 成分についても同様にして、両者を足し合わせると
+この2つの固有状態と固有値を使うと、測定演算子を組み立てることができる。そのために、まず $\vert {+z}\rangle\langle{+z}\vert$ という組み合わせの意味を考えよう。これを任意の状態 $\vert \psi\rangle = \alpha\vert {+z}\rangle + \beta\vert {-z}\rangle$ に作用させると
+
+```math
+\vert {+z}\rangle\langle{+z}\vert \psi\rangle = \vert {+z}\rangle(\alpha\langle{+z}\vert {+z}\rangle + \beta\langle{+z}\vert {-z}\rangle) = \alpha\vert {+z}\rangle
+```
+
+つまり、状態の $\vert {+z}\rangle$ 成分だけを取り出す操作になっている。このような演算子を**射影子**と呼ぶ。同様に $\vert {-z}\rangle\langle{-z}\vert$ は $\vert {-z}\rangle$ 成分だけを取り出す射影子である。
+
+発想はこうである。射影子 $\vert {+z}\rangle\langle{+z}\vert$ に固有値 $(+1)$ を重みとして掛ける。 $\vert {-z}\rangle$ 成分についても同様にして、両者を足し合わせると
 
 ```math
 \hat{Z} = (+1)\vert {+z}\rangle\langle{+z}\vert + (-1)\vert {-z}\rangle\langle{-z}\vert
