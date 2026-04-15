@@ -13,11 +13,11 @@ keywords: 量子力学, スピン, パウリ行列, ブロッホ球, ベルの�
 
 ## ノート一覧
 
-1. [実験事実からパウリ行列を導く](https://github.com/t-ishii66/TheAlienSphere/blob/main/PHYSICS_NOTE.md)
-2. [回転演算子の導出](https://github.com/t-ishii66/TheAlienSphere/blob/main/PHYSICS_NOTE2.md)
-3. [ブロッホ球](https://github.com/t-ishii66/TheAlienSphere/blob/main/PHYSICS_NOTE3.md)
-4. [なぜ θ/2 が現れるのか](https://github.com/t-ishii66/TheAlienSphere/blob/main/PHYSICS_NOTE4.md)
-5. [ベルの不等式](https://github.com/t-ishii66/TheAlienSphere/blob/main/PHYSICS_NOTE5.md)
+1. [実験事実からパウリ行列を導く](https://github.com/t-ishii66/TheAlienSphere/blob/main/ja/NOTE1.md)
+2. [回転演算子の導出](https://github.com/t-ishii66/TheAlienSphere/blob/main/ja/NOTE2.md)
+3. [ブロッホ球](https://github.com/t-ishii66/TheAlienSphere/blob/main/ja/NOTE3.md)
+4. [なぜ θ/2 が現れるのか](https://github.com/t-ishii66/TheAlienSphere/blob/main/ja/NOTE4.md)
+5. [ベルの不等式](https://github.com/t-ishii66/TheAlienSphere/blob/main/ja/NOTE5.md)
 
 ## このシリーズについて
 

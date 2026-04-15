@@ -1,16 +1,16 @@
 # ベルの不等式：量子力学が古典的直観を越える場所
 
-> **シリーズ構成**: [実験からパウリ行列へ](PHYSICS_NOTE.md) → [回転演算子](PHYSICS_NOTE2.md) → [ブロッホ球](PHYSICS_NOTE3.md) → [θ/2 の由来](PHYSICS_NOTE4.md) → 本文書（PHYSICS_NOTE5.md）
+> **シリーズ構成**: [実験からパウリ行列へ](NOTE1.md) → [回転演算子](NOTE2.md) → [ブロッホ球](NOTE3.md) → [θ/2 の由来](NOTE4.md) → 本文書（NOTE5.md）
 
 ## この文書の方針
 
-この文書は、PHYSICS_NOTE シリーズの知識だけを使って、ベルの不等式を導く。
+この文書は、NOTE シリーズの知識だけを使って、ベルの不等式を導く。
 
 使う道具は
 
-- 状態ベクトルと測定（[PHYSICS_NOTE.md](PHYSICS_NOTE.md)）
-- パウリ行列 $\sigma_x, \sigma_y, \sigma_z$ と方向 $\mathbf{n}$ の測定 $\mathbf{n}\cdot\boldsymbol{\sigma}$ （[PHYSICS_NOTE.md](PHYSICS_NOTE.md)）
-- スピン回転と固有状態の変換（[PHYSICS_NOTE4.md](PHYSICS_NOTE4.md)）
+- 状態ベクトルと測定（[NOTE1.md](NOTE1.md)）
+- パウリ行列 $\sigma_x, \sigma_y, \sigma_z$ と方向 $\mathbf{n}$ の測定 $\mathbf{n}\cdot\boldsymbol{\sigma}$ （[NOTE1.md](NOTE1.md)）
+- スピン回転と固有状態の変換（[NOTE4.md](NOTE4.md)）
 
 である。新しい数学道具としては2粒子系のテンソル積を導入し、概念としては局所隠れ変数と CHSH の考え方を追加する。それ以外は既知の道具の組み合わせで話が進む。
 
@@ -33,7 +33,7 @@
 
 ### 1粒子の復習
 
-[PHYSICS_NOTE.md](PHYSICS_NOTE.md) で見たように、1粒子のスピン状態は 2 次元空間に住んでいる。 $z$ 基底は
+[NOTE1.md](NOTE1.md) で見たように、1粒子のスピン状態は 2 次元空間に住んでいる。 $z$ 基底は
 
 ```math
 \vert {+z}\rangle = \begin{pmatrix}1\\0\end{pmatrix}, \qquad
@@ -123,7 +123,7 @@ $\vert \Psi^-\rangle$ の第1項 $\vert {+z}\rangle\vert {-z}\rangle$ は「Alic
 
 $\mathbf{a}$ が $z$ 軸から角度 $\theta_a$ の方向にあるとする。
 
-方向 $\mathbf{a}$ の固有状態 $\vert {+a}\rangle$ は、 $\vert {+z}\rangle$ を $y$ 軸まわりに $\theta_a$ だけ回転させたものである。[PHYSICS_NOTE4.md](PHYSICS_NOTE4.md) の回転行列
+方向 $\mathbf{a}$ の固有状態 $\vert {+a}\rangle$ は、 $\vert {+z}\rangle$ を $y$ 軸まわりに $\theta_a$ だけ回転させたものである。[NOTE4.md](NOTE4.md) の回転行列
 
 ```math
 U(\theta, \mathbf{n}) = \cos\frac{\theta}{2}\,I - i\sin\frac{\theta}{2}\,\mathbf{n}\cdot\boldsymbol{\sigma}
@@ -183,7 +183,7 @@ $-i \cdot (-i) = i^2 = -1$ と $-i \cdot i = -i^2 = 1$ に注意すると
 \vert {-a}\rangle = -\sin\frac{\theta_a}{2}\,\vert {+z}\rangle + \cos\frac{\theta_a}{2}\,\vert {-z}\rangle
 ```
 
-である。空間的には $\theta_a$ だけ回転しているが、状態ベクトルの係数には $\theta_a/2$ が現れる。これは [PHYSICS_NOTE4.md](PHYSICS_NOTE4.md) で見たスピノルの半角構造そのものである。 $c = \cos(\theta_a/2)$, $s = \sin(\theta_a/2)$ と略記すると
+である。空間的には $\theta_a$ だけ回転しているが、状態ベクトルの係数には $\theta_a/2$ が現れる。これは [NOTE4.md](NOTE4.md) で見たスピノルの半角構造そのものである。 $c = \cos(\theta_a/2)$, $s = \sin(\theta_a/2)$ と略記すると
 
 ```math
 \vert {+a}\rangle\vert {-a}\rangle
@@ -277,7 +277,7 @@ Bob は方向 $\mathbf{b}$ で測定する。 $\mathbf{a}$ と $\mathbf{b}$ の�
 
 Bob が $+1$ を得る確率は $\vert \langle{+b}\vert {-a}\rangle\vert ^2$ 、 $-1$ を得る確率は $\vert \langle{-b}\vert {-a}\rangle\vert ^2$ である。
 
-$\mathbf{a}$ と $\mathbf{b}$ が同じ $xz$ 平面内にあるとし、 $z$ 軸からの角度をそれぞれ $\theta_a$, $\theta_b$ とする（ $\theta = \theta_b - \theta_a$ ）。[PHYSICS_NOTE4.md](PHYSICS_NOTE4.md) の回転から
+$\mathbf{a}$ と $\mathbf{b}$ が同じ $xz$ 平面内にあるとし、 $z$ 軸からの角度をそれぞれ $\theta_a$, $\theta_b$ とする（ $\theta = \theta_b - \theta_a$ ）。[NOTE4.md](NOTE4.md) の回転から
 
 ```math
 \vert {+b}\rangle = \cos\frac{\theta_b}{2}\vert {+z}\rangle + \sin\frac{\theta_b}{2}\vert {-z}\rangle
@@ -663,7 +663,7 @@ $A, B = \pm 1$ の4つの相関を自由に選べるなら、 $S$ の式の定�
 ## 全体の論理構造（振り返り）
 
 ```
-1粒子のスピン状態（2次元）  ← PHYSICS_NOTE.md
+1粒子のスピン状態（2次元）  ← NOTE1.md
     ↓
 2粒子は 2×2 = 4 次元（テンソル積）
     ↓

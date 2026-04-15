@@ -1,10 +1,10 @@
 # ブロッホ球：スピン状態を球面で見る
 
-> **シリーズ構成**: [実験からパウリ行列へ](PHYSICS_NOTE.md) → [回転演算子](PHYSICS_NOTE2.md) → 本文書（PHYSICS_NOTE3.md）→ [θ/2 の由来](PHYSICS_NOTE4.md) → [ベルの不等式](PHYSICS_NOTE5.md)
+> **シリーズ構成**: [実験からパウリ行列へ](NOTE1.md) → [回転演算子](NOTE2.md) → 本文書（NOTE3.md）→ [θ/2 の由来](NOTE4.md) → [ベルの不等式](NOTE5.md)
 
 ## この文書の方針
 
-[PHYSICS_NOTE.md](PHYSICS_NOTE.md) では、スピン 1/2 の状態が
+[NOTE1.md](NOTE1.md) では、スピン 1/2 の状態が
 
 ```math
 \vert \psi\rangle = \alpha\vert {+z}\rangle + \beta\vert {-z}\rangle
@@ -59,7 +59,7 @@
 
 #### 一般方向の測定演算子
 
-[PHYSICS_NOTE.md](PHYSICS_NOTE.md) では $z$, $x$, $y$ 方向の測定演算子としてパウリ行列 $\sigma_z, \sigma_x, \sigma_y$ を導いた。空間の一般方向 $\mathbf{n} = (n_x, n_y, n_z)$ の測定演算子は、これらの線形結合
+[NOTE1.md](NOTE1.md) では $z$, $x$, $y$ 方向の測定演算子としてパウリ行列 $\sigma_z, \sigma_x, \sigma_y$ を導いた。空間の一般方向 $\mathbf{n} = (n_x, n_y, n_z)$ の測定演算子は、これらの線形結合
 
 ```math
 \mathbf{n}\cdot\boldsymbol{\sigma}
@@ -142,7 +142,7 @@ a = \cos\frac{\theta}{2}, \qquad b = e^{i\phi}\sin\frac{\theta}{2}
 
 #### 既知の結果との整合
 
-念のため、[PHYSICS_NOTE.md](PHYSICS_NOTE.md) で求めた特殊な場合と合うか確認しよう。
+念のため、[NOTE1.md](NOTE1.md) で求めた特殊な場合と合うか確認しよう。
 
 - **$z$ 方向** （ $\theta = 0$ ）： $\cos 0 = 1$, $\sin 0 = 0$ なので $\vert {+n}\rangle = \vert {+z}\rangle$ $\checkmark$
 - **$x$ 方向** （ $\theta = \pi/2$, $\phi = 0$ ）： $\cos(\pi/4) = \sin(\pi/4) = 1/\sqrt{2}$, $e^{i\cdot 0} = 1$ なので $\vert {+n}\rangle = \frac{1}{\sqrt{2}}(\vert {+z}\rangle + \vert {-z}\rangle) = \vert {+x}\rangle$ $\checkmark$
@@ -150,7 +150,7 @@ a = \cos\frac{\theta}{2}, \qquad b = e^{i\phi}\sin\frac{\theta}{2}
 
 #### $\theta/2$ の意味と $(\alpha, \beta)$ への接続
 
-こうして、**空間的な方向の角度が $\theta$ のとき、状態ベクトルの係数には $\theta/2$ が入る**ことが分かった。これは偶然ではなく、スピン 1/2 の数学的構造から必然的に出てくる結果である（詳しくは [PHYSICS_NOTE4.md](PHYSICS_NOTE4.md) で扱う）。
+こうして、**空間的な方向の角度が $\theta$ のとき、状態ベクトルの係数には $\theta/2$ が入る**ことが分かった。これは偶然ではなく、スピン 1/2 の数学的構造から必然的に出てくる結果である（詳しくは [NOTE4.md](NOTE4.md) で扱う）。
 
 ここで出発点に戻ろう。48行目で $\alpha = \cos(\theta/2)$, $\vert \beta\vert = \sin(\theta/2)$ と置いたが、いま固有状態の導出から $b = e^{i\phi}\sin(\theta/2)$ という形も得られた。これはまさに $\beta$ の完全な形を与えている——大きさが $\sin(\theta/2)$ で、位相が $e^{i\phi}$ である。つまり
 
@@ -213,7 +213,7 @@ $(\theta, \phi)$ は、まさに球面の極座標（極角と方位角）と同
 
 ### 検算
 
-[PHYSICS_NOTE.md](PHYSICS_NOTE.md) で導いた固有状態と照合する。
+[NOTE1.md](NOTE1.md) で導いた固有状態と照合する。
 
 $\vert {+x}\rangle$：標準形に $\theta = \pi/2$, $\phi = 0$ を代入すると
 
@@ -223,7 +223,7 @@ $\vert {+x}\rangle$：標準形に $\theta = \pi/2$, $\phi = 0$ を代入する�
 = \frac{1}{\sqrt{2}}(\vert {+z}\rangle + \vert {-z}\rangle)
 ```
 
-これは [PHYSICS_NOTE.md](PHYSICS_NOTE.md) の $\vert {+x}\rangle$ と一致する。 $\checkmark$
+これは [NOTE1.md](NOTE1.md) の $\vert {+x}\rangle$ と一致する。 $\checkmark$
 
 $\vert {+y}\rangle$：$\theta = \pi/2$, $\phi = \pi/2$ を代入すると
 
@@ -232,7 +232,7 @@ $\vert {+y}\rangle$：$\theta = \pi/2$, $\phi = \pi/2$ を代入すると
 = \frac{1}{\sqrt{2}}(\vert {+z}\rangle + i\vert {-z}\rangle)
 ```
 
-これも [PHYSICS_NOTE.md](PHYSICS_NOTE.md) の $\vert {+y}\rangle$ と一致する。 $\checkmark$
+これも [NOTE1.md](NOTE1.md) の $\vert {+y}\rangle$ と一致する。 $\checkmark$
 
 $\vert {-x}\rangle$：$\theta = \pi/2$, $\phi = \pi$ を代入すると
 
@@ -243,7 +243,7 @@ $\vert {-x}\rangle$：$\theta = \pi/2$, $\phi = \pi$ を代入すると
 
 一致する。 $\checkmark$
 
-つまり、[PHYSICS_NOTE.md](PHYSICS_NOTE.md) で「 $\phi = 0$ を $x$ 、 $\phi = \pi/2$ を $y$ と対応させた」という規約は、ブロッホ球の言葉では「赤道上の方位角がそのまま空間の方位角に対応する」ということだったのである。
+つまり、[NOTE1.md](NOTE1.md) で「 $\phi = 0$ を $x$ 、 $\phi = \pi/2$ を $y$ と対応させた」という規約は、ブロッホ球の言葉では「赤道上の方位角がそのまま空間の方位角に対応する」ということだったのである。
 
 ---
 
@@ -353,7 +353,7 @@ P(+\mathbf{n}) = \cos^2\frac{\Theta}{2}
 P(-\mathbf{n}) = 1 - \cos^2\frac{\Theta}{2} = \sin^2\frac{\Theta}{2}
 ```
 
-つまり、**測定確率はブロッホ球上の角度 $\Theta$ だけで決まる**。この公式は [PHYSICS_NOTE.md](PHYSICS_NOTE.md) の Chapter 2 で登場した Born 則の確率と同じ形である。ブロッホ球の上では、2つの状態がどれだけ近いか（角度が小さいか）で測定結果の確率が決まる。
+つまり、**測定確率はブロッホ球上の角度 $\Theta$ だけで決まる**。この公式は [NOTE1.md](NOTE1.md) の Chapter 2 で登場した Born 則の確率と同じ形である。ブロッホ球の上では、2つの状態がどれだけ近いか（角度が小さいか）で測定結果の確率が決まる。
 
 ### 具体例で確認
 
@@ -363,7 +363,7 @@ $\vert {+z}\rangle$ の状態で $x$ 方向を測る。ブロッホ球上で北�
 P(+x) = \cos^2\frac{\pi}{4} = \frac{1}{2}
 ```
 
-半々。[PHYSICS_NOTE.md](PHYSICS_NOTE.md) の実験事実と一致する。 $\checkmark$
+半々。[NOTE1.md](NOTE1.md) の実験事実と一致する。 $\checkmark$
 
 $\vert {+z}\rangle$ の状態で $z$ 方向を測る。同じ点なので $\Theta = 0$。
 
@@ -437,7 +437,7 @@ P = \cos^2\frac{\pi}{2} = 0
     ↓
 (θ, φ) は球面の極座標 → ブロッホ球
     ↓
-PHYSICS_NOTE.md の固有状態が球面上の自然な位置に乗る
+NOTE1.md の固有状態が球面上の自然な位置に乗る
     ↓
 Born 則 → 測定確率 = cos²(Θ/2)　← 球面上の角度だけで決まる
     ↓
@@ -448,4 +448,4 @@ Born 則 → 測定確率 = cos²(Θ/2)　← 球面上の角度だけで決ま�
 
 ---
 
-**次の文書**: [PHYSICS_NOTE4.md — スピン 1/2 の回転演算子になぜ θ/2 が現れるのか](PHYSICS_NOTE4.md) では、ブロッホ球の上で回転演算子がどう働くかを具体的に計算し、スピノルとブロッホベクトルの二重構造を明らかにする。
+**次の文書**: [NOTE4.md — スピン 1/2 の回転演算子になぜ θ/2 が現れるのか](NOTE4.md) では、ブロッホ球の上で回転演算子がどう働くかを具体的に計算し、スピノルとブロッホベクトルの二重構造を明らかにする。

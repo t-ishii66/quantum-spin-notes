@@ -1,12 +1,12 @@
 # スピン 1/2 の回転演算子になぜ $\theta/2$ が現れるのか
 
-> **シリーズ構成**: [実験からパウリ行列へ](PHYSICS_NOTE.md) → [回転演算子](PHYSICS_NOTE2.md) → [ブロッホ球](PHYSICS_NOTE3.md) → 本文書（PHYSICS_NOTE4.md）→ [ベルの不等式](PHYSICS_NOTE5.md)
+> **シリーズ構成**: [実験からパウリ行列へ](NOTE1.md) → [回転演算子](NOTE2.md) → [ブロッホ球](NOTE3.md) → 本文書（NOTE4.md）→ [ベルの不等式](NOTE5.md)
 
 ## この文書の方針
 
-[PHYSICS_NOTE.md](PHYSICS_NOTE.md) で、パウリ行列 $\sigma_x, \sigma_y, \sigma_z$ を実験事実から導き、スピン演算子が $S_i = \hbar\sigma_i/2$ であること、交換関係 $[\sigma_i, \sigma_j] = 2i\epsilon_{ijk}\sigma_k$ を確認した。
+[NOTE1.md](NOTE1.md) で、パウリ行列 $\sigma_x, \sigma_y, \sigma_z$ を実験事実から導き、スピン演算子が $S_i = \hbar\sigma_i/2$ であること、交換関係 $[\sigma_i, \sigma_j] = 2i\epsilon_{ijk}\sigma_k$ を確認した。
 
-[PHYSICS_NOTE2.md](PHYSICS_NOTE2.md) で、回転演算子が
+[NOTE2.md](NOTE2.md) で、回転演算子が
 
 ```math
 U(\theta,\mathbf{n}) = \exp\!\left(-\frac{i}{\hbar}\,\theta\,\mathbf{n}\cdot\mathbf{J}\right)
@@ -37,7 +37,7 @@ U(\theta,\mathbf{n}) = \exp\!\left(-\frac{i}{\hbar}\,\theta\,\mathbf{n}\cdot\mat
 
 で定義される。これは「位置と運動量から作られる量」という**構成的な定義**である。
 
-しかし [PHYSICS_NOTE2.md](PHYSICS_NOTE2.md) で見たように、 $\mathbf{L}$ にはもう一つの顔がある。それは**回転の生成子**としての役割である。 $z$ 軸まわりの微小回転 $\delta\phi$ に対して
+しかし [NOTE2.md](NOTE2.md) で見たように、 $\mathbf{L}$ にはもう一つの顔がある。それは**回転の生成子**としての役割である。 $z$ 軸まわりの微小回転 $\delta\phi$ に対して
 
 ```math
 \delta\hat{x} = \frac{i}{\hbar}\delta\phi\,[G_z,\,\hat{x}]
@@ -70,7 +70,7 @@ U(\theta,\mathbf{n}) = \exp\!\left(-\frac{i}{\hbar}\,\theta\,\mathbf{n}\cdot\mat
 
 結果は異なる。回転は順序に依存する（非可換である）。
 
-この「入れ替えたときのずれ」を、量子力学の演算子で捉えたい。微小回転を考える。 $x$ 軸まわりに $\delta\alpha$ 、 $y$ 軸まわりに $\delta\beta$ の微小回転を順に行うとする。[PHYSICS_NOTE2.md](PHYSICS_NOTE2.md) の形を使うと
+この「入れ替えたときのずれ」を、量子力学の演算子で捉えたい。微小回転を考える。 $x$ 軸まわりに $\delta\alpha$ 、 $y$ 軸まわりに $\delta\beta$ の微小回転を順に行うとする。[NOTE2.md](NOTE2.md) の形を使うと
 
 ```math
 U(\delta\alpha, \hat{x}) = I - \frac{i}{\hbar}\delta\alpha\,G_x + O(\delta\alpha^2)
@@ -114,7 +114,7 @@ U(\delta\alpha, \hat{x})\,U(\delta\beta, \hat{y})
 
 一方、古典幾何学では、 $x$ と $y$ の微小回転を入れ替えたときのずれは、 $z$ 軸まわりの微小回転になる。これを回転行列で直接確かめる。
 
-$x$ 軸まわりの微小回転行列は（[PHYSICS_NOTE2.md](PHYSICS_NOTE2.md) の $z$ 軸版と同様に、 $\cos\delta\alpha \approx 1$, $\sin\delta\alpha \approx \delta\alpha$ を使う）
+$x$ 軸まわりの微小回転行列は（[NOTE2.md](NOTE2.md) の $z$ 軸版と同様に、 $\cos\delta\alpha \approx 1$, $\sin\delta\alpha \approx \delta\alpha$ を使う）
 
 ```math
 R_x(\delta\alpha) \approx
@@ -262,7 +262,7 @@ U(\delta\gamma, \hat{z}) - I = -\frac{i}{\hbar}\,\delta\gamma\,G_z
 
 逆に、3つのエルミート演算子 $J_x, J_y, J_z$ がこの交換関係を満たしているとする。そこから本当に回転演算子が作れるか。
 
-[PHYSICS_NOTE2.md](PHYSICS_NOTE2.md) で見たように、有限回転は微小回転の積み重ねで作れる。
+[NOTE2.md](NOTE2.md) で見たように、有限回転は微小回転の積み重ねで作れる。
 
 ```math
 U(\theta, \mathbf{n}) = \lim_{N\to\infty}\left(I - \frac{i}{\hbar}\frac{\theta}{N}\,\mathbf{n}\cdot\mathbf{J}\right)^N
@@ -284,13 +284,13 @@ U(\theta, \mathbf{n}) = \lim_{N\to\infty}\left(I - \frac{i}{\hbar}\frac{\theta}{
 
 ### 軌道角運動量はこの特殊例にすぎない
 
-[PHYSICS_NOTE2.md](PHYSICS_NOTE2.md) で導いた $\hat{L}_z = \hat{x}\hat{p}_y - \hat{y}\hat{p}_x$ は、位置と運動量を持つ粒子において、上の交換関係を満たす生成子を**具体的に構成した**ものである。
+[NOTE2.md](NOTE2.md) で導いた $\hat{L}_z = \hat{x}\hat{p}_y - \hat{y}\hat{p}_x$ は、位置と運動量を持つ粒子において、上の交換関係を満たす生成子を**具体的に構成した**ものである。
 
 しかし交換関係の定義は、 $\mathbf{r} \times \mathbf{p}$ という構成法を要求していない。位置や運動量を一切持たない自由度でも、3つのエルミート演算子が交換関係を満たしさえすれば、それは角運動量である。
 
 ### パウリ行列はこの条件を満たす
 
-[PHYSICS_NOTE.md](PHYSICS_NOTE.md) で直接計算したように
+[NOTE1.md](NOTE1.md) で直接計算したように
 
 ```math
 [\sigma_i, \sigma_j] = 2i\,\epsilon_{ijk}\,\sigma_k
@@ -320,7 +320,7 @@ U(\theta, \mathbf{n}) = \lim_{N\to\infty}\left(I - \frac{i}{\hbar}\frac{\theta}{
 
 1. 回転の生成子は交換関係 $[J_i, J_j] = i\hbar\,\epsilon_{ijk}\,J_k$ を満たす（回転の幾何から要請される）
 2. この交換関係を満たすものを角運動量と定義する（ $\mathbf{r} \times \mathbf{p}$ は特殊例にすぎない）
-3. $S_i = \frac{\hbar}{2}\sigma_i$ はこの交換関係を満たす（[PHYSICS_NOTE.md](PHYSICS_NOTE.md) で計算済み）
+3. $S_i = \frac{\hbar}{2}\sigma_i$ はこの交換関係を満たす（[NOTE1.md](NOTE1.md) で計算済み）
 4. したがって $\mathbf{S}$ は角運動量であり、回転演算子 $U = \exp(-i\theta\,\mathbf{n}\cdot\mathbf{J}/\hbar)$ の $\mathbf{J}$ として使える
 
 ---
@@ -519,7 +519,7 @@ e^{-i\theta/2} & 0 \\
 
 $\vert {+z}\rangle$ と $\vert {-z}\rangle$ にそれぞれ逆符号の位相がつく。これだけでは「回転」のイメージが湧きにくいので、具体的な状態に作用させてみよう。
 
-$\vert {+x}\rangle$ は [PHYSICS_NOTE.md](PHYSICS_NOTE.md) で導いたように
+$\vert {+x}\rangle$ は [NOTE1.md](NOTE1.md) で導いたように
 
 ```math
 \vert {+x}\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}
@@ -546,7 +546,7 @@ U(\theta, \hat{z})\,\vert {+x}\rangle
 \frac{1}{\sqrt{2}}\begin{pmatrix}1\\e^{i\theta}\end{pmatrix}
 ```
 
-が得られる。[PHYSICS_NOTE.md](PHYSICS_NOTE.md) で見たように、この形は
+が得られる。[NOTE1.md](NOTE1.md) で見たように、この形は
 
 ```math
 \frac{1}{\sqrt{2}}\bigl(\vert {+z}\rangle + e^{i\phi}\vert {-z}\rangle\bigr)
@@ -801,4 +801,4 @@ $\theta/2$ の起源は $S_i = \hbar\sigma_i/2$ の $1/2$ であり、その $1/
 
 ---
 
-**次の文書**: [PHYSICS_NOTE5.md — ベルの不等式](PHYSICS_NOTE5.md) では、本文書で整備した回転・固有状態の道具を使って、2粒子系の相関からベルの不等式を導く。
+**次の文書**: [NOTE5.md — ベルの不等式](NOTE5.md) では、本文書で整備した回転・固有状態の道具を使って、2粒子系の相関からベルの不等式を導く。
