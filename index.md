@@ -18,6 +18,7 @@ keywords: 量子力学, スピン, パウリ行列, ブロッホ球, ベルの�
 3. [ブロッホ球](https://github.com/t-ishii66/TheAlienSphere/blob/main/ja/NOTE3.md)
 4. [なぜ θ/2 が現れるのか](https://github.com/t-ishii66/TheAlienSphere/blob/main/ja/NOTE4.md)
 5. [ベルの不等式](https://github.com/t-ishii66/TheAlienSphere/blob/main/ja/NOTE5.md)
+6. [補講: 群論ミニ入門：SU(2) と SO(3)](https://github.com/t-ishii66/TheAlienSphere/blob/main/ja/NOTE6.md)
 
 ## このシリーズについて
 

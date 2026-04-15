@@ -2,7 +2,6 @@
 
 ## Project Overview
 量子力学の物理ノートシリーズ。初学者がこのドキュメントだけで理解できることを目標とする。
-リポジトリ名: **quantum-spin-notes**（GitHub上でリネーム予定）
 
 ## 方針
 - 初学者向けに丁寧に、分かりやすく書く
@@ -17,6 +16,7 @@
 3. [ja/NOTE3.md](ja/NOTE3.md) — ブロッホ球
 4. [ja/NOTE4.md](ja/NOTE4.md) — θ/2 の由来
 5. [ja/NOTE5.md](ja/NOTE5.md) — ベルの不等式
+6. [ja/NOTE6.md](ja/NOTE6.md) — 補講: 群論ミニ入門（SU(2) と SO(3)）
 
 ## Writing Conventions
 - 日本語本文 + 英語の数式・用語

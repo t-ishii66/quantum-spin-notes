@@ -121,15 +121,15 @@ $\vert \Psi^-\rangle$ の第1項 $\vert {+z}\rangle\vert {-z}\rangle$ は「Alic
 
 これを確かめるには、任意の方向 $\mathbf{a}$ の固有状態で $\vert \Psi^-\rangle$ を書き直してみればよい。ここでは計算を簡単にするため、方向を $xz$ 平面内に取る。シングレットは任意の空間回転に対して不変なので、一般の方向でも同じ結論になる。
 
-$\mathbf{a}$ が $z$ 軸から角度 $\theta_a$ の方向にあるとする。
+$\mathbf{a}$ が $z$ 軸から角度 $\theta_a$ の方向にあるとする（ $\theta_a$ は $z$ 軸からの極角）。
 
-方向 $\mathbf{a}$ の固有状態 $\vert {+a}\rangle$ は、 $\vert {+z}\rangle$ を $y$ 軸まわりに $\theta_a$ だけ回転させたものである。[NOTE4.md](NOTE4.md) の回転行列
+方向 $\mathbf{a}$ の固有状態 $\vert {+a}\rangle$ は、 $\vert {+z}\rangle$ を $y$ 軸まわりに $\theta_a$ だけ回転させたものである。$z$ 軸から $\theta_a$ だけ傾いた方向に到達するには、$y$ 軸まわりにちょうど $\theta_a$ だけ回せばよいので、ここでは極角と回転角が同じ値になる。[NOTE4.md](NOTE4.md) の回転行列
 
 ```math
 U(\theta, \mathbf{n}) = \cos\frac{\theta}{2}\,I - i\sin\frac{\theta}{2}\,\mathbf{n}\cdot\boldsymbol{\sigma}
 ```
 
-で $\mathbf{n} = \hat{y}$, $\theta = \theta_a$ とすると
+で $\mathbf{n} = \hat{y}$, 回転角 $\theta = \theta_a$ とすると
 
 ```math
 U(\theta_a, \hat{y})
@@ -336,7 +336,7 @@ E(\mathbf{a}, \mathbf{b})
 = \sum_{A,B = \pm 1} A \cdot B \cdot P(A, B)
 ```
 
-Alice の結果は等確率（各 $1/2$ ）なので
+同時確率 $P(A, B)$ は、Alice の測定確率 $P(A)$ と、Alice の結果を条件とした Bob の条件付き確率 $P(B \mid A)$ の積 $P(A, B) = P(A) \cdot P(B \mid A)$ で求まる。シングレット状態は回転不変なので、Alice がどの方向で測っても $+1$ と $-1$ は等確率 $P(A = +1) = P(A = -1) = 1/2$ である（どちらの向きも特別ではない）。したがって
 
 ```math
 E = \frac{1}{2}\Bigl[(+1)(+1)\sin^2\frac{\theta}{2} + (+1)(-1)\cos^2\frac{\theta}{2}\Bigr]
@@ -512,10 +512,11 @@ B' = B(\mathbf{b}', \lambda)
 s(\lambda) = A B - A B' + A' B + A' B'
 ```
 
-$AB'$ を括り出すと
+$A$ を含む項と $A'$ を含む項に分けて整理すると
 
 ```math
-s(\lambda) = A(B - B') + A'(B + B')
+s(\lambda) = \underbrace{AB - AB'}_{A\text{ を含む項}} + \underbrace{A'B + A'B'}_{A'\text{ を含む項}}
+= A(B - B') + A'(B + B')
 ```
 
 ここで $B, B' = \pm 1$ なので、 $B - B'$ と $B + B'$ の組み合わせは次の2通りしかない。
@@ -687,3 +688,6 @@ E(a,b) = −cos θ = −a·b    ← 量子力学の予測
     ↓
 素朴な局所実在論は量子力学と両立しない
 ```
+
+
+<img src="../images/end.png" width="400">

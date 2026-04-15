@@ -140,7 +140,39 @@ $z$ 方向の装置を演算子 $\hat{Z}$ と書くと、上向きの銀に装�
 
 となる。このように、ある状態に演算子を作用させたとき、定数倍（測定値）×元の状態に戻る関係を**固有値方程式**と呼び、 $(+1)$, $(-1)$ を**固有値**、 $\vert {+z}\rangle$, $\vert {-z}\rangle$ を**固有状態**と呼ぶ。
 
-この2つの固有状態と固有値を使うと、測定演算子を組み立てることができる。そのために、まず $\vert {+z}\rangle\langle{+z}\vert$ という組み合わせの意味を考えよう。これを任意の状態 $\vert \psi\rangle = \alpha\vert {+z}\rangle + \beta\vert {-z}\rangle$ に作用させると
+この2つの固有状態と固有値を使うと、測定演算子を組み立てることができる。そのために準備として、**任意の状態**の書き方を導入しよう。
+
+2次元の複素ベクトル空間では、直交する2つのベクトル $\vert {+z}\rangle$, $\vert {-z}\rangle$ が基底になる。つまり、この空間のどんなベクトルも、この2つの重ね合わせとして
+
+```math
+\boxed{
+\vert \psi\rangle = \alpha\vert {+z}\rangle + \beta\vert {-z}\rangle
+}
+```
+
+と書ける。ここで $\alpha$, $\beta$ は複素数の係数である。固有状態 $\vert {+z}\rangle$ は $\alpha = 1, \beta = 0$ の特別な場合であり、 $\vert {-z}\rangle$ は $\alpha = 0, \beta = 1$ の特別な場合である。
+
+では、この係数 $\alpha$, $\beta$ にはどんな物理的意味があるのか？　ここで量子力学の基本原理の一つである**Born（ボルン）則**を導入する。Born則とは、状態 $\vert \psi\rangle$ を測定して固有状態 $\vert \phi\rangle$ が得られる確率は、両者の内積の絶対値の2乗
+
+```math
+\boxed{
+P(\phi) = \vert \langle\phi\vert \psi\rangle\vert ^2
+}
+```
+
+で与えられる、という規則である。これは実験から導くことのできない**公理**であり、量子力学の枠組みとして受け入れるものである。
+
+$\vert \psi\rangle = \alpha\vert {+z}\rangle + \beta\vert {-z}\rangle$ に対してこれを使ってみよう。 $z$ 測定で $\vert {+z}\rangle$ が得られる確率は
+
+```math
+\vert \langle{+z}\vert \psi\rangle\vert ^2
+= \vert \alpha\langle{+z}\vert {+z}\rangle + \beta\langle{+z}\vert {-z}\rangle\vert ^2
+= \vert \alpha\vert ^2
+```
+
+同様に $\vert {-z}\rangle$ が得られる確率は $\vert \beta\vert ^2$ である。つまり、係数の絶対値の2乗がそのまま確率になる。確率の総和は1でなければならないので、正規化条件 $\vert\alpha\vert^2 + \vert\beta\vert^2 = 1$ が要求される。
+
+では、この任意の状態を使って話を進めよう。 $\vert {+z}\rangle\langle{+z}\vert$ という組み合わせの意味を考える。これを $\vert \psi\rangle = \alpha\vert {+z}\rangle + \beta\vert {-z}\rangle$ に作用させると
 
 ```math
 \vert {+z}\rangle\langle{+z}\vert \psi\rangle = \vert {+z}\rangle(\alpha\langle{+z}\vert {+z}\rangle + \beta\langle{+z}\vert {-z}\rangle) = \alpha\vert {+z}\rangle
@@ -173,6 +205,34 @@ $z$ 方向の装置を演算子 $\hat{Z}$ と書くと、上向きの銀に装�
 ```
 
 確かに132行目・138行目の固有値方程式が再現された。ここで内積の直交性（ $\langle{+z}\vert {-z}\rangle = 0$ ）が本質的に効いている。
+
+### 期待値
+
+スペクトル分解を使うと、測定の**期待値**（測定を何度も繰り返したときの平均値）が自然に得られる。任意の状態 $\vert \psi\rangle = \alpha\vert {+z}\rangle + \beta\vert {-z}\rangle$ に対して $\langle\psi\vert \hat{Z}\vert \psi\rangle$ を計算してみよう。
+
+まず $\hat{Z}\vert \psi\rangle$ を求める。スペクトル分解 $\hat{Z} = (+1)\vert {+z}\rangle\langle{+z}\vert + (-1)\vert {-z}\rangle\langle{-z}\vert$ を使うと
+
+```math
+\hat{Z}\vert \psi\rangle = (+1)\alpha\vert {+z}\rangle + (-1)\beta\vert {-z}\rangle
+```
+
+次に左から $\langle\psi\vert = \alpha^*\langle{+z}\vert + \beta^*\langle{-z}\vert$ を掛ける。直交性を使うと
+
+```math
+\langle\psi\vert \hat{Z}\vert \psi\rangle
+= \alpha^*\cdot(+1)\alpha + \beta^*\cdot(-1)\beta
+= (+1)\vert\alpha\vert^2 + (-1)\vert\beta\vert^2
+```
+
+$\vert\alpha\vert^2$ は測定値 $+1$ が出る確率、 $\vert\beta\vert^2$ は測定値 $-1$ が出る確率だった。つまり $\langle\psi\vert \hat{Z}\vert \psi\rangle$ は「各測定値 × その確率」の和——まさに期待値になっている。
+
+```math
+\boxed{
+\langle\psi\vert \hat{Z}\vert \psi\rangle = \sum_i (\text{固有値}_i) \times (\text{その確率})
+}
+```
+
+これは $\hat{Z}$ に限らず、一般の測定演算子について成り立つ。
 
 ### 行列表示
 
@@ -216,7 +276,7 @@ $z$ 方向の装置を演算子 $\hat{Z}$ と書くと、上向きの銀に装�
 \langle\psi\vert \psi\rangle = \vert \alpha\vert ^2 + \vert \beta\vert ^2 = 1
 ```
 
-を課す。現時点ではこれは**規約**である。「なぜ1でなければならないのか」は、次の段階で測定結果の確率を読み取る方法（Born則）を導入したとき明らかになる—— $\vert \alpha\vert ^2$ と $\vert \beta\vert ^2$ がそれぞれの結果を得る確率になり、確率の総和は1だからである。
+を課す。これはBorn則から自然に要求される——先に見たように $\vert \alpha\vert ^2$ と $\vert \beta\vert ^2$ はそれぞれの測定結果が得られる確率であり、確率の総和は1だからである。
 
 ---
 
@@ -243,7 +303,7 @@ $x$ 方向にも2つの固有状態 $\vert {+x}\rangle$, $\vert {-x}\rangle$ が
 \vert {+x}\rangle = a\vert {+z}\rangle + b\vert {-z}\rangle
 ```
 
-実験Bの結果「 $\vert {+z}\rangle$ の銀原子を $x$ 方向の装置に通すと、 $+1$ と $-1$ が半々で出る」を数式にしたい。Born則によれば、ある状態が別の固有状態に見出される確率は、両者の内積の絶対値の2乗で与えられる。したがって「半々」という条件は
+実験Bの結果「 $\vert {+z}\rangle$ の銀原子を $x$ 方向の装置に通すと、 $+1$ と $-1$ が半々で出る」を数式にしたい。Born則（ $P(\phi) = \vert \langle\phi\vert \psi\rangle\vert ^2$ ）を使うと、「半々」という条件は
 
 ```math
 \vert \langle{+x}\vert {+z}\rangle\vert ^2 = \frac{1}{2}
@@ -261,7 +321,7 @@ $x$ 方向にも2つの固有状態 $\vert {+x}\rangle$, $\vert {-x}\rangle$ が
 
 ### 位相の自由度を数える
 
-量子力学では、状態ベクトル全体に共通の位相 $e^{i\gamma}$ を掛けても物理は変わらない。この自由度を使って $e^{i\alpha} = 1$ と選ぶことができる。すると
+量子力学では、状態ベクトル全体に共通の位相 $e^{i\gamma}$ を掛けても物理は変わらない。Born則で確率を計算すると $\vert \langle\phi\vert e^{i\gamma}\psi\rangle\vert ^2 = \vert e^{i\gamma}\vert ^2\vert \langle\phi\vert \psi\rangle\vert ^2 = \vert \langle\phi\vert \psi\rangle\vert ^2$ となり、全体位相は消えてしまう——つまり、どんな測定をしても全体位相の違いを観測する方法がないのである。この自由度を使って $e^{i\alpha} = 1$ と選ぶことができる。すると
 
 ```math
 \vert {+x}\rangle = \frac{1}{\sqrt{2}}\bigl(\vert {+z}\rangle + e^{i\phi}\vert {-z}\rangle\bigr)
@@ -424,7 +484,7 @@ e^{i\pi/2} = i
 
 もし係数を実数に限ると、相対位相は $+1$ か $-1$ しかない。 $+1$ はすでに $x$ が使っている。 $-1$ を使うと $\vert {-x}\rangle$ と同じ状態になってしまう。
 
-つまり実数だけでは、 $z$ に垂直な独立方向を1つしか表せない。もう少し正確に言えば、実数の $2 \times 2$ 行列で作れる traceless エルミート行列は $\sigma_z$ と $\sigma_x$ の実数係数の組み合わせに限られ、第三の独立な成分 $\sigma_y$ を持てない。3方向の測定を2次元で表すには、複素数——つまり $i$ ——がどうしても必要になる。
+つまり実数だけでは、 $z$ に垂直な独立方向を1つしか表せない。もう少し正確に言えば、実数の $2 \times 2$ 行列で作れる traceless エルミート行列（対角成分の和がゼロで、転置して複素共役を取ると元に戻る行列）は $\sigma_z$ と $\sigma_x$ の実数係数の組み合わせに限られ、第三の独立な成分 $\sigma_y$ を持てない。3方向の測定を2次元で表すには、複素数——つまり $i$ ——がどうしても必要になる。
 
 ### 測定統計の検算
 

@@ -90,7 +90,22 @@ n_x - in_y = \sin\theta\,e^{-i\phi}
 
 #### 固有状態を求める
 
-この行列の固有値 $+1$ に属する固有状態 $\vert {+n}\rangle = \begin{pmatrix} a \\ b \end{pmatrix}$ を求める。固有値方程式の第1行は
+この行列の固有値 $+1$ に属する固有状態 $\vert {+n}\rangle = \begin{pmatrix} a \\ b \end{pmatrix}$ を求める。固有値方程式は
+
+```math
+(\mathbf{n}\cdot\boldsymbol{\sigma})\vert {+n}\rangle = (+1)\vert {+n}\rangle
+```
+
+すなわち
+
+```math
+\begin{pmatrix} \cos\theta & \sin\theta\,e^{-i\phi} \\ \sin\theta\,e^{i\phi} & -\cos\theta \end{pmatrix}
+\begin{pmatrix} a \\ b \end{pmatrix}
+=
+\begin{pmatrix} a \\ b \end{pmatrix}
+```
+
+である。第1行は
 
 ```math
 \cos\theta \cdot a + \sin\theta\,e^{-i\phi} \cdot b = a
@@ -174,6 +189,8 @@ a = \cos\frac{\theta}{2}, \qquad b = e^{i\phi}\sin\frac{\theta}{2}
 
 - $\theta$ ： $0$ から $\pi$ の範囲（ $\vert {+z}\rangle$ 成分と $\vert {-z}\rangle$ 成分の割合を決める）
 - $\phi$ ： $0$ から $2\pi$ の範囲（2成分の相対位相を決める）
+
+<img src="../images/bloch-sphere.png" width="400">
 
 ---
 
@@ -319,13 +336,35 @@ $A, B$ を元に戻すと
 
 ### ブロッホベクトルの内積
 
-一方、2つのブロッホベクトル $\mathbf{r}$ と $\mathbf{n}$ の内積は
+一方、2つのブロッホベクトル $\mathbf{r}$ と $\mathbf{n}$ の内積を求めよう。球面座標では各ベクトルの直交成分は
+
+```math
+\mathbf{r} = \begin{pmatrix} \sin\theta_r\cos\phi_r \\ \sin\theta_r\sin\phi_r \\ \cos\theta_r \end{pmatrix}, \qquad
+\mathbf{n} = \begin{pmatrix} \sin\theta_n\cos\phi_n \\ \sin\theta_n\sin\phi_n \\ \cos\theta_n \end{pmatrix}
+```
+
+なので、内積は各成分の積の和
+
+```math
+\mathbf{r}\cdot\mathbf{n}
+= \sin\theta_r\cos\phi_r\sin\theta_n\cos\phi_n
++ \sin\theta_r\sin\phi_r\sin\theta_n\sin\phi_n
++ \cos\theta_r\cos\theta_n
+```
+
+第1項と第2項をまとめると
+
+```math
+= \sin\theta_r\sin\theta_n(\cos\phi_r\cos\phi_n + \sin\phi_r\sin\phi_n) + \cos\theta_r\cos\theta_n
+```
+
+カッコ内は余弦の加法定理 $\cos(\alpha - \beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta$ そのものなので
 
 ```math
 \mathbf{r}\cdot\mathbf{n} = \sin\theta_r\sin\theta_n\cos\Delta\phi + \cos\theta_r\cos\theta_n
 ```
 
-である。ブロッホベクトルの間の角度を $\Theta$ とすると $\mathbf{r}\cdot\mathbf{n} = \cos\Theta$ なので
+ブロッホベクトルの間の角度を $\Theta$ とすると $\mathbf{r}\cdot\mathbf{n} = \cos\Theta$ なので
 
 ```math
 \cos\Theta = \sin\theta_r\sin\theta_n\cos\Delta\phi + \cos\theta_r\cos\theta_n
@@ -333,13 +372,56 @@ $A, B$ を元に戻すと
 
 ### 2つの式を結びつける
 
-半角の公式 $\cos^2(x/2) = (1 + \cos x)/2$ と $\sin^2(x/2) = (1 - \cos x)/2$ を使い、 $\sin\theta = 2\sin(\theta/2)\cos(\theta/2)$ を使って上の Born 則の式を整理すると
+Born則の式（ $A, B$ を元に戻した式）を、半角の公式を使って $\cos\Theta$ で表す。使う公式は
 
 ```math
-\vert \langle{+n}\vert \psi\rangle\vert ^2 = \frac{1 + \cos\Theta}{2} = \cos^2\frac{\Theta}{2}
+\cos^2\frac{x}{2} = \frac{1 + \cos x}{2}, \qquad
+\sin^2\frac{x}{2} = \frac{1 - \cos x}{2}, \qquad
+\sin x = 2\sin\frac{x}{2}\cos\frac{x}{2}
 ```
 
-が得られる。ここで $\Theta$ はブロッホ球上の2点の間の角度（中心角）である。
+の3つである。Born則の式の各項を変換していく。
+
+**第1項：**
+
+```math
+\cos^2\frac{\theta_n}{2}\cos^2\frac{\theta_r}{2}
+= \frac{1 + \cos\theta_n}{2}\cdot\frac{1 + \cos\theta_r}{2}
+= \frac{1 + \cos\theta_n + \cos\theta_r + \cos\theta_n\cos\theta_r}{4}
+```
+
+**第2項：**
+
+```math
+\sin^2\frac{\theta_n}{2}\sin^2\frac{\theta_r}{2}
+= \frac{1 - \cos\theta_n}{2}\cdot\frac{1 - \cos\theta_r}{2}
+= \frac{1 - \cos\theta_n - \cos\theta_r + \cos\theta_n\cos\theta_r}{4}
+```
+
+**第1項 + 第2項：**
+
+```math
+= \frac{2 + 2\cos\theta_n\cos\theta_r}{4}
+= \frac{1 + \cos\theta_n\cos\theta_r}{2}
+```
+
+**第3項：**
+
+```math
+2\cos\frac{\theta_n}{2}\sin\frac{\theta_n}{2}\cos\frac{\theta_r}{2}\sin\frac{\theta_r}{2}\cos\Delta\phi
+= \frac{\sin\theta_n\cdot\sin\theta_r}{2}\cos\Delta\phi
+```
+
+**すべて足すと：**
+
+```math
+\vert \langle{+n}\vert \psi\rangle\vert ^2
+= \frac{1 + \cos\theta_n\cos\theta_r + \sin\theta_n\sin\theta_r\cos\Delta\phi}{2}
+= \frac{1 + \cos\Theta}{2}
+= \cos^2\frac{\Theta}{2}
+```
+
+最後のステップで再び半角の公式を逆向きに使った。 $\Theta$ はブロッホ球上の2点の間の角度（中心角）である。
 
 ### 確率の公式
 

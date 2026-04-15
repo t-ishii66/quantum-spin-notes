@@ -269,18 +269,23 @@ U(\theta, \mathbf{n}) = \lim_{N\to\infty}\left(I - \frac{i}{\hbar}\frac{\theta}{
 = \exp\!\left(-\frac{i}{\hbar}\,\theta\,\mathbf{n}\cdot\mathbf{J}\right)
 ```
 
-ここで問題は、こうして作った $U$ が「本物の回転」として正しく振る舞うかである。つまり
+ここで問題は、こうして作った $U$ が「本物の回転」として正しく振る舞うかである。つまり、2つの回転 $U(\alpha, \mathbf{e}_x)$ と $U(\beta, \mathbf{e}_y)$ を合成したとき、幾何学的に正しい合成回転になっているか、という問いである。
 
-- $x$ 軸まわりに $\alpha$ 回してから $y$ 軸まわりに $\beta$ 回した結果が
-- 幾何学的に正しい合成回転になっているか
+この問いに答えるために、有限回転を微小回転に分解して考えよう。有限回転 $U(\alpha, \mathbf{e}_x)$ は、微小回転 $U(\delta\alpha, \mathbf{e}_x)$ を $N$ 回重ねたものである。同様に $U(\beta, \mathbf{e}_y)$ も微小回転の $N$ 回の積である。したがって、2つの有限回転の合成は、微小回転の長い列
 
-という問いである。
+```math
+\underbrace{U(\delta\beta, \mathbf{e}_y)\cdots U(\delta\beta, \mathbf{e}_y)}_{N\text{ 個}}\;\underbrace{U(\delta\alpha, \mathbf{e}_x)\cdots U(\delta\alpha, \mathbf{e}_x)}_{N\text{ 個}}
+```
 
-答えはこうである。有限回転の合成は、微小回転を何度も交互に重ねることに帰着する。そして微小回転どうしを入れ替えるたびに出てくるずれは、いま見たように交換子 $[G_i, G_j]$ で決まる。
+になる。この列の中で隣り合う微小回転の順序を入れ替えたいとき、何が起きるか。前の節で見たように、2つの微小回転の順序を入れ替えると
 
-交換関係が正しければ、微小回転の入れ替えのたびに出るずれは、幾何学の要求と一致する。微小回転を何万回積んでも、各ステップのずれが正しいなら、最終結果も正しい。
+```math
+U(\delta\alpha, \mathbf{e}_x)\,U(\delta\beta, \mathbf{e}_y) - U(\delta\beta, \mathbf{e}_y)\,U(\delta\alpha, \mathbf{e}_x) \sim \frac{1}{\hbar^2}\delta\alpha\,\delta\beta\,[G_x, G_y]
+```
 
-たとえるなら、交換関係はレンガの噛み合わせの規格のようなものである。レンガ1個1個の噛み合わせが正しければ、それを何段積んでも壁全体が正しく組み上がる。交換関係は各微小回転の「噛み合わせ」を規定しているので、それさえ合っていれば有限回転は自動的に正しくなる。
+という「ずれ」が生じる。このずれは交換子 $[G_x, G_y]$ で決まる。交換関係 $[G_x, G_y] = i\hbar\,G_z$ が幾何学の要求と一致していれば、微小回転1回分の入れ替えのずれは正しい。
+
+有限回転の合成を正しく並べ替えるには、こうした微小回転の入れ替えを何度も繰り返す必要があるが、毎回のずれが正しいなら、最終結果も正しくなる。つまり、交換関係は微小回転の「入れ替え規則」を定めており、それさえ幾何学と合っていれば、有限回転は自動的に正しく合成される。
 
 ### 軌道角運動量はこの特殊例にすぎない
 
@@ -507,7 +512,7 @@ U(\theta, \hat{z})
 \end{pmatrix}
 ```
 
-オイラーの公式 $e^{-i\alpha} = \cos\alpha - i\sin\alpha$ を使うと
+ここで $\theta$ は $z$ 軸まわりの**回転角**である（ブロッホ球の極角ではない）。オイラーの公式 $e^{-ix} = \cos x - i\sin x$ を使うと
 
 ```math
 U(\theta, \hat{z})
@@ -525,7 +530,7 @@ $\vert {+x}\rangle$ は [NOTE1.md](NOTE1.md) で導いたように
 \vert {+x}\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}
 ```
 
-である。これにブロッホ球上で赤道上（ $x$ 方向）の状態だった。 $U(\theta, \hat{z})$ を作用させると
+である。これはブロッホ球上で赤道上（方位角 $\phi = 0$ ）の状態だった。 $z$ 軸まわりの回転は $x$-$y$ 平面内の回転なので、方位角 $\phi$ が変化するはずである。 $U(\theta, \hat{z})$ を作用させると
 
 ```math
 U(\theta, \hat{z})\,\vert {+x}\rangle
@@ -554,7 +559,7 @@ U(\theta, \hat{z})\,\vert {+x}\rangle
 
 の赤道状態であり、 $\phi$ は赤道上の方位角だった。 $\phi = 0$ が $\vert {+x}\rangle$ 、 $\phi = \pi/2$ が $\vert {+y}\rangle$ だった。
 
-上の結果では $\phi = \theta$ である。つまり、もとの $\vert {+x}\rangle$ （方位角 $0$ ）がブロッホ球の赤道上で方位角 $\theta$ の位置に移った。これはまさに $z$ 軸まわりに角度 $\theta$ だけ回転したことを意味する。
+上の結果では方位角が $\phi = \theta$ （回転角）になっている。つまり、もとの $\vert {+x}\rangle$ （方位角 $0$ ）がブロッホ球の赤道上で方位角 $\theta$ の位置に移った。これはまさに $z$ 軸まわりに角度 $\theta$ だけ回転したことを意味する。
 
 一方、 $\vert {+z}\rangle$ （北極）と $\vert {-z}\rangle$ （南極）に作用させると
 
@@ -594,11 +599,13 @@ U(\pi, \hat{x})\vert {+z}\rangle
 
 ## 思考実験：古典的に $\theta$ 回したら、ブロッホ球上でも $\theta$ 動くか
 
+ここでの $\theta$ は $U(\theta, \mathbf{n})$ の**回転角**であり、ブロッホ球の極角（ $z$ 軸からの角度）とは別物である。両方が同時に出てくる箇所では、ブロッホ球のパラメータを $\theta_0, \phi_0$ と書いて区別する。
+
 ### 問いの設定
 
 いま、スピン 1/2 の粒子が状態 $\vert \psi\rangle$ にあり、ブロッホ球上のある点を指しているとする。
 
-この粒子を**古典的に** $\theta$ だけ回転させたとする。たとえばブロッホ球そのものを手で $\theta$ だけ回すようなイメージである。
+この粒子を**古典的に**角度 $\theta$ だけ回転させたとする。たとえばブロッホ球そのものを手で $\theta$ だけ回すようなイメージである。
 
 このとき、ブロッホベクトル（測定統計を表す矢印）は $\theta$ だけ動くか、それとも $\theta/2$ だけしか動かないか。
 
@@ -606,13 +613,13 @@ U(\pi, \hat{x})\vert {+z}\rangle
 
 ### 具体例で確かめる
 
-$z$ 軸まわりに角度 $\theta$ だけ回転させる。例1で見たように
+$z$ 軸まわりに角度 $\theta$ だけ回転させる。 $z$ 軸まわりの回転は $x$-$y$ 平面内の回転なので、ブロッホ球上では方位角が変化する。例1で見たように
 
 ```math
 U(\theta, \hat{z}) = \begin{pmatrix}e^{-i\theta/2} & 0 \\ 0 & e^{+i\theta/2}\end{pmatrix}
 ```
 
-である。初期状態を $\vert {+x}\rangle$ （ブロッホ球の赤道上、方位角 $\phi = 0$ ）とする。
+である。初期状態を $\vert {+x}\rangle$ （ブロッホ球の赤道上、方位角 $\phi_0 = 0$ ）とする。
 
 例1で計算したように、回転後の状態は（全体位相を除くと）
 
@@ -622,7 +629,7 @@ U(\theta, \hat{z}) = \begin{pmatrix}e^{-i\theta/2} & 0 \\ 0 & e^{+i\theta/2}\end
 
 であり、方位角が $0 \to \theta$ に移った。つまり**ブロッホベクトルは $\theta$ だけ動いている**。 $\theta/2$ ではない。
 
-もう一例。初期状態を $\vert {+y}\rangle$ （方位角 $\phi = \pi/2$ ）にする。
+もう一例。初期状態を $\vert {+y}\rangle$ （方位角 $\phi_0 = \pi/2$ ）にする。
 
 ```math
 U(\theta, \hat{z})\,\vert {+y}\rangle
@@ -663,20 +670,20 @@ $+\theta/2$ と $-\theta/2$ の差は $\theta$ になる。2成分に逆符号�
 
 $z$ 軸まわりの回転について赤道上の状態で確かめたが、これは一般の状態でも同じである。
 
-一般の状態 $\vert \psi\rangle = \cos(\alpha/2)\vert {+z}\rangle + e^{i\phi}\sin(\alpha/2)\vert {-z}\rangle$ （ブロッホ球の極角 $\alpha$ 、方位角 $\phi$ ）に $U(\theta, \hat{z})$ を作用させると
+一般の状態のブロッホ球パラメータを極角 $\theta_0$ 、方位角 $\phi_0$ と書くと、状態は $\vert \psi\rangle = \cos(\theta_0/2)\vert {+z}\rangle + e^{i\phi_0}\sin(\theta_0/2)\vert {-z}\rangle$ である。これに $z$ 軸まわりの回転 $U(\theta, \hat{z})$ を作用させると
 
 ```math
 U(\theta, \hat{z})\vert \psi\rangle
-= e^{-i\theta/2}\cos\frac{\alpha}{2}\vert {+z}\rangle + e^{i(\phi+\theta/2)}\sin\frac{\alpha}{2}\vert {-z}\rangle
+= e^{-i\theta/2}\cos\frac{\theta_0}{2}\vert {+z}\rangle + e^{i(\phi_0+\theta/2)}\sin\frac{\theta_0}{2}\vert {-z}\rangle
 ```
 
 全体位相 $e^{-i\theta/2}$ を括り出すと
 
 ```math
-= e^{-i\theta/2}\left(\cos\frac{\alpha}{2}\vert {+z}\rangle + e^{i(\phi+\theta)}\sin\frac{\alpha}{2}\vert {-z}\rangle\right)
+= e^{-i\theta/2}\left(\cos\frac{\theta_0}{2}\vert {+z}\rangle + e^{i(\phi_0+\theta)}\sin\frac{\theta_0}{2}\vert {-z}\rangle\right)
 ```
 
-極角 $\alpha$ は変わらず、方位角が $\phi \to \phi + \theta$ に変わった。 $z$ 軸まわりに $\theta$ だけ回転している。
+極角 $\theta_0$ は変わらず、方位角が $\phi_0 \to \phi_0 + \theta$ に変わった。 $z$ 軸まわりに $\theta$ だけ回転している。
 
 ### まとめ：二重構造
 
@@ -748,6 +755,20 @@ $\vert \psi\rangle$ と $-\vert \psi\rangle$ は、単独の測定では区別�
 
 しかし、ある粒子のスピンを2つの経路に分け、片方だけを 360 度回転してから再び合流させると、 $-1$ の符号差が**干渉**として観測される。これは中性子干渉実験で実際に確認されている。
 
+**NOTE1 との関係について補足**：[NOTE1.md](NOTE1.md) で「状態ベクトル全体に共通の位相 $e^{i\gamma}$ を掛けても、どんな測定をしても観測できない」と述べた。これと矛盾するように見えるかもしれないが、矛盾しない。
+
+NOTE1 で言う「全体位相」とは、系全体に一様にかかる位相のことである。1つの状態 $\vert \psi\rangle$ を測定する限り、$\vert \psi\rangle$ と $e^{i\gamma}\vert \psi\rangle$ は確かに区別できない。
+
+干渉実験で起きていることは、これとは異なる。1つの粒子を2つの経路 A, B に分け、経路 B だけに 360 度回転を施す。すると
+
+```math
+\text{合流後の状態} \sim \vert \psi_A\rangle + (-1)\vert \psi_B\rangle
+```
+
+となる。ここで $-1$ は系全体にかかる位相ではなく、2つの経路の間の**相対位相**である。相対位相は干渉パターンに影響するので観測にかかる。これはまさに、NOTE1 で「相対位相 $e^{i\phi}$ だけが残る」と述べた話と同じ構造である——全体位相は消えるが、相対位相は物理的な意味を持つ。
+
+つまり「全体位相は観測できない」という原則は常に成り立っている。360 度回転の $-1$ が見えるのは、それが干渉実験において相対位相として現れるからである。
+
 ---
 
 ## なぜ $1/2$ なのか：もう少し広い視点
@@ -760,9 +781,31 @@ $\vert \psi\rangle$ と $-\vert \psi\rangle$ は、単独の測定では区別�
 U(\theta,\mathbf{n}) = \exp\!\left(-\frac{i}{\hbar}\,\theta\,\mathbf{n}\cdot\mathbf{J}\right)
 ```
 
-であり、 $\mathbf{J}$ の固有値は $-j\hbar$ から $+j\hbar$ まで整数刻みで並ぶ。
+であり、ここでの $\theta$ は軸 $\mathbf{n}$ まわりの回転角（ブロッホ球の極角ではない）である。角運動量量子数 $j$ は、角運動量の「大きさ」を表す演算子 $\mathbf{J}^2 = J_x^2 + J_y^2 + J_z^2$ の固有値から決まる。
 
-$z$ 軸まわりの回転では $U = e^{-i\theta J_z/\hbar}$ であり、 $J_z$ の固有値 $m\hbar$ （ $m = -j, -j+1, \ldots, +j$ ）に対して各成分に $e^{-im\theta}$ がかかる。
+```math
+\mathbf{J}^2\vert j, m\rangle = j(j+1)\hbar^2\,\vert j, m\rangle
+```
+
+$j$ は $0, 1/2, 1, 3/2, \ldots$ のいずれかの値を取る。各 $j$ に対して、 $z$ 成分 $J_z$ の固有値 $m\hbar$ は $m = -j, -j+1, \ldots, +j$ の $(2j+1)$ 個である。
+
+回転の周期を調べるには、軸を $z$ 軸に選ぶと見通しがよい（結論はどの軸でも同じである）。 $\mathbf{n} = \hat{z}$ とすると $U = e^{-i\theta J_z/\hbar}$ になる。これを $J_z$ の固有状態 $\vert j, m\rangle$ に作用させると
+
+```math
+e^{-i\theta J_z/\hbar}\,\vert j, m\rangle
+= e^{-i\theta\,(m\hbar)/\hbar}\,\vert j, m\rangle
+= e^{-im\theta}\,\vert j, m\rangle
+```
+
+2行目では $J_z\vert j, m\rangle = m\hbar\vert j, m\rangle$ を使った。指数関数の中の演算子 $J_z$ が、固有状態に作用するときには固有値 $m\hbar$ に置き換わる——これが演算子の指数関数の基本的な性質である。
+
+一般の状態は $\vert \psi\rangle = \sum_m c_m\vert j, m\rangle$ と展開できるので
+
+```math
+U\vert \psi\rangle = \sum_m c_m\,e^{-im\theta}\,\vert j, m\rangle
+```
+
+となる。各成分 $\vert j, m\rangle$ にそれぞれ異なる位相 $e^{-im\theta}$ がかかる。
 
 全成分が元に戻る条件は $e^{-im\theta} = 1$ が全ての $m$ で成り立つことである。
 
