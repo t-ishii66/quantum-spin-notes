@@ -123,7 +123,7 @@ $\vert \Psi^-\rangle$ の第1項 $\vert {+z}\rangle\vert {-z}\rangle$ は「Alic
 
 $\mathbf{a}$ が $z$ 軸から角度 $\theta_a$ の方向にあるとする（ $\theta_a$ は $z$ 軸からの極角）。
 
-方向 $\mathbf{a}$ の固有状態 $\vert {+a}\rangle$ は、 $\vert {+z}\rangle$ を $y$ 軸まわりに $\theta_a$ だけ回転させたものである。$z$ 軸から $\theta_a$ だけ傾いた方向に到達するには、$y$ 軸まわりにちょうど $\theta_a$ だけ回せばよいので、ここでは極角と回転角が同じ値になる。[NOTE4.md](NOTE4.md) の回転行列
+方向 $\mathbf{a}$ の固有状態 $\vert {+a}\rangle$ は、 $\vert {+z}\rangle$ を y 軸まわりに $\theta_a$ だけ回転させたものである。z 軸から $\theta_a$ だけ傾いた方向に到達するには、y 軸まわりにちょうど $\theta_a$ だけ回せばよいので、ここでは極角と回転角が同じ値になる。[NOTE4.md](NOTE4.md) の回転行列
 
 ```math
 U(\theta, \mathbf{n}) = \cos\frac{\theta}{2}\,I - i\sin\frac{\theta}{2}\,\mathbf{n}\cdot\boldsymbol{\sigma}
@@ -643,7 +643,7 @@ CHSH 不等式は、測定結果が事前に決まっていて（実在性）、
 
 ## 補足： $2\sqrt{2}$ は量子力学の上限でもある
 
-隠れた変数では $\vert S\vert \leq 2$ 。量子力学では $\vert S\vert = 2\sqrt{2}$ 。では、 $\vert S\vert $ はどこまで大きくなりうるか。
+隠れた変数では $\vert S\vert \leq 2$ 。量子力学では $\vert S\vert = 2\sqrt{2}$ 。では、 $\vert S\vert$ はどこまで大きくなりうるか。
 
 $A, B = \pm 1$ の4つの相関を自由に選べるなら、 $S$ の式の定義から最大値は $\vert S\vert = 4$ になりうる（4つの相関がすべて $\pm 1$ で揃えば）。
 

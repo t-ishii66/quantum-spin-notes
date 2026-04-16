@@ -204,7 +204,7 @@ $\vert \psi\rangle = \alpha\vert {+z}\rangle + \beta\vert {-z}\rangle$ に対し
 = (-1)\vert {-z}\rangle \quad\checkmark
 ```
 
-確かに132行目・138行目の固有値方程式が再現された。ここで内積の直交性（ $\langle{+z}\vert {-z}\rangle = 0$ ）が本質的に効いている。
+確かに「測定演算子を作る」節で立てた2つの固有値方程式 $\hat{Z}\vert {+z}\rangle = (+1)\vert {+z}\rangle$ と $\hat{Z}\vert {-z}\rangle = (-1)\vert {-z}\rangle$ が再現された。ここで内積の直交性（ $\langle{+z}\vert {-z}\rangle = 0$ ）が本質的に効いている。
 
 ### 期待値
 
@@ -216,7 +216,13 @@ $\vert \psi\rangle = \alpha\vert {+z}\rangle + \beta\vert {-z}\rangle$ に対し
 \hat{Z}\vert \psi\rangle = (+1)\alpha\vert {+z}\rangle + (-1)\beta\vert {-z}\rangle
 ```
 
-次に左から $\langle\psi\vert = \alpha^*\langle{+z}\vert + \beta^*\langle{-z}\vert$ を掛ける。直交性を使うと
+次に左から
+
+```math
+\langle\psi\vert = \alpha^*\langle{+z}\vert + \beta^*\langle{-z}\vert
+```
+
+を掛ける。直交性を使うと
 
 ```math
 \langle\psi\vert \hat{Z}\vert \psi\rangle
@@ -345,14 +351,14 @@ $x$ 方向にも2つの固有状態 $\vert {+x}\rangle$, $\vert {-x}\rangle$ が
 \phi = 0
 ```
 
-を選ぶ。241行目の式に $\phi = 0$ を代入すると $e^{i \cdot 0} = 1$ なので
+を選ぶ。前節の $\vert {+x}\rangle = \frac{1}{\sqrt{2}}\bigl(\vert {+z}\rangle + e^{i\phi}\vert {-z}\rangle\bigr)$ に $\phi = 0$ を代入すると $e^{i \cdot 0} = 1$ なので
 
 ```math
 \vert {+x}\rangle = \frac{1}{\sqrt{2}}\bigl(\vert {+z}\rangle + \vert {-z}\rangle\bigr)
 = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}
 ```
 
-となる。次に $\vert {-x}\rangle$ を求める。254行目で述べたように $\vert {-x}\rangle$ は $\phi = \pi$ に対応するので、同じ式に $\phi = \pi$ を代入すると $e^{i\pi} = -1$ から
+となる。次に $\vert {-x}\rangle$ を求める。前節「$\phi$ の選択は物理的に何を意味するか」で述べたように $\vert {-x}\rangle$ は $\phi = \pi$ に対応するので、同じ式に $\phi = \pi$ を代入すると $e^{i\pi} = -1$ から
 
 ```math
 \vert {-x}\rangle = \frac{1}{\sqrt{2}}\bigl(\vert {+z}\rangle - \vert {-z}\rangle\bigr)
@@ -440,7 +446,7 @@ $x$ はすでに $\phi = 0$ を使った。 $y$ が $x$ と異なるなら、 $\
 
 ### $y$ を $\phi = \pi/2$ に対応させる
 
-$x$ 軸から 90 度回転した方向が $y$ 軸である。ここで、状態ベクトルの相対位相 $\phi$ が実空間の方位角にそのまま対応すると仮定する。この対応は自然に見えるが、実は回転演算子と $\mathrm{SU}(2)$ 表現を使って初めてきちんと正当化される（[NOTE2.md](NOTE2.md) で導く）。いまはこの対応を認めて先に進もう。
+$x$ 軸から 90 度回転した方向が $y$ 軸である。ここで、状態ベクトルの相対位相 $\phi$ が実空間の方位角にそのまま対応すると仮定する。この対応は自然に見えるが、実は回転演算子の幾何学的構造を使って初めてきちんと正当化される——[NOTE3.md](NOTE3.md) で相対位相 $\phi$ がブロッホ球の方位角と一致することを示し、[NOTE4.md](NOTE4.md) で $z$ 軸まわりの回転が実際に方位角を動かすことを具体的に確かめる。いまはこの対応を認めて先に進もう。
 
 $x$ を $\phi = 0$ に取ったので、 $y$ は
 
@@ -448,7 +454,7 @@ $x$ を $\phi = 0$ に取ったので、 $y$ は
 \phi = \frac{\pi}{2}
 ```
 
-に対応する。241行目の式に $\phi = \pi/2$ を代入する。 $e^{i\pi/2} = i$ なので
+に対応する。 $\vert {+x}\rangle$ の導出で使った同じ式 $\frac{1}{\sqrt{2}}\bigl(\vert {+z}\rangle + e^{i\phi}\vert {-z}\rangle\bigr)$ に $\phi = \pi/2$ を代入する。 $e^{i\pi/2} = i$ なので
 
 ```math
 \vert {+y}\rangle = \frac{1}{\sqrt{2}}\bigl(\vert {+z}\rangle + i\vert {-z}\rangle\bigr)
@@ -711,7 +717,7 @@ S_i = \frac{\hbar}{2}\,\sigma_i
 
 - $\vert {+z}\rangle = (1,0)^T$, $\vert {-z}\rangle = (0,1)^T$ という基底の取り方
 - $x$ 方向の固有状態を実数係数で書く（ $\phi = 0$ ）
-- 右手系の約束で $y$ は $x$ から反時計回り 90 度（ $\phi = \pi/2$ ）——相対位相と実空間の方位角の対応は [NOTE2.md](NOTE2.md) の回転演算子で裏付けられる
+- 右手系の約束で $y$ は $x$ から反時計回り 90 度（ $\phi = \pi/2$ ）——相対位相と実空間の方位角の対応は [NOTE3.md](NOTE3.md) のブロッホ球と [NOTE4.md](NOTE4.md) の回転演算子で裏付けられる
 
 ### 導出された結果
 

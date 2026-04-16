@@ -43,7 +43,7 @@
 
 量子力学では、状態ベクトル全体に共通の位相 $e^{i\gamma}$ を掛けても物理は変わらない。すべての測定確率が $\vert \langle\phi\vert \psi\rangle\vert ^2$ の形で計算され、全体位相は絶対値の二乗で消えるからである。
 
-この自由度を使って、 $\alpha$ を実数かつ非負に選ぶことができる。すると $\alpha = \vert \alpha\vert $ であり、正規化条件 $\alpha^2 + \vert \beta\vert ^2 = 1$ から、 $\alpha$ と $\vert \beta\vert $ は1つのパラメータで決まる。
+この自由度を使って、 $\alpha$ を実数かつ非負に選ぶことができる。すると $\alpha = \vert \alpha\vert$ であり、正規化条件 $\alpha^2 + \vert \beta\vert ^2 = 1$ から、 $\alpha$ と $\vert \beta\vert$ は1つのパラメータで決まる。
 
 具体的には、ある角度 $\theta$ （ $0 \leq \theta \leq \pi$ ）を使って
 
@@ -90,7 +90,13 @@ n_x - in_y = \sin\theta\,e^{-i\phi}
 
 #### 固有状態を求める
 
-この行列の固有値 $+1$ に属する固有状態 $\vert {+n}\rangle = \begin{pmatrix} a \\ b \end{pmatrix}$ を求める。固有値方程式は
+この行列の固有値 $+1$ に属する固有状態を
+
+```math
+\vert {+n}\rangle = \begin{pmatrix} a \\ b \end{pmatrix}
+```
+
+とおいて求める。固有値方程式は
 
 ```math
 (\mathbf{n}\cdot\boldsymbol{\sigma})\vert {+n}\rangle = (+1)\vert {+n}\rangle
@@ -167,13 +173,13 @@ a = \cos\frac{\theta}{2}, \qquad b = e^{i\phi}\sin\frac{\theta}{2}
 
 こうして、**空間的な方向の角度が $\theta$ のとき、状態ベクトルの係数には $\theta/2$ が入る**ことが分かった。これは偶然ではなく、スピン 1/2 の数学的構造から必然的に出てくる結果である（詳しくは [NOTE4.md](NOTE4.md) で扱う）。
 
-ここで出発点に戻ろう。48行目で $\alpha = \cos(\theta/2)$, $\vert \beta\vert = \sin(\theta/2)$ と置いたが、いま固有状態の導出から $b = e^{i\phi}\sin(\theta/2)$ という形も得られた。これはまさに $\beta$ の完全な形を与えている——大きさが $\sin(\theta/2)$ で、位相が $e^{i\phi}$ である。つまり
+ここで出発点に戻ろう。「全体位相を除く」節で $\alpha = \cos(\theta/2)$, $\vert \beta\vert = \sin(\theta/2)$ と置いたが、いま固有状態の導出から $b = e^{i\phi}\sin(\theta/2)$ という形も得られた。これはまさに $\beta$ の完全な形を与えている——大きさが $\sin(\theta/2)$ で、位相が $e^{i\phi}$ である。つまり
 
 ```math
 \alpha = \cos\frac{\theta}{2}, \qquad \beta = e^{i\phi}\sin\frac{\theta}{2}
 ```
 
-ここで $\phi$ （ $0 \leq \phi < 2\pi$ ）は2成分の**相対位相**であり、$\theta$ と $\phi$ はそれぞれ方向 $\mathbf{n}$ の極角と方位角に対応する。
+ここで $\phi$ （ $0 \leq \phi < 2\pi$ ）は2成分の**相対位相**であり、 $\theta$ と $\phi$ はそれぞれ方向 $\mathbf{n}$ の極角と方位角に対応する。
 
 ### 標準形
 
@@ -242,7 +248,7 @@ $\vert {+x}\rangle$：標準形に $\theta = \pi/2$, $\phi = 0$ を代入する�
 
 これは [NOTE1.md](NOTE1.md) の $\vert {+x}\rangle$ と一致する。 $\checkmark$
 
-$\vert {+y}\rangle$：$\theta = \pi/2$, $\phi = \pi/2$ を代入すると
+$\vert {+y}\rangle$ について。 $\theta = \pi/2$, $\phi = \pi/2$ を代入すると
 
 ```math
 \frac{1}{\sqrt{2}}(\vert {+z}\rangle + e^{i\pi/2}\vert {-z}\rangle)
@@ -251,7 +257,7 @@ $\vert {+y}\rangle$：$\theta = \pi/2$, $\phi = \pi/2$ を代入すると
 
 これも [NOTE1.md](NOTE1.md) の $\vert {+y}\rangle$ と一致する。 $\checkmark$
 
-$\vert {-x}\rangle$：$\theta = \pi/2$, $\phi = \pi$ を代入すると
+$\vert {-x}\rangle$ について。 $\theta = \pi/2$, $\phi = \pi$ を代入すると
 
 ```math
 \frac{1}{\sqrt{2}}(\vert {+z}\rangle + e^{i\pi}\vert {-z}\rangle)

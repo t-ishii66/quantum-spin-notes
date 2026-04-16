@@ -400,7 +400,7 @@ $z$ 軸まわり（ $\mathbf{n} = (0, 0, 1)$ ）：
 \delta z = 0
 ```
 
-$z$ 軸の結果は196行目で回転行列から導いたものと一致している。これらを表にまとめると見通しがよい。
+$z$ 軸の結果は「回転演算子に求められること」節で回転行列から導いた $\hat{x} \to \hat{x} - \hat{y}\,\delta\phi$, $\hat{y} \to \hat{y} + \hat{x}\,\delta\phi$ と一致している。これらを表にまとめると見通しがよい。
 
 |  | $\delta x$ | $\delta y$ | $\delta z$ |
 |:---:|:---:|:---:|:---:|
@@ -496,6 +496,22 @@ G_{\mathbf{n}} = n_x\hat{L}_x + n_y\hat{L}_y + n_z\hat{L}_z = \mathbf{n}\cdot\ha
 ```
 
 つまり、演算子 $\hat{A}$ が回転に対してどう変化するかは、生成子 $\mathbf{J}$ との交換関係だけで決まる。
+
+ここで $\hat{A}$ には任意のスカラー演算子（成分が1つの演算子）を代入できる。ベクトル演算子 $\hat{\mathbf{r}} = (\hat{x}, \hat{y}, \hat{z})$ のような3成分を持つ演算子の場合は、各成分に対してそれぞれこの式を適用すればよい。
+
+```math
+\delta\hat{x} = \frac{i}{\hbar}\,\delta\theta\,[\mathbf{n}\cdot\mathbf{J},\, \hat{x}], \quad
+\delta\hat{y} = \frac{i}{\hbar}\,\delta\theta\,[\mathbf{n}\cdot\mathbf{J},\, \hat{y}], \quad
+\delta\hat{z} = \frac{i}{\hbar}\,\delta\theta\,[\mathbf{n}\cdot\mathbf{J},\, \hat{z}]
+```
+
+これら3本をまとめてベクトル表記で
+
+```math
+\delta\hat{\mathbf{r}} = \frac{i}{\hbar}\,\delta\theta\,[\mathbf{n}\cdot\mathbf{J},\, \hat{\mathbf{r}}]
+```
+
+と書くこともできる（右辺の交換子は成分ごとに取る規約）。実際、これまでの議論で $z$ 軸まわりの回転に対して $[\hat{L}_z, \hat{x}]$, $[\hat{L}_z, \hat{y}]$ から $\delta\hat{x}$, $\delta\hat{y}$ を決めてきたのは、この「成分ごとの代入」をすでに行っていたことに他ならない。
 
 **有限回転**——この微小回転を角度 $\theta$ まで積み上げると、状態ベクトルを回転させるユニタリ演算子
 
