@@ -227,10 +227,7 @@ $\vert {-z}\rangle\vert {-z}\rangle$ の係数： $sc - cs = 0$
 両辺を $\sqrt{2}$ で割ると
 
 ```math
-\boxed{
-\frac{1}{\sqrt{2}}\bigl(\vert {+a}\rangle\vert {-a}\rangle - \vert {-a}\rangle\vert {+a}\rangle\bigr)
-= \vert \Psi^-\rangle
-}
+\boxed{ \frac{1}{\sqrt{2}}\bigl(\vert {+a}\rangle\vert {-a}\rangle - \vert {-a}\rangle\vert {+a}\rangle\bigr) = \vert \Psi^-\rangle }
 ```
 
 シングレット状態は、 $z$ 基底で書いても $\mathbf{a}$ 基底で書いても同じ形になる。これが**回転不変性**である。
@@ -357,9 +354,7 @@ E = \frac{1}{2}\Bigl[(+1)(+1)\sin^2\frac{\theta}{2} + (+1)(-1)\cos^2\frac{\theta
 ここで $\cos\theta = \cos^2(\theta/2) - \sin^2(\theta/2)$ なので
 
 ```math
-\boxed{
-E(\mathbf{a}, \mathbf{b}) = -\cos\theta = -\mathbf{a}\cdot\mathbf{b}
-}
+\boxed{ E(\mathbf{a}, \mathbf{b}) = -\cos\theta = -\mathbf{a}\cdot\mathbf{b} }
 ```
 
 これがベル不等式の議論全体の到達点となる核心的な結果である。

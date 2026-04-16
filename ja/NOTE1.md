@@ -145,9 +145,7 @@ $z$ 方向の装置を演算子 $\hat{Z}$ と書くと、上向きの銀に装�
 2次元の複素ベクトル空間では、直交する2つのベクトル $\vert {+z}\rangle$, $\vert {-z}\rangle$ が基底になる。つまり、この空間のどんなベクトルも、この2つの重ね合わせとして
 
 ```math
-\boxed{
-\vert \psi\rangle = \alpha\vert {+z}\rangle + \beta\vert {-z}\rangle
-}
+\boxed{ \vert \psi\rangle = \alpha\vert {+z}\rangle + \beta\vert {-z}\rangle }
 ```
 
 と書ける。ここで $\alpha$, $\beta$ は複素数の係数である。固有状態 $\vert {+z}\rangle$ は $\alpha = 1, \beta = 0$ の特別な場合であり、 $\vert {-z}\rangle$ は $\alpha = 0, \beta = 1$ の特別な場合である。
@@ -155,9 +153,7 @@ $z$ 方向の装置を演算子 $\hat{Z}$ と書くと、上向きの銀に装�
 では、この係数 $\alpha$, $\beta$ にはどんな物理的意味があるのか？　ここで量子力学の基本原理の一つである**Born（ボルン）則**を導入する。Born則とは、状態 $\vert \psi\rangle$ を測定して固有状態 $\vert \phi\rangle$ が得られる確率は、両者の内積の絶対値の2乗
 
 ```math
-\boxed{
-P(\phi) = \vert \langle\phi\vert \psi\rangle\vert ^2
-}
+\boxed{ P(\phi) = \vert \langle\phi\vert \psi\rangle\vert ^2 }
 ```
 
 で与えられる、という規則である。これは実験から導くことのできない**公理**であり、量子力学の枠組みとして受け入れるものである。
@@ -233,9 +229,7 @@ $\vert \psi\rangle = \alpha\vert {+z}\rangle + \beta\vert {-z}\rangle$ に対し
 $\vert\alpha\vert^2$ は測定値 $+1$ が出る確率、 $\vert\beta\vert^2$ は測定値 $-1$ が出る確率だった。つまり $\langle\psi\vert \hat{Z}\vert \psi\rangle$ は「各測定値 × その確率」の和——まさに期待値になっている。
 
 ```math
-\boxed{
-\langle\psi\vert \hat{Z}\vert \psi\rangle = \sum_i (\text{固有値}_i) \times (\text{その確率})
-}
+\boxed{ \langle\psi\vert \hat{Z}\vert \psi\rangle = \sum_i (\text{固有値}_i) \times (\text{その確率}) }
 ```
 
 これは $\hat{Z}$ に限らず、一般の測定演算子について成り立つ。

@@ -186,9 +186,7 @@ a = \cos\frac{\theta}{2}, \qquad b = e^{i\phi}\sin\frac{\theta}{2}
 以上をまとめると、固有状態 $\vert {+n}\rangle$ の表式で方向 $\mathbf{n}$ を自由に動かせば任意の状態が得られるので、 $\vert {+n}\rangle$ を改めて $\vert \psi\rangle$ と書き直す。全体位相の自由度を除いた後、スピン 1/2 の一般の状態は
 
 ```math
-\boxed{
-\vert \psi\rangle = \cos\frac{\theta}{2}\vert {+z}\rangle + e^{i\phi}\sin\frac{\theta}{2}\vert {-z}\rangle
-}
+\boxed{ \vert \psi\rangle = \cos\frac{\theta}{2}\vert {+z}\rangle + e^{i\phi}\sin\frac{\theta}{2}\vert {-z}\rangle }
 ```
 
 と、**2つの実数パラメータ $(\theta, \phi)$** だけで書ける。
@@ -432,9 +430,7 @@ Born則の式（ $A, B$ を元に戻した式）を、半角の公式を使っ�
 ### 確率の公式
 
 ```math
-\boxed{
-P(+\mathbf{n}) = \cos^2\frac{\Theta}{2}
-}
+\boxed{ P(+\mathbf{n}) = \cos^2\frac{\Theta}{2} }
 ```
 
 ```math
