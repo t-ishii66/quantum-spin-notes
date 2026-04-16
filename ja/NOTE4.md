@@ -365,9 +365,13 @@ U(\theta,\mathbf{n})
 
 $\hbar$ が約分されて
 
+<table align="center"><tr><td>
+
 ```math
-\boxed{ U(\theta,\mathbf{n}) = \exp\!\left(-i\frac{\theta}{2}\,\mathbf{n}\cdot\boldsymbol{\sigma}\right) }
+U(\theta,\mathbf{n}) = \exp\!\left(-i\frac{\theta}{2}\,\mathbf{n}\cdot\boldsymbol{\sigma}\right)
 ```
+
+</td></tr></table>
 
 が得られる。
 
@@ -481,9 +485,13 @@ e^{-i\alpha M} = \cos\alpha\,I - i\sin\alpha\,M
 
 $\alpha = \theta/2$, $M = \mathbf{n}\cdot\boldsymbol{\sigma}$ を戻すと
 
+<table align="center"><tr><td>
+
 ```math
-\boxed{ U(\theta,\mathbf{n}) = \cos\frac{\theta}{2}\,I - i\sin\frac{\theta}{2}\,\mathbf{n}\cdot\boldsymbol{\sigma} }
+U(\theta,\mathbf{n}) = \cos\frac{\theta}{2}\,I - i\sin\frac{\theta}{2}\,\mathbf{n}\cdot\boldsymbol{\sigma}
 ```
+
+</td></tr></table>
 
 これがスピン 1/2 の回転行列の完全な形である。
 

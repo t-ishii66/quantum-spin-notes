@@ -109,9 +109,13 @@ K = -\frac{i}{\hbar}\,G
 
 したがって微小回転は
 
+<table align="center"><tr><td>
+
 ```math
-\boxed{ U(\delta\theta) = I - \frac{i}{\hbar}\,\delta\theta\,G + O(\delta\theta^2) }
+U(\delta\theta) = I - \frac{i}{\hbar}\,\delta\theta\,G + O(\delta\theta^2)
 ```
+
+</td></tr></table>
 
 の形に限られる。ここで $G$ はエルミートな演算子である。この $G$ が何の物理量に対応するかは、第4段階で角運動量として同定される。
 
@@ -162,9 +166,13 @@ e^a = \lim_{N\to\infty}\left(1 + \frac{a}{N}\right)^N
 
 演算子でもまったく同じ形が成り立つ。 $a$ を $-i\theta G/\hbar$ に置き換えれば
 
+<table align="center"><tr><td>
+
 ```math
-\boxed{ U(\theta,\mathbf{n}) = \exp\!\left(-\frac{i}{\hbar}\,\theta\,G_{\mathbf{n}}\right) }
+U(\theta,\mathbf{n}) = \exp\!\left(-\frac{i}{\hbar}\,\theta\,G_{\mathbf{n}}\right)
 ```
+
+</td></tr></table>
 
 が得られる。
 
@@ -509,9 +517,13 @@ G_{\mathbf{n}} = n_x\hat{L}_x + n_y\hat{L}_y + n_z\hat{L}_z = \mathbf{n}\cdot\ha
 
 **有限回転**——この微小回転を角度 $\theta$ まで積み上げると、状態ベクトルを回転させるユニタリ演算子
 
+<table align="center"><tr><td>
+
 ```math
-\boxed{ U(\theta,\mathbf{n}) = \exp\!\left(-\frac{i}{\hbar}\,\theta\,\mathbf{n}\cdot\mathbf{J}\right) }
+U(\theta,\mathbf{n}) = \exp\!\left(-\frac{i}{\hbar}\,\theta\,\mathbf{n}\cdot\mathbf{J}\right)
 ```
+
+</td></tr></table>
 
 が得られる。演算子 $\hat{A}$ 自体の有限回転による変換は
 

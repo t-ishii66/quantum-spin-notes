@@ -226,9 +226,13 @@ $\vert {-z}\rangle\vert {-z}\rangle$ の係数： $sc - cs = 0$
 
 両辺を $\sqrt{2}$ で割ると
 
+<table align="center"><tr><td>
+
 ```math
-\boxed{ \frac{1}{\sqrt{2}}\bigl(\vert {+a}\rangle\vert {-a}\rangle - \vert {-a}\rangle\vert {+a}\rangle\bigr) = \vert \Psi^-\rangle }
+\frac{1}{\sqrt{2}}\bigl(\vert {+a}\rangle\vert {-a}\rangle - \vert {-a}\rangle\vert {+a}\rangle\bigr) = \vert \Psi^-\rangle
 ```
+
+</td></tr></table>
 
 シングレット状態は、 $z$ 基底で書いても $\mathbf{a}$ 基底で書いても同じ形になる。これが**回転不変性**である。
 
@@ -353,9 +357,13 @@ E = \frac{1}{2}\Bigl[(+1)(+1)\sin^2\frac{\theta}{2} + (+1)(-1)\cos^2\frac{\theta
 
 ここで $\cos\theta = \cos^2(\theta/2) - \sin^2(\theta/2)$ なので
 
+<table align="center"><tr><td>
+
 ```math
-\boxed{ E(\mathbf{a}, \mathbf{b}) = -\cos\theta = -\mathbf{a}\cdot\mathbf{b} }
+E(\mathbf{a}, \mathbf{b}) = -\cos\theta = -\mathbf{a}\cdot\mathbf{b}
 ```
+
+</td></tr></table>
 
 これがベル不等式の議論全体の到達点となる核心的な結果である。
 
@@ -545,9 +553,13 @@ s = A \cdot (\pm 2) + A' \cdot 0 = \pm 2
 
 したがって
 
+<table align="center"><tr><td>
+
 ```math
-\boxed{\vert S\vert \leq 2} \qquad \text{（CHSH 不等式）}
+\vert S\vert \leq 2 \qquad \text{（CHSH 不等式）}
 ```
+
+</td></tr></table>
 
 これは隠れた変数の仮説——事前に値が決まっていること（実在性）、遠方の設定に依存しないこと（局所性）、測定方向の選択が $\lambda$ と独立であること——だけから導かれる不等式であり、量子力学の法則を一切使っていない。
 
@@ -618,9 +630,13 @@ S = E(\mathbf{a}, \mathbf{b}) - E(\mathbf{a}, \mathbf{b}') + E(\mathbf{a}', \mat
 
 したがって
 
+<table align="center"><tr><td>
+
 ```math
-\boxed{\vert S\vert = 2\sqrt{2} \approx 2.83}
+\vert S\vert = 2\sqrt{2} \approx 2.83
 ```
+
+</td></tr></table>
 
 これは CHSH 不等式の上限 $2$ を明確に超えている。
 
