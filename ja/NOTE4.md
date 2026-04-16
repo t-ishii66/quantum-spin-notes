@@ -250,11 +250,15 @@ U(\delta\gamma, \hat{z}) - I = -\frac{i}{\hbar}\,\delta\gamma\,G_z
 
 が導かれる。まとめると
 
+<table align="center"><tr><td>
+
 ```math
 [G_i, G_j] = i\hbar\,\epsilon_{ijk}\,G_k
 ```
 
-である。
+</td></tr></table>
+
+である。これが回転の生成子が満たすべき**交換関係**であり、角運動量の定義そのものになる。
 
 つまりこの交換関係は、「 $x$ と $y$ の回転を入れ替えると $z$ の回転がずれとして出る」という3次元回転の幾何学的性質を、演算子の言葉に翻訳したものである。回転の生成子であるなら、この関係を満たさなければならない。
 
@@ -303,11 +307,15 @@ U(\delta\alpha, \mathbf{e}_x)\,U(\delta\beta, \mathbf{e}_y) - U(\delta\beta, \ma
 
 が成り立つ。したがって $S_i = \frac{\hbar}{2}\sigma_i$ とおけば
 
+<table align="center"><tr><td>
+
 ```math
 [S_i, S_j] = i\hbar\,\epsilon_{ijk}\,S_k
 ```
 
-が成り立つ。これは角運動量の定義そのものである。
+</td></tr></table>
+
+が成り立つ。これは先ほどの角運動量の定義そのものである。
 
 しかも $S_i$ は $2 \times 2$ の行列であり、位置 $\hat{x}$ や運動量 $\hat{p}$ とは何の関係もない。つまり $\mathbf{S}$ は
 
