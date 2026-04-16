@@ -51,11 +51,17 @@ U(\theta,\mathbf{n}) = \exp\!\left(-\frac{i}{\hbar}\,\theta\,\mathbf{n}\cdot\mat
 
 量子力学では、角運動量を次のように定義する。
 
-> 3つのエルミート演算子 $J_x, J_y, J_z$ が
->
-> $$[J_i, J_j] = i\hbar\,\epsilon_{ijk}\,J_k$$
->
-> を満たすとき、 $\mathbf{J} = (J_x, J_y, J_z)$ を**角運動量**と呼ぶ。
+**定義**：3つのエルミート演算子 $J_x, J_y, J_z$ が
+
+<table border="1" align="center"><tr><td>
+
+```math
+[J_i, J_j] = i\hbar\,\epsilon_{ijk}\,J_k
+```
+
+</td></tr></table>
+
+を満たすとき、 $\mathbf{J} = (J_x, J_y, J_z)$ を**角運動量**と呼ぶ。
 
 なぜこれが定義になるのか。理由は、回転の生成子であるためにはこの交換関係を満たすことが**必要かつ十分**だからである。以下、必要性と十分性をそれぞれ具体的に見る。
 
@@ -250,7 +256,7 @@ U(\delta\gamma, \hat{z}) - I = -\frac{i}{\hbar}\,\delta\gamma\,G_z
 
 が導かれる。まとめると
 
-<table align="center"><tr><td>
+<table border="1" align="center"><tr><td>
 
 ```math
 [G_i, G_j] = i\hbar\,\epsilon_{ijk}\,G_k
@@ -307,7 +313,7 @@ U(\delta\alpha, \mathbf{e}_x)\,U(\delta\beta, \mathbf{e}_y) - U(\delta\beta, \ma
 
 が成り立つ。したがって $S_i = \frac{\hbar}{2}\sigma_i$ とおけば
 
-<table align="center"><tr><td>
+<table border="1" align="center"><tr><td>
 
 ```math
 [S_i, S_j] = i\hbar\,\epsilon_{ijk}\,S_k
@@ -373,7 +379,7 @@ U(\theta,\mathbf{n})
 
 $\hbar$ が約分されて
 
-<table align="center"><tr><td>
+<table border="1" align="center"><tr><td>
 
 ```math
 U(\theta,\mathbf{n}) = \exp\!\left(-i\frac{\theta}{2}\,\mathbf{n}\cdot\boldsymbol{\sigma}\right)
@@ -493,7 +499,7 @@ e^{-i\alpha M} = \cos\alpha\,I - i\sin\alpha\,M
 
 $\alpha = \theta/2$, $M = \mathbf{n}\cdot\boldsymbol{\sigma}$ を戻すと
 
-<table align="center"><tr><td>
+<table border="1" align="center"><tr><td>
 
 ```math
 U(\theta,\mathbf{n}) = \cos\frac{\theta}{2}\,I - i\sin\frac{\theta}{2}\,\mathbf{n}\cdot\boldsymbol{\sigma}

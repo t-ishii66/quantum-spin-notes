@@ -109,7 +109,7 @@ K = -\frac{i}{\hbar}\,G
 
 したがって微小回転は
 
-<table align="center"><tr><td>
+<table border="1" align="center"><tr><td>
 
 ```math
 U(\delta\theta) = I - \frac{i}{\hbar}\,\delta\theta\,G + O(\delta\theta^2)
@@ -166,7 +166,7 @@ e^a = \lim_{N\to\infty}\left(1 + \frac{a}{N}\right)^N
 
 演算子でもまったく同じ形が成り立つ。 $a$ を $-i\theta G/\hbar$ に置き換えれば
 
-<table align="center"><tr><td>
+<table border="1" align="center"><tr><td>
 
 ```math
 U(\theta,\mathbf{n}) = \exp\!\left(-\frac{i}{\hbar}\,\theta\,G_{\mathbf{n}}\right)
@@ -517,7 +517,7 @@ G_{\mathbf{n}} = n_x\hat{L}_x + n_y\hat{L}_y + n_z\hat{L}_z = \mathbf{n}\cdot\ha
 
 **有限回転**——この微小回転を角度 $\theta$ まで積み上げると、状態ベクトルを回転させるユニタリ演算子
 
-<table align="center"><tr><td>
+<table border="1" align="center"><tr><td>
 
 ```math
 U(\theta,\mathbf{n}) = \exp\!\left(-\frac{i}{\hbar}\,\theta\,\mathbf{n}\cdot\mathbf{J}\right)
