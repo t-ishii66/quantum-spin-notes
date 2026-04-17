@@ -101,7 +101,7 @@ $z$ 方向で確定した粒子なのに、 $x$ 方向の結果は確率的に�
 ここから分かることは
 
 - この内部自由度は $z$ 方向について2値しか返さない
-- したがって状態空間は（少なくとも）2次元である
+- この2つの確定状態を区別して表すには、少なくとも2次元の状態空間が必要である
 
 最小のモデルとして、2次元の**複素**ベクトル空間を採用する。これは仮定である——実験が教えてくれるのは「2値」という事実だけで、状態空間が複素ベクトル空間の構造を持つことや、なぜ実数ではなく複素数なのかは、ここでは天下り的に受け入れる。「最小のモデル」というのは、2値を説明するには最低2次元が必要で、それ以上の次元を持ち込んでも新しい測定値が増えないからである。
 
@@ -593,14 +593,6 @@ $z$ 基底で各項を計算する。
 ```math
 \sigma_y\,\vert {-y}\rangle
 = \begin{pmatrix}0&-i\\i&0\end{pmatrix}\frac{1}{\sqrt{2}}\begin{pmatrix}1\\-i\end{pmatrix}
-= \frac{1}{\sqrt{2}}\begin{pmatrix}-(-i)(-i)\\i\cdot 1 + 0\end{pmatrix}
-```
-
-もう少し丁寧にやる。
-
-```math
-\sigma_y\,\vert {-y}\rangle
-= \begin{pmatrix}0&-i\\i&0\end{pmatrix}\frac{1}{\sqrt{2}}\begin{pmatrix}1\\-i\end{pmatrix}
 = \frac{1}{\sqrt{2}}\begin{pmatrix}0\cdot 1 + (-i)(-i)\\i\cdot 1 + 0\cdot(-i)\end{pmatrix}
 = \frac{1}{\sqrt{2}}\begin{pmatrix}i^2\\i\end{pmatrix}
 ```
@@ -666,9 +658,13 @@ $z$ 基底で各項を計算する。
 
 これらをまとめると
 
+<table border="1" align="center"><tr><td>
+
 ```math
 [\sigma_i, \sigma_j] = 2i\,\epsilon_{ijk}\,\sigma_k
 ```
+
+</td></tr></table>
 
 である。ここで $\epsilon_{ijk}$ は完全反対称テンソル（レヴィ＝チヴィタ記号）で、添字の入れ替えに対する符号を表す。具体的には、 $i, j, k$ を $1, 2, 3$（それぞれ $x, y, z$）として
 
@@ -694,7 +690,17 @@ S_i = \frac{\hbar}{2}\,\sigma_i
 = i\hbar\,\epsilon_{ijk}\,S_k
 ```
 
-となる。これは**角運動量の交換関係**そのものである。
+すなわち
+
+<table border="1" align="center"><tr><td>
+
+```math
+[S_i, S_j] = i\hbar\,\epsilon_{ijk}\,S_k
+```
+
+</td></tr></table>
+
+が成り立つ。これは**角運動量の交換関係**そのものである。
 
 なぜこの交換関係が重要なのか——つまり、これを満たすことがなぜ「角運動量である」ことの証明になるのかは、次の文書 [NOTE2.md](NOTE2.md) で一般的な回転演算子を導き、[NOTE4.md](NOTE4.md) で詳しく論じる。
 
