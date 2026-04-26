@@ -1,5 +1,7 @@
 # 回転演算子 $U(\theta,\mathbf{n}) = \exp(-i\theta J_{\mathbf{n}}/\hbar)$ の導出
 
+<img src="../images/rot.png">
+
 > **シリーズ構成**: [実験からパウリ行列へ](NOTE1.md) → 本文書（NOTE2.md）→ [ブロッホ球](NOTE3.md) → [θ/2 の由来](NOTE4.md) → [ベルの不等式](NOTE5.md)
 
 ## この文書の方針

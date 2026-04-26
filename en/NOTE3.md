@@ -1,5 +1,7 @@
 # The Bloch Sphere: Visualizing Spin States on a Sphere
 
+<img src="../images/bloch.png">
+
 > **Series**: [From Experiments to Pauli Matrices](NOTE1.md) → [Rotation Operators](NOTE2.md) → This document (NOTE3.md) → [The Origin of θ/2](NOTE4.md) → [Bell's Inequality](NOTE5.md)
 
 ## Purpose of This Document

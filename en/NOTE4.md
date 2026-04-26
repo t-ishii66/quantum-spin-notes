@@ -1,5 +1,7 @@
 # Why θ/2 Appears in the Spin-1/2 Rotation Operator
 
+<img src="../images/spin.png">
+
 > **Series**: [From Experiments to Pauli Matrices](NOTE1.md) → [Rotation Operators](NOTE2.md) → [The Bloch Sphere](NOTE3.md) → This document (NOTE4.md) → [Bell's Inequality](NOTE5.md)
 
 ## Purpose of This Document

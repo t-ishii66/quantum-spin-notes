@@ -1,5 +1,7 @@
 # Bell's Inequality: Where Quantum Mechanics Surpasses Classical Intuition
 
+<img src="../images/bell.png">
+
 > **Series**: [From Experiments to Pauli Matrices](NOTE1.md) → [Rotation Operators](NOTE2.md) → [The Bloch Sphere](NOTE3.md) → [The Origin of θ/2](NOTE4.md) → This document (NOTE5.md)
 
 ## Purpose of This Document

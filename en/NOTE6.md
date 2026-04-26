@@ -1,5 +1,7 @@
 # Supplement: A Mini Introduction to Group Theory — SU(2) and SO(3)
 
+<img src="../images/su2-so3.png">
+
 > **Series**: [From Experiments to Pauli Matrices](NOTE1.md) → [Rotation Operators](NOTE2.md) → [The Bloch Sphere](NOTE3.md) → [The Origin of θ/2](NOTE4.md) → [Bell's Inequality](NOTE5.md) → This document (NOTE6.md)
 
 ## Purpose of This Document

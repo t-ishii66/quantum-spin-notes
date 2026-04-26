@@ -1,5 +1,7 @@
 # Deriving the Pauli Matrices from Experimental Facts
 
+<img src="../images/pauli.png">
+
 > **Series**: This document (NOTE1.md) → [Rotation Operators](NOTE2.md) → [The Bloch Sphere](NOTE3.md) → [The Origin of θ/2](NOTE4.md) → [Bell's Inequality](NOTE5.md)
 
 ## Purpose of This Document

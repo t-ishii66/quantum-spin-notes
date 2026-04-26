@@ -1,5 +1,7 @@
 # Derivation of the Rotation Operator $U(\theta,\mathbf{n}) = \exp(-i\theta J_{\mathbf{n}}/\hbar)$
 
+<img src="../images/rot.png">
+
 > **Series**: [From Experiments to Pauli Matrices](NOTE1.md) → This document (NOTE2.md) → [The Bloch Sphere](NOTE3.md) → [The Origin of θ/2](NOTE4.md) → [Bell's Inequality](NOTE5.md)
 
 ## Purpose of This Document
