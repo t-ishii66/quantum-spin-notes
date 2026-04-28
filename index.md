@@ -7,6 +7,8 @@ keywords: quantum mechanics, spin, Pauli matrices, Bloch sphere, Bell inequality
 
 # Physics Notes on Spin 1/2
 
+![](images/alice-index.png)
+
 A self-contained note series that starts from the experimental facts of the Stern–Gerlach experiment and derives the Pauli matrices, rotation operators, the Bloch sphere, and Bell's inequality.
 
 For the full notes with rendered equations, please view them on the GitHub repository.
