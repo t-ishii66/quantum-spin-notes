@@ -146,7 +146,7 @@ Using these two eigenstates and eigenvalues, we can construct the measurement op
 
 In a 2-dimensional complex vector space, the two orthogonal vectors $\vert {+z}\rangle$, $\vert {-z}\rangle$ form a basis. That is, any vector in this space can be written as a superposition of these two:
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 \vert \psi\rangle = \alpha\vert {+z}\rangle + \beta\vert {-z}\rangle
@@ -158,7 +158,7 @@ where $\alpha$, $\beta$ are complex coefficients. The eigenstate $\vert {+z}\ran
 
 What physical meaning do the coefficients $\alpha$, $\beta$ have? Here we introduce one of the fundamental principles of quantum mechanics, the **Born rule**. The Born rule states that the probability of obtaining the eigenstate $\vert \phi\rangle$ when measuring the state $\vert \psi\rangle$ is given by the squared absolute value of their inner product:
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 P(\phi) = \vert \langle\phi\vert \psi\rangle\vert ^2
@@ -238,7 +238,7 @@ Using orthogonality:
 
 $\vert\alpha\vert^2$ is the probability of measurement value $+1$, and $\vert\beta\vert^2$ is the probability of measurement value $-1$. Thus $\langle\psi\vert \hat{Z}\vert \psi\rangle$ is the sum of "each measurement value × its probability" — precisely the expectation value.
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 \langle\psi\vert \hat{Z}\vert \psi\rangle = \sum_i (\text{eigenvalue}_i) \times (\text{its probability})
@@ -656,7 +656,7 @@ Similarly (the procedure is just matrix multiplication, so we show only the resu
 
 Summarizing:
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 [\sigma_i, \sigma_j] = 2i\,\epsilon_{ijk}\,\sigma_k
@@ -690,7 +690,7 @@ we get
 
 That is,
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 [S_i, S_j] = i\hbar\,\epsilon_{ijk}\,S_k

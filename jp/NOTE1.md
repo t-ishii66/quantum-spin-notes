@@ -146,7 +146,7 @@ $z$ 方向の装置を演算子 $\hat{Z}$ と書くと、上向きの銀に装�
 
 2次元の複素ベクトル空間では、直交する2つのベクトル $\vert {+z}\rangle$, $\vert {-z}\rangle$ が基底になる。つまり、この空間のどんなベクトルも、この2つの重ね合わせとして
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 \vert \psi\rangle = \alpha\vert {+z}\rangle + \beta\vert {-z}\rangle
@@ -158,7 +158,7 @@ $z$ 方向の装置を演算子 $\hat{Z}$ と書くと、上向きの銀に装�
 
 では、この係数 $\alpha$, $\beta$ にはどんな物理的意味があるのか？　ここで量子力学の基本原理の一つである**Born（ボルン）則**を導入する。Born則とは、状態 $\vert \psi\rangle$ を測定して固有状態 $\vert \phi\rangle$ が得られる確率は、両者の内積の絶対値の2乗
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 P(\phi) = \vert \langle\phi\vert \psi\rangle\vert ^2
@@ -238,7 +238,7 @@ $\vert \psi\rangle = \alpha\vert {+z}\rangle + \beta\vert {-z}\rangle$ に対し
 
 $\vert\alpha\vert^2$ は測定値 $+1$ が出る確率、 $\vert\beta\vert^2$ は測定値 $-1$ が出る確率だった。つまり $\langle\psi\vert \hat{Z}\vert \psi\rangle$ は「各測定値 × その確率」の和——まさに期待値になっている。
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 \langle\psi\vert \hat{Z}\vert \psi\rangle = \sum_i (\text{固有値}_i) \times (\text{その確率})
@@ -660,7 +660,7 @@ $z$ 基底で各項を計算する。
 
 これらをまとめると
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 [\sigma_i, \sigma_j] = 2i\,\epsilon_{ijk}\,\sigma_k
@@ -694,7 +694,7 @@ S_i = \frac{\hbar}{2}\,\sigma_i
 
 すなわち
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 [S_i, S_j] = i\hbar\,\epsilon_{ijk}\,S_k
