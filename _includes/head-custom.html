@@ -8,6 +8,21 @@
     },
     options: {
       skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    startup: {
+      pageReady: function () {
+        // Transform GitHub-style ```math fences (kramdown emits them as
+        // <pre><code class="language-math">) into display-math nodes so
+        // MathJax can typeset them. Without this, the raw LaTeX shows
+        // through as a code block on the published Pages site.
+        document.querySelectorAll('pre > code.language-math').forEach(function (code) {
+          var math = code.textContent;
+          var div = document.createElement('div');
+          div.textContent = '\\[' + math + '\\]';
+          code.parentNode.replaceWith(div);
+        });
+        return MathJax.startup.defaultPageReady();
+      }
     }
   };
 </script>
