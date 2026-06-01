@@ -1,3 +1,41 @@
+title: "Physics Notes on Spin 1/2 — From Experiments to Bell's Inequality"
+description: >-
+  A self-contained quantum mechanics tutorial deriving the Pauli matrices,
+  rotation operators, the Bloch sphere, and the CHSH inequality from the
+  Stern–Gerlach experiment. Written for self-study; every derivation is
+  presented without skipping intermediate steps.
+
+url: "https://t-ishii66.github.io"
+baseurl: "/quantum-spin-notes"
+repository: t-ishii66/quantum-spin-notes
+
+theme: jekyll-theme-cayman
+
+author: t-ishii66
+lang: en
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
 exclude:
   - CLAUDE.md
   - PROBLEMS.md
+  - "*PROBLEMS*.md"
+  - "*.bak"
+  - Makefile
+  - build/
+  - dist/
+  - target/
+  - node_modules/
+  - .vscode/
+  - "*.o"
+  - "*.so"
+  - "*.dylib"
+  - "*.exe"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
+  syntax_highlighter: rouge

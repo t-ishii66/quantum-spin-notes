@@ -11,12 +11,12 @@
 - 前の文書で導出していない結果を「〜で見たように」と参照しない
 
 ## シリーズ構成
-1. [ja/NOTE1.md](ja/NOTE1.md) — 実験からパウリ行列へ
-2. [ja/NOTE2.md](ja/NOTE2.md) — 回転演算子
-3. [ja/NOTE3.md](ja/NOTE3.md) — ブロッホ球
-4. [ja/NOTE4.md](ja/NOTE4.md) — θ/2 の由来
-5. [ja/NOTE5.md](ja/NOTE5.md) — ベルの不等式
-6. [ja/NOTE6.md](ja/NOTE6.md) — 補講: 群論ミニ入門（SU(2) と SO(3)）
+1. [jp/NOTE1.md](jp/NOTE1.md) — 実験からパウリ行列へ
+2. [jp/NOTE2.md](jp/NOTE2.md) — 回転演算子
+3. [jp/NOTE3.md](jp/NOTE3.md) — ブロッホ球
+4. [jp/NOTE4.md](jp/NOTE4.md) — θ/2 の由来
+5. [jp/NOTE5.md](jp/NOTE5.md) — ベルの不等式
+6. [jp/NOTE6.md](jp/NOTE6.md) — 補講: 群論ミニ入門（SU(2) と SO(3)）
 
 ## Writing Conventions
 - 日本語本文 + 英語の数式・用語

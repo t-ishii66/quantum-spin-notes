@@ -1,12 +1,27 @@
+---
+title: "Physics Notes on Spin 1/2 — From Experiments to Bell's Inequality"
+description: "A self-contained quantum mechanics tutorial deriving the Pauli matrices, rotation operators, the Bloch sphere, and the CHSH inequality from the Stern–Gerlach experiment."
+keywords: "quantum mechanics, spin 1/2, Pauli matrices, Bloch sphere, Bell inequality, CHSH inequality, Stern-Gerlach experiment, rotation operator, eigenstates, spectral decomposition, projective measurement, quantum entanglement, hidden variables, local realism, Born rule, SU(2), SO(3), group theory, double cover, quantum tutorial, physics notes, open source"
+permalink: /
+---
+
+[English](README.md) | [日本語](README-jp.md)
+
 # Physics Notes on Spin 1/2
 
 ![](images/top.png)
 
 A self-contained note series that starts from the experimental facts of the Stern–Gerlach experiment and derives the Pauli matrices, rotation operators, the Bloch sphere, and Bell's inequality.
 
+<!-- SEO intro added by setup-github-pages; review and adjust -->
+
+If you have ever wanted to **derive the Pauli matrices from scratch**, build up **quantum spin 1/2** from real experimental facts, or understand how the **Bloch sphere**, the **rotation operator** $U(\theta,\mathbf{n}) = \exp(-i\theta \mathbf{n}\cdot\mathbf{J}/\hbar)$, and **Bell's inequality** fit together — this **self-contained quantum mechanics tutorial** is for you. Topics covered include the **Stern–Gerlach experiment**, **spectral decomposition**, the **CHSH inequality**, **quantum entanglement**, and a mini introduction to the groups **SU(2)** and **SO(3)** that govern spinor rotations.
+
+<!-- /SEO intro -->
+
 All derivations are presented without skipping intermediate steps, and every new concept is explained before it is used. Clarity is prioritized over rigor.
 
-## Notes (English)
+## Notes
 
 | # | Title | Contents |
 |---|-------|----------|
@@ -25,31 +40,6 @@ All derivations are presented without skipping intermediate steps, and every new
 
 ---
 
-# スピン1/2の物理ノート
-
-シュテルン・ゲルラッハの実験事実から出発し、パウリ行列、回転演算子、ブロッホ球、ベルの不等式までを導く自己完結的なノートシリーズです。
-
-他の教科書を参照しなくても読み進められるよう、式の導出は途中計算を省略せず、新しい概念は使う前に必ず説明しています。厳密さよりわかりやすさを優先しています。
-
-## ノート一覧（日本語）
-
-| # | タイトル | 内容 |
-|---|---------|------|
-| 1 | [実験事実からパウリ行列を導く](ja/NOTE1.md) | シュテルン・ゲルラッハ実験の二値測定から固有状態・射影子・スペクトル分解を経てパウリ行列 $\sigma_x, \sigma_y, \sigma_z$ を構成する |
-| 2 | [回転演算子の導出](ja/NOTE2.md) | 確率保存とユニタリ性から回転演算子 $U(\theta,\mathbf{n}) = \exp(-i\theta \mathbf{n}\cdot\mathbf{J}/\hbar)$ を導く |
-| 3 | [ブロッホ球](ja/NOTE3.md) | スピン状態を球面上の1点として表し、測定確率を幾何学的に読む方法を示す |
-| 4 | [なぜ θ/2 が現れるのか](ja/NOTE4.md) | スピン1/2の回転演算子に半角が現れる理由を、角運動量の交換関係から説明する |
-| 5 | [ベルの不等式](ja/NOTE5.md) | 2粒子のもつれ状態からCHSH不等式を導き、量子力学が古典的な局所実在論の限界を超えることを示す |
-| 補講 | [群論ミニ入門：SU(2) と SO(3)](ja/NOTE6.md) | スピンの回転で登場する群 SU(2) と SO(3) の関係を、群の定義から二重被覆・表現まで簡潔に導入する |
-
-## 前提知識
-
-- 高校レベルの三角関数と行列の基本操作
-- 複素数（オイラーの公式 $e^{i\phi} = \cos\phi + i\sin\phi$）
-- さわり程度の線形代数、量子論の知識
-
----
-
 ## Credits
 
 - Project: t-ishii66 (studied physics at university; systems engineer)
@@ -62,4 +52,4 @@ All derivations are presented without skipping intermediate steps, and every new
 
 ---
 
-**Keywords**: quantum mechanics tutorial / spin 1/2 / Pauli matrices derivation / Stern-Gerlach experiment / Bloch sphere / rotation operator derivation / Bell inequality proof / CHSH inequality / quantum entanglement / Born rule / eigenvalue equation / spectral decomposition / projective measurement / hidden variables / local realism / 量子力学 入門 / スピン1/2 / パウリ行列 導出 / シュテルン・ゲルラッハ実験 / ブロッホ球 解説 / 回転演算子 導出 / ベルの不等式 証明 / CHSH不等式 / 量子もつれ エンタングルメント
+**Keywords**: quantum mechanics tutorial / spin 1/2 / Pauli matrices derivation / Stern-Gerlach experiment / Bloch sphere / rotation operator derivation / Bell inequality proof / CHSH inequality / quantum entanglement / Born rule / eigenvalue equation / spectral decomposition / projective measurement / hidden variables / local realism / SU(2) / SO(3) / double cover
