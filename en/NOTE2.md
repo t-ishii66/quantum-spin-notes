@@ -111,7 +111,7 @@ The factor of $\hbar$ is included to give $G$ the same dimensions as angular mom
 
 Therefore, an infinitesimal rotation is restricted to the form
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 U(\delta\theta) = I - \frac{i}{\hbar}\,\delta\theta\,G + O(\delta\theta^2)
@@ -168,7 +168,7 @@ holds. This is the very definition of the exponential function: the limit of "mu
 
 Exactly the same form holds for operators. Replacing $a$ with $-i\theta G/\hbar$, we obtain
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 U(\theta,\mathbf{n}) = \exp\!\left(-\frac{i}{\hbar}\,\theta\,G_{\mathbf{n}}\right)
@@ -509,7 +509,7 @@ These three equations can also be written collectively in vector notation as
 
 **Finite rotation** — Accumulating these infinitesimal rotations up to angle $\theta$, the unitary operator that rotates state vectors is
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 U(\theta,\mathbf{n}) = \exp\!\left(-\frac{i}{\hbar}\,\theta\,\mathbf{n}\cdot\mathbf{J}\right)

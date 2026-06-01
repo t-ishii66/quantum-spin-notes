@@ -53,7 +53,7 @@ In quantum mechanics, angular momentum is defined as follows.
 
 **Definition**: When three Hermitian operators $J_x, J_y, J_z$ satisfy
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 [J_i, J_j] = i\hbar\,\epsilon_{ijk}\,J_k
@@ -256,7 +256,7 @@ The same calculation can be done for the $y$-$z$ and $z$-$x$ combinations, yield
 
 Summarizing:
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 [G_i, G_j] = i\hbar\,\epsilon_{ijk}\,G_k
@@ -313,7 +313,7 @@ As directly computed in [NOTE1.md](NOTE1.md):
 
 Therefore, setting $S_i = \frac{\hbar}{2}\sigma_i$:
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 [S_i, S_j] = i\hbar\,\epsilon_{ijk}\,S_k
@@ -379,7 +379,7 @@ U(\theta,\mathbf{n})
 
 The $\hbar$ cancels:
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 U(\theta,\mathbf{n}) = \exp\!\left(-i\frac{\theta}{2}\,\mathbf{n}\cdot\boldsymbol{\sigma}\right)
@@ -497,7 +497,7 @@ e^{-i\alpha M} = \cos\alpha\,I - i\sin\alpha\,M
 
 Restoring $\alpha = \theta/2$, $M = \mathbf{n}\cdot\boldsymbol{\sigma}$:
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 U(\theta,\mathbf{n}) = \cos\frac{\theta}{2}\,I - i\sin\frac{\theta}{2}\,\mathbf{n}\cdot\boldsymbol{\sigma}

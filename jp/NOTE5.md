@@ -228,7 +228,7 @@ $\vert {-z}\rangle\vert {-z}\rangle$ の係数： $sc - cs = 0$
 
 両辺を $\sqrt{2}$ で割ると
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 \frac{1}{\sqrt{2}}\bigl(\vert {+a}\rangle\vert {-a}\rangle - \vert {-a}\rangle\vert {+a}\rangle\bigr) = \vert \Psi^-\rangle
@@ -359,7 +359,7 @@ E = \frac{1}{2}\Bigl[(+1)(+1)\sin^2\frac{\theta}{2} + (+1)(-1)\cos^2\frac{\theta
 
 ここで $\cos\theta = \cos^2(\theta/2) - \sin^2(\theta/2)$ なので
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 E(\mathbf{a}, \mathbf{b}) = -\cos\theta = -\mathbf{a}\cdot\mathbf{b}
@@ -555,7 +555,7 @@ s = A \cdot (\pm 2) + A' \cdot 0 = \pm 2
 
 したがって
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 \vert S\vert \leq 2 \qquad \text{（CHSH 不等式）}
@@ -632,7 +632,7 @@ S = E(\mathbf{a}, \mathbf{b}) - E(\mathbf{a}, \mathbf{b}') + E(\mathbf{a}', \mat
 
 したがって
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 \vert S\vert = 2\sqrt{2} \approx 2.83

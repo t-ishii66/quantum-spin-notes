@@ -55,7 +55,7 @@ U(\theta,\mathbf{n}) = \exp\!\left(-\frac{i}{\hbar}\,\theta\,\mathbf{n}\cdot\mat
 
 **定義**：3つのエルミート演算子 $J_x, J_y, J_z$ が
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 [J_i, J_j] = i\hbar\,\epsilon_{ijk}\,J_k
@@ -258,7 +258,7 @@ U(\delta\gamma, \hat{z}) - I = -\frac{i}{\hbar}\,\delta\gamma\,G_z
 
 が導かれる。まとめると
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 [G_i, G_j] = i\hbar\,\epsilon_{ijk}\,G_k
@@ -315,7 +315,7 @@ U(\delta\alpha, \mathbf{e}_x)\,U(\delta\beta, \mathbf{e}_y) - U(\delta\beta, \ma
 
 が成り立つ。したがって $S_i = \frac{\hbar}{2}\sigma_i$ とおけば
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 [S_i, S_j] = i\hbar\,\epsilon_{ijk}\,S_k
@@ -381,7 +381,7 @@ U(\theta,\mathbf{n})
 
 $\hbar$ が約分されて
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 U(\theta,\mathbf{n}) = \exp\!\left(-i\frac{\theta}{2}\,\mathbf{n}\cdot\boldsymbol{\sigma}\right)
@@ -501,7 +501,7 @@ e^{-i\alpha M} = \cos\alpha\,I - i\sin\alpha\,M
 
 $\alpha = \theta/2$, $M = \mathbf{n}\cdot\boldsymbol{\sigma}$ を戻すと
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 U(\theta,\mathbf{n}) = \cos\frac{\theta}{2}\,I - i\sin\frac{\theta}{2}\,\mathbf{n}\cdot\boldsymbol{\sigma}

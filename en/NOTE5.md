@@ -226,7 +226,7 @@ Therefore
 
 Dividing both sides by $\sqrt{2}$:
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 \frac{1}{\sqrt{2}}\bigl(\vert {+a}\rangle\vert {-a}\rangle - \vert {-a}\rangle\vert {+a}\rangle\bigr) = \vert \Psi^-\rangle
@@ -357,7 +357,7 @@ Simplifying each term:
 
 Since $\cos\theta = \cos^2(\theta/2) - \sin^2(\theta/2)$:
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 E(\mathbf{a}, \mathbf{b}) = -\cos\theta = -\mathbf{a}\cdot\mathbf{b}
@@ -553,7 +553,7 @@ holds for each particle pair. Averaging over $\lambda$:
 
 Therefore
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 \vert S\vert \leq 2 \qquad \text{(CHSH inequality)}
@@ -630,7 +630,7 @@ S = E(\mathbf{a}, \mathbf{b}) - E(\mathbf{a}, \mathbf{b}') + E(\mathbf{a}', \mat
 
 Therefore
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 \vert S\vert = 2\sqrt{2} \approx 2.83

@@ -185,7 +185,7 @@ Here $\phi$ ($0 \leq \phi < 2\pi$) is the **relative phase** of the two componen
 
 Summarizing the above: since varying the direction $\mathbf{n}$ freely in the expression for the eigenstate $\vert {+n}\rangle$ yields any state, we rename $\vert {+n}\rangle$ as $\vert \psi\rangle$. After removing the overall phase freedom, the general state of spin 1/2 is
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 \vert \psi\rangle = \cos\frac{\theta}{2}\vert {+z}\rangle + e^{i\phi}\sin\frac{\theta}{2}\vert {-z}\rangle
@@ -431,7 +431,7 @@ In the last step we used the half-angle formula in reverse. $\Theta$ is the angl
 
 ### The Probability Formula
 
-<table border="1" align="center"><tr><td>
+<table border="1" align="center"><tr><td markdown="1">
 
 ```math
 P(+\mathbf{n}) = \cos^2\frac{\Theta}{2}
