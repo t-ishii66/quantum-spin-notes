@@ -1,4 +1,22 @@
 <!-- math rendering enabled by enable-github-pages-math -->
+<style>
+  /* Boxed display-math pattern: <table border="1"> wrapping a ```math
+     fence. HTML4 puts borders on both the <table> and each <td>, and
+     the cell is shrink-to-fit by default — so the raw output is a
+     double-border with the formula left-aligned and a stray vertical
+     line where the cell ends. These rules collapse the borders to a
+     single line, shrink-fit the table, center it on the page, and
+     center the formula inside. */
+  table[border="1"] {
+    border-collapse: collapse;
+    margin: 1em auto;
+    width: auto;
+  }
+  table[border="1"] td {
+    text-align: center;
+    padding: 0.6em 1.4em;
+  }
+</style>
 <script>
   window.MathJax = {
     tex: {
