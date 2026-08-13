@@ -53,3 +53,5 @@ All derivations are presented without skipping intermediate steps, and every new
 ---
 
 **Keywords**: quantum mechanics tutorial / spin 1/2 / Pauli matrices derivation / Stern-Gerlach experiment / Bloch sphere / rotation operator derivation / Bell inequality proof / CHSH inequality / quantum entanglement / Born rule / eigenvalue equation / spectral decomposition / projective measurement / hidden variables / local realism / SU(2) / SO(3) / double cover
+
+<img src="images/alice-index.png" width="600">
