@@ -5,7 +5,7 @@ keywords: "quantum mechanics, spin 1/2, Pauli matrices, Bloch sphere, Bell inequ
 permalink: /
 ---
 
-[English](README.md) | [日本語](README-jp.md)
+[English](README.md) \| [日本語](README-jp.md)
 
 # Physics Notes on Spin 1/2
 

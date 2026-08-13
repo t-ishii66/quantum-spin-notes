@@ -5,7 +5,7 @@ keywords: "量子力学, スピン1/2, パウリ行列, ブロッホ球, ベル�
 lang: ja
 ---
 
-[English](README.md) | [日本語](README-jp.md)
+[English](README.md) \| [日本語](README-jp.md)
 
 # スピン1/2の物理ノート
 
