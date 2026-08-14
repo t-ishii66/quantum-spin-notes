@@ -366,7 +366,7 @@ $x$ 方向にも2つの固有状態 $\vert {+x}\rangle$, $\vert {-x}\rangle$ が
 = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}
 ```
 
-となる。次に $\vert {-x}\rangle$ を求める。前節「$\phi$ の選択は物理的に何を意味するか」で述べたように $\vert {-x}\rangle$ は $\phi = \pi$ に対応するので、同じ式に $\phi = \pi$ を代入すると $e^{i\pi} = -1$ から
+となる。次に $\vert {-x}\rangle$ を求める。前節「 $\phi$ の選択は物理的に何を意味するか」で述べたように $\vert {-x}\rangle$ は $\phi = \pi$ に対応するので、同じ式に $\phi = \pi$ を代入すると $e^{i\pi} = -1$ から
 
 ```math
 \vert {-x}\rangle = \frac{1}{\sqrt{2}}\bigl(\vert {+z}\rangle - \vert {-z}\rangle\bigr)

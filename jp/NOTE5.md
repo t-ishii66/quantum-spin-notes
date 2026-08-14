@@ -91,7 +91,7 @@
 \frac{1}{\sqrt{2}}\bigl(\vert {+z}\rangle\vert {-z}\rangle - \vert {-z}\rangle\vert {+z}\rangle\bigr)
 ```
 
-は、どのような $\vert \psi\rangle_A$ と $\vert \phi\rangle_B$ を持ってきても積の形に書けない。このような状態を**もつれ状態（エンタングル状態）**と呼ぶ。
+は、どのような $\vert \psi\rangle_A$ と $\vert \phi\rangle_B$ を持ってきても積の形に書けない。このような状態を**もつれ状態**（エンタングル状態）と呼ぶ。
 
 ---
 

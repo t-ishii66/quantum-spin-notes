@@ -372,7 +372,7 @@ Expanding in components:
 
 Now let us list the results of infinitesimal rotations about each coordinate axis. These are obtained by substituting the unit vectors of the coordinate axes for $\mathbf{n}$ in the cross-product formula above.
 
-About the $x$-axis ($\mathbf{n} = (1, 0, 0)$):
+About the $x$-axis, with $\mathbf{n} = (1, 0, 0)$:
 
 ```math
 \delta x = \delta\theta\,(0 \cdot z - 0 \cdot y) = 0, \qquad
@@ -380,7 +380,7 @@ About the $x$-axis ($\mathbf{n} = (1, 0, 0)$):
 \delta z = \delta\theta\,(1 \cdot y - 0 \cdot x) = +y\,\delta\theta
 ```
 
-About the $y$-axis ($\mathbf{n} = (0, 1, 0)$):
+About the $y$-axis, with $\mathbf{n} = (0, 1, 0)$:
 
 ```math
 \delta x = \delta\theta\,(1 \cdot z - 0 \cdot y) = +z\,\delta\theta, \qquad
@@ -388,7 +388,7 @@ About the $y$-axis ($\mathbf{n} = (0, 1, 0)$):
 \delta z = \delta\theta\,(0 \cdot y - 1 \cdot x) = -x\,\delta\theta
 ```
 
-About the $z$-axis ($\mathbf{n} = (0, 0, 1)$):
+About the $z$-axis, with $\mathbf{n} = (0, 0, 1)$:
 
 ```math
 \delta x = \delta\theta\,(0 \cdot z - 1 \cdot y) = -y\,\delta\theta, \qquad

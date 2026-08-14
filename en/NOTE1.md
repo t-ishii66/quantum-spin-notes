@@ -267,7 +267,7 @@ Then the matrix representation of $\hat{Z}$ is
 \end{pmatrix}
 ```
 
-This is the first Pauli matrix $\sigma_z$ — it is simply the fact that "$z$-direction measurement gives two values" translated directly into a matrix.
+This is the first Pauli matrix $\sigma_z$ — it is simply the fact that a $z$-direction measurement gives two values, translated directly into a matrix.
 
 ### Arbitrary States
 
@@ -317,7 +317,7 @@ In the $x$-direction there are also two eigenstates $\vert {+x}\rangle$, $\vert 
 \vert {+x}\rangle = a\vert {+z}\rangle + b\vert {-z}\rangle
 ```
 
-We want to express the result of Experiment B — "$\vert {+z}\rangle$ silver atoms passed through an $x$-direction device give $+1$ and $-1$ in equal proportion" — as an equation. Using the Born rule ($P(\phi) = \vert \langle\phi\vert \psi\rangle\vert ^2$), the "50-50" condition is
+We want to express the result of Experiment B — "silver atoms in $\vert {+z}\rangle$ passed through an $x$-direction device give $+1$ and $-1$ in equal proportion" — as an equation. Using the Born rule, $P(\phi) = \vert \langle\phi\vert \psi\rangle\vert ^2$, the "50-50" condition is
 
 ```math
 \vert \langle{+x}\vert {+z}\rangle\vert ^2 = \frac{1}{2}
@@ -706,7 +706,7 @@ Here we state only the conclusion. The three Pauli matrices are established as t
 
 - Their form is determined by experimental facts (two-valued measurement, 50-50 statistics)
 - That form automatically satisfies the angular momentum commutation relations
-- Moreover, in 2 dimensions, this is essentially the only representation satisfying the commutation relations (uniqueness of the 2-dimensional irreducible representation of $\mathrm{SU}(2)$)
+- Moreover, in 2 dimensions, this is essentially the only representation satisfying the commutation relations — the uniqueness of the 2-dimensional irreducible representation of $\mathrm{SU}(2)$.
 
 ---
 
@@ -718,7 +718,7 @@ Let us organize what was used in the derivation.
 
 - The result of measurement in each direction is two-valued ($+1$ and $-1$)
 - Re-measurement in the same direction reproduces the result
-- Measurements in perpendicular directions give 50-50 probability (for a general angle, $\cos^2(\theta/2)$)
+- Measurements in perpendicular directions give 50-50 probability; for a general angle, $\cos^2(\theta/2)$
 - Interposing a measurement in one direction destroys information about the other
 
 ### Conventions (Other Choices Are Possible)

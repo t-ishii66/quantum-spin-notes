@@ -221,7 +221,7 @@ In other words, it is a "dictionary that translates group elements into matrices
 
 ### A Concrete Example
 
-Consider two operations: rotation by $\pi/2$ and rotation by $\pi$ about the $z$-axis. Writing these as spin-1/2 rotation operators (the 2-dimensional representation of $\mathrm{SU}(2)$), we get the following.
+Consider two operations: rotation by $\pi/2$ and rotation by $\pi$ about the $z$-axis. Writing these as spin-1/2 rotation operators — the 2-dimensional representation of $\mathrm{SU}(2)$ — we get the following.
 
 Rotation by $\pi/2$ about the $z$-axis:
 
@@ -262,7 +262,7 @@ R_1 = R(\pi/2,\, \hat{z})
 = \begin{pmatrix}0 & -1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1\end{pmatrix}
 ```
 
-$U_1$ is $2 \times 2$ and $R_1$ is $3 \times 3$, but they represent the same physical operation: "$\pi/2$ rotation about the $z$-axis."
+$U_1$ is $2 \times 2$ and $R_1$ is $3 \times 3$, but they represent the same physical operation: a $\pi/2$ rotation about the $z$-axis.
 
 In the context of spin 1/2:
 
