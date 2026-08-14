@@ -547,7 +547,7 @@ $\vert {+x}\rangle$ は [NOTE1.md](NOTE1.md) で導いたように
 \vert {+x}\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}
 ```
 
-である。これはブロッホ球上で赤道上（方位角 $\phi = 0$ ）の状態だった。 $z$ 軸まわりの回転は $x$-$y$ 平面内の回転なので、方位角 $\phi$ が変化するはずである。 $U(\theta, \hat{z})$ を作用させると
+である。これはブロッホ球上で赤道上（方位角 $\phi = 0$ ）の状態だった。 $z$ 軸まわりの回転は $xy$ 平面内の回転なので、方位角 $\phi$ が変化するはずである。 $U(\theta, \hat{z})$ を作用させると
 
 ```math
 U(\theta, \hat{z})\,\vert {+x}\rangle
@@ -630,7 +630,7 @@ U(\pi, \hat{x})\vert {+z}\rangle
 
 ### 具体例で確かめる
 
-$z$ 軸まわりに角度 $\theta$ だけ回転させる。 $z$ 軸まわりの回転は $x$-$y$ 平面内の回転なので、ブロッホ球上では方位角が変化する。例1で見たように
+$z$ 軸まわりに角度 $\theta$ だけ回転させる。 $z$ 軸まわりの回転は $xy$ 平面内の回転なので、ブロッホ球上では方位角が変化する。例1で見たように
 
 ```math
 U(\theta, \hat{z}) = \begin{pmatrix}e^{-i\theta/2} & 0 \\ 0 & e^{+i\theta/2}\end{pmatrix}

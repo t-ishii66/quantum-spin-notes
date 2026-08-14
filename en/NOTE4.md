@@ -246,7 +246,7 @@ Cancelling $\delta\alpha\,\delta\beta$ and multiplying by $\hbar^2$:
 - The $i$ comes from writing the infinitesimal rotation operator as $U = I - \frac{i}{\hbar}\delta\theta\,G$ (with $G$ Hermitian)
 - The $\hbar$ comes from the ratio of $1/\hbar$ in the denominator and $1/\hbar^2$ at second order
 
-The same calculation can be done for the $y$-$z$ and $z$-$x$ combinations, yielding
+The same calculation can be done for the $yz$ and $zx$ combinations, yielding
 
 ```math
 [G_x, G_y] = i\hbar\,G_z, \qquad
@@ -543,7 +543,7 @@ $\vert {+x}\rangle$ is, as derived in [NOTE1.md](NOTE1.md):
 \vert {+x}\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}
 ```
 
-This is a state on the equator of the Bloch sphere (azimuthal angle $\phi = 0$). Since rotation about the $z$-axis is a rotation within the $x$-$y$ plane, the azimuthal angle $\phi$ should change. Applying $U(\theta, \hat{z})$:
+This is a state on the equator of the Bloch sphere (azimuthal angle $\phi = 0$). Since rotation about the $z$-axis is a rotation within the $xy$ plane, the azimuthal angle $\phi$ should change. Applying $U(\theta, \hat{z})$:
 
 ```math
 U(\theta, \hat{z})\,\vert {+x}\rangle
@@ -626,7 +626,7 @@ Since the rotation operator contains $\theta/2$, one might think "the Bloch vect
 
 ### Checking with Concrete Examples
 
-Rotate by angle $\theta$ about the $z$-axis. Since rotation about the $z$-axis is a rotation within the $x$-$y$ plane, the azimuthal angle changes on the Bloch sphere. From Example 1:
+Rotate by angle $\theta$ about the $z$-axis. Since rotation about the $z$-axis is a rotation within the $xy$ plane, the azimuthal angle changes on the Bloch sphere. From Example 1:
 
 ```math
 U(\theta, \hat{z}) = \begin{pmatrix}e^{-i\theta/2} & 0 \\ 0 & e^{+i\theta/2}\end{pmatrix}
