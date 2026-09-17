@@ -7,3 +7,14 @@ _site/
 
 PROBLEMS.md
 *PROBLEMS*.md
+
+.env
+.env.*
+!.env.example
+!.env.template
+!.env.sample
+credentials.json
+service-account*.json
+*.pem
+*.key
+id_rsa*
