@@ -7,6 +7,9 @@ lang: ja
 
 [English](README.md) \| [日本語](README-jp.md)
 
+> 📖 **数式をきれいに表示した Web 版はこちら：** <https://t-ishii66.github.io/quantum-spin-notes/README-jp.html>  
+> GitHub Pages 上で MathJax により数式を組版しているため、github.com で直接読むよりも読みやすくなっています。
+
 # スピン1/2の物理ノート
 
 ![](images/top.png)

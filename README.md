@@ -7,6 +7,9 @@ permalink: /
 
 [English](README.md) \| [日本語](README-jp.md)
 
+> 📖 **Read the nicely rendered web version:** <https://t-ishii66.github.io/quantum-spin-notes/>  
+> The GitHub Pages site typesets every formula with MathJax, so it is easier to read than browsing the files on github.com.
+
 # Physics Notes on Spin 1/2
 
 ![](images/top.png)
